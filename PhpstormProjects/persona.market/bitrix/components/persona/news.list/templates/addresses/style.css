@@ -1,0 +1,50 @@
+.clearfix {
+    display: block;
+    zoom: 1;
+}
+.shops-title {
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: 700;
+}
+.shops-list {
+    float: left;
+    width: 360px;
+    height: 390px;
+    margin-right: 2px;
+    margin-bottom: 20px;
+}
+.shops-list-item:hover, .shops-list-item.active {
+    background: #1c1c1c;
+}
+.shops-list-item {
+    display: block;
+    padding: 20px 10px;
+    font-size: 13px;
+    line-height: 20px;
+    cursor: pointer;
+    text-decoration: none;
+    color: #f5f5f5;
+    background: #000;
+    border-bottom: 1px solid #f5f5f5;
+}
+.shops-list-item span {
+    font-size: 12px;
+    color: #af8c00;
+}
+.shops-map {
+    float: left;
+    width: calc(100% - 365px);
+    border: 1px solid #dcdcdc;
+}
+.shops-map-image {
+    height: 486px;
+    overflow: hidden;
+    background: #f5f5f5;
+}
+#map {
+    height: 486px;
+}
+.home-page .shops-list {
+    height: 486px;
+}

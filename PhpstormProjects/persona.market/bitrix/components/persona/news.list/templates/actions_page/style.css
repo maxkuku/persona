@@ -1,0 +1,15 @@
+.panel-body.page {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+.box-product .panel-body.page .product-item {
+    -webkit-box-flex:25%;
+    -ms-flex:25%;
+    flex:25%;
+}

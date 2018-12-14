@@ -1,0 +1,15 @@
+.wishlist td img {
+    width: 200px;
+    max-width: none;
+}
+.wishlist i.fa {
+    width: 26px;
+}
+td button.btn {
+    margin-bottom: 20px;
+}
+.table-responsive.wishlist td a.btn.btn-danger {
+    float: right;
+    margin-top: 31px;
+    margin-right: 30px;
+}

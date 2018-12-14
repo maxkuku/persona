@@ -1,0 +1,36 @@
+#slideshow-art img.detail_picture {
+    object-fit: cover;
+    object-position: center;
+}
+#slideshow-art .carousel {
+    margin-bottom: 0;
+}
+#slideshow-art .owl-controls .owl-buttons div{
+    color: #FFF;
+    display: inline-block;
+    zoom: 1;
+    *display: inline;/*IE7 life-saver */
+    margin: 5px;
+    padding: 3px 10px;
+    font-size: 12px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    border-radius: 30px;
+    background: #869791;
+    filter: Alpha(Opacity=50);/*IE7 fix*/
+    opacity: 0.5;
+}
+#slideshow-art .owl-controls .owl-pagination {
+    background: #000;
+    padding: 3px;
+    text-align: right;
+    width: 100%;
+}
+#slideshow-art .carousel {
+    border: none;
+}
+#slideshow-art img.detail_picture {
+    width: 100%;
+    object-fit: cover;
+    height: 300px;
+}
