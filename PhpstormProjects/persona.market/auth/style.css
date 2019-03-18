@@ -1,0 +1,95 @@
+.auth-title {
+    line-height: 46px;
+}
+#workarea-inner .row {
+    margin-left: 0;
+    margin-right: 0;
+}
+.iblock.label_block {
+    margin-right: 20px;
+}
+#workarea-inner .registraion-page .form-control,
+#workarea-inner .authorization .form-control {
+    margin: 0 0 0;
+    box-shadow: none!important;
+}
+.wrap_md{display: flex;}
+button, input, optgroup, select, textarea {
+    color: inherit;
+    font: inherit;
+    margin: 0;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+span.star {
+    color: red;
+    top: -10px;
+    display: inline-block;
+    position: relative;
+    float: left;
+    margin-right: 5px;
+}
+label {
+    width: 130px;
+}
+.module-authorization .registraion-page .form-control, .module-authorization .authorization .form-control {
+    box-shadow: unset!important;
+    height: 30px;
+}
+form[name=bform] input[type="email"] {
+    border: none;
+    margin-bottom: 3px;
+
+}
+:focus{
+    outline:none
+}
+form[name=bform] input[type="email"]:focus{
+    outline:none
+}
+form .form-control {
+    width: 100%;
+    height: 44px;
+}
+div.bx-auth-serv-icons a {
+    height: 34px;
+}
+button.button[type=submit]{
+    border-radius:0;
+}
+div.bx-auth-serv-icons a:hover {
+    margin: 0px;
+    border: 0;
+}
+.but-r .filter.block {
+    display: flex;
+    justify-content: space-between;
+}
+.authorization-cols {
+    display: flex;
+    justify-content: space-between;
+}
+.col.authorization .form-block {
+    display: flex;
+    justify-content: space-between;
+}
+.col.authorization {
+    display: inline-block;
+    flex: 0 0 76%;
+}
+.soc-avt {
+    position: relative;
+    top: -33px;
+}
+.bx-auth-serv-icons {
+    margin-top: 36px;
+}
+.registration .form-block {
+    margin-top: 28px;
+}
+.but-r .buttons {
+    text-align: right;
+    margin-top: 20px;
+    margin-right: 10px;
+}

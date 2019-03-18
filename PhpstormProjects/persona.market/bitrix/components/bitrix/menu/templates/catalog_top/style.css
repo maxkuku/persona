@@ -1,0 +1,92 @@
+.top-nav {
+    background-color: #000;
+    color: #fff;
+    width: 100%;
+    float: left;
+    margin: 3px 0px 0px;
+    /* border: 1px solid #000; */
+}
+.top-nav:before{
+
+}
+.top-nav ul {
+    width: 100%;
+    float: left;
+    /* border-bottom: 1px solid #7f7f7f; */
+    padding: 0px 0px 0px;
+}
+.top-nav ul li {
+    float: left;
+    list-style: none;
+    margin: 0px 0px;
+    line-height: 19px;
+    /* padding: 0px 0px 0px; */
+}
+.top-nav ul li a {
+    font-size: 12px;
+    line-height: 19px;
+    font-weight: normal;
+    color: #fff;
+    text-decoration: none;
+    padding: 15px 12px 16px;
+    float: left;
+    text-transform: uppercase;
+    /* transition: background-color .4s linear, color .4s linear; */
+}
+.top-nav ul li .sub_menu_new {
+    min-width: 260px;
+    max-width: 910px;
+    display: none;
+    position: absolute;
+    z-index: 999;
+    background: #fff;
+    padding: 25px 15px 25px;
+    margin: 52px 0px -15px;
+    color: #000;
+    box-shadow: 2px 4px 15px #E0DFDF;
+    border: 1px solid #E0DFDF;
+}
+.triviewmenunew {
+    width: 530px;
+    height: 14px;
+    background: url(images/triview3.png) 24px no-repeat;
+    margin: -39px 2px 0px;
+    position: absolute;
+    z-index: 1000;
+    padding: 11px 0px 0px;
+}
+.top-nav ul li:hover .sub_menu_new {
+    display: block;
+}
+.first-sub {
+    margin: 0px;
+}
+.sub_menu_item {
+    width: 200px;
+    float: left;
+    margin: 0px 0px 0px 30px;
+}
+.sub_menu_item span {
+    font-size: 15px;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-family: initial;
+    padding: 0px 0px 2px;
+    margin: 0px 0px 8px;
+    width: 100%;
+    float: left;
+    border-bottom: 1px solid #000;
+    background: url(images/triangle12.jpg) right 5px no-repeat;
+}
+.top-nav ul li .sub_menu_new a {
+    text-transform: inherit;
+}
+.list_href_menu a {
+    color: #000 !important;
+    padding: 2px 0px !important;
+    font-size: 14px !important;
+    text-decoration: underline !important;
+    display: inline-block;
+    float: left !important;
+    width: 100%;
+}

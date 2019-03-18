@@ -1,0 +1,6 @@
+input[name=web_form_submit]:focus {
+    outline: none;
+}
+.simple-content .name {
+    width: 50%;
+}
