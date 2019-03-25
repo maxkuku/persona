@@ -18,6 +18,7 @@ IncludeTemplateLangFile(__FILE__);
 		<div class="panel-heading"><?=GetMessage('HEADING_FEEDS')?></div>
 		<div id="record_columns-12" class="panel-body owl-carousel product-carousel">
 
+<?#pr($arResult["ITEMS"]);?>
 
 <?foreach($arResult["ITEMS"] as $arItem):?>
 	<?

@@ -29,8 +29,8 @@ use \Bitrix\Main\Localization\Loc;
 			</div>
 			<div class="image">
 				<a href="<?=$item['DETAIL_PAGE_URL']?>">
-                    <?if($item['DETAIL_PICTURE']['SRC']):?>
-                    <img src="<?=$item['DETAIL_PICTURE']['SRC']?>" alt="<?=$item['DETAIL_PICTURE']['ALT']?>" title="<?=$item['DETAIL_PICTURE']['TITLE']?>" class="img-responsive center-block">
+                    <?if($item['PREVIEW_PICTURE']['SRC']):?>
+                    <img src="<?=$item['PREVIEW_PICTURE']['SRC']?>" alt="<?=$item['PREVIEW_PICTURE']['ALT']?>" title="<?=$item['PREVIEW_PICTURE']['TITLE']?>" class="img-responsive center-block">
                     <?else:?>
                         <span style="background: url(/bitrix/templates/persona/images/no-photo.jpg) no-repeat center / contain;    width: 100%;height: 100%;display: block;">&nbsp;</span>
                     <?endif?>
@@ -64,8 +64,7 @@ use \Bitrix\Main\Localization\Loc;
                     <?endif?>
                 </div>
 
-                <p class="price">
-                    <?=$item['PROPERTIES']['price']['VALUE']?> <span class="sr-only">р.</span><span class="roboto-forced ruble" aria-hidden="true" style="display:none;"></span>
+                <p class="price"><?=$item['PROPERTIES']['price']['VALUE']?><span class="rur">руб.</span> <!--span class="sr-only">р.</span><span class="roboto-forced ruble" aria-hidden="true" style="display:none;"></span-->
                 </p>
                 <?$r = CatalogItemComponent::choozeFeedback($item['ID']);
                 # r[0] - rating, r[1] - feeds?>

@@ -13790,6 +13790,16 @@ li {
 #menu #menu-list a.root-item-selected {
     color: #ae8b00;
 }
+#modal-fastorder img.img-responsive.center-block {
+    max-height: 260px;
+}
+.text-center.white {
+    padding: 2em;
+    color:white;
+}
+#form_customer_3 .modal-body, #form_customer_3 .modal-body a {
+    color: white;
+}
 @media (min-width: 768px) and (max-width:1200px){
     .phone span.two-small-phones {
         font-size: 17px;

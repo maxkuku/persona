@@ -66,8 +66,8 @@ if($ratings_all)
     $ratings = array_unique($ratings_all);
 
 
-?>
-<?if(strlen($res[0]['DETAIL_TEXT'])>1):?>
+
+if(strlen($res[0]['DETAIL_TEXT'])>1):?>
     <div class="red-links desc_cat" data-readmore="" aria-expanded="false" id="rmjs-<?=$res[0]['ID']?>">
         <div>
             <?=$res[0]['DETAIL_TEXT']?>
@@ -434,9 +434,7 @@ if ($arParams['HIDE_SECTION_DESCRIPTION'] !== 'Y')
                         <?
                         foreach ($rowItems as $item)
                         {
-                            ?>
 
-                            <?
                             $APPLICATION->IncludeComponent(
                                 'persona:catalog.item',
                                 '',
@@ -456,9 +454,8 @@ if ($arParams['HIDE_SECTION_DESCRIPTION'] !== 'Y')
                                 $component,
                                 array('HIDE_ICONS' => 'Y')
                             );
-                            ?>
 
-                            <?
+
                         }
 
                         break;
@@ -865,10 +862,14 @@ if ($arParams['HIDE_SECTION_DESCRIPTION'] !== 'Y')
         ?>
         <!-- items-container -->
         <?
+
     }
     else
     {
         // load css for bigData/deferred load
+
+        echo "<div class='container'><p class='no-found-in-catalog'>К сожалению по вашему запросу ничего не найдено. Попробуйте расширить параметры поиска.</p></div>";
+
         $APPLICATION->IncludeComponent(
             'persona:catalog.item',
             '',

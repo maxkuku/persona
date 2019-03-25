@@ -1,5 +1,8 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
+
+$APPLICATION->IncludeComponent( "abricos:antisovetnik", "", array(), false);
+
 $APPLICATION->SetTitle("Каталог «Персона» маркет");
 $url_arr = explode('/',$_SERVER['REQUEST_URI']);
 $cat_code = array_slice($url_arr,-2,1)[0];
