@@ -25,6 +25,15 @@ if($rating) {
     $sort = "PROPERTY_RATING";
     $sort_order = $rating;
 }
+?>
+	<div class="list-selection-element">
+<?
+$arrFilter = [];
+if(htmlspecialchars($_REQUEST['ajax'],3) == "Y" &&
+strlen(htmlspecialchars($_REQUEST['brand'],3) ) > 0){
+    array_push($arrFilter, ["PROPERTY_BRAND" => htmlspecialchars($_REQUEST['brand'],3)]);
+}
+
 $APPLICATION->IncludeComponent(
 	"persona:catalog.section", 
 	".default", 
@@ -185,4 +194,5 @@ $APPLICATION->IncludeComponent(
 	),
 	false
 );?>
+	</div>
 <?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
