@@ -21,7 +21,7 @@ $protocol = (!empty($_SERVER['HTTPS'])
 define( 'PROTOCOL', $protocol );
 define( 'SITE_URL', siteURL() );
 define( 'MIN_ORDER_PRICE', 990 );
-define( 'COUNTDOWN', '2019-08-31' );
+define( 'COUNTDOWN', '2039-08-31' );
 
 
 $useragent=$_SERVER['HTTP_USER_AGENT'];

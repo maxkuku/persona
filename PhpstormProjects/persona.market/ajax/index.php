@@ -110,7 +110,7 @@ if ($PRODUCT_ID && $WEB_FORM_ID) {
 
 # append / remove to basket in popup
 $PRODUCT_ID = htmlspecialchars($_REQUEST['key'], 3);
-$UPD = htmlspecialchars($_REQUEST['quantity'], 3);
+$UPD = (int)htmlspecialchars($_REQUEST['quantity'], 3);
 if ($PRODUCT_ID > 0 && $UPD == 1) {
 
     $WEB_FORM_ID = 2;
@@ -911,7 +911,7 @@ if (htmlspecialchars($_REQUEST['whish_rem'], 3) == 1) {
 
 if (htmlspecialchars($_REQUEST['fastorder'], 3) == "Y") {
     if ((int)htmlspecialchars($_REQUEST['product_id'], 3) > 0) {
-        $arSelect = Array("ID", "IBLOCK_ID", "NAME", "DATE_ACTIVE_FROM", "PROPERTY_PRICE", "DETAIL_PICTURE", "DETAIL_PAGE_URL", "PROPERTY_SALE");
+        $arSelect = Array("ID", "IBLOCK_ID", "NAME", "DATE_ACTIVE_FROM", "PROPERTY_PRICE", "DETAIL_PICTURE", "DETAIL_PAGE_URL", "PROPERTY_SALE", "PROPERTY_BRAND");
         $arFilter = Array("IBLOCK_ID" => GOODS, "ID" => (int)htmlspecialchars($_REQUEST['product_id'], 3), "ACTIVE" => "Y");
         $res = CIBlockElement::GetList(Array(), $arFilter, false, false, $arSelect);
         while ($ob = $res->GetNextElement()) {
@@ -936,16 +936,8 @@ if (htmlspecialchars($_REQUEST['fastorder'], 3) == "Y") {
 
         if ($RESULT_ID = CFormResult::Add($FORM_ID, $arValues))
         {
-            #$json['redirect'] = "/basket/result_list.php";
-	        $arEventFields = array(
-		        "ORDER"               => implode(' ', $arValues),
-		        "RS_USER_PHONE"       => htmlspecialchars($_REQUEST["form_text_12"],3),
-		        "RS_USER_NAME"        => htmlspecialchars($_REQUEST["form_text_13"],3),
-	        );
 
-	        if(CEvent::Send("FORM_FILLING_SIMPLE_FORM_1", "s1", $arEventFields)){
-                echo "<script>alert('sent');</script>";
-            }
+            ?><script>console.log('form add in ajax index')</script><?
         }
         else
         {
@@ -962,7 +954,11 @@ if (htmlspecialchars($_REQUEST['fastorder'], 3) == "Y") {
             <div class="row">
                 <div class="col-sm-6 text-center">
                     <div class="image">
+                        <?if($rsFile):?>
                         <img src="<?=$rsFile?>" onclick="location.href='<?= $arFields['DETAIL_PAGE_URL']?>'" alt="<?=$arFields['NAME']?>" class="img-responsive center-block">
+                        <?else:?>
+                        <img src="/bitrix/templates/persona/images/no-photo.png" onclick="location.href='<?= $arFields['DETAIL_PAGE_URL']?>'" alt="No image" class="img-responsive center-block">
+                        <?endif?>
                     </div>
                     <div class="price"><?=(!$arFields['PROPERTY_SALE_VALUE'])?$arFields['PROPERTY_PRICE_VALUE'] . " <span class=\"roboto-forced ruble price-real\" aria-hidden=\"true\" style=\"display:none;\"></span>":""?>
 
@@ -973,8 +969,8 @@ if (htmlspecialchars($_REQUEST['fastorder'], 3) == "Y") {
                     </div>
                 </div>
                 <div class="col-sm-6">
-                    <form action="" method="post" enctype="multipart/form-data" id="fastorderform">
-                        <input type="hidden" name="WEB_FORM_ID" value="3"/>
+                    <form action="/ajax/" method="post" enctype="multipart/form-data" id="fastorderform">
+                        <!--input type="hidden" name="WEB_FORM_ID" value="2"/-->
                         <div class="form-group">
                             <div class="input-group ">
                                 <span class="input-group-addon"><i class="fa fa-user fa-fw"></i></span>
@@ -993,7 +989,7 @@ if (htmlspecialchars($_REQUEST['fastorder'], 3) == "Y") {
                         <?
                         $r = $DB->Query("SELECT ID FROM  b_form_result ORDER BY ID DESC LIMIT 1");
                         $res = $r->Fetch();
-                        $last = $res["ID"] + 2;
+                        $last = $res["ID"];
                         ?>
                         <input type="hidden" name="sessid" value="<?=substr(bitrix_sessid_get(),7)?>"/>
                         <input type="hidden" name="RESULT_ID" value="<?=$last?>"/>
@@ -1004,12 +1000,12 @@ if (htmlspecialchars($_REQUEST['fastorder'], 3) == "Y") {
             </div>
         </div>
         <script>
-            /*function fastordersend(){
+            function fastordersend(){
                 $.post($('#fastorderform').attr('action'), $('#fastorderform').serialize(), function(html) {
                     $('#modal-fastorder .modal-content').html(html);
                 });
-            }*/
-            function fastordersend(){
+            }
+            /*function fastordersend(){
                 if($("[name=form_text_13]").val().length > 0){
                     if($("[name=form_text_12]").val().length > 0){
                         $('form').serialize();
@@ -1022,9 +1018,59 @@ if (htmlspecialchars($_REQUEST['fastorder'], 3) == "Y") {
                 else{
                     alert("Заполните имя");
                 }
-            }
+            }*/
+            jQuery(document).ready(function($) {
+                var selector = $('[name=form_text_12]');
+                var im = new Inputmask("+7(999)999-99-99");
+                im.mask(selector);
+            });
         </script>
         <?
+    }
+}
+
+# если отправлен быстрый заказ
+if(strlen(htmlspecialchars($_REQUEST['form_text_12'],3)) > 1 &&
+    strlen(htmlspecialchars($_REQUEST['RESULT_ID'],3)) > 1){
+    $RESULT_ID = htmlspecialchars($_REQUEST['RESULT_ID'],3);
+    if (CFormResult::SetStatus($RESULT_ID, 3, "N"))
+    {
+
+        $res_form = CFormResult::GetDataByID($RESULT_ID);
+
+	    $adminEmail = COption::GetOptionString('main', 'email_from', 'default@admin.email');
+
+	    $var = "";
+	    if($res_form['product_variant'][0]['USER_TEXT'])
+		    $var = ", вариант: " . $res_form['product_variant'][0]['USER_TEXT'] . ",";
+
+        $arEventFields = array(
+            "EMAIL_TO"            => $adminEmail . ", maxkuku@gmail.com",
+            "ORDER"               => "Название: " . $res_form['name'][0]['USER_TEXT'] . $var .
+             ", цена: " . $res_form['price'][0]['USER_TEXT'] . ", ID: " . $res_form['product_id'][0]['USER_TEXT'] . "\r\n" . htmlspecialchars($_REQUEST['MESSAGE'], 3),
+            "RS_USER_PHONE"       => htmlspecialchars($_REQUEST["form_text_12"],3),
+            "RS_USER_NAME"        => htmlspecialchars($_REQUEST["form_text_13"],3),
+            "RS_DATE_CREATE"        => date('d-m-Y H:i'),
+            "MESSAGE"             => "Сообщение: " . htmlspecialchars($_REQUEST["MESSAGE"],3),
+        );
+
+        if($arEventFields['RS_USER_PHONE']):
+            if(CEvent::Send("FORM_FILLING_SIMPLE_FORM_1", "s1", $arEventFields)){?>
+                <script>console.log("sent");</script>
+            <?
+                CFormResult::Delete($RESULT_ID);
+        }
+        endif;
+
+        echo "<div class=\"modal-header\">
+        <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-hidden=\"true\">×</button>
+        <h4 class=\"modal-title\">Быстрый заказ</h4>
+    </div><div class=\"modal-body\"><div class=\"text-center white\">Заказ отправлен, спасибо. № заказа ".$RESULT_ID.".</div></div>";
+    }
+    else // ошибка
+    {
+        global $strError;
+        echo $strError;
     }
 }
 

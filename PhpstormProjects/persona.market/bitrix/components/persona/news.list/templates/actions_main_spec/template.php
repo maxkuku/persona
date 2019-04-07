@@ -13,7 +13,7 @@
 $this->setFrameMode(true);
 IncludeTemplateLangFile(__FILE__);
 ?>
-<div class="wrapper_actions_line owl-carousel owl-theme" id="owl_actions">
+<div class="wrapper_actions_line lione<?=MOB?>  <?=(!isMobile())?"owl-carousel":""?> owl-theme" id="owl_actions">
 <?foreach($arResult["ITEMS"] as $arItem):?>
     <a href="/catalog/detail.php?ID=<?=$arItem['PROPERTIES']['to_good']['VALUE']?>" class="item_actions_line item" style="background: url('<?=$arItem['DETAIL_PICTURE']['SRC']?>') 100% center no-repeat;">
         <div class="item_actions_line_shadow"></div>
@@ -27,6 +27,7 @@ IncludeTemplateLangFile(__FILE__);
     </a>
 <?endforeach;?>
 </div>
+<?if(!isMobile()):?>
 	<script type="text/javascript">
 			domReady(function () {
                 $("#owl_actions").owlCarousel({
@@ -40,3 +41,4 @@ IncludeTemplateLangFile(__FILE__);
                 });
             });
 		</script>
+<?endif?>

@@ -628,13 +628,13 @@ Array(
 				</div>
 			</div>
 			 <?endif;?>
-			<div class="row">
+			<!--div class="row">
 				<div style="text-align: center;">
 					<h2>Тематические статьи</h2>
 				</div>
 			</div>
 			<div class="col-sm-12" id="articles-position">
-				 <?$APPLICATION->IncludeComponent(
+				 <?/*$APPLICATION->IncludeComponent(
 	"persona:news.list",
 	"bot_articles_main",
 	Array(
@@ -680,8 +680,8 @@ Array(
 		"SORT_BY1" => "SORT",
 		"SORT_ORDER1" => "ASC"
 	)
-);?>
-			</div>
+);*/?>
+			</div-->
 			<div class="col-sm-12 wrap">
 				<div class="shops clearfix">
 					<div class="shops-title">

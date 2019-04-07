@@ -4,9 +4,10 @@ CModule::IncludeModule('iblock');
 CModule::IncludeModule('form');
 $APPLICATION->SetTitle("Список заказов корзины");
 $APPLICATION->SetAdditionalCSS("/basket/style.css");
+
+$BX_USER_ID = htmlspecialchars($_COOKIE['BX_USER_ID'], 3);
 $SHOW_ALL = "Y";
 if($SHOW_ALL == "Y") {
-    $SESSION_ID = end( explode( '=', bitrix_sessid_get() ) );
     global $USER;
     global $DB;
     $FORM_ID = 2;
@@ -32,9 +33,9 @@ if($SHOW_ALL == "Y") {
     # у одного заказа в форме несколько строк
     # выберем все строки с id сессии
     if ( strlen( $RIDS ) > 0 ) {
-        $res = $DB->Query( "SELECT RESULT_ID FROM b_form_result_answer WHERE FORM_ID = " . $FORM_ID . " AND USER_TEXT = '$SESSION_ID' OR RESULT_ID IN ($RIDS)" );
+        $res = $DB->Query( "SELECT RESULT_ID FROM b_form_result_answer WHERE FORM_ID = " . $FORM_ID . " AND USER_TEXT = '$BX_USER_ID' OR RESULT_ID IN ($RIDS)" );
     } else {
-        $res = $DB->Query( "SELECT RESULT_ID FROM b_form_result_answer WHERE FORM_ID = " . $FORM_ID . " AND USER_TEXT = '$SESSION_ID'" );
+        $res = $DB->Query( "SELECT RESULT_ID FROM b_form_result_answer WHERE FORM_ID = " . $FORM_ID . " AND USER_TEXT = '$BX_USER_ID'" );
     }
 
 
@@ -159,7 +160,7 @@ if($SHOW_ALL == "Y") {
                                                 <td class="total"><?=$it["PRICE"] * $it["QUAN"]?> <span class="sr-only">р.</span><span class="roboto-forced ruble" aria-hidden="true" style="display:none;"></span></td>
                                                 <td class="remove" style="text-align: center;">
                                                     <div class="cartCellContent">
-                                                        <a href="#" onclick="cart.removeFbasket('<?=$it["ID"]?>');return false;" title="Удалить" class=""><i class="fa fa-trash-o fa-lg"></i></a>
+                                                        <a href="#" onclick="cart.remove(<?=$it["ID"]?>,'Y');return false;" title="Удалить" class=""><i class="fa fa-trash-o fa-lg"></i></a>
                                                     </div>
                                                 </td>
                                             </tr>

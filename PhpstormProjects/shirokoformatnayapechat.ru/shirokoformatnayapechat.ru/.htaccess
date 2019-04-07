@@ -1,0 +1,151 @@
+RewriteCond %{HTTP_HOST} ^www\.(.+) [NC]
+RewriteRule ^(.*) http://%1/$1 [R=301,NE,L]
+
+
+RewriteCond %{SERVER_PORT} ^443$ [OR]
+RewriteCond %{HTTPS} =on
+RewriteRule ^(.*)$ http://shirokoformatnayapechat.ru/$1 [R=301,L]
+
+
+Options -Indexes 
+ErrorDocument 404 /404.php
+
+<IfModule mod_php7.c>
+  php_flag session.use_trans_sid off
+  #php_value display_errors 1
+  php_value mbstring.internal_encoding UTF-8
+  php_value mbstring.func_overload 2
+  php_value max_input_vars 10000
+</IfModule>
+
+<IfModule mod_php5.c>
+  php_flag session.use_trans_sid off
+  #php_value display_errors 1
+  #php_value mbstring.internal_encoding UTF-8
+</IfModule>
+
+<IfModule mod_rewrite.c>
+  Options +FollowSymLinks
+  RewriteEngine On
+
+
+
+
+
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-l
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_FILENAME} !/bitrix/urlrewrite.php$
+  RewriteRule ^(.*)$ /bitrix/urlrewrite.php [L]
+  RewriteRule .* - [E=REMOTE_USER:%{HTTP:Authorization}]
+
+
+
+</IfModule>
+
+<IfModule mod_dir.c>
+  DirectoryIndex index.php index.html
+</IfModule>
+
+<IfModule mod_expires.c>
+  ExpiresActive on
+  ExpiresByType image/jpeg "access plus 0 day"
+  ExpiresByType image/gif "access plus 0 day"
+  ExpiresByType image/png "access plus 0 day"
+  ExpiresByType text/css "access plus 0 day"
+  ExpiresByType application/javascript "access plus 0 day"  
+</IfModule>
+
+Options +FollowSymLinks
+RewriteEngine On
+
+
+Redirect 301 /interernaya-pechat/ http://shirokoformatnayapechat.ru/interernaya/
+Redirect 301 /interernaya-pechat/interernaya-pechat-na-plenke/ http://shirokoformatnayapechat.ru/interernaya/na-plenke/
+Redirect 301 /interernaya-pechat/interernaya-pechat-na-bannere/ http://shirokoformatnayapechat.ru/interernaya/na-bannere/
+Redirect 301 /interernaya-pechat/interernaya-pechat-na-kholste/ http://shirokoformatnayapechat.ru/interernaya/na-holste/
+Redirect 301 /interernaya-pechat/interernaya-pechat-na-plastike/ http://shirokoformatnayapechat.ru/interernaya/na-plastike/
+Redirect 301 /interernaya-pechat/interernaya-pechat-na-bumage/ http://shirokoformatnayapechat.ru/interernaya/na-bumage/
+
+Redirect 301 /shirokoformatnaya-pechat/ http://shirokoformatnayapechat.ru/uslugi/
+Redirect 301 /shirokoformatnaya-pechat/shirokoformatnaya-pechat-na-bumage/ http://shirokoformatnayapechat.ru/uslugi/pechat-na-bumage/
+Redirect 301 /shirokoformatnaya-pechat/shirokoformatnaya-pechat-na-plenke/ http://shirokoformatnayapechat.ru/uslugi/pechat-na-plenke/
+Redirect 301 /shirokoformatnaya-pechat/shirokoformatnaya-pechat-na-plastike/ http://shirokoformatnayapechat.ru/uslugi/pechat-na-plastike/
+Redirect 301 /shirokoformatnaya-pechat/shirokoformatnaya-pechat-reklamy/ http://shirokoformatnayapechat.ru/uslugi/pechat-reklamy/
+Redirect 301 /shirokoformatnaya-pechat/shirokoformatnaya-pechat-na-tkani/ http://shirokoformatnayapechat.ru/uslugi/pechat-na-tkani/
+Redirect 301 /shirokoformatnaya-pechat/shirokoformatnaya-pechat-na-kholste/ http://shirokoformatnayapechat.ru/uslugi/pechat-na-holste/
+Redirect 301 /shirokoformatnaya-pechat/shirokoformatnaya-pechat-na-setke/ http://shirokoformatnayapechat.ru/uslugi/pechat-na-setke/
+Redirect 301 /shirokoformatnaya-pechat/shirokoformatnaya-pechat-na-pvkh/ http://shirokoformatnayapechat.ru/uslugi/pechat-na-pvh/
+Redirect 301 /shirokoformatnaya-pechat/shirokoformatnaya-pechat-fotografiy/ http://shirokoformatnayapechat.ru/uslugi/pechat-fotografiy/
+Redirect 301 /shirokoformatnaya-pechat/shirokoformatnaya-pechat-bannerov/ http://shirokoformatnayapechat.ru/uslugi/pechat-bannerov/
+Redirect 301 /shirokoformatnaya-pechat/shirokoformatnaya-pechat-chertezhey/ http://shirokoformatnayapechat.ru/uslugi/pechat-chertezhey/
+
+Redirect 301 /portfolio/pechat-bannerov/ http://shirokoformatnayapechat.ru/portfolio/bannery/
+Redirect 301 /portfolio/pechat-na-plastike/ http://shirokoformatnayapechat.ru/portfolio/plastik/
+Redirect 301 /portfolio/pechat-na-plenke/ http://shirokoformatnayapechat.ru/portfolio/plenka/
+Redirect 301 /portfolio/pechat-na-bumage/ http://shirokoformatnayapechat.ru/portfolio/bumaga/
+Redirect 301 /portfolio/pechat-na-tkani/ http://shirokoformatnayapechat.ru/portfolio/tkani/
+Redirect 301 /portfolio/pechat-na-kholste/ http://shirokoformatnayapechat.ru/portfolio/holst/
+Redirect 301 /portfolio/pechat-na-bannernoy-setke/ http://shirokoformatnayapechat.ru/portfolio/bannernaya-setka/
+
+Redirect 301 /portfolio/pechat-bannerov/pechat-bannerov/ http://shirokoformatnayapechat.ru/portfolio/bannery/fotogalereja/
+Redirect 301 /portfolio/pechat-na-plenke/pechat-na-plenke/ http://shirokoformatnayapechat.ru/portfolio/plenka/primer-rabot/
+Redirect 301 /portfolio/pechat-na-plastike/pechat-na-plastike/ http://shirokoformatnayapechat.ru/portfolio/plastik/fotoprimer-rabot/
+Redirect 301 /portfolio/pechat-na-bumage/pechat-na-bumage/ http://shirokoformatnayapechat.ru/portfolio/bumaga/primer-raboty/
+Redirect 301 /portfolio/interernaya-pechat/interernaya-pechat/ http://shirokoformatnayapechat.ru/portfolio/interernaya-pechat/foto-raboty/
+Redirect 301 /portfolio/pechat-na-bannernoy-setke/pechat-na-bannernoy-setke/ http://shirokoformatnayapechat.ru/portfolio/bannernaya-setka/foto-rabot/
+Redirect 301 /portfolio/pechat-na-tkani/pechat-na-tkani/ http://shirokoformatnayapechat.ru/portfolio/tkani/primery-rabot/
+Redirect 301 /portfolio/pechat-na-kholste/pechat-na-kholste/ http://shirokoformatnayapechat.ru/portfolio/holst/foto/
+
+Redirect 301 /services/ http://shirokoformatnayapechat.ru/servis/
+Redirect 301 /services/razrabotka-dizayna/ http://shirokoformatnayapechat.ru/servis/razrabotka-dizayna/
+Redirect 301 /services/postpechatnaya-obrabotka/ http://shirokoformatnayapechat.ru/servis/postpechatnaya-obrabotka/
+Redirect 301 /services/dostavka/ http://shirokoformatnayapechat.ru/servis/dostavka/
+Redirect 301 /services/montazh/ http://shirokoformatnayapechat.ru/servis/montazh/
+
+Redirect 301 /company/ http://shirokoformatnayapechat.ru/kompanija/
+Redirect 301 /company/oborudovanie/ http://shirokoformatnayapechat.ru/kompanija/oborudovanie/
+Redirect 301 company/requisites/ http://shirokoformatnayapechat.ru/kompanija/rekvizity/
+Redirect 301 /company/faq/ http://shirokoformatnayapechat.ru/kompanija/faq/
+Redirect 301 /company/trebovaniya-k-maketam-dlya-shirokoformatnoy-pechati/ http://shirokoformatnayapechat.ru/kompanija/trebovaniya-k-maketam/
+Redirect 301 /company/vacancy/ http://shirokoformatnayapechat.ru/kompanija/vacansii/
+Redirect 301 /company/articles/ http://shirokoformatnayapechat.ru/kompanija/stati/
+Redirect 301 /company/reviews/ http://shirokoformatnayapechat.ru/kompanija/otzyvy/
+
+Redirect 301 /kompanija/vacancy/ http://shirokoformatnayapechat.ru/kompanija/vacansii/
+
+Redirect 301 /portfolio/mobilnye-prilozheniya/ http://shirokoformatnayapechat.ru/portfolio/
+Redirect 301 /portfolio/internet-magaziny/ http://shirokoformatnayapechat.ru/portfolio/
+Redirect 301 /portfolio/korporativnye-sayty/ http://shirokoformatnayapechat.ru/portfolio/
+Redirect 301 /portfolio/bazovoe-seo/ http://shirokoformatnayapechat.ru/portfolio/
+Redirect 301 /portfolio/kontekstnaya-reklama/ http://shirokoformatnayapechat.ru/portfolio/
+Redirect 301 /portfolio/smm-i-partizanskiy-marketing/ http://shirokoformatnayapechat.ru/portfolio/
+Redirect 301 /portfolio/vnedrenie/ http://shirokoformatnayapechat.ru/portfolio/
+Redirect 301 /portfolio/vnedrenie-crm/ http://shirokoformatnayapechat.ru/portfolio/
+Redirect 301 /portfolio/nagruzochnoe-testirovanie/ http://shirokoformatnayapechat.ru/portfolio/
+Redirect 301 /portfolio/testirovanie-web-prilozheniy/ http://shirokoformatnayapechat.ru/portfolio/
+
+Redirect 301 /kompanija/stati/shirokoformatnaya-ofsetnaya-pechat/ http://shirokoformatnayapechat.ru/stati/ofsetnaya-pechat/
+Redirect 301 /kompanija/stati/shirokoformatnaya-lazernaya-pechat/ http://shirokoformatnayapechat.ru/stati/lazernaya-pechat/
+Redirect 301 /kompanija/stati/struynaya-shirokoformatnaya-pechat/ http://shirokoformatnayapechat.ru/stati/struynaya-pechat/
+Redirect 301 /kompanija/stati/shirokoformatnaya-sublimatsionnaya-pechat-na-tkani/ http://shirokoformatnayapechat.ru/stati/sublimatsionnaya-pechat-na-tkani/
+
+Redirect 301 /kompanija/rekvizity/ http://shirokoformatnayapechat.ru/kompanija/
+Redirect 301 /kompanija/stati/ http://shirokoformatnayapechat.ru/stati/
+Redirect 301 /kompanija/vacansii/spetsialist-po-kontekstnoy-reklame/ http://shirokoformatnayapechat.ru/kompanija/
+Redirect 301 /kompanija/vacansii/razrabotchik-mobilnykh-prilozheniy-dlya-android/ http://shirokoformatnayapechat.ru/kompanija/
+
+Redirect 301 /kompanija/vacansii/graficheskiy-dizayner/ http://shirokoformatnayapechat.ru
+Redirect 301 /kompanija/vacansii/kladovshchik-sklada/ http://shirokoformatnayapechat.ru
+Redirect 301 /kompanija/vacansii/maketchik/ http://shirokoformatnayapechat.ru
+Redirect 301 /kompanija/vacansii/marketolog-rukovoditel-otdela/ http://shirokoformatnayapechat.ru
+Redirect 301 /kompanija/vacansii/marketolog/ http://shirokoformatnayapechat.ru
+Redirect 301 /kompanija/vacansii/menedzher-po-naruzhnoy-reklame/ http://shirokoformatnayapechat.ru
+Redirect 301 /kompanija/vacansii/montazhnik-reklamnykh-konstruktsiy/ http://shirokoformatnayapechat.ru
+Redirect 301 /kompanija/vacansii/operator-shirokoformatnogo-plottera-pomoshchnik/ http://shirokoformatnayapechat.ru
+Redirect 301 /kompanija/vacansii/operator-shirokoformatnogo-plottera/ http://shirokoformatnayapechat.ru
+Redirect 301 /kompanija/vacansii/rukovoditel-otdela-prodazh/ http://shirokoformatnayapechat.ru
+Redirect 301 /kompanija/vacansii/seo-spetsialist-spetsialist-po-kontekstnoy-reklame/ http://shirokoformatnayapechat.ru
+Redirect 301 /kompanija/index.php/ http://shirokoformatnayapechat.ru/kompanija/
+
+Redirect 301 /uslugi/pechat-na-plenke/ http://shirokoformatnayapechat.ru/uslugi/pechat-na-samokleyushcheysya-plenke/

@@ -104,6 +104,40 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
                           class="inputtextarea"><?= implode("", $item_to_form) ?></textarea>
             </div>
         </div>
+        <div class="simplecheckout-button-block buttons" id="buttons">
+            <div class="simplecheckout-button-right">
+                <!--span id="agreement_checkbox"><label><input type="checkbox" name="agreement" value="1" checked="checked">Нажимая "Оформить заказ", вы подтверждаете свою дееспособность, согласие на обработку персональных данных, получение информации о заказе в соответствии c <a class="colorbox fancybox agree" href="/about-us/policy" alt="Политика конфиденциальности"><b>Политикой конфиденциальности.</b></a></label>&nbsp;
+                </span-->
+                <? if ($arParams['USER_CONSENT'] == 'Y'):?>
+                    <? $APPLICATION->IncludeComponent(
+                        "bitrix:main.userconsent.request",
+                        "",
+                        array(
+                            "ID" => $arParams["USER_CONSENT_ID"],
+                            "IS_CHECKED" => $arParams["USER_CONSENT_IS_CHECKED"],
+                            "AUTO_SAVE" => "Y",
+                            "IS_LOADED" => $arParams["USER_CONSENT_IS_LOADED"],
+                            "REPLACE" => array(
+                                'button_caption' => 'Подписаться!',
+                                'fields' => array('Email', 'Телефон', 'Имя')
+                            ),
+                        )
+                    ); ?>
+                <? endif; ?>
+            </div>
+            <div class="simplecheckout-button-left">
+                <? if($arParams['FORMLINEIDS']):?>
+                    <a data-type="reset" class="button btn"  onclick="clear_all('<?=$arParams['FORMLINEIDS']?>')"><span>Очистить корзину</span></a>
+                <?endif?>
+                <a class="button btn" data-onclick="backHistory"
+                   id="simplecheckout_button_back"><span>Назад</span></a>
+                <input <?= (intval($arResult["F_RIGHT"]) < 10 ? "disabled=\"disabled\"" : ""); ?> type="submit" name="web_form_submit" value="<?= htmlspecialcharsbx(strlen(trim($arResult["arForm"]["BUTTON"])) <= 0 ? GetMessage("FORM_ADD") : $arResult["arForm"]["BUTTON"]); ?>" class="button btn-primary btn"/>
+
+                <? if ($arResult["F_RIGHT"] >= 15):?>
+                    &nbsp;<input type="hidden" name="web_form_apply" value="Y"/>
+                <? endif; ?>
+            </div>
+        </div>
     </div>
     <div class="simplecheckout-right-column">
         <div class="simplecheckout-block" id="simplecheckout_samo_address">
@@ -114,8 +148,7 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
                         <label class="control-label col-sm-4">Самовывоз</label>
                         <div class="col-sm-8">
 
-                            <select class="form-control" name="form_text_23" id="samo_address_country_id"
-                                    data-onchange="reloadAll">
+                            <select class="form-control" name="form_text_23" id="samo_address_country_id">
                                 <option value="0">Выберите при самовывозе</option>
                                 <? $APPLICATION->IncludeComponent(
                                     "persona:news.list",
@@ -156,7 +189,7 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
                                         "SET_META_KEYWORDS" => "N",
                                         "SET_META_DESCRIPTION" => "N",
                                         "SET_LAST_MODIFIED" => "N",
-                                        "INCLUDE_IBLOCK_INTO_CHAIN" => "Y",
+                                        "INCLUDE_IBLOCK_INTO_CHAIN" => "N",
                                         "ADD_SECTIONS_CHAIN" => "Y",
                                         "HIDE_LINK_WHEN_NO_DETAIL" => "N",
                                         "PARENT_SECTION" => "",
@@ -200,42 +233,15 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
             <div class="checkout-heading panel-heading">Адрес доставки</div>
             <div class="simplecheckout-block-content">
                 <fieldset class="form-horizontal">
-                    <div class="form-group required row-payment_address_country_id">
-                        <label class="control-label col-sm-4">Страна</label>
-                        <div class="col-sm-8">
-
-                            <select class="form-control countries" name="city[]">
-                                <ul class="dropdown-menu">
-                                    <?$country = fopen('country.csv','r');
-                                    $f = file('country.csv');
-                                    $row = [];
-                                    $from = ['"', '\n', '\r'];
-                                    $to = ['','',''];
-                                    foreach($f as $line){
-                                        $row[] = explode(';', str_replace($from,$to,$line));
-                                    }
-                                    fclose($country);
-                                    foreach($row as $i=>$r){?>
-                                            <option value='<?=$r[2]?>' data-country-id="<?=$r[0]?>"><?=$r[2]?></option>
-                                    <?}?>
-                                </ul>
-                            </select>
-
-                            <div class="simplecheckout-rule-group" data-for="payment_address_country_id">
-                                <div style="display:none;" data-for="payment_address_country_id" data-rule="notEmpty"
-                                     class="simplecheckout-error-text simplecheckout-rule" data-not-empty="1"
-                                     data-required="true">Выберите страну!
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                     <div class="form-group required row-payment_address_zone_id">
                         <label class="control-label col-sm-4">Регион</label>
                         <div class="col-sm-8">
 
                             <select class="form-control regions" name="city[]">
                                 <ul class="dropdown-menu">
-                                    <?$region = fopen('region.csv','r');
+                                    <option name="Москва" selected>Москва</option>
+                                    <option name="Московская область">Московская область</option>
+                                    <?/*$region = fopen('region.csv','r');
                                     $f = file('region.csv');
                                     $row = [];
                                     $from = ['"', '\n', '\r'];
@@ -248,16 +254,16 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
                                         #if($r[1] == '3159'){?>
                                             <option value='<?=$r[3]?>' data-country-id="<?=$r[1]?>"><?=$r[3]?></option>
                                         <? # }
-                                    }?>
+                                    }*/?>
                                 </ul>
                             </select>
 
-                            <div class="simplecheckout-rule-group" data-for="payment_address_zone_id">
+                            <!--div class="simplecheckout-rule-group" data-for="payment_address_zone_id">
                                 <div style="display:none;" data-for="payment_address_zone_id" data-rule="notEmpty"
                                      class="simplecheckout-error-text simplecheckout-rule" data-not-empty="1"
                                      data-required="true">Выберите регион!
                                 </div>
-                            </div>
+                            </div-->
                         </div>
                     </div>
                     <div class="form-group required row-payment_address_city">
@@ -276,9 +282,9 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
                                     }
                                     fclose($region);
                                     foreach($row as $i=>$r){
-                                        #if($r[1] == '3159'){?>
+                                        if($r[1] == '3159' && $r[2] == '4312'){?>
                                         <option value='<?=$r[3]?>' data-country-id="<?=$r[1]?>"  data-region-id="<?=$r[2]?>"><?=$r[3]?></option>
-                                        <? # }
+                                        <? }
                                     }?>
                                 </ul>
                             </select>
@@ -402,39 +408,7 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
     <div class="simplecheckout-warning-block" id="agreement_warning" style="display:none;">Вы должны согласиться с
         условиями соглашения "Политика конфиденциальности"!
     </div>
-    <div class="simplecheckout-button-block buttons" id="buttons">
-        <div class="simplecheckout-button-right">
-            <!--span id="agreement_checkbox"><label><input type="checkbox" name="agreement" value="1" checked="checked">Нажимая "Оформить заказ", вы подтверждаете свою дееспособность, согласие на обработку персональных данных, получение информации о заказе в соответствии c <a class="colorbox fancybox agree" href="/about-us/policy" alt="Политика конфиденциальности"><b>Политикой конфиденциальности.</b></a></label>&nbsp;
-            </span-->
-            <? if ($arParams['USER_CONSENT'] == 'Y'):?>
-                <? $APPLICATION->IncludeComponent(
-                    "bitrix:main.userconsent.request",
-                    "",
-                    array(
-                        "ID" => $arParams["USER_CONSENT_ID"],
-                        "IS_CHECKED" => $arParams["USER_CONSENT_IS_CHECKED"],
-                        "AUTO_SAVE" => "Y",
-                        "IS_LOADED" => $arParams["USER_CONSENT_IS_LOADED"],
-                        "REPLACE" => array(
-                            'button_caption' => 'Подписаться!',
-                            'fields' => array('Email', 'Телефон', 'Имя')
-                        ),
-                    )
-                ); ?>
-            <? endif; ?>
-        </div>
-        <div class="simplecheckout-button-left">
-            <a class="button btn-primary button_oc btn" data-onclick="backHistory"
-               id="simplecheckout_button_back"><span>Назад</span></a>
-            <input <?= (intval($arResult["F_RIGHT"]) < 10 ? "disabled=\"disabled\"" : ""); ?> type="submit"
-                                                                                              name="web_form_submit"
-                                                                                              value="<?= htmlspecialcharsbx(strlen(trim($arResult["arForm"]["BUTTON"])) <= 0 ? GetMessage("FORM_ADD") : $arResult["arForm"]["BUTTON"]); ?>"
-                                                                                              class="button btn-primary btn"/>
-            <? if ($arResult["F_RIGHT"] >= 15):?>
-                &nbsp;<input type="hidden" name="web_form_apply" value="Y"/>
-            <? endif; ?>
-        </div>
-    </div>
+
 
 
     <?= $arResult["FORM_FOOTER"] ?>

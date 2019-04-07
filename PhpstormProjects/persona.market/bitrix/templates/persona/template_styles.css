@@ -3454,6 +3454,17 @@ a.btn.disabled, fieldset[disabled] a.btn {
     content: '\f291';
 }
 
+input[name=brand] {
+    visibility: hidden;
+    width: 5px;
+}
+
+
+input[name=price] {
+    visibility: hidden;
+    width: 5px;
+}
+
 .btn-success.disabled.focus, .btn-success.disabled:focus, .btn-success.disabled:hover, .btn-success[disabled].focus, .btn-success[disabled]:focus, .btn-success[disabled]:hover, fieldset[disabled] .btn-success.focus, fieldset[disabled] .btn-success:focus, fieldset[disabled] .btn-success:hover {
     background-color: #5cb85c;
     border-color: #4cae4c
@@ -13800,6 +13811,30 @@ li {
 #form_customer_3 .modal-body, #form_customer_3 .modal-body a {
     color: white;
 }
+.get-limit ul.dropdown-menu.pull-right {
+    min-width: 75px;
+}
+.filt-but i.fa.fa-filter.striked {
+    border-left: 1px solid #ccc;
+}
+.filter-header span {
+    line-height: 22px;
+}
+.filter-header {
+    background-color: black;
+    color: white;
+    padding: 6px 12px;
+    margin-bottom: 28px;
+}
+.filter-left .form_group{
+    margin-bottom: 40px;
+}
+.filter-left .form_group select{
+    outline: none;
+    text-shadow:none;
+    box-shadow: none;
+    border-color: #AD8A28;
+}
 @media (min-width: 768px) and (max-width:1200px){
     .phone span.two-small-phones {
         font-size: 17px;
@@ -13829,6 +13864,8 @@ li {
         font-size: 13px;
         display: block
     }
+
+
 }
 @media (max-width: 478px) {
     #top h1 {

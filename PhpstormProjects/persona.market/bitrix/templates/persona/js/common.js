@@ -358,6 +358,31 @@ var cart = {
             }
         });
     },
+    'updateInCart': function (key, quantity) {
+        $.ajax({
+            url: '/ajax/index.php',
+            type: 'post',
+            data: 'key=' + key + '&quantity=' + (typeof(quantity) != 'undefined' ? quantity : 1),
+            dataType: 'json',
+            beforeSend: function () {
+                $('#cart > button').button('loading');
+                $('.cartMask').css({'display': 'block'});
+            },
+            success: function (json) {
+                $('#cart > button').button('reset');
+                setTimeout(function () {
+                    $('#cart-total').html(json['button']);
+                    $('#modal-cart .modal-body').html(json['line']);
+                    var f = parseInt( $('#incart_span_' + key).text() );
+                    $('#incart_span_' + key).text( f + parseInt( quantity ) );
+                }, 100);
+
+            },
+            error: function (xhr, ajaxOptions, thrownError) {
+                alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
+            }
+        });
+    },
     'remove': function (key, reload) {
         $.ajax({
             url: '/ajax/index.php',
@@ -680,8 +705,11 @@ var fastorder = function (product_id) {
     html += '</div>';
     $('body').append(html);
     $('#modal-fastorder').modal('show');
+    //var name = $('[name=form_text_13]').val().toString();
+    //var phone = $('[name=form_text_12]').val().toString();
+    //var message = $('[name=MESSAGE]').val().toString();
     $.ajax({
-        url: '/ajax/index.php?fastorder=Y&product_id=' + product_id,
+        url: '/ajax/index.php?fastorder=Y&product_id=' + product_id, // + '&form_text_13=' + name + '&form_text_12=' + phone + '&MESSAGE=' + message,
         type: 'get',
         dataType: 'html',
         success: function (data) {

@@ -1,0 +1,27 @@
+.mobile #feedback_on_page .slides .image {
+    border-radius: 50%;
+    overflow: hidden;
+    width: 200px;
+    height: 200px;
+    margin: 0 auto 22px;
+}
+.mobile #feedback_on_page .flexslider .slides p {
+    background: none;
+    text-transform: unset;
+    color: #222;
+    position: relative;
+    font-family: 'Gotham Pro Regular', sans-serif;
+    font-size: 15px;
+    font-weight: normal;
+    padding: 2px 0;
+}
+.mobile #feedback_on_page img.img-responsive.feed-img {
+    object-fit: cover;
+    height: 100%;
+}
+.mobile #feedback_on_page .title a.dark-color {
+    font-weight: bold;
+}
+.mobile #feedback_on_page .body-info {
+    padding: 0 8px;
+}
