@@ -27,11 +27,12 @@ $this->setFrameMode(true);
 						/></a>
 	<?endforeach;?>
 	</div>
+        <!-- size 938x280 -->
 	</div>
 <script type="text/javascript"><!--
     domReady(function () {
         $('#slideshow-b > div').nivoSlider({
-			effect: 'fold',               // Specify sets like: 'fold,fade,sliceDown'
+			effect: 'slideInLeft',               // Specify sets like: 'fold,fade,sliceDown'
 			animSpeed: 400,                 // Slide transition speed
 			pauseTime: 6000,                // How long each slide will show
 			startSlide: 0,                  // Set starting Slide (0 index)

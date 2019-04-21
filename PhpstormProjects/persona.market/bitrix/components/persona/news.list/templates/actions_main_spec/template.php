@@ -1,4 +1,6 @@
 <?if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();
+#use \Bitrix\Conversion\Internals\MobileDetect;
+CModule::IncludeModule("fileman");
 /** @var array $arParams */
 /** @var array $arResult */
 /** @global CMain $APPLICATION */
@@ -13,7 +15,17 @@
 $this->setFrameMode(true);
 IncludeTemplateLangFile(__FILE__);
 ?>
-<div class="wrapper_actions_line lione<?=MOB?>  <?=(!isMobile())?"owl-carousel":""?> owl-theme" id="owl_actions">
+<?$mob = 0;
+/*$detect = new MobileDetect;
+if($detect->isMobile()){
+    $mob = 1;
+}*/
+if(CLightHTMLEditor::IsMobileDevice()){
+    $mob = 1;
+}
+
+?>
+<div class="wrapper_actions_line lione<?=$mob?>  <?=(!$mob)?"owl-carousel":""?> owl-theme" id="owl_actions">
 <?foreach($arResult["ITEMS"] as $arItem):?>
     <a href="/catalog/detail.php?ID=<?=$arItem['PROPERTIES']['to_good']['VALUE']?>" class="item_actions_line item" style="background: url('<?=$arItem['DETAIL_PICTURE']['SRC']?>') 100% center no-repeat;">
         <div class="item_actions_line_shadow"></div>

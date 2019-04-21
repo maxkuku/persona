@@ -82,7 +82,7 @@ if(strlen($res[0]['DETAIL_TEXT'])>1):?>
 parse_str($_SERVER['QUERY_STRING'], $url_query);
 
 ?>
-
+<?if(htmlspecialchars($_REQUEST['ajax'],3) != "Y"):?>
 <div>
 <div class="row">
     <div class="col-lg-12 col-xs-12 products-filter text-center">
@@ -99,7 +99,7 @@ parse_str($_SERVER['QUERY_STRING'], $url_query);
             </div>
         </div>
 
-        <div class="btn-group">
+        <div id="manuf-group" class="btn-group">
             <div class="btn-group hidden-xs hidden-sm hidden-md ">
                 <button type="button" id="manufact" class="btn " style="border-color: #ccc;">
                     <span class="">Производитель:</span>
@@ -110,11 +110,16 @@ parse_str($_SERVER['QUERY_STRING'], $url_query);
                     <span class=" button-text">&nbsp;&nbsp;</span><i class="fa fa-angle-down caretalt"></i>
                 </button>
 
+
+
                 <ul class="dropdown-menu pull-right">
                     <li><a href="<?=$url_was?>"><b>Все производители</b></a></li>
-                    <?for ($r = 0; $r < count($brands); $r++):?>
-                        <li data-property="<?=$brands[$r]?>" data-brand="<?=htmlspecialchars($_REQUEST['brand_name'])?>" class="<?=($brands[$r] == htmlspecialchars($_REQUEST['brand_name']))?"active":""?>"><a href="<?=$url?>?brand_name=<?=$brands[$r]?>"><?=$brands[$r]?></a></li>
-                    <?endfor?>
+                    <?$req_uri = htmlspecialchars($_SERVER['REQUEST_URI'],3);
+                    $string = "";
+                    $pattern = "/brand_name=[a-zA-Zа-яА-Я0-9_-].*/i";?>
+                    <?foreach ($brands as $r):?>
+                        <li data-property="<?=$r?>" class="<?=($r == htmlspecialchars($_REQUEST['brand_name']))?"active":""?>"><a href="<?=preg_replace($pattern, "brand_name=" . $r, str_replace('/&', '/?', $req_uri . "&brand_name=" .$r))?>" target="_self"><?=$r?></a></li>
+                    <?endforeach?>
                 </ul>
                 <button class="btn btn-default dropdown-toggle filt-but pull-right" type="button">
                     <span class="-text"></span><i class="fa fa-filter striked" title="Очистить фильтр" data-tooltip="Очистить фильтр" onclick="location.href='<?=$url_was?>'"></i>
@@ -127,8 +132,10 @@ parse_str($_SERVER['QUERY_STRING'], $url_query);
 
 
         <div class="btn-group pull-right">
+
             <div class="btn-group <?=(strlen(htmlspecialchars($_GET['price'],3))>0 || strlen(htmlspecialchars($_GET['rating'],3))>0)?"get-sort":"clear"?>" title="Сортировать:" id="sort-button">
-                <button class="btn btn-default dropdown-toggle price-toggle" id="rate_to_show" type="button" data-toggle="dropdown">
+                <button class="btn btn-default dropdown-toggle price-toggle"
+                        id="rate_to_show" type="button" data-toggle="dropdown">
                     <i class="fa fa-sort"></i>&nbsp;&nbsp;
                     <span class="button-text">&nbsp;&nbsp;</span><i class="fa fa-angle-down caretalt"></i>
                 </button>
@@ -146,29 +153,36 @@ parse_str($_SERVER['QUERY_STRING'], $url_query);
                     <?endif?>
                 </ul>
             </div>
-            <div class="btn-group <?=(strlen(htmlspecialchars($_GET['limit'],3))>0)?"get-limit":"clear"?>" title="Показывать:" id="limit-button">
+            <div class="btn-group clear <? /* get-limit or clear to show arrow */ $inm = 1?>" title="Показывать:" id="limit-button">
                 <button class="btn btn-default dropdown-toggle limit-toggle" type="button" id="lim_button" data-toggle="dropdown">
                     <i class="fa fa-eye"></i>&nbsp;&nbsp;
-                    <span class="button-text">&nbsp;&nbsp;</span><i class="fa fa-angle-down caretalt"></i>
+                    <!--span class="button-text">&nbsp;&nbsp;</span-->
+                    <?global $limit;
+                    if ( isset ( $_GET['limit'] ) )
+                        $limit = htmlspecialchars($_GET['limit'],3);?>
+
+                    <span><?=$limit?></span>
+                    <i class="fa fa-angle-down caretalt"></i>
                 </button>
-                <ul class="dropdown-menu pull-right">
+                <ul class="dropdown-menu pull-right limit-select">
                     <?$r5 = array_merge($url_query,array("limit"=>"16"));?>
-                    <li class="text-right <?=(htmlspecialchars($_GET['limit'],3)=="16")?"active":""?>"><a href="<?=$url_was?>?<?=http_build_query($r5)?>"><i class="fa fa-eye"></i><b>16</b></a></li>
+                    <li id="limit16" class="text-right  <?=($limit=="16")?"active":""?>"><a href="<?=$url_was?>?<?=http_build_query($r5)?>"><i class="fa fa-eye"></i><b>16</b></a></li>
                     <?$r6 = array_merge($url_query,array("limit"=>"28"));?>
-                    <li class="text-right <?=(htmlspecialchars($_GET['limit'],3)=="28")?"active":""?>"><a href="<?=$url_was?>?<?=http_build_query($r6)?>"><i class="fa fa-eye"></i>  28</a></li>
+                    <li id="limit28" class="text-right  <?=($limit=="28")?"active":""?>"><a href="<?=$url_was?>?<?=http_build_query($r6)?>"><i class="fa fa-eye"></i>  28</a></li>
                     <?$r7 = array_merge($url_query,array("limit"=>"54"));?>
-                    <li class="text-right <?=(htmlspecialchars($_GET['limit'],3)=="54")?"active":""?>"><a href="<?=$url_was?>?<?=http_build_query($r7)?>"><i class="fa fa-eye"></i>  54</a></li>
+                    <li id="limit54" class="text-right  <?=($limit=="54")?"active":""?>"><a href="<?=$url_was?>?<?=http_build_query($r7)?>"><i class="fa fa-eye"></i>  54</a></li>
                     <?$r8 = array_merge($url_query,array("limit"=>"100"));?>
-                    <li class="text-right <?=(htmlspecialchars($_GET['limit'],3)=="100")?"active":""?>"><a href="<?=$url_was?>?<?=http_build_query($r8)?>"><i class="fa fa-eye"></i>  100</a></li>
+                    <li id="limit100" class="text-right  <?=($limit=="100")?"active":""?>"><a href="<?=$url_was?>?<?=http_build_query($r8)?>"><i class="fa fa-eye"></i>  100</a></li>
                 </ul>
-                <button class="btn btn-default filt-but" type="button">
-                    <span class="-text"></span><i class="fa fa-filter striked" title="Очистить фильтр" data-tooltip="Очистить фильтр" onclick="location.href='<?=$url_was?>'"></i>
-                </button>
+                <!--button class="btn btn-default filt-but" type="button">
+                    <span class="-text"></span><i class="fa fa-filter striked" title="Очистить фильтр" data-tooltip="Очистить фильтр" onclick="location.href='<?=$url_was?>?filter_clear=Y'"></i>
+                </button-->
             </div>
         </div>
     </div>
 </div>
 </div>
+<?endif?>
 <?
 if (!empty($arResult['NAV_RESULT']))
 {
@@ -311,7 +325,7 @@ if ($showTopPager)
     </div>
     <?
 }
-
+if(htmlspecialchars($_REQUEST['ajax'],3) != "Y"):
 if ($arParams['HIDE_SECTION_DESCRIPTION'] !== 'Y')
 {
     ?>
@@ -320,11 +334,16 @@ if ($arParams['HIDE_SECTION_DESCRIPTION'] !== 'Y')
     </div>
     <?
 }
+
 ?>
 
 
-<div class="catalog-section row template-<?=$arParams['TEMPLATE_THEME']?>" data-entity="<?=$containerName?>"  data-bal="append-bal">
+<div class="catalog-section row template-<?=$arParams['TEMPLATE_THEME']?>" data-entity="<?=$containerName?>"
+     data-bal="append-bal">
     <?
+
+    endif;
+
     if (!empty($arResult['ITEMS']) && !empty($arResult['ITEM_ROWS']))
     {
         $areaIds = array();
@@ -879,6 +898,8 @@ if ($arParams['HIDE_SECTION_DESCRIPTION'] !== 'Y')
         );
     }
     ?>
+
+<?if(htmlspecialchars($_REQUEST['ajax'],3) != "Y"):?>
 </div>
 <?
 if ($showLazyLoad)
@@ -987,3 +1008,4 @@ $signedParams = $signer->sign(base64_encode(serialize($arResult['ORIGINAL_PARAME
         $('#filter_manufacturer').find('.button-text').prepend($('#filter_manufacturer').find("b").text());
     });
 </script>
+<?endif?>

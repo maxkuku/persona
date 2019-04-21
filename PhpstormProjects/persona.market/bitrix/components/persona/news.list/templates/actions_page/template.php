@@ -69,12 +69,12 @@ IncludeTemplateLangFile(__FILE__);
 						<li><a onclick="fastorder('<?=$arItem['ID']?>')"><i
 									class="fa fa-bolt fa-fw"></i><?=GetMessage('FAST_ORDER')?></a></li>
 						<li><a onclick="wishlist.add('<?=$arItem['ID']?>');return false;"
-						       title="В закладки"><i
-									class="fa fa-heart-o fa-fw"></i><?=GetMessage('IN_BOOKMARKS')?></a></li>
+						       title="В закладки">
+                                <i class="fa fa-heart-o fa-fw"></i><?=GetMessage('IN_BOOKMARKS')?></a></li>
 						<li><a rel="nofollow"
 						       onclick="compare.add('<?=$arItem['ID']?>');return false;"
-						       title="В сравнение"><i
-									class="fa fa-balance-scale fa-fw"></i><?=GetMessage('IN_COMPARE')?></a></li>
+						       title="В сравнение">
+                                <i class="fa fa-balance-scale fa-fw"></i><?=GetMessage('IN_COMPARE')?></a></li>
 					</ul>
 				</div>
 			</div>

@@ -82,6 +82,17 @@ $alt = !empty($arResult['IPROPERTY_VALUES']['ELEMENT_DETAIL_PICTURE_FILE_ALT'])
     ? $arResult['IPROPERTY_VALUES']['ELEMENT_DETAIL_PICTURE_FILE_ALT']
     : $arResult['NAME'];
 
+
+
+
+
+
+
+
+
+
+
+
 $haveOffers = !empty($arResult['OFFERS']);
 if ($haveOffers) {
     $actualItem = isset($arResult['OFFERS'][$arResult['OFFERS_SELECTED']])
@@ -151,11 +162,10 @@ if (!empty($arParams['LABEL_PROP_POSITION'])) {
 $protocol = (CMain::IsHTTPS()) ? "https://" : "http://";
 
 ?>
+
 <div class="bx-catalog-element bx-<?= $arParams['TEMPLATE_THEME'] ?>" id="<?= $itemIds['ID'] ?>"
      itemscope itemtype="<?=$protocol?>schema.org/Product">
-
-
-
+    <h1><?=($arResult['MY_H1'])?$arResult['MY_H1']:$arResult['NAME']?></h1>
     <div class="well well-sm">
         <div class="inline-info">
             <b>Код товара:</b> <span><?= $arResult['PROPERTIES']['artikul']['VALUE'] ?></span>
@@ -192,11 +202,14 @@ $protocol = (CMain::IsHTTPS()) ? "https://" : "http://";
             <?if($r[1]>0){?>
             <a href=""
                onclick="$('a[href=\'#tab-html-3\']').trigger('click');  $('html, body').animate({ scrollTop: $('a[href=\'#tab-html-3\']').offset().top - 5}, 250); return false;"> <?= $r[1] ?> <?= (in_array($r[1] % 10, array(2, 3, 4)) && $r[1] < 10) ? "отзыва" : ($r[1] == 1 ? "отзыв" : "отзывов") ?></a>
-               <?}else{
+               <?}
+               else{
                 echo "<span>".$r[4]."</span>";
             }?>
         </div>
     </div>
+
+<? $APPLICATION->SetPageProperty("description", $arResult['PREVIEW_TEXT']);?> 
 
 
     <div class="row">
@@ -234,12 +247,20 @@ $protocol = (CMain::IsHTTPS()) ? "https://" : "http://";
 
                             <div class="thumbnails">
                                 <div class="main-image-wrapper">
-                                    <a class="main-image" href="<?= $arResult['DEFAULT_PICTURE']['SRC'] ?>"
+                                    <?#= $arResult['DEFAULT_PICTURE']['SRC'] ?>
+                                    <div class="main-image" href="#"
                                        title="<?= $arResult['NAME'] ?>" data-number="0">
+                                        <?if($arResult['PREVIEW_PICTURE']['SRC']){?>
                                         <img src="<?= $arResult['PREVIEW_PICTURE']['SRC'] ?>"
                                              title="<?= $arResult['NAME'] ?>" alt="<?= $arResult['NAME'] ?>"
                                              class="img-responsive center-block">
-                                    </a>
+                                        <?}
+                                        else if( is_file(SITE_TEMPLATE_PATH . '/images/' . strtolower(str_replace(' ', '-', $arResult['PROPERTIES']['brand']['VALUE'])) . '-pale.jpg') ){?>
+                                            <img src="<?= SITE_TEMPLATE_PATH . '/images/' . strtolower(str_replace(' ', '-', $arResult['PROPERTIES']['brand']['VALUE'])) . '-pale.jpg' ?>"
+                                                 title="<?= $arResult['NAME'] ?>" alt="<?= $arResult['NAME'] ?>"
+                                                 class="img-responsive center-block">
+                                        <?}?>
+                                    </div>
                                 </div>
 
                             </div>
@@ -263,13 +284,15 @@ $protocol = (CMain::IsHTTPS()) ? "https://" : "http://";
                                     <tbody>
                                     <?
                                     if (!empty($arResult['DISPLAY_PROPERTIES'])) {
-                                        ?>
 
-                                        <?
+
                                         foreach ($arResult['DISPLAY_PROPERTIES'] as $property) {
+                                            $name = $property['NAME'];
+                                            $arParams = array("replace_space"=>"-","replace_other"=>"-");
+                                            $trans = Cutil::translit($name,"ru",$arParams);
                                             ?>
-                                            <tr>
-                                                <td class="left"><?= $property['NAME'] ?></td>
+                                            <tr class="<?=$trans?>">
+                                                <td class="left" ><?= $property['NAME'] ?></td>
                                                 <td class="right">
                                                     <?= (is_array($property['DISPLAY_VALUE'])
                                                         ? implode(' / ', $property['DISPLAY_VALUE'])
@@ -354,7 +377,7 @@ $protocol = (CMain::IsHTTPS()) ? "https://" : "http://";
 
                             <div class="btn-group pull-right">
                                 <button type="button" data-toggle="tooltip" data-placement="top" class="btn btn-default"
-                                        title="" onclick="wishlist.add('<?= $arResult['ID'] ?>');"
+                                        title="В избранное" onclick="wishlist.add('<?= $arResult['ID'] ?>');"
                                         data-original-title="В избранное"><i class="fa fa-heart"></i></button>
                                 <!--button type="button" data-toggle="tooltip" data-placement="top" class="btn btn-default"
                                         title="" onclick="compare.add('<?= $arResult['ID'] ?>');"
@@ -368,23 +391,23 @@ $protocol = (CMain::IsHTTPS()) ? "https://" : "http://";
 
                                     <div class="priceBig">
                                         <? if ($arResult['PROPERTIES']['sale']['VALUE']): ?>
-                                            <span class="price-old">&nbsp;<span
-                                                        class="autocalc-product-price"><?= $arResult['PROPERTIES']['sale']['VALUE'] ?>
-                                                    <span class="sr-only">р.</span><span class="roboto-forced ruble"
-                                                                                         aria-hidden="true"
-                                                                                         style="display:none;"></span></span>&nbsp;</span>
+                                            <span class="price-old">&nbsp;
+                                                <span class="autocalc-product-price"><?= $arResult['PROPERTIES']['sale']['VALUE'] ?>
+                                                    <span class="sr-only">р.</span>
+                                                    <span class="roboto-forced ruble" aria-hidden="true" style="display:none;"></span>
+                                                </span>&nbsp;
+                                            </span>
                                         <? endif ?>
-                                        <span><span
-                                                    class="autocalc-product-special"><?= $arResult['PROPERTIES']['price']['VALUE'] ?>
-                                                <span class="sr-only">р.</span><span class="roboto-forced ruble"
-                                                                                     aria-hidden="true"
-                                                                                     style="display:none;"></span></span></span>
+                                        <span>
+                                            <span class="autocalc-product-special"><?= $arResult['PROPERTIES']['price']['VALUE'] ?>
+                                                <span class="sr-only">р.</span>
+                                                <span class="roboto-forced ruble" aria-hidden="true" style="display:none;"></span>
+                                            </span>
+                                        </span>
 
                                         <!--span class="points">Цена в бонусных баллах: <strong><span
                                                         class="autocalc-product-points"><?= $arResult['PROPERTIES']['sale']['VALUE'] ? $arResult['PROPERTIES']['sale']['VALUE'] : $arResult['PROPERTIES']['price']['VALUE'] ?></span></strong></span-->
                                     </div>
-
-
                                 </div>
 
 
@@ -396,8 +419,6 @@ $protocol = (CMain::IsHTTPS()) ? "https://" : "http://";
                                         <strong>Нет на складе</strong>
                                     <? endif ?>
                                 </div>
-
-
                             </div>
 
 
@@ -459,7 +480,7 @@ $protocol = (CMain::IsHTTPS()) ? "https://" : "http://";
                                         <div class="addtocart-group">
 
                                             <button type="button" id="button-cart"
-                                                    onclick="cart.add(<?= $arResult['ID'] ?>, 1);"
+                                                    onclick="cart.add(<?= $arResult['ID'] ?>, $('[name=quantity]').val());"
                                                     data-loading-text="Загрузка..."
                                                     data-id="<?= $arResult['ID'] ?>"
                                                     class="btn btn-danger gradiented">В корзину
@@ -493,13 +514,10 @@ $protocol = (CMain::IsHTTPS()) ? "https://" : "http://";
                     </div>
                     <!--div class="panel panel-default brand_info">
                         <div class="panel-body">
-
                             <div class="inline_info">
                                 <b>Линия:</b>
-
                                 <a href="/catalog/?line=<?= $arResult['PROPERTIES']['line']['VALUE'] ?>"
                                    class="red-link"><?= $arResult['PROPERTIES']['line']['VALUE'] ?></a>
-
                             </div>
                         </div>
                     </div-->
@@ -508,8 +526,6 @@ $protocol = (CMain::IsHTTPS()) ? "https://" : "http://";
                 </div>
 
                 <div class="col-sm-12">
-
-
                     <ul class="nav nav-tabs product-tabs">
                         <li class="active">
                             <a href="#tab-description" data-toggle="tab">
@@ -791,14 +807,194 @@ $protocol = (CMain::IsHTTPS()) ? "https://" : "http://";
                                 </div>
 
                                 <div id="ascpw3_comment-title" class="ascpw3_button_review"
-                                     style="margin: 20px 0px; display: none;">
-                                    <a href="#" id="ascpw3_comment_id_reply_0" data-cmswidget="3" data-prefix="ascpw3_"
+                                     style="margin: 20px 0px;">
+                                    <a href="#tab-html-3" id="ascpw3_comment_id_reply_0" data-cmswidget="3" data-prefix="ascpw3_"
                                        class="ascpw3_write_review btn btn-default comment_reply comment_buttons">
                                         <i class="fa fa-pencil"></i>&nbsp;&nbsp;Оставить отзыв</a>
                                 </div>
 
 
-                                <div id="ascpw3_comment_work_0" class="ascpw3_comment_work comment_work"></div>
+                                <div id="ascpw3_comment_work_0" class="ascpw3_comment_work comment_work" style="display: none">
+                                    <div id="ascpw3_c_w_0" class="ascpw3_form_customer_pointer well">
+
+                                        <div class="modal" id="form_customer_3">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                                        <div class="modal-title" style="font-size: 18px;">Авторизация</div>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <form action="/auth/" method="post" enctype="multipart/form-data" class="form-horizontal">
+                                                            <div class="form-group">
+                                                                <label class="col-sm-2 control-label">E-Mail:</label>
+                                                                <div class="col-sm-10">
+                                                                    <input type="text" name="email" class="form-control" value="">
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label class="col-sm-2 control-label">Пароль:</label>
+                                                                <div class="col-sm-10">
+                                                                    <input type="password" name="password" class="form-control" value="">
+                                                                    <a href="/forgot-password/">Забыли пароль?</a>
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group" style="margin-bottom: 0;">
+                                                                <div class="col-sm-10 col-sm-offset-2">
+                                                                    <input type="submit" value="Войти" class="button btn btn-primary">
+                                                                    <a href="/auth/registration/" class="marginleft10">Регистрация</a>
+                                                                    <input type="hidden" name="redirect" value="#tabs">
+                                                                </div>
+                                                            </div>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <script type="text/javascript">
+                                            domReady(function(){
+                                                $(".button_login_3").click(function() {
+                                                    $("#form_customer_3").modal('show');
+                                                    //location.href='/auth/'
+                                                });
+                                            });
+                                        </script>
+
+
+
+                                        <form id="ascpw3_form_work_0" class="form-horizontal">
+
+                                            <div class="seocmspro_customer_name">
+
+                                                <div class="form-group required seocmspro_author">
+                                                    <label class="col-sm-3 control-label">Ваше имя:</label>
+                                                    <div class="col-sm-9">
+                                                        <input type="text" name="name" class="form-control" value="">
+
+                                                        <div class="asc_textlogin">
+                                                            <a href="#" class="button_login_3" data-cmswidget="3" data-prefix="ascpw3_">
+                                                                <ins class="hrefajax customer_enter customer_auth" data-prefix="ascpw3_" data-cmswidget="3">Войти</ins></a>
+                                                            или <a href="/auth/registration/">зарегистрироваться</a>
+                                                        </div>
+
+
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="marginbottom5">
+                                            </div>
+
+                                            <div class="width100 addfields" style="">
+                                                <div class="form-group">
+                                                    <label class="col-sm-3 control-label">Достоинства:</label>
+                                                    <div class="col-sm-9"><input type="text" name="af[plus]" class="form-control blog-record"></div>
+                                                </div><div class="form-group">
+                                                    <label class="col-sm-3 control-label">Недостатки:</label>
+                                                    <div class="col-sm-9"><input type="text" name="af[minus]" class="form-control blog-record"></div>
+                                                </div><div class="form-group">
+                                                    <label class="col-sm-3 control-label">Цена:</label>
+                                                    <div class="col-sm-9">
+                                                        <!--<input type="hidden" name="af[price_rating]" value="">
+                                                                        <input type="radio" class="visual_star" name="af[price_rating]" alt="#8c0000"  value="1" >
+                                                                        <input type="radio" class="visual_star" name="af[price_rating]" alt="#8c4500"  value="2" >
+                                                                        <input type="radio" class="visual_star" name="af[price_rating]" alt="#b6b300"  value="3" >
+                                                                        <input type="radio" class="visual_star" name="af[price_rating]" alt="#698c00"  value="4" >
+                                                                        <input type="radio" class="visual_star" name="af[price_rating]" alt="#008c00"  value="5" >
+                                                        <span id="hover-test" ></span>-->
+
+                                                        <div class="field_rat">
+                                                            <input id="rat_1" type="radio" name="af[price_rating]" value="1"><label class="rat_star" for="rat_1"><i class="fa fa-star"></i></label>
+                                                            <input id="rat_2" type="radio" name="af[price_rating]" value="2"><label class="rat_star" for="rat_2"><i class="fa fa-star"></i></label>
+                                                            <input id="rat_3" type="radio" name="af[price_rating]" value="3"><label class="rat_star" for="rat_3"><i class="fa fa-star"></i></label>
+                                                            <input id="rat_4" type="radio" name="af[price_rating]" value="4"><label class="rat_star" for="rat_4"><i class="fa fa-star"></i></label>
+                                                            <input id="rat_5" type="radio" name="af[price_rating]" value="5"><label class="rat_star" for="rat_5"><i class="fa fa-star"></i></label>
+                                                        </div>
+                                                    </div>
+                                                </div><script type="text/javascript">
+                                                    domReady(function(){
+                                                        $('.rat_star').hover(function () {
+                                                            $(this).prevAll('.rat_star').addClass('active');
+                                                            $(this).addClass('active');
+                                                        },function () {
+                                                            $(this).prevAll('.rat_star').removeClass('active');
+                                                            $(this).removeClass('active');
+                                                        });
+
+                                                        $('.rat_star').click(function(){
+                                                            $('.rat_star').each(function(){
+                                                                $(this).removeClass('checked');
+                                                                $(this).prevAll('.rat_star').removeClass('checked');
+                                                            });
+
+                                                            $(this).addClass('checked');
+                                                            $(this).prevAll('.rat_star').addClass('checked');
+                                                        });
+                                                    });
+                                                </script>
+                                            </div>
+
+                                            <div class="form-group required">
+                                                <label class="col-sm-3 control-label">Ваш отзыв:</label>
+                                                <div class="col-sm-9 ascp_bbode">
+                                                    <textarea name="text" id="ascpw3_editor_0" class="form-control blog-record-textarea ascpw3_editor blog-textarea_height"></textarea>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group  required ">
+                                                <label class="col-sm-3 control-label">Рейтинг</label>
+                                                <div class="col-sm-9">
+                                                    <div class="prod-rat">
+                                                        <input id="rat1" type="radio" name="rating" value="1"><label class="rat-star" for="rat1"><i class="fa fa-star"></i></label>
+                                                        <input id="rat2" type="radio" name="rating" value="2"><label class="rat-star" for="rat2"><i class="fa fa-star"></i></label>
+                                                        <input id="rat3" type="radio" name="rating" value="3"><label class="rat-star" for="rat3"><i class="fa fa-star"></i></label>
+                                                        <input id="rat4" type="radio" name="rating" value="4"><label class="rat-star" for="rat4"><i class="fa fa-star"></i></label>
+                                                        <input id="rat5" type="radio" name="rating" value="5"><label class="rat-star" for="rat5"><i class="fa fa-star"></i></label>
+                                                    </div>
+                                                    <script type="text/javascript">
+                                                        domReady(function(){
+                                                            $('.rat-star').hover(function () {
+                                                                $(this).prevAll('.rat-star').addClass('active');
+                                                                $(this).addClass('active');
+                                                            },function () {
+                                                                $(this).prevAll('.rat-star').removeClass('active');
+                                                                $(this).removeClass('active');
+                                                            });
+
+                                                            $('.rat-star').click(function(){
+                                                                $('.rat-star').each(function(){
+                                                                    $(this).removeClass('checked');
+                                                                    $(this).prevAll('.rat-star').removeClass('checked');
+                                                                });
+
+                                                                $(this).addClass('checked');
+                                                                $(this).prevAll('.rat-star').addClass('checked');
+                                                            });
+                                                        });
+                                                    </script>
+                                                </div>
+                                            </div>
+
+
+                                            <!--div class="form-group ">
+                                                <label class="col-sm-3 control-label">Получать ответы  на e-mail</label>
+                                                <div class="col-sm-4">
+                                                    <input type="text" name="email_ghost" class="form-control" value="">
+                                                </div>
+                                            </div-->
+
+                                            <div class="form-group" style="margin-bottom: 0;">
+                                                <div class="col-sm-9 col-sm-offset-3">
+                                                    <input type="hidden" name="product_name" class="form-control" value="<?=$arResult['NAME']?>">
+                                                    <input type="hidden" name="for_what" class="form-control" value="<?=$arResult['ID']?>">
+                                                    <button type="button" id="ascpw3_button-comment-0" data-loading-text="" class="btn btn-primary button button-comment">Продолжить</button>
+                                                </div>
+                                            </div>
+
+                                        </form>
+
+                                    </div>
+                                </div>
 
                             </div>
                         </div>
@@ -964,84 +1160,92 @@ $protocol = (CMain::IsHTTPS()) ? "https://" : "http://";
                              style="opacity: 1; display: block;">
 
 
-                            <!--for recomend-->
-                            <? $arrFilter = array("=PROPERTY_RECOMEND" => "1", "ID" => array(explode(',', $arResult['PROPERTIES']['recomended']['VALUE']))) ?>
-                            <? $APPLICATION->IncludeComponent(
-                                "persona:news.list",
-                                "recomend_goods",
-                                array(
-                                    "IBLOCK_TYPE" => "goods",
-                                    "IBLOCK_ID" => "4",
-                                    "NEWS_COUNT" => "20",
-                                    "SORT_BY1" => "SORT",
-                                    "SORT_ORDER1" => "ASC",
-                                    "FILTER_NAME" => "arrFilter",
-                                    "FIELD_CODE" => array(
-                                        0 => "PREVIEW_PICTURE",
-                                        1 => "DETAIL_PICTURE",
-                                        2 => "",
-                                    ),
-                                    "PROPERTY_CODE" => array(
-                                        0 => "artikul",
-                                        1 => "price",
-                                        2 => "sale",
-                                        3 => "",
-                                    ),
-                                    "CHECK_DATES" => "Y",
-                                    "DETAIL_URL" => "",
-                                    "AJAX_MODE" => "N",
-                                    "AJAX_OPTION_SHADOW" => "Y",
-                                    "AJAX_OPTION_JUMP" => "N",
-                                    "AJAX_OPTION_STYLE" => "Y",
-                                    "AJAX_OPTION_HISTORY" => "N",
-                                    "CACHE_TYPE" => "A",
-                                    "CACHE_TIME" => "36000000",
-                                    "CACHE_FILTER" => "N",
-                                    "CACHE_GROUPS" => "Y",
-                                    "PREVIEW_TRUNCATE_LEN" => "",
-                                    "ACTIVE_DATE_FORMAT" => "d.m.Y",
-                                    "DISPLAY_PANEL" => "N",
-                                    "SET_TITLE" => "N",
-                                    "SET_STATUS_404" => "N",
-                                    "INCLUDE_IBLOCK_INTO_CHAIN" => "N",
-                                    "ADD_SECTIONS_CHAIN" => "N",
-                                    "HIDE_LINK_WHEN_NO_DETAIL" => "N",
-                                    "PARENT_SECTION" => "",
-                                    "PARENT_SECTION_CODE" => "",
-                                    "DISPLAY_TOP_PAGER" => "N",
-                                    "DISPLAY_BOTTOM_PAGER" => "N",
-                                    "PAGER_TITLE" => "Рекомендуемые",
-                                    "PAGER_SHOW_ALWAYS" => "N",
-                                    "PAGER_TEMPLATE" => "",
-                                    "PAGER_DESC_NUMBERING" => "N",
-                                    "PAGER_DESC_NUMBERING_CACHE_TIME" => "36000000",
-                                    "PAGER_SHOW_ALL" => "N",
-                                    "DISPLAY_DATE" => "Y",
-                                    "DISPLAY_NAME" => "Y",
-                                    "DISPLAY_PICTURE" => "Y",
-                                    "DISPLAY_PREVIEW_TEXT" => "Y",
-                                    "AJAX_OPTION_ADDITIONAL" => "",
-                                    "COMPONENT_TEMPLATE" => "recomend_main",
-                                    "SORT_BY2" => "SORT",
-                                    "SORT_ORDER2" => "ASC",
-                                    "SET_BROWSER_TITLE" => "N",
-                                    "SET_META_KEYWORDS" => "N",
-                                    "SET_META_DESCRIPTION" => "N",
-                                    "SET_LAST_MODIFIED" => "N",
-                                    "INCLUDE_SUBSECTIONS" => "Y",
-                                    "STRICT_SECTION_CHECK" => "N",
-                                    "PAGER_BASE_LINK_ENABLE" => "N",
-                                    "SHOW_404" => "N",
-                                    "MESSAGE_404" => ""
-                                ),
-                                false
-                            ); ?>
+<!--for recomend-->
+<?
+
+$arrFilter = array
+(
+    #"=PROPERTY_RECOMEND" => "1",
+    #"ID" => array(explode(',', $arResult['PROPERTIES']['recomended']['VALUE'])),
+    #"LOGIC" => "AND",
+    "!PREVIEW_PICTURE"=>false,
+    "!DETAIL_PICTURE"=>false
+); ?>
+<? $APPLICATION->IncludeComponent(
+	"persona:news.list", 
+	"recomend_goods", 
+	array(
+		"IBLOCK_TYPE" => "goods",
+		"IBLOCK_ID" => "4",
+		"NEWS_COUNT" => "10",
+		"DISPLAY_PICTURE" => "Y",
+		"SORT_BY1" => "RAND",
+		"SORT_ORDER1" => "ASC",
+		"FILTER_NAME" => "arrFilter",
+		"FIELD_CODE" => array(
+			0 => "PREVIEW_PICTURE",
+			1 => "DETAIL_PICTURE",
+			2 => "",
+		),
+		"PROPERTY_CODE" => array(
+			0 => "artikul",
+			1 => "price",
+			2 => "strana_brenda",
+			3 => "sale",
+			4 => "",
+		),
+		"CHECK_DATES" => "Y",
+		"DETAIL_URL" => "",
+		"AJAX_MODE" => "N",
+		"AJAX_OPTION_SHADOW" => "Y",
+		"AJAX_OPTION_JUMP" => "N",
+		"AJAX_OPTION_STYLE" => "Y",
+		"AJAX_OPTION_HISTORY" => "N",
+		"CACHE_TYPE" => "N",
+		"CACHE_TIME" => "36000000",
+		"CACHE_FILTER" => "N",
+		"CACHE_GROUPS" => "Y",
+		"PREVIEW_TRUNCATE_LEN" => "",
+		"ACTIVE_DATE_FORMAT" => "d.m.Y",
+		"DISPLAY_PANEL" => "N",
+		"SET_TITLE" => "N",
+		"SET_STATUS_404" => "N",
+		"INCLUDE_IBLOCK_INTO_CHAIN" => "N",
+		"ADD_SECTIONS_CHAIN" => "N",
+		"HIDE_LINK_WHEN_NO_DETAIL" => "N",
+		"PARENT_SECTION" => "",
+		"PARENT_SECTION_CODE" => "",
+		"DISPLAY_TOP_PAGER" => "N",
+		"DISPLAY_BOTTOM_PAGER" => "N",
+		"PAGER_TITLE" => "Рекомендуемые",
+		"PAGER_SHOW_ALWAYS" => "N",
+		"PAGER_TEMPLATE" => "",
+		"PAGER_DESC_NUMBERING" => "N",
+		"PAGER_DESC_NUMBERING_CACHE_TIME" => "36000000",
+		"PAGER_SHOW_ALL" => "N",
+		"DISPLAY_DATE" => "Y",
+		"DISPLAY_NAME" => "Y",
+		"DISPLAY_PREVIEW_TEXT" => "Y",
+		"AJAX_OPTION_ADDITIONAL" => "",
+		"COMPONENT_TEMPLATE" => "recomend_goods",
+		"SORT_BY2" => "ID",
+		"SORT_ORDER2" => "RAND",
+		"SET_BROWSER_TITLE" => "N",
+		"SET_META_KEYWORDS" => "N",
+		"SET_META_DESCRIPTION" => "N",
+		"SET_LAST_MODIFIED" => "N",
+		"INCLUDE_SUBSECTIONS" => "Y",
+		"STRICT_SECTION_CHECK" => "N",
+		"PAGER_BASE_LINK_ENABLE" => "N",
+		"SHOW_404" => "N",
+		"MESSAGE_404" => ""
+	),
+	false
+); ?>
 
 
                         </div>
                     </div>
-
-
                 </div>
             </div>
         </div>
@@ -1084,7 +1288,8 @@ $protocol = (CMain::IsHTTPS()) ? "https://" : "http://";
             </span>
             <meta itemprop="description" content="<?= strip_tags($arResult['DETAIL_TEXT']) ?>">
                 <!--for recomended meta-->
-                <? $arrFilter = array("=PROPERTY_RECOMEND" => "1", "ID" => array(explode(',', $arResult['PROPERTIES']['recomended']['VALUE']))) ?>
+                <? $arrFilter = array("=PROPERTY_RECOMEND" => "1",
+                    "ID" => array(explode(',', $arResult['PROPERTIES']['recomended']['VALUE']))) ?>
                 <? $APPLICATION->IncludeComponent(
                     "persona:news.list",
                     "recomend_goods_meta",
@@ -1163,8 +1368,11 @@ $protocol = (CMain::IsHTTPS()) ? "https://" : "http://";
                 <div class="col-md-12">
                     <div class="panel-group" id="collapse-group00">
                         <!--for answers product-->
-                        <? $arrFilter = array("=PROPERTY_TO_GOOD" => $arResult['ID']) ?>
-                        <? $APPLICATION->IncludeComponent(
+                        <? $arr_2_Filter = array(
+                            "=PROPERTY_TO_GOOD" => $arResult['ID'],
+                            ">=PROPERTY_QUANTITY_CUST" => 1
+                        );
+                        $APPLICATION->IncludeComponent(
                             "persona:news.list",
                             "answers_product",
                             array(
@@ -1173,7 +1381,7 @@ $protocol = (CMain::IsHTTPS()) ? "https://" : "http://";
                                 "NEWS_COUNT" => "20",
                                 "SORT_BY1" => "SORT",
                                 "SORT_ORDER1" => "ASC",
-                                "FILTER_NAME" => "arrFilter",
+                                "FILTER_NAME" => "arr_2_Filter",
                                 "FIELD_CODE" => array(
                                     0 => "PREVIEW_PICTURE",
                                     1 => "DETAIL_PICTURE",
@@ -1181,7 +1389,7 @@ $protocol = (CMain::IsHTTPS()) ? "https://" : "http://";
                                 ),
                                 "PROPERTY_CODE" => array(
                                     0 => "to_good",
-                                    1 => "",
+                                    1 => "quantity_cust",
                                 ),
                                 "CHECK_DATES" => "Y",
                                 "DETAIL_URL" => "",
@@ -1251,6 +1459,7 @@ $protocol = (CMain::IsHTTPS()) ? "https://" : "http://";
                     var prefix = 'ascpw3_';
                     var cmswidget = '3';
                     var heading_title = 'Отзывы';
+                    var heading_title2 = 'Оставить отзыв';
                     var total = '<?=$r[1]?>';
 
                     var name = '<?=$arResult['NAME']?>';
@@ -1347,7 +1556,7 @@ $protocol = (CMain::IsHTTPS()) ? "https://" : "http://";
             </script>
             <script type="text/javascript">
                 domReady(function () {
-                    //$('.ascpw3_button_review').show();
+                    $('.ascpw3_button_review').show();
                     $('.ascpw3_write_review').on('click', function () {
                         $('.ascpw3_button_review').hide();
                         $('.ascpw3_comment_work').show();
@@ -1377,7 +1586,7 @@ $protocol = (CMain::IsHTTPS()) ? "https://" : "http://";
                     delete cmswidget;
                 });
             </script>
-            <script type="text/javascript">
+            <!--script type="text/javascript">
                 domReady(function () {
                     var prefix = 'ascpw10';
                     var cmswidget = '10';
@@ -1396,19 +1605,16 @@ $protocol = (CMain::IsHTTPS()) ? "https://" : "http://";
                     delete prefix;
                     delete cmswidget;
                 });
-            </script>
+            </script-->
         </div>
     </div>
 </div>
-
-
-
-
-
-
-
-
-
-
+    <script>
+        setTimeout(function() {
+            $('.filter-left').hide();
+            $('#content').toggleClass('col-sm-10');
+        },100);
+    </script>
 <?
+
 unset($actualItem, $itemIds, $jsParams);

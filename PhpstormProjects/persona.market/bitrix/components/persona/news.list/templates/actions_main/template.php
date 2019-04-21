@@ -14,18 +14,23 @@ $this->setFrameMode(true);
 IncludeTemplateLangFile(__FILE__);
 ?>
 <div class="panel panel-default box-product actions">
-	<div class="panel-heading"><a href="/catalog/specials/"><?=GetMessage('HEADING')?></a></div>
+	<div class="panel-heading"><a href="/catalog/specials/"><?=GetMessage('HEADING_ACTIONS')?></a></div>
 	<div id="xds-special0" class="panel-body owl-carousel product-carousel">
 <?foreach($arResult["ITEMS"] as $arItem):?>
 	<div class="product-item" data-artikul="<?=$arItem['PROPERTIES']['artikul']['VALUE']?>">
 			<div class="image">
 				<a href="<?=$arItem['DETAIL_PAGE_URL']?>"
 					title="<?=$arItem['NAME']?>">
+                    <? if ( is_file ( $arItem['PREVIEW_PICTURE']['SRC'] ) ) { ?>
 					<img
 						src="<?=$arItem['PREVIEW_PICTURE']['SRC']?>"
 						alt="<?=$arItem['PREVIEW_PICTURE']['ALT']?>"
 						title="<?=$arItem['PREVIEW_PICTURE']['TITLE']?>"
 						class="img-responsive">
+                    <? }
+                    else { ?>
+                    <img src="/upload/resize_cache/iblock/51e/248_260_1/Persona_sign_gold_01_1.jpg" alt="<?=$arItem['NAME']?>"/>
+                    <? } ?>
 				</a>
 				<?$perc = $arItem['PROPERTIES']['sale']['VALUE'] * 100 / $arItem['PROPERTIES']['price']['VALUE']?>
 				<div class="sticker st-sale with-date gradiented">-<?=round(100-$perc)?>%</div>

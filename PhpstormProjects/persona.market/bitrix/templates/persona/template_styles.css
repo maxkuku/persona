@@ -2806,7 +2806,11 @@ table td[class*=col-], table th[class*=col-] {
         -ms-overflow-style: -ms-autohiding-scrollbar;
         border: 1px solid #ddd
     }
-
+    .top-nav ul.top-menu {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
     .table-responsive > .table {
         margin-bottom: 0
     }
@@ -10095,14 +10099,14 @@ div#simplecheckout_form_0 {
     }
     body .modal.in .modal-dialog {
         position: absolute;
-        top: 46%;
+        top: 50%;
         left: 47%;
         -webkit-transform: translate(-50%, -50%);
         -ms-transform: translate(-50%, -50%);
         -o-transform: translate(-50%, -50%);
         transform: translate(-50%, -50%);
         width: 88%;
-        height: 80%;
+        height: 90%;
         overflow: auto;
         padding: 4px;
     }
@@ -10861,7 +10865,8 @@ footer a {
     }
 
     #header-menu {
-        padding: 0 0 20px
+        padding: 0 0 20px;
+        text-align: center;
     }
 
     .blog-content .caption-box .name a {
@@ -13645,7 +13650,9 @@ div#modal-cart {
 }
 img.img-responsive.center-block {
     /*background: url(/bitrix/templates/persona/images/no-photo.jpg) no-repeat center / contain;*/
-
+}
+.main-image-wrapper .main-image img{
+    max-height: 320px;
 }
 img.img-responsive.center-block[data-err='true']{
     margin-top: 50%;
@@ -13815,7 +13822,7 @@ li {
     min-width: 75px;
 }
 .filt-but i.fa.fa-filter.striked {
-    border-left: 1px solid #ccc;
+    border-left: 0px solid #ccc;
 }
 .filter-header span {
     line-height: 22px;
@@ -13859,6 +13866,12 @@ li {
     }
 }
 @media (min-width: 992px) {
+    div.news-detail img.detail_picture {
+        margin: 0 25px 45px 1px;
+        box-shadow: 1px 1px 8px #333333;
+		max-width: 70%;
+    	height: auto;
+    }
     #cart .prices, #cart .products {
         line-height: 16px;
         font-size: 13px;
@@ -13866,6 +13879,15 @@ li {
     }
 
 
+}
+@media (min-width: 479px) and (max-width: 768px){
+    .action-main-spec a.item_actions_line.item {
+        width: 49%;
+        display: block;
+    }
+    .item_actions_line_shadow {
+        width: 100%;
+    }
 }
 @media (max-width: 478px) {
     #top h1 {
@@ -14018,5 +14040,15 @@ li {
     }
     .products-filter .filt-but {
         display: none;
+    }
+    .item_actions_line_shadow {
+        float: none;
+        margin: 0px auto;
+    }
+    .item_actions_line_wrapper {
+        top: 0;
+    }
+    a.item_actions_line.item {
+        position: relative;
     }
 }

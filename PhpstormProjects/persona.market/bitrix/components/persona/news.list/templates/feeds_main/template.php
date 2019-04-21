@@ -24,6 +24,10 @@ IncludeTemplateLangFile(__FILE__);
 	<?
 	$this->AddEditAction($arItem['ID'], $arItem['EDIT_LINK'], CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_EDIT"));
 	$this->AddDeleteAction($arItem['ID'], $arItem['DELETE_LINK'], CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_DELETE"), array("CONFIRM" => GetMessage('CT_BNL_ELEMENT_DELETE_CONFIRM')));
+    $_GET["PID"] = $arItem['PROPERTIES']['for_what']['VALUE'];
+    $res = CIBlockElement::GetByID($_GET["PID"]);
+    if($ar_res = $res->GetNext())
+        $arItem['URL'] = $ar_res['DETAIL_PAGE_URL'];
 	?>
 
 		<div class="review_item product-item">
@@ -47,10 +51,10 @@ IncludeTemplateLangFile(__FILE__);
 					<?=$arItem['PREVIEW_TEXT']?>
 				</div>
 				<div class="review_further">
-					<a href="<?=$arItem['URL']?>#commentlink_127_3"
+					<a href="<?=$arItem['URL']?>"
 					   class="red-link seocms_further "
 					   title="<?=$arItem['GOOD']?>"
-					   data-cmswidget="12">Читать полностью...</a>
+					   data-cmswidget="12">К какому товару...</a>
 				</div>
 			</div>
 		</div>

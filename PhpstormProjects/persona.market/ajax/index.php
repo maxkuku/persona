@@ -111,7 +111,7 @@ if ($PRODUCT_ID && $WEB_FORM_ID) {
 # append / remove to basket in popup
 $PRODUCT_ID = htmlspecialchars($_REQUEST['key'], 3);
 $UPD = (int)htmlspecialchars($_REQUEST['quantity'], 3);
-if ($PRODUCT_ID > 0 && $UPD == 1) {
+if ($PRODUCT_ID > 0 && $UPD > 0) {
 
     $WEB_FORM_ID = 2;
 
@@ -151,7 +151,7 @@ if ($PRODUCT_ID > 0 && $UPD == 1) {
 
 
 }
-elseif ($PRODUCT_ID > 0 && $UPD < 1) { #?key=189&quantity=0
+elseif ($PRODUCT_ID > 0 && (int)$UPD < 1) { #?key=189&quantity='-1'
 
 
     $FORM_ID = 2;
@@ -358,9 +358,17 @@ if (htmlspecialchars($_REQUEST['route'], 3) == "extension/module/xds_qview"
                 <div class="col-md-6">
                     <div class="images text-center">
                         <div class="thumb">
-                            <img src="<?= $ar['FILE']['src'] ?>" title="<?= $item['NAME'] ?>" alt="<?= $item['NAME'] ?>"
-                                 class="img-rounded img-responsive center-block"
-                                 onerror="this.src='/bitrix/templates/persona/images/<?=strtolower(str_replace(' ', '-', $props['brand']['VALUE']))?>-pale.jpg'; this.setAttribute('data-err', 'true')">
+                            <?if($ar['FILE']['src']){?>
+                                <img src="<?= $ar['FILE']['src'] ?>"
+                                     title="<?= $item['NAME'] ?>" alt="<?= $item['NAME'] ?>"
+                                     class="img-responsive center-block">
+                            <?}
+                            else if( is_file(SITE_TEMPLATE_PATH . '/images/' . strtolower(str_replace(' ', '-', $item['PROPERTIES']['brand']['VALUE'])) . '-pale.jpg') ){?>
+                                <img src="<?= SITE_TEMPLATE_PATH . '/images/' . strtolower(str_replace(' ', '-', $item['PROPERTIES']['brand']['VALUE'])) . '-pale.jpg' ?>"
+                                     title="<?= $item['NAME'] ?>" alt="<?= $item['NAME'] ?>"
+                                     class="img-responsive center-block">
+                            <?}?>
+                            
                         </div>
                     </div>
                 </div>
@@ -562,9 +570,9 @@ if (htmlspecialchars($_REQUEST['route'], 3) == "extension/module/xds_qview"
 
             $('#modal-button-cart').on('click', function () {
                 $.ajax({
-                    url: '/ajax/index.php?product_id=<?=$item["ID"]?>&upd=2',
+                    url: '/ajax/index.php',
                     type: 'post',
-                    data: $('#modal-qview input[type=\'text\'], #modal-qview input[type=\'hidden\'], #modal-qview input[type=\'radio\']:checked, #modal-qview input[type=\'checkbox\']:checked, #modal-qview select, #modal-qview textarea'),
+                    data: 'key=<?=$item["ID"]?>&quantity=' + $('[name=quantity]').val() + '&WEB_FORM_ID=2',
                     dataType: 'json',
                     beforeSend: function () {
                         $('#modal-button-cart').button('loading');
@@ -576,55 +584,12 @@ if (htmlspecialchars($_REQUEST['route'], 3) == "extension/module/xds_qview"
                         $('.text-danger').remove();
                         $('.form-group').removeClass('has-error');
 
-                        if (json['error']) {
-                            if (json['error']['option']) {
-                                for (i in json['error']['option']) {
-                                    var element = $('#input-option' + i.replace('_', '-'));
-
-                                    if (element.parent().hasClass('input-group')) {
-                                        element.parent().after('<div class="text-danger">' + json['error']['option'][i] + '</div>');
-                                    } else {
-                                        element.after('<div class="text-danger">' + json['error']['option'][i] + '</div>');
-                                    }
-                                }
-                            }
-
-                            if (json['error']['recurring']) {
-                                $('select[name=\'recurring_id\']').after('<div class="text-danger">' + json['error']['recurring'] + '</div>');
-                            }
-
-                            // Highlight any found errors
-                            $('.text-danger').parent().addClass('has-error');
 
 
-                        }
 
-                        if (json['success']) {
-
-                            $('#modal-qview').modal('hide');
-
-                            $('#modal-qview').on('hidden.bs.modal', function (e) {
-                                $('#modal-cart').modal('show');
-                            });
+                            location.reload();
 
 
-                            setTimeout(function () {
-                                $('#cart-total').html(json['total_new']);
-                            }, 100);
-
-                            $.ajax({
-                                url: '/ajax/index.php?route=common/cart/info&show_all=Y',
-                                type: 'get',
-                                dataType: 'json',
-                                beforeSend: function () {
-                                    $('.cartMask').css({'display': 'block'});
-                                },
-                                success: function (data) {
-                                    $('#modal-cart .modal-body').html(data['list']);
-                                    $('#modal-cart .modal-body').prepend('<div class="alert alert-success"><button type="button" class="close" data-dismiss="alert">&times;</button><i class="fa fa-info-circle"></i>&nbsp;&nbsp;' + json['total'] + '</div>');
-                                }
-                            });
-                        }
 
 
                     }, error: function (xhr, ajaxOptions, thrownError) {
@@ -934,12 +899,7 @@ if (htmlspecialchars($_REQUEST['fastorder'], 3) == "Y") {
         );
 
 
-        if ($RESULT_ID = CFormResult::Add($FORM_ID, $arValues))
-        {
-
-            ?><script>console.log('form add in ajax index')</script><?
-        }
-        else
+        if (!$RESULT_ID = CFormResult::Add($FORM_ID, $arValues))
         {
             global $strError;
             $json["error"] = $strError;
@@ -948,9 +908,10 @@ if (htmlspecialchars($_REQUEST['fastorder'], 3) == "Y") {
         ?>
         <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-            <h4 class="modal-title">Быстрый заказ <?=$arFields['NAME']?></h4>
+            <h4 class="modal-title">Быстрый заказ: <?=$arFields['NAME']?></h4>
         </div>
         <div class="modal-body">
+
             <div class="row">
                 <div class="col-sm-6 text-center">
                     <div class="image">
@@ -971,6 +932,7 @@ if (htmlspecialchars($_REQUEST['fastorder'], 3) == "Y") {
                 <div class="col-sm-6">
                     <form action="/ajax/" method="post" enctype="multipart/form-data" id="fastorderform">
                         <!--input type="hidden" name="WEB_FORM_ID" value="2"/-->
+                        <p id="f_err_1" style="display: none; color:red">Заполните поля</p>
                         <div class="form-group">
                             <div class="input-group ">
                                 <span class="input-group-addon"><i class="fa fa-user fa-fw"></i></span>
@@ -1001,9 +963,15 @@ if (htmlspecialchars($_REQUEST['fastorder'], 3) == "Y") {
         </div>
         <script>
             function fastordersend(){
-                $.post($('#fastorderform').attr('action'), $('#fastorderform').serialize(), function(html) {
-                    $('#modal-fastorder .modal-content').html(html);
-                });
+                if($("[name=form_text_13]").val().length && $("[name=form_text_12]").val().length) {
+                    $('#f_err_1').hide();
+                    $.post($('#fastorderform').attr('action'), $('#fastorderform').serialize(), function (html) {
+                        $('#modal-fastorder .modal-content').html(html);
+                    });
+                }
+                else{
+                    $('#f_err_1').show();
+                }
             }
             /*function fastordersend(){
                 if($("[name=form_text_13]").val().length > 0){

@@ -13,27 +13,36 @@
 $this->setFrameMode(true);
 IncludeTemplateLangFile(__FILE__);
 ?>
-
 <div class="panel panel-default box-product recomend">
 	<div class="panel-heading"><?=GetMessage('HEADING_RECOMEND')?></div>
 	<div id="xds-featured0" class="panel-body owl-carousel product-carousel">
 <?foreach($arResult["ITEMS"] as $arItem):?>
-	
+
+<?#pr($arItem)?>
 
 		<div class="product-item" data-artikul="<?=$arItem['PROPERTIES']['artikul']['VALUE']?>">
 			<div class="image">
 				<a href="<?=$arItem['DETAIL_PAGE_URL']?>"
 					title="<?=$arItem['NAME']?>">
+                    <?if($arItem['DETAIL_PICTURE']['SRC']):?>
 					<img
-						src="<?=$arItem['PREVIEW_PICTURE']['SRC']?>"
-						alt="<?=$arItem['PREVIEW_PICTURE']['ALT']?>"
-						title="<?=$arItem['PREVIEW_PICTURE']['TITLE']?>"
+						src="<?=$arItem['DETAIL_PICTURE']['SRC']?>"
+						alt="<?=$arItem['DETAIL_PICTURE']['ALT']?>"
+						title="<?=$arItem['DETAIL_PICTURE']['TITLE']?>"
 						class="img-responsive">
+                    <?else:?>
+                        <img src="/bitrix/templates/persona/images/no-photo.jpg"/>
+                    <?endif?>
 				</a>
 			</div>
 			<div class="caption">
 				<div class="name" style="word-wrap: break-word;">
-					<a href="<?=$arItem['DETAIL_PAGE_URL']?>"><?=strip_tags(TruncateText($arItem['PREVIEW_TEXT'], 75))?>... </a>
+					<a href="<?=$arItem['DETAIL_PAGE_URL']?>">
+                        <?if($arItem['NAME'] != strip_tags(TruncateText($arItem['PREVIEW_TEXT'], 75))):?>
+                        <?=$arItem['NAME']?>
+                        <?endif?>
+                        <?=strip_tags(TruncateText($arItem['PREVIEW_TEXT'], 75))?>...
+                    </a>
 				</div>
 				<div class="price">
 					<?=$arItem['PROPERTIES']['price']['VALUE']?> <span class="sr-only"><?=GetMessage("RUB")
@@ -41,7 +50,7 @@ IncludeTemplateLangFile(__FILE__);
 						class="roboto-forced ruble" aria-hidden="true"
 						style="display:none;"></span>
                     <button class="btn btn-addtocart qview" onclick="qview('<?=$arItem['ID']?>')"
-                            data-toggle="tooltip" title=""
+                            data-toggle="tooltip" title="<?=GetMessage('QUICK_VIEW')?>"
                             data-original-title="<?=GetMessage('QUICK_VIEW')?>">
                         <i class="fa fa-eye fa-fw"></i>
                     </button>
@@ -76,9 +85,7 @@ IncludeTemplateLangFile(__FILE__);
 				</div>
 			</div>
 		</div>
-
 <?endforeach;?>
-		
 	</div>
 	<script type="text/javascript">
 		domReady(function () {
@@ -96,9 +103,9 @@ IncludeTemplateLangFile(__FILE__);
 				pagination: false,
 				autoPlay: false
 			});
-			$('#xds-featured-clock-m0-p115').countdown('2018-08-31', function (event) {
+			/*$('#xds-featured-clock-m0-p115').countdown('2018-08-31', function (event) {
 				$(this).html(event.strftime('%D дн. %H:%M:%S'));
-			});
+			});*/
 		});
 	</script>
 </div>

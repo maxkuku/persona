@@ -11,8 +11,7 @@ IncludeTemplateLangFile( __FILE__ ); ?>
 	<meta property="og:type" content="website">
 	<meta property="og:url" content="//<?= $_SERVER['HTTP_HOST'] ?>/ ">
 	<meta property="og:image" content="<?= SITE_TEMPLATE_PATH ?>/lang/ru/logo.gif">
-	<meta property="og:site_name"
-	      content="<? $APPLICATION->IncludeFile( SITE_DIR . 'include/company_name.php', Array(), Array( 'MODE' => 'html' ) ); ?> ">
+	<meta property="og:site_name" content="<?= COMPANY_NAME?> "/>
 	<link rel="apple-touch-icon" sizes="180x180" href="<?= SITE_TEMPLATE_PATH ?>/images/apple-touch-icon.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="<?= SITE_TEMPLATE_PATH ?>/images/favicon-32x32.png">
 	<link rel="icon" type="image/png" sizes="192x192"
@@ -29,7 +28,7 @@ IncludeTemplateLangFile( __FILE__ ); ?>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" type="text/css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" type="text/css"/>
     <link rel="stylesheet" href="<?= SITE_TEMPLATE_PATH?>/bal_style.css" type="text/css"/>
-    <link rel="stylesheet" href="<?= SITE_TEMPLATE_PATH?>/customscrollbar.css" type="text/css"/>
+    <link rel="stylesheet"  href="<?= SITE_TEMPLATE_PATH?>/customscrollbar.css" type="text/css"/>
 	<script type="text/javascript">
 		var domReady = function (callback) {
 			document.readyState === "interactive"
@@ -47,7 +46,7 @@ else{
     $adr = array_splice(explode("/", $_SERVER["REQUEST_URI"]),-2,1);
     $class = $adr[0];
 }?>
-<body class="<?=$class?>">
+<body class="<?=$class?>" <?php #if (!isset($_COOKIE['popup'])) { echo "onLoad=\"window.open('/cookie-information.php');\""; } ?>>
     
 <div id="page-wrapper">
 	<div id="panel"><? $APPLICATION->ShowPanel(); ?></div>
@@ -108,8 +107,8 @@ else{
                 <div class="col-sm-12 col-sm-4">
                     <div id="logo">
                         <a href="/" title="Главная"><img src="<?= SITE_TEMPLATE_PATH ?>/images/logo-market-w.png"
-                                                         title=" «Персона Market» магазин косметики для волос и тела"
-                                                         alt="«Персона Market» магазин косметики для волос и тела" class="img-responsive"></a>
+                                                         title="Персона Market магазин косметики для волос и тела"
+                                                         alt="Персона Market магазин косметики для волос и тела" class="img-responsive"></a>
                     </div>
                 </div>
                 <div class="phone-outer col-sm-4 text-right-md">
@@ -118,11 +117,7 @@ else{
                             <i class="fa fa-phone icon mirrored"></i>
                             <span data-toggle="dropdown" class="main-phone">
               							<span class="two-small-phones">
-								<? $APPLICATION->IncludeFile(
-									SITE_DIR . "include/phone.php",
-									Array(),
-									Array( "MODE" => "html" )
-								); ?><br>
+								<?= PHONE?><br>
 						                </span>
 							<span class="fa fa fa-angle-down caretalt"></span>
 						</span>
@@ -131,43 +126,18 @@ else{
                                         мне</a></li>
                                 <li class="divider"></li>
                                 <li>
-                                    <a href="tel:<? $APPLICATION->IncludeFile(
-										SITE_DIR . "include/phone.php",
-										Array(),
-										Array( "MODE" => "html" )
-									); ?>">
+                                    <a href="tel:<?=PHONE?>">
                                         <img src="<?= SITE_TEMPLATE_PATH ?>/images/phone1.png" class="max16"
-                                             alt="<? $APPLICATION->IncludeFile(
-											     SITE_DIR . "include/phone.php",
-											     Array(),
-											     Array( "MODE" => "html" )
-										     ); ?>">&nbsp;<? $APPLICATION->IncludeFile(
-											SITE_DIR . "include/phone.php",
-											Array(),
-											Array( "MODE" => "html" )
-										); ?>
+                                             alt="<?=PHONE?>"> <?=PHONE?>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="tel:<? $APPLICATION->IncludeFile(
-										SITE_DIR . "include/phone2.php",
-										Array(),
-										Array( "MODE" => "html" )
-									); ?>">
+                                    <a href="tel:<?= PHONE2 ?>">
                                         <img src="<?= SITE_TEMPLATE_PATH ?>/images/phone2.png" class="max16"
-                                             alt="<? $APPLICATION->IncludeFile(
-											     SITE_DIR . "include/phone2.php",
-											     Array(),
-											     Array( "MODE" => "html" )
-										     ); ?>"> <? $APPLICATION->IncludeFile(
-											SITE_DIR . "include/phone2.php",
-											Array(),
-											Array( "MODE" => "html" )
-										); ?>
-                                    </a>
+                                             alt="<?= PHONE2 ?>"> <?= PHONE2 ?></a>
                                 </li>
                                 <li>
-                                    <a href="https://api.whatsapp.com/send?phone=79778350206" class="whatsapp"><img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" width="20">+7(977) 835-02-06</a>
+                                    <a href="https://api.whatsapp.com/send?phone=<?=WHATSAPP_PHONE_SIMPLE?>" class="whatsapp"><img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" width="20"> <?=WHATSAPP_PHONE?></a>
                                 </li>
                                 <li class="divider"></li>
                                 <!--li>
@@ -177,16 +147,8 @@ else{
                                     </div>
                                 </li-->
                                 <li>
-                                    <a href="mailto:<? $APPLICATION->IncludeFile(
-										SITE_DIR . "include/email.php",
-										Array(),
-										Array( "MODE" => "html" )
-									); ?>" target="_blank"><i class="fa fa-envelope-o fu"></i>&nbsp;
-										<? $APPLICATION->IncludeFile(
-											SITE_DIR . "include/email.php",
-											Array(),
-											Array( "MODE" => "html" )
-										); ?></a>
+                                    <a href="mailto:<?=EMAIL?>" target="_blank"><i class="fa fa-envelope-o fu"></i>&nbsp;
+										<?= EMAIL ?></a>
                                 </li>
                             </ul>
 							<? $APPLICATION->IncludeFile(
@@ -336,14 +298,16 @@ else{
 
 
 
-                    <?if(strpos($APPLICATION->GetCurPage(), 'catalog') < 1):?>
+
+                    <?if($APPLICATION->GetCurPage() == '/catalog/'){?>
                     <h1><?$APPLICATION->ShowTitle(false);?></h1>
-                    <?endif;?>
+                    <?}?>
 
 
                     <div class="row">
+                        <?if(CSite::InDir('/catalog/')){?>
                         <div class="filter-left col-sm-2 col-xs-12">
-                            <div class="form_group">
+                            <div class="form_group" id="vid-tovara-select">
                                 <div class="filter-header">
                                     <span>Вид товара</span>
                                 </div>
@@ -365,8 +329,24 @@ else{
 
 
 
+                            <div class="form_group" id="dlya-select">
+                                <div class="filter-header">
+                                    <span>Предназначен</span>
+                                </div>
+                                <div class="select-wrap">
+                                    <select name="dlya_tovara" class="form-control">
+                                        <option value="off"></option>
+                                        <?$APPLICATION->IncludeComponent("persona:search_cat_list", "select", array(), false);?>
+                                    </select>
+                                </div>
+                            </div>
 
-                            <div class="form_group">
+
+
+
+
+
+                            <div id="brand-checkbox" class="form_group">
                                 <div class="filter-header">
                                     <span>Бренд</span>
                                 </div>
@@ -387,15 +367,15 @@ else{
 
 
 
-                            <div class="form_group">
+                            <div id="price-checkbox" class="form_group">
                                 <div class="filter-header">
                                     <span>Цена</span>
                                 </div>
-                                <?$res = $DB->Query("SELECT MAX(VALUE) AS vmax FROM `b_iblock_element_property` WHERE IBLOCK_PROPERTY_ID = 2");
+                                <?$res = $DB->Query("SELECT MAX(VALUE) AS vmax FROM `b_iblock_element_property` WHERE IBLOCK_PROPERTY_ID = 2 AND VALUE REGEXP '^-?[0-9]+$'");
                                 $ob = $res->Fetch();
                                 $max = $ob['vmax'];
-                                $res = $DB->Query("SELECT MIN(VALUE) AS vmin FROM `b_iblock_element_property` WHERE IBLOCK_PROPERTY_ID = 2 AND VALUE > 0");
-                                $ob = $res->Fetch();
+                                $res = $DB->Query("SELECT MIN(VALUE) AS vmin FROM `b_iblock_element_property` WHERE IBLOCK_PROPERTY_ID = 2 AND VALUE REGEXP '^-?[0-9]+$' AND VALUE > 0");
+                                $ob1 = $res->Fetch();
                                 $min = $ob['vmin'];
                                 $dist = 0;
                                 if(($max - $min) > 0)
@@ -428,62 +408,9 @@ else{
                                 <?endif?>
                             </div>
                         </div>
+                        <?$fil = "Y"?>
+                        <?}?>
 
-
-                        <script>
-                            //&limit=" + parseInt($('#lim_button .button-text').text()) + "
-                            domReady(function () {
-                                $('.filter-left label').click(function () {
-
-
-                                    if($(this).length)
-                                        $(this).find('.fa-check').toggle();
-
-
-                                    if($(this).prop('tagName') !== "SELECT")
-                                        $('select option[value="off"]').attr("selected",true);
-
-
-                                    $(this).find('input').attr('checked', true);
-
-                                    $.ajax({
-                                        url: "/catalog/ajax.php",
-                                        data: "type=" + ($(this).attr('name') || $(this).parent().attr('name')) + "&val=" + $(this).val() + "&ajax=Y&dist=" + window.dist,
-                                        dataType: "html",
-                                        success: function(response) {
-                                            $('.catalog-section').html(response);
-                                            $('.pagination-wrapper').hide();
-                                        },
-                                        error: function (xhr, ajaxOptions, thrownError) {
-                                            console.log(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
-                                        }
-                                    });
-                                });
-                                $('.filter-left select').change(function () {
-
-
-
-                                    
-
-
-
-                                    $.ajax({
-                                        url: "/catalog/ajax.php",
-                                        data: "type=" + ($(this).attr('name') || $(this).parent().attr('name')) + "&val=" + $(this).val() + "&ajax=Y&dist=" + window.dist,
-                                        dataType: "html",
-                                        success: function(response) {
-                                            $('.catalog-section').html(response);
-                                            $('.pagination-wrapper').hide();
-                                        },
-                                        error: function (xhr, ajaxOptions, thrownError) {
-                                            console.log(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
-                                        }
-                                    });
-                                });
-                            });
-                        </script>
-
-
-                        <div id="content" class="col-sm-10 col-xs-12">
+                        <div id="content" class="<?=($fil=="Y")?"col-sm-10":"col-sm-12"?> col-xs-12">
 
                         <?endif?>

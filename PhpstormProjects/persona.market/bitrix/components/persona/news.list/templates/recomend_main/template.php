@@ -63,13 +63,13 @@ IncludeTemplateLangFile(__FILE__);
 					<ul class="dropdown-menu addtocart-additional">
 						<li><a onclick="fastorder('<?=$arItem['ID']?>')"><i
 									class="fa fa-bolt fa-fw"></i><?=GetMessage('FAST_ORDER')?></a></li>
-						<li><a onclick="wishlist.add('<?=$arItem['ID']?>');return false;"
+						<li><a onclick="wishlist.add('<?=$arItem['ID']?>');"
 						       title="В закладки"><i
 									class="fa fa-heart-o fa-fw"></i><?=GetMessage('IN_BOOKMARKS')?></a></li>
-						<li><a rel="nofollow"
-						       onclick="compare.add('<?=$arItem['ID']?>');return false;"
+						<!--li><a rel="nofollow"
+						       onclick="compare.add('<?=$arItem['ID']?>');"
 						       title="В сравнение"><i
-									class="fa fa-balance-scale fa-fw"></i><?=GetMessage('IN_COMPARE')?></a></li>
+									class="fa fa-balance-scale fa-fw"></i><?=GetMessage('IN_COMPARE')?></a></li-->
 					</ul>
 				</div>
 			</div>
@@ -94,7 +94,7 @@ IncludeTemplateLangFile(__FILE__);
 				pagination: false,
 				autoPlay: false
 			});
-			$('#xds-featured-clock-m0-p115').countdown('2018-08-31', function (event) {
+			$('#xds-featured-clock-m0-p115').countdown(COUNTDOWN, function (event) {
 				$(this).html(event.strftime('%D дн. %H:%M:%S'));
 			});
 		});
