@@ -1,5 +1,10 @@
 <? if ( ! defined( "B_PROLOG_INCLUDED" ) || B_PROLOG_INCLUDED !== true ) {die();}
-IncludeTemplateLangFile( __FILE__ ); ?>
+IncludeTemplateLangFile( __FILE__ );
+
+\Bitrix\Main\Loader::includeModule('fileman');
+if(CLightHTMLEditor::IsMobileDevice()){
+    $mob = 1;
+}?>
 <!DOCTYPE html>
 <html xmlns="https://www.w3.org/1999/xhtml" xml:lang="ru" lang="ru">
 <head>
@@ -46,7 +51,7 @@ else{
     $adr = array_splice(explode("/", $_SERVER["REQUEST_URI"]),-2,1);
     $class = $adr[0];
 }?>
-<body class="<?=$class?>" <?php #if (!isset($_COOKIE['popup'])) { echo "onLoad=\"window.open('/cookie-information.php');\""; } ?>>
+<body class="<?=$class?> <?=($mob)?"mob":"desktop"?>" <?php #if (!isset($_COOKIE['popup'])) { echo "onLoad=\"window.open('/cookie-information.php');\""; } ?>>
     
 <div id="page-wrapper">
 	<div id="panel"><? $APPLICATION->ShowPanel(); ?></div>
@@ -232,7 +237,7 @@ else{
 					</script>
 				</div>
 				<div class="col-sm-6 col-sm-pull-6 col-md-3 col-md-pull-9 menu-box">
-					<nav id="menu" class="btn-group btn-block <?if($APPLICATION->GetCurPage() == "/"):?>open<?endif?>">
+					<nav id="menu" class="btn-group btn-block <?if($APPLICATION->GetCurPage() == "/" && !$mob):?>open<?endif?>">
 
 						<button type="button" class="btn btn-menu btn-block gradiented bordered dropdown-toggle" data-toggle="dropdown"
 						        <?if($APPLICATION->GetCurPage() == "/"):?>aria-expanded="true"<?endif?>>
@@ -313,7 +318,7 @@ else{
                                 </div>
                                 <div class="select-wrap">
                                     <select name="vid_tovara" class="form-control">
-                                    <option value="off"></option>
+                                    <option value="off">Выберите</option>
                                     <?$res = $DB->Query("SELECT DISTINCT VALUE FROM `b_iblock_element_property` WHERE IBLOCK_PROPERTY_ID = 29 ORDER BY VALUE");
                                     while ($ob = $res->Fetch()):
                                         $name = $ob['VALUE'];
@@ -331,11 +336,11 @@ else{
 
                             <div class="form_group" id="dlya-select">
                                 <div class="filter-header">
-                                    <span>Предназначен</span>
+                                    <span>Предназначение</span>
                                 </div>
                                 <div class="select-wrap">
                                     <select name="dlya_tovara" class="form-control">
-                                        <option value="off"></option>
+                                        <option value="off">Выберите</option>
                                         <?$APPLICATION->IncludeComponent("persona:search_cat_list", "select", array(), false);?>
                                     </select>
                                 </div>
@@ -350,21 +355,31 @@ else{
                                 <div class="filter-header">
                                     <span>Бренд</span>
                                 </div>
-                                <?$res = $DB->Query("SELECT DISTINCT VALUE FROM `b_iblock_element_property` WHERE IBLOCK_PROPERTY_ID = 32 ORDER BY VALUE");
-                                while ($ob = $res->Fetch()):
-                                    $name = $ob['VALUE'];
-                                    $en_name = rus2translit($name)?>
-                                    <div><label for="brnd_chk">
-                                            <i class="fa fa-check fa-square-o"></i>
-                                            <i class="fa fa-check fa-check-square-o" style="display: none"></i>
-                                            <input id="<?=$en_name?>_chk" type="checkbox" name="brand" value="<?=$name?>"/> <?=$name?></label></div>
-                                <?endwhile;
-                                ?>
+                                <? $arrFilter = array ("!=PROPERTY_brand"=>false);
+                                $APPLICATION->IncludeComponent(
+                                    "persona:brand_menu",
+                                    "brands_menu_select",
+                                    Array("IBLOCK_ID"=>4)
+                                ); ?>
                             </div>
+                            <p class="show_all"><a href="#" title="" class=""></a></p>
+                            <style>
+                                div#brand-checkbox.active {
+                                    height: <?=$GLOBALS['brandmenuitems'] * 28?>px;
+                                }
+
+                            </style>
 
 
 
-
+                            <script>
+                                domReady(function () {
+                                    $('.show_all a').click(function (e) {
+                                        e.preventDefault();
+                                        $('#brand-checkbox').toggleClass('active');
+                                    });
+                                });
+                            </script>
 
 
                             <div id="price-checkbox" class="form_group">

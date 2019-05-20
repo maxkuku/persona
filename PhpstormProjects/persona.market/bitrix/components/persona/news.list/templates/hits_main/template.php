@@ -38,7 +38,11 @@ IncludeTemplateLangFile(__FILE__);
 			</div>
 			<div class="caption">
 				<div class="name" style="word-wrap: break-word;">
-					<a href="<?=$arItem['DETAIL_PAGE_URL']?>"><?=TruncateText($arItem['PREVIEW_TEXT'], 75)?>... </a>
+					<a href="<?=$arItem['DETAIL_PAGE_URL']?>">
+                        <?if($arItem["NAME"] != TruncateText($arItem['PREVIEW_TEXT'], 75)):?>
+                        <?=$arItem["NAME"]?><br>
+                        <?endif?>
+                        <?=TruncateText($arItem['PREVIEW_TEXT'], 75)?>... </a>
 				</div>
 				<div class="price">
 					<?=$arItem['PROPERTIES']['price']['VALUE']?>

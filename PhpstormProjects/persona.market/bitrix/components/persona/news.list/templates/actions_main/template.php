@@ -21,7 +21,7 @@ IncludeTemplateLangFile(__FILE__);
 			<div class="image">
 				<a href="<?=$arItem['DETAIL_PAGE_URL']?>"
 					title="<?=$arItem['NAME']?>">
-                    <? if ( is_file ( $arItem['PREVIEW_PICTURE']['SRC'] ) ) { ?>
+                    <? if ( strlen ( $arItem['PREVIEW_PICTURE']['SRC'] ) > 5 ) { ?>
 					<img
 						src="<?=$arItem['PREVIEW_PICTURE']['SRC']?>"
 						alt="<?=$arItem['PREVIEW_PICTURE']['ALT']?>"

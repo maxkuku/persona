@@ -349,8 +349,8 @@ if ($user_name_req['group'] == 1 || $user_name_req['group'] == 2 || $user_name_r
                         </button>
                         <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
                             <?
-                            $idzap = mysqli_query($conn, "SELECT id FROM phrase");
-                            for ($i = 0; $i < mysql_num_rows($idzap); $i++) {
+                            $idzap = mysqli_query($conn, "SELECT id FROM phrase ORDER BY id ASC");
+                            for ($i = 0; $i < mysqli_num_rows($idzap); $i++) {
                                 $d = mysqli_fetch_assoc($idzap);
                                 echo '<li role="presentation"><a role="menuitem" tabindex="-1" href="?id=' . $d['id'] . '">' . $d['id'] . '</a></li>';
                             } ?>
@@ -379,8 +379,8 @@ if ($user_name_req['group'] == 1 || $user_name_req['group'] == 2 || $user_name_r
                         </button>
                         <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu3">
                             <?
-                            $idzap = mysqli_query($conn, "SELECT DISTINCT tags FROM phrase");
-                            for ($i = 0; $i < mysql_num_rows($idzap); $i++) {
+                            $idzap = mysqli_query($conn, "SELECT DISTINCT tags FROM phrase ORDER BY tags ASC");
+                            for ($i = 0; $i < mysqli_num_rows($idzap); $i++) {
                                 $d = mysqli_fetch_assoc($idzap);
                                 $splitted = explode(",", $d['tags']);
                                 foreach ($splitted as $s) {

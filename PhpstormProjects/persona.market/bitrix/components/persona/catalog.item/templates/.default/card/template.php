@@ -32,7 +32,7 @@ use \Bitrix\Main\Localization\Loc;
                     <?if($item['PREVIEW_PICTURE']['SRC']):?>
                     <img src="<?=$item['PREVIEW_PICTURE']['SRC']?>" alt="<?=$item['PREVIEW_PICTURE']['ALT']?>" title="<?=$item['PREVIEW_PICTURE']['TITLE']?>" width="248" height="260" class="img-responsive center-block">
                     <?else:?>
-                        <span style="background: url(/bitrix/templates/persona/images/no-photo.jpg) no-repeat center / contain;    width: 100%; height: 260px; display: block;">&nbsp;</span>
+                        <span style="background: url(/upload/resize_cache/iblock/51e/248_260_1/Persona_sign_gold_01_1.jpg) no-repeat center / contain;    width: 100%; height: 260px; display: block;">&nbsp;</span>
                     <?endif?>
                     </a>
                 <div style="display:none" data-entity="quantity-block"><?=['PROPERTIES']['quantity_cust']['VALUE']?></div>

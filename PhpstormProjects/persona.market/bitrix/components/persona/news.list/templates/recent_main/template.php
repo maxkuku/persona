@@ -23,11 +23,16 @@ foreach($arResult["ITEMS"] as $arItem):?>
 			<div class="image">
 				<a href="<?=$arItem['DETAIL_PAGE_URL']?>"
 					title="<?=$arItem['NAME']?>">
-					<img
-						src="<?=$arItem['PREVIEW_PICTURE']['SRC']?>"
-						alt="<?=$arItem['PREVIEW_PICTURE']['ALT']?>"
-						title="<?=$arItem['PREVIEW_PICTURE']['TITLE']?>"
-						class="img-responsive">
+                    <? if ( is_file ( $arItem['PREVIEW_PICTURE']['SRC'] ) ) { ?>
+                        <img
+                                src="<?=$arItem['PREVIEW_PICTURE']['SRC']?>"
+                                alt="<?=$arItem['PREVIEW_PICTURE']['ALT']?>"
+                                title="<?=$arItem['PREVIEW_PICTURE']['TITLE']?>"
+                                class="img-responsive">
+                    <? }
+                    else { ?>
+                        <img src="/bitrix/templates/persona/images/Persona_sign_gold_01_1.jpg" alt="<?=$arItem['NAME']?>"/>
+                    <? } ?>
 				</a>
 			</div>
 			<div class="caption">

@@ -1,7 +1,6 @@
 <?error_reporting(1);
 
 
-
 //print_r($_REQUEST);
 
 /*if ($_COOKIE['orderhash'] == '') {*/

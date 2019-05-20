@@ -24,15 +24,16 @@ IncludeTemplateLangFile(__FILE__);
 			<div class="image">
 				<a href="<?=$arItem['DETAIL_PAGE_URL']?>"
 					title="<?=$arItem['NAME']?>">
-                    <?if($arItem['DETAIL_PICTURE']['SRC']):?>
-					<img
-						src="<?=$arItem['DETAIL_PICTURE']['SRC']?>"
-						alt="<?=$arItem['DETAIL_PICTURE']['ALT']?>"
-						title="<?=$arItem['DETAIL_PICTURE']['TITLE']?>"
-						class="img-responsive">
-                    <?else:?>
-                        <img src="/bitrix/templates/persona/images/no-photo.jpg"/>
-                    <?endif?>
+                    <? if ( $arItem['PREVIEW_PICTURE']['SRC'] != "" ) { ?>
+                        <img
+                                src="<?=$arItem['PREVIEW_PICTURE']['SRC']?>"
+                                alt="<?=$arItem['PREVIEW_PICTURE']['ALT']?>"
+                                title="<?=$arItem['PREVIEW_PICTURE']['TITLE']?>"
+                                class="img-responsive">
+                    <? }
+                    else { ?>
+                        <img src="/upload/resize_cache/iblock/51e/248_260_1/Persona_sign_gold_01_1.jpg" alt="<?=$arItem['NAME']?>"/>
+                    <? } ?>
 				</a>
 			</div>
 			<div class="caption">

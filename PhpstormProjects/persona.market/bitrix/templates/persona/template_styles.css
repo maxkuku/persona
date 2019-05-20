@@ -4623,6 +4623,39 @@ select[multiple].input-group-sm > .form-control, select[multiple].input-group-sm
     margin: 8px -10px
 }
 
+.show_all a::after {
+    content: "Показать все";
+    padding-right: 17px;
+    display: inline-block;
+    color: rgb(173, 138, 24);
+    cursor: pointer;
+    background: url(/bitrix/templates/persona/images/arrow_show_all_filter.png) right 8px no-repeat;
+}
+
+.active + .show_all a::after {
+    content: "Скрыть";
+    display: inline-block;
+    color: rgb(173, 138, 24);
+    cursor: pointer;
+    background: url(/bitrix/templates/persona/images/arrow_hide_all_filter.png) right 8px no-repeat;
+}
+
+#brand-checkbox + .show_all {
+    margin-top: 5px;
+    margin-bottom: 40px;
+}
+
+/*div#brand-checkbox.active {
+    height: 890px;
+}*/
+
+div#brand-checkbox {
+    height: 305px;
+    overflow: hidden;
+    transition: .3s;
+    margin-bottom: 10px;
+}
+
 @media (min-width: 768px) {
     .navbar-form .form-group {
         display: inline-block;
@@ -4698,6 +4731,16 @@ select[multiple].input-group-sm > .form-control, select[multiple].input-group-sm
     }
     .container .row{
         margin:0
+    }
+    #workarea .breadcrumb + .row {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column-reverse;
+    }
+    .catalog h1 + .row {
+        flex-direction: column-reverse;
+        display: flex;
+        flex-wrap: wrap;
     }
     body .modal {
         top: 0%;
@@ -13718,9 +13761,7 @@ input[name="logout_butt"] {
 div#space-for-footer {
     height: 70px;
 }
-.home-page #menu #menu-list{
-    display:block!important
-}
+
 select#gds-cr-tree {
     margin-bottom: 1em;
 }
@@ -13877,7 +13918,9 @@ li {
         font-size: 13px;
         display: block
     }
-
+    .home-page #menu #menu-list{
+        display:block!important
+    }
 
 }
 @media (min-width: 479px) and (max-width: 768px){

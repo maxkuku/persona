@@ -147,6 +147,7 @@ $(document).ready(function () {
         });
     }
 });
+
 $(document).ready(function () {
     $('.text-danger').each(function () {
         var element = $(this).parent().parent();
@@ -257,7 +258,6 @@ $(document).ready(function () {
     });
 });
 
-
 $(document).ready(function(){
     var gid = $('#button-cart').data('id')
     $('#plus').click(function(){
@@ -273,8 +273,6 @@ $(document).ready(function(){
         }
     })
 })
-
-
 
 var cart = {
     'add': function (product_id, quantity) {
@@ -1106,13 +1104,16 @@ $(document).ready(function(){
 
 
 domReady(function () {
-    $('.filter-left label').click(function () {
+    window.variable = new Array();
+    $('.filter-left label').one('click', function () {
 
+
+        //console.log('filter-left label click')
 
         if($(this).length) {
-            $('.filter-left').find('input').removeAttr('checked');
-            $('.filter-left').find('.fa-check-square-o').hide();
-            $('.filter-left').find('.fa-square-o').show();
+            //$('.filter-left').find('input').removeAttr('checked');
+            //$(this).find('.fa-check-square-o').toggle();
+            //$(this).find('.fa-square-o').toggle();
             $(this).find('.fa-check').toggle();
         }
 
@@ -1120,17 +1121,34 @@ domReady(function () {
             $('select option[value="off"]').attr("selected",true);
 
 
+        var filter_name = "";
         if($(this).parents('#brand-checkbox').length){
             $('#manuf-group').css({'visibility':'hidden'});
+            filter_name = "brand";
         }
         else{
             $('#manuf-group').css({'visibility':'visible'});
+            filter_name = "price";
         }
 
 
-        $(this).find('input').attr('checked', true);
+        var inp = $(this).find('input').attr('checked', true);
+        var var_value = inp.val();
 
-        $.ajax({
+        window.variable.push({
+            filter_name: {
+                type: filter_name,
+                val: var_value
+            }
+        });
+
+        var line = "ajax=Y&dist=" + window.dist;
+        for (var i=0; i<window.variable.length; ++i){
+            line = line + "&type[" + i + "]=" + window.variable[i].filter_name.type;
+            line = line + "&val[" + i + "]=" + window.variable[i].filter_name.val;
+        }
+
+        /*$.ajax({
             url: "/catalog/ajax.php",
             data: "type=" + ($(this).find('input').attr('name') || $(this).parent().attr('name')) + "&val=" + $(this).find('input').val() + "&ajax=Y&dist=" + window.dist,
             dataType: "html",
@@ -1141,25 +1159,96 @@ domReady(function () {
             error: function (xhr, ajaxOptions, thrownError) {
                 console.log(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
             }
-        });
-    });
+        });*/
 
 
-    $('.filter-left select').change(function () {
+
         $.ajax({
-            url: "/catalog/ajax.php",
-            data: "type=" + ($(this).attr('name') || $(this).parent().attr('name')) + "&val=" + $(this).val() + "&ajax=Y&dist=" + window.dist,
+            url: "/catalog/json.php",
+            data: line,
             dataType: "html",
             success: function(response) {
+                //console.log(response);
                 $('.catalog-section').html(response);
                 $('.pagination-wrapper').hide();
-                $('.filter-left').find('input').removeAttr('checked');
-                $('.filter-left').find('.fa-check-square-o').hide();
-                $('.filter-left').find('.fa-check-o').show();
+                $('#clear_filter').show();
             },
             error: function (xhr, ajaxOptions, thrownError) {
                 console.log(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
             }
         });
+
+    });
+
+
+    $('.filter-left select').change(function () {
+        var filter_name = $(this).attr('name');
+        var val_select = $(this).children('option:selected').val();
+        var id_select = $(this).children('option:selected').data("id");
+        if($(this).children('option:selected').val() != "off")
+        {
+
+        window.variable.push({
+            filter_name: {
+                type: filter_name,
+                val: val_select,
+                id: id_select
+            }
+        });
+
+            var line = "ajax=Y";
+            for (var i=0; i<window.variable.length; ++i){
+
+                //if(window.variable[i].filter_name.type === "") {
+                    line = line + "&type[" + i + "]=" + window.variable[i].filter_name.type;
+                    line = line + "&val[" + i + "]=" + window.variable[i].filter_name.val;
+                    line = line + "&id[" + i + "]=" + window.variable[i].filter_name.id;
+                //}
+
+                //if(window.variable[i].filter_name.val === "")
+
+
+                //if(window.variable[i].filter_name.id === "")
+
+            }
+
+
+            /*$.ajax({
+                url: "/catalog/ajax.php",
+                data: "type=" + ($(this).attr('name') || $(this).parent().attr('name')) + "&val=" + $(this).val() + "&ajax=Y&dist=" + window.dist + '&id=' + $(this).find('option:selected').data('id'),
+                dataType: "html",
+                success: function (response) {
+                    $('.catalog-section').html(response);
+                    $('.pagination-wrapper').hide();
+                    $('.filter-left').find('input').removeAttr('checked');
+                    $('.filter-left').find('.fa-check-square-o').hide();
+                    $('.filter-left').find('.fa-check-o').show();
+                },
+                error: function (xhr, ajaxOptions, thrownError) {
+                    console.log(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
+                }
+            });*/
+
+
+
+
+            $.ajax({
+                url: "/catalog/json.php",
+                data: line,
+                dataType: "html",
+                beforeSend: function(){
+
+                },
+                success: function(response) {
+                    //console.log(response);
+                    $('.catalog-section').html(response);
+                    $('.pagination-wrapper').hide();
+                    $('#clear_filter').show();
+                },
+                error: function (xhr, ajaxOptions, thrownError) {
+                    console.log(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
+                }
+            });
+        }
     });
 });

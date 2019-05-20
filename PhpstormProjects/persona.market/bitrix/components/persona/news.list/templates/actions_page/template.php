@@ -21,11 +21,16 @@ IncludeTemplateLangFile(__FILE__);
 			<div class="image">
 				<a href="<?=$arItem['DETAIL_PAGE_URL']?>"
 					title="<?=$arItem['NAME']?>">
-					<img
-						src="<?=$arItem['PREVIEW_PICTURE']['SRC']?>"
-						alt="<?=$arItem['PREVIEW_PICTURE']['ALT']?>"
-						title="<?=$arItem['PREVIEW_PICTURE']['TITLE']?>"
-						class="img-responsive">
+                    <? if ( is_file ( $arItem['PREVIEW_PICTURE']['SRC'] ) ) { ?>
+                        <img
+                                src="<?=$arItem['PREVIEW_PICTURE']['SRC']?>"
+                                alt="<?=$arItem['PREVIEW_PICTURE']['ALT']?>"
+                                title="<?=$arItem['PREVIEW_PICTURE']['TITLE']?>"
+                                class="img-responsive">
+                    <? }
+                    else { ?>
+                        <img src="/upload/resize_cache/iblock/51e/248_260_1/Persona_sign_gold_01_1.jpg" alt="<?=$arItem['NAME']?>"/>
+                    <? } ?>
 				</a>
 				<?$perc = $arItem['PROPERTIES']['sale']['VALUE'] * 100 / $arItem['PROPERTIES']['price']['VALUE']?>
 				<div class="sticker st-sale with-date gradiented">-<?=round(100-$perc)?>%</div>

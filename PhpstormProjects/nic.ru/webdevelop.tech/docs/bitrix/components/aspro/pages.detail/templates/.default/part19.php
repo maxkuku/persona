@@ -1,6 +1,6 @@
 <?if($arResult['PROPERTIES']['sert_on']['VALUE']=='Да'){?>	
 	
-<div id="part19" class="row margin0 company-block block-with-bg"  data-type="parallax-bg">
+<div id="part19" class="row margin0 company-block block-with-bg" style="background:url(/images/bg_sert.jpg)" data-type="parallax-bg">
 
 <div class="maxwidth-theme">
 	<h3 class="text-center" style="color:#fff;">ВЫСТАВКИ И СЕРТИФИКАТЫ</h3>	
