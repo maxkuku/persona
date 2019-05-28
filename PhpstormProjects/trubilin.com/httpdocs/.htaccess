@@ -1,0 +1,71 @@
+Options -Indexes
+ErrorDocument 404 /404.php
+
+<IfModule mod_php5.c>
+	php_flag allow_call_time_pass_reference 1
+	php_flag session.use_trans_sid off
+
+
+	php_value mbstring.func_overload 2
+    php_value mbstring.internal_encoding UTF-8
+
+</IfModule>
+
+
+<ifModule mod_deflate.c>
+AddOutputFilterByType DEFLATE text/html text/plain text/xml application/xml application/xhtml+xml text/css text/javascript application/javascript application/x-javascript
+</ifModule>
+
+
+
+
+
+<IfModule mod_rewrite.c>
+	Options +FollowSymLinks
+	RewriteEngine On
+
+    RewriteCond %{HTTPS} off
+    RewriteRule .* https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+    RewriteCond %{HTTP_HOST} !^www\. [NC]
+    RewriteRule .* https://www.%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+
+
+
+	RewriteRule ^doctors/endokrinologi/ivanov-ivan-ivanovich/$ https://www.trubilin.com/doctors/vladimir-nikolaevich/ [L,R=301]
+	RewriteRule ^doctors/pediatr/trubilina-maria-alexandrovna/$ https://www.trubilin.com/doctors/trubilina-maria-alexandrovna/ [L,R=301]
+
+	RewriteRule ^doctors/endokrinologi/$ https://www.trubilin.com/doctors/ [L,R=301]
+	RewriteRule ^doctors/pediatr/$ https://www.trubilin.com/doctors/ [L,R=301]
+	RewriteRule ^doctors/pediatr/kurganova-olesya-vladimirovna/$ https://www.trubilin.com/doctors/ [L,R=301]
+
+	Redirect 301 /doctors/endokrinologi/poddubnyy-valentin-konstantinovich/ https://www.trubilin.com/doctors/endokrinologi/aleksandr-vladimirovich/
+
+
+	RewriteCond %{REQUEST_FILENAME} !-f
+	RewriteCond %{REQUEST_FILENAME} !-l
+	RewriteCond %{REQUEST_FILENAME} !-d
+	RewriteCond %{REQUEST_FILENAME} !/bitrix/urlrewrite.php$
+	RewriteRule ^(.*)$ /bitrix/urlrewrite.php [L]
+	RewriteRule .* - [E=REMOTE_USER:%{HTTP:Authorization}]
+
+
+
+	RewriteCond %{THE_REQUEST} ^GET.*index\.php [NC]
+    RewriteRule (.*?)index\.php/*(.*) /$1$2 [R=301,NE,L]
+</IfModule>
+
+<IfModule mod_dir.c>
+	DirectoryIndex index.php index.html
+</IfModule>
+
+<IfModule mod_expires.c>
+	ExpiresActive on
+	ExpiresByType image/jpeg "access plus 33 days"
+	ExpiresByType image/gif "access plus 33 days"
+	ExpiresByType image/png "access plus 33 days"
+	ExpiresByType image/webp "access plus 33 days"
+	ExpiresByType text/css "access 1 month"
+    ExpiresByType text/html "access 1 month"
+    ExpiresByType application/pdf "access 1 month"
+</IfModule>

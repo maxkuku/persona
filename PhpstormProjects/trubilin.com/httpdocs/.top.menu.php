@@ -1,0 +1,53 @@
+<?
+$aMenuLinks = Array(
+	Array(
+		"О клинике", 
+		"/clinic/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Специалисты", 
+		"/doctors/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Услуги", 
+		"/uslugi/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Цены", 
+		"/price/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Пациентам", 
+		"/pacient/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Оптика", 
+		"/optica/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Контакты", 
+		"/contact/", 
+		Array(), 
+		Array(), 
+		"" 
+	)
+);
+?>

@@ -19,7 +19,7 @@ $APPLICATION->SetAdditionalCSS( "/uslugi/udalenie-katarakty/custom.css" );
 			<div class="inline inline-text">
 				<div class="text-header-block">
 					<div>
-						<h1>Операция по удалению катаракты в Москве</h1>
+						<h2>Операция по удалению катаракты в Москве</h2>
 					</div>
 				<div>
  <span class="red-bg">Под ключ <nobr> от 35 000 руб.</nobr></span>
@@ -139,11 +139,21 @@ $APPLICATION->SetAdditionalCSS( "/uslugi/udalenie-katarakty/custom.css" );
 		</ul>
  </section> 
 
-<center>
-    <div>
-        <iframe width="800" height="450" src="https://www.youtube.com/embed/1WU4uVYuAag" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
-    </div>
-	</center>
+
+
+
+
+
+        <div class="flexed">
+            <div style="width: 70%">
+                <div class="youtube" id="1WU4uVYuAag" style="height:450px; background-image: url(sddefault.jpg);">
+                    <div class="play"></div>
+                </div>
+            </div>
+        </div>
+
+
+
 
 <section id="diagnostika">
 		<h2>Диагностика катаракты</h2>
@@ -180,11 +190,16 @@ $APPLICATION->SetAdditionalCSS( "/uslugi/udalenie-katarakty/custom.css" );
  </section>
 
 
-<center>
-    <div>
-        <iframe width="800" height="450" src="https://www.youtube.com/embed/CdnOFUoI850" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
-    </div>
-	</center>
+
+
+
+        <div class="flexed">
+            <div style="width: 70%">
+                <div class="youtube" id="CdnOFUoI850" style="height:450px; background-image: url(sddefault.jpg);">
+                    <div class="play"></div>
+                </div>
+            </div>
+        </div>
 
 
 		<h2>По акции <span style="color: red;">35 000 руб.</span> имплантируется ИОЛ Rayner C-Flex (Великобритания) и Hanita Seelens (Израиль)</h2>
@@ -206,11 +221,17 @@ $APPLICATION->SetAdditionalCSS( "/uslugi/udalenie-katarakty/custom.css" );
 		</div>
  </section>
 
-<center>
-    <div>
-        <iframe width="800" height="450" src="https://www.youtube.com/embed/0aMevCmdgpA" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
-    </div>
-	</center>
+
+
+
+        <div class="flexed">
+            <div style="width: 70%">
+                <div class="youtube" id="0aMevCmdgpA" style="height:450px; background-image: url(sddefault.jpg);">
+                    <div class="play"></div>
+                </div>
+            </div>
+        </div>
+
 
  <section class="five-reasons">
 		<h2>Пять причин обратиться к нам</h2>
@@ -225,16 +246,24 @@ $APPLICATION->SetAdditionalCSS( "/uslugi/udalenie-katarakty/custom.css" );
 		<h3><b>ПАМЯТКА ПАЦИЕНТУ: <a href="/pacient/katarakta_glaukoma.php" target="_blank"><span class="red">Список анализов для подготовки к операции по удалению катаракты</span></a></b></h3>
 		<h2>
 		Отзывы пациентов </h2>
+
+
 		<div class="flexed">
 			<div>
-				<iframe width="100%" height="100%" src="https://www.youtube.com/embed/jJ_eQGRejSk?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
+                <div class="youtube" id="jJ_eQGRejSk" style="background-image: url(https://img.youtube.com/vi/jJ_eQGRejSk/0.jpg);">
+                    <div class="play"></div>
+                </div>
 			</div>
-			<div>
-				<iframe width="100%" height="100%" src="https://www.youtube.com/embed/48BmAL8_bKo?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
-			</div>
-			<div>
-				<iframe width="100%" height="100%" src="https://www.youtube.com/embed/f1PbfJo28bU?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
-			</div>
+            <div>
+                <div class="youtube" id="48BmAL8_bKo" style="background-image: url(https://img.youtube.com/vi/48BmAL8_bKo/0.jpg);">
+                    <div class="play"></div>
+                </div>
+            </div>
+            <div>
+                <div class="youtube" id="f1PbfJo28bU" style="background-image: url(https://img.youtube.com/vi/f1PbfJo28bU/0.jpg);">
+                    <div class="play"></div>
+                </div>
+            </div>
 		</div>
 		<h2>Катаракта операция цены</h2>
 		<p>
@@ -412,11 +441,9 @@ $APPLICATION->SetAdditionalCSS( "/uslugi/udalenie-katarakty/custom.css" );
  <br>
  </section>
 	</div>
-<!--
-	<div class="bottom">
-		 Запись на бесплатную консультацию: <a href="tel:+74951233121">+7 (495) 123-31-21</a>
-	</div>
--->
+
 
 </div>
- <br><? require( $_SERVER["DOCUMENT_ROOT"] . "/bitrix/footer.php" ); ?>
+ <br>
+
+<?require($_SERVER['DOCUMENT_ROOT']."/bitrix/footer.php");?>

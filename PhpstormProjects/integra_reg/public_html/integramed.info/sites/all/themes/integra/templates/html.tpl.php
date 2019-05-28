@@ -13,7 +13,7 @@
 <head data-templ="html-tpl-php">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta charset="UTF-8">
-    <base href="http://integramed.info">
+    <base href="https://integramed.info">
     <title><?php print $head_title; ?> </title>
     <?php print  $head; ?>
     <?php print $styles; ?>
@@ -68,7 +68,7 @@
     <div class="row align-items-center">
       <div class="col-12 col-md-5">
 <!--         Ссылка с логотипом и текстом-->
-              <a class="navbar-brand row align-self-center" href="http://integramed.info">
+              <a class="navbar-brand row align-self-center" href="/">
                 <div class=" align-top col-4 pr-0"><img src="/sites/all/themes/integra/img/logo.png" class="img-fluid align-top " width=""  alt="Интеграмедсервис"></div>
                 <div class="col-8 pl-1 align-self-center">
                             <div class="heading-bold">ИНТЕГРАМЕДСЕРВИС</div>
@@ -88,8 +88,8 @@
                   <span ><a rel="nofollow"  href="https://www.facebook.com/%D0%A6%D0%B5%D0%BD%D1%82%D1%80-%D0%A0%D0%B5%D1%81%D0%BF%D0%B8%D1%80%D0%B0%D1%82%D0%BE%D1%80%D0%BD%D0%BE%D0%B9-%D0%BC%D0%B5%D0%B4%D0%B8%D1%86%D0%B8%D0%BD%D1%8B-%D0%98%D0%BD%D1%82%D0%B5%D0%B3%D1%80%D0%B0%D0%9C%D0%B5%D0%B4%D1%81%D0%B5%D1%80%D0%B2%D0%B8%D1%81-121895424577293/?rc=p"><i class="fab fa-facebook text-primary"></i></a></span>
                   <span ><a rel="nofollow" href="https://vk.com/klinikarm"><i class="fab fa-vk   text-primary"></i></a></span>
                   <span ><a rel="nofollow" href="https://twitter.com/PulmonologyINT"><i class="fab fa-twitter  text-primary"></i></a></span>
-                  <span ><a rel="nofollow" href="http://www.youtube.com/channel/UCfmeP6mEga4grBRvtIeCdWw"><i class="fab fa-youtube  text-primary"></i></a></span>
-                  <span ><a rel="nofollow" href="http://www.yell.ru/moscow/com/otdelenie-pulmonologii-integramedservis-ooo_10694993/"><i class="fab text-primary fa-yahoo  "></i></a></span>
+                  <span ><a rel="nofollow" href="//www.youtube.com/channel/UCfmeP6mEga4grBRvtIeCdWw"><i class="fab fa-youtube  text-primary"></i></a></span>
+                  <span ><a rel="nofollow" href="//www.yell.ru/moscow/com/otdelenie-pulmonologii-integramedservis-ooo_10694993/"><i class="fab text-primary fa-yahoo  "></i></a></span>
 
 
                   <span class="btn btn-primary m-1" data-toggle="modal" data-target="#forma-zapisi" >Запись онлайн</span>
@@ -150,7 +150,7 @@
           <a rel="nofollow" href="https://vk.com/klinikarm" class="d-inline-block"><img src="/sites/all/themes/integra/img/vk.png" alt=""></a>
 <!--          <a href="#" class="d-inline-block"><img src="/sites/all/themes/integra/img/instagram2.png" alt=""></a>-->
           <a rel="nofollow" href="https://www.facebook.com/%D0%A6%D0%B5%D0%BD%D1%82%D1%80-%D0%A0%D0%B5%D1%81%D0%BF%D0%B8%D1%80%D0%B0%D1%82%D0%BE%D1%80%D0%BD%D0%BE%D0%B9-%D0%BC%D0%B5%D0%B4%D0%B8%D1%86%D0%B8%D0%BD%D1%8B-%D0%98%D0%BD%D1%82%D0%B5%D0%B3%D1%80%D0%B0%D0%9C%D0%B5%D0%B4%D1%81%D0%B5%D1%80%D0%B2%D0%B8%D1%81-121895424577293/?rc=p" class="d-inline-block"><img src="/sites/all/themes/integra/img/facebook.png" alt=""></a>
-          <a rel="nofollow" href="http://www.youtube.com/channel/UCfmeP6mEga4grBRvtIeCdWw" class="d-inline-block"><img src="/sites/all/themes/integra/img/youtube.png" alt=""></a>
+          <a rel="nofollow" href="//www.youtube.com/channel/UCfmeP6mEga4grBRvtIeCdWw" class="d-inline-block"><img src="/sites/all/themes/integra/img/youtube.png" alt=""></a>
         </div>
 
       </div>

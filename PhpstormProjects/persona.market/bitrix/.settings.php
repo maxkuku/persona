@@ -62,4 +62,9 @@ return array (
     ),
     'readonly' => true,
   ),
+  'https_request' =>
+	  array(
+		  'value' => true,
+		  'readonly' => true,
+	  ),
 );
