@@ -1,7 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ab59b16c-0731-4108-80dd-ff430e4816fe" name="Default" comment="" />
+    <list default="true" id="ab59b16c-0731-4108-80dd-ff430e4816fe" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/../../integra_reg/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../../integra_reg/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/../../integra_reg/public_html/integramed.info/.htaccess" afterPath="$PROJECT_DIR$/../../integra_reg/public_html/integramed.info/.htaccess" />
+      <change beforePath="$PROJECT_DIR$/../../persona.market/.bottom.menu.php" afterPath="$PROJECT_DIR$/../../persona.market/.bottom.menu.php" />
+      <change beforePath="$PROJECT_DIR$/../../persona.market/bitrix/components/persona/catalog.item/templates/.default/card/template.php" afterPath="$PROJECT_DIR$/../../persona.market/bitrix/components/persona/catalog.item/templates/.default/card/template.php" />
+      <change beforePath="$PROJECT_DIR$/../../persona.market/bitrix/php_interface/init.php" afterPath="$PROJECT_DIR$/../../persona.market/bitrix/php_interface/init.php" />
+      <change beforePath="$PROJECT_DIR$/../../persona.market/bitrix/templates/persona/footer.php" afterPath="$PROJECT_DIR$/../../persona.market/bitrix/templates/persona/footer.php" />
+      <change beforePath="$PROJECT_DIR$/../../persona.market/bitrix/templates/persona/js/common.js" afterPath="$PROJECT_DIR$/../../persona.market/bitrix/templates/persona/js/common.js" />
+      <change beforePath="$PROJECT_DIR$/../../persona.market/bitrix/templates/persona/template_styles.css" afterPath="$PROJECT_DIR$/../../persona.market/bitrix/templates/persona/template_styles.css" />
+      <change beforePath="$PROJECT_DIR$/../../persona.market/catalog/specials/index.php" afterPath="$PROJECT_DIR$/../../persona.market/catalog/specials/index.php" />
+      <change beforePath="$PROJECT_DIR$/../../persona.market/index.php" afterPath="$PROJECT_DIR$/../../persona.market/index.php" />
+      <change beforePath="$PROJECT_DIR$/../../persona.market/texts/index.php" afterPath="$PROJECT_DIR$/../../persona.market/texts/index.php" />
+      <change beforePath="$PROJECT_DIR$/../../persona.market/urlrewrite.php" afterPath="$PROJECT_DIR$/../../persona.market/urlrewrite.php" />
+      <change beforePath="$PROJECT_DIR$/../../trubilin.com/httpdocs/uslugi/udalenie-katarakty/index.php" afterPath="$PROJECT_DIR$/../../trubilin.com/httpdocs/uslugi/udalenie-katarakty/index.php" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -10,7 +25,20 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="script.js" pinned="true" current-in-tab="true">
+        <entry file="remoteDeploymentFS://&lt;d870e8eb-417e-4467-b693-0c01346bf934&gt;/akademstom.ru/public_html/bitrix/templates/ak_new/js/script.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="290">
+              <caret line="37" column="25" lean-forward="false" selection-start-line="37" selection-start-column="25" selection-end-line="37" selection-end-column="25" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -18,6 +46,9 @@
       <find>bold</find>
       <find>.h2, .h3</find>
       <find>--&gt;</find>
+      <find>.left-right-wrap</find>
+      <find>items-move</find>
+      <find>.articlesU .item</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -27,17 +58,20 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="&lt;d870e8eb-417e-4467-b693-0c01346bf934&gt;/akademstom.ru/public_html/bitrix/templates/academ/template_styles.css" />
-        <option value="&lt;d870e8eb-417e-4467-b693-0c01346bf934&gt;/akademstom.ru/public_html/bitrix/php_interface/init.php" />
         <option value="&lt;d870e8eb-417e-4467-b693-0c01346bf934&gt;/akademstom.ru/public_html/contacts/index.php" />
         <option value="&lt;d870e8eb-417e-4467-b693-0c01346bf934&gt;/akademstom.ru/public_html/bitrix/templates/ak_new/js/watch.js" />
         <option value="&lt;d870e8eb-417e-4467-b693-0c01346bf934&gt;/akademstom.ru/public_html/bitrix/templates/ak_new/css/fontawesome.min.css" />
         <option value="&lt;d870e8eb-417e-4467-b693-0c01346bf934&gt;/akademstom.ru/public_html/bitrix/templates/ak_new/header.php" />
-        <option value="&lt;d870e8eb-417e-4467-b693-0c01346bf934&gt;/akademstom.ru/public_html/bitrix/templates/ak_new/template_styles.css" />
-        <option value="&lt;d870e8eb-417e-4467-b693-0c01346bf934&gt;/akademstom.ru/public_html/bitrix/templates/ak_new/styles.css" />
         <option value="&lt;d870e8eb-417e-4467-b693-0c01346bf934&gt;/akademstom.ru/public_html/bitrix/templates/ak_new/js/footerfuncs.js" />
         <option value="&lt;d870e8eb-417e-4467-b693-0c01346bf934&gt;/akademstom.ru/public_html/bitrix/templates/ak_new/footer.php" />
         <option value="&lt;d870e8eb-417e-4467-b693-0c01346bf934&gt;/akademstom.ru/public_html/allon4/index.php" />
+        <option value="&lt;d870e8eb-417e-4467-b693-0c01346bf934&gt;/akademstom.ru/public_html/bitrix/php_interface/init.php" />
+        <option value="&lt;d870e8eb-417e-4467-b693-0c01346bf934&gt;/akademstom.ru/public_html/bitrix/components/ak_new/news.detail/templates/.default/template.php" />
+        <option value="&lt;d870e8eb-417e-4467-b693-0c01346bf934&gt;/akademstom.ru/public_html/articles/detail.php" />
+        <option value="&lt;d870e8eb-417e-4467-b693-0c01346bf934&gt;/akademstom.ru/public_html/bitrix/components/ak_new/other.articles/templates/.default/template.php" />
+        <option value="&lt;d870e8eb-417e-4467-b693-0c01346bf934&gt;/akademstom.ru/public_html/bitrix/templates/ak_new/template_styles.css" />
         <option value="&lt;d870e8eb-417e-4467-b693-0c01346bf934&gt;/akademstom.ru/public_html/bitrix/templates/ak_new/js/script.js" />
+        <option value="&lt;d870e8eb-417e-4467-b693-0c01346bf934&gt;/akademstom.ru/public_html/bitrix/templates/ak_new/styles.css" />
       </list>
     </option>
   </component>
@@ -137,8 +171,8 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -178,24 +212,27 @@
       <updated>1554613607769</updated>
       <workItem from="1554613609609" duration="15000" />
       <workItem from="1557635953415" duration="10233000" />
+      <workItem from="1559239005764" duration="146000" />
+      <workItem from="1560269492111" duration="8723000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10248000" />
+    <option name="totallyTimeSpent" value="19117000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="35" y="98" width="1781" height="862" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297587" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297587" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Remote Host" active="true" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32967034" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24754193" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25274727" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -216,7 +253,15 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>remoteDeploymentFS://&lt;d870e8eb-417e-4467-b693-0c01346bf934&gt;/akademstom.ru/public_html/articles/detail.php</url>
+          <line>81</line>
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="1" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
@@ -224,7 +269,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-143">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>

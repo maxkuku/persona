@@ -43,7 +43,7 @@ $aMenuLinks = Array(
 	),
 	Array(
 		"Новости",
-		"news/",
+		"/ads_block/",
 		Array(),
 		Array("IS_PARENT"=>"", "DEPTH_LEVEL"=>"2"),
 		""
@@ -67,13 +67,13 @@ $aMenuLinks = Array(
             "DIVIDER" => "hidden"),
         ""
     ),
-	Array(
+	/*Array(
 		"Служба поддержки",
 		"mailto:info@persona.market",
 		Array(),
 		Array("IS_PARENT"=>"", "DEPTH_LEVEL"=>"2"),
 		""
-	),
+	),*/
 	Array(
 		"Отзывы о товарах",
 		"/reviews/",
@@ -142,13 +142,13 @@ $aMenuLinks = Array(
 		Array("IS_PARENT"=>"", "DEPTH_LEVEL"=>"2"),
 		""
 	),
-	Array(
+	/*Array(
 		"Карта сайта",
 		"sitemap/",
 		Array(),
 		Array("IS_PARENT"=>"", "DEPTH_LEVEL"=>"2"),
 		""
-	),
+	),*/
 	/*Array(
 		"Подарочный сертификат",
 		"vouchers/",

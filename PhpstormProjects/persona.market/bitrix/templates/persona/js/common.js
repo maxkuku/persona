@@ -297,7 +297,7 @@ var cart = {
                     $('#modal-cart .modal-body').find('.text-center').hide();
                     $('#modal-cart').modal('show');
                     //setTimeout(function () {
-                        $('#cart-total').html(json['totals']);
+                    $('#cart-total').html(json['totals']);
                     //}, 100);
                     $.ajax({ // TODO: обновление миникорзины
                         url: '/ajax/index.php',
@@ -1104,151 +1104,34 @@ $(document).ready(function(){
 
 
 domReady(function () {
-    window.variable = new Array();
-    $('.filter-left label').one('click', function () {
+
+    $('.filter-left input').one('change', function () {
 
 
-        //console.log('filter-left label click')
-
-        if($(this).length) {
-            //$('.filter-left').find('input').removeAttr('checked');
-            //$(this).find('.fa-check-square-o').toggle();
-            //$(this).find('.fa-square-o').toggle();
-            $(this).find('.fa-check').toggle();
-        }
-
-        if($(this).prop('tagName') !== "SELECT")
-            $('select option[value="off"]').attr("selected",true);
-
-
-        var filter_name = "";
-        if($(this).parents('#brand-checkbox').length){
-            $('#manuf-group').css({'visibility':'hidden'});
-            filter_name = "brand";
-        }
-        else{
-            $('#manuf-group').css({'visibility':'visible'});
-            filter_name = "price";
-        }
-
-
-        var inp = $(this).find('input').attr('checked', true);
-        var var_value = inp.val();
-
-        window.variable.push({
-            filter_name: {
-                type: filter_name,
-                val: var_value
-            }
-        });
-
-        var line = "ajax=Y&dist=" + window.dist;
-        for (var i=0; i<window.variable.length; ++i){
-            line = line + "&type[" + i + "]=" + window.variable[i].filter_name.type;
-            line = line + "&val[" + i + "]=" + window.variable[i].filter_name.val;
-        }
-
-        /*$.ajax({
-            url: "/catalog/ajax.php",
-            data: "type=" + ($(this).find('input').attr('name') || $(this).parent().attr('name')) + "&val=" + $(this).find('input').val() + "&ajax=Y&dist=" + window.dist,
-            dataType: "html",
-            success: function(response) {
-                $('.catalog-section').html(response);
-                $('.pagination-wrapper').hide();
-            },
-            error: function (xhr, ajaxOptions, thrownError) {
-                console.log(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
-            }
-        });*/
+        $(this).parents('label').find('.fa-check').toggle();
 
 
 
-        $.ajax({
-            url: "/catalog/json.php",
-            data: line,
-            dataType: "html",
-            success: function(response) {
-                //console.log(response);
-                $('.catalog-section').html(response);
-                $('.pagination-wrapper').hide();
-                $('#clear_filter').show();
-            },
-            error: function (xhr, ajaxOptions, thrownError) {
-                console.log(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
-            }
-        });
+
+
+        var qs = $('#catalog_form').serialize();
+
+        //console.log(qs);
+
+
+        setTimeout(function() {
+            location.href = "/catalog/select/?" + qs
+        },100);
 
     });
 
 
     $('.filter-left select').change(function () {
-        var filter_name = $(this).attr('name');
-        var val_select = $(this).children('option:selected').val();
-        var id_select = $(this).children('option:selected').data("id");
-        if($(this).children('option:selected').val() != "off")
-        {
 
-        window.variable.push({
-            filter_name: {
-                type: filter_name,
-                val: val_select,
-                id: id_select
-            }
-        });
+        var qs = $('#catalog_form').serialize();
 
-            var line = "ajax=Y";
-            for (var i=0; i<window.variable.length; ++i){
-
-                //if(window.variable[i].filter_name.type === "") {
-                    line = line + "&type[" + i + "]=" + window.variable[i].filter_name.type;
-                    line = line + "&val[" + i + "]=" + window.variable[i].filter_name.val;
-                    line = line + "&id[" + i + "]=" + window.variable[i].filter_name.id;
-                //}
-
-                //if(window.variable[i].filter_name.val === "")
-
-
-                //if(window.variable[i].filter_name.id === "")
-
-            }
-
-
-            /*$.ajax({
-                url: "/catalog/ajax.php",
-                data: "type=" + ($(this).attr('name') || $(this).parent().attr('name')) + "&val=" + $(this).val() + "&ajax=Y&dist=" + window.dist + '&id=' + $(this).find('option:selected').data('id'),
-                dataType: "html",
-                success: function (response) {
-                    $('.catalog-section').html(response);
-                    $('.pagination-wrapper').hide();
-                    $('.filter-left').find('input').removeAttr('checked');
-                    $('.filter-left').find('.fa-check-square-o').hide();
-                    $('.filter-left').find('.fa-check-o').show();
-                },
-                error: function (xhr, ajaxOptions, thrownError) {
-                    console.log(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
-                }
-            });*/
-
-
-
-
-            $.ajax({
-                url: "/catalog/json.php",
-                data: line,
-                dataType: "html",
-                beforeSend: function(){
-
-                },
-                success: function(response) {
-                    //console.log(response);
-                    $('.catalog-section').html(response);
-                    $('.pagination-wrapper').hide();
-                    $('#clear_filter').show();
-                },
-                error: function (xhr, ajaxOptions, thrownError) {
-                    console.log(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
-                }
-            });
-        }
+        setTimeout(function() {
+            location.href = "/catalog/select/?" + qs
+        },100);
     });
 });

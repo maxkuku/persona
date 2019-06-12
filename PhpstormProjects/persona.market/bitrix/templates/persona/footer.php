@@ -54,7 +54,25 @@
 
 </footer>
 
+<section id="cookiePrompt" class="cookiePrompt footer-fixed bg-neutral-60 text-light py-2 peeking" style="display: none">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 text-tw-slate">
+                Мы используем куки чтобы добавить вам удобства, когда вы на сайте. Если вы согласны, нажмите Принять. Подробнее читайте <a href="/policy/"><u>Политика</u></a>.
+            </div>
+            <div class="col-md-4">
+                <a href="javascript:;" id="cookieConsentButton" class="btn btn-green">
+                    Принять
+                </a>
+                <a href="javascript:;" id="cookieDeclineButton" class="btn btn-neutral-80">
+                    Отказаться
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
 
+<div style="display:none">
 <span itemscope="" itemtype="http://schema.org/Store">
 <meta itemprop="name" content=" «Персона» маркет — магазин косметики для волос и тела">
 <link itemprop="url" href="<?= SITE_URL?>">
@@ -164,6 +182,7 @@ search={search_term_string}">
 <span class="photo"><span class="value-title" title="<?= SITE_TEMPLATE_PATH?>/lang/ru/logo.gif"></span></span>
 <span class="priceRange"><span class="value-title" title="RUB"></span></span>
 </span>
+</div>
 
 <div id="cmngr_message_modal" class="modal fade">
     <div class="modal-dialog">

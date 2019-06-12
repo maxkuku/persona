@@ -32,7 +32,7 @@ use \Bitrix\Main\Localization\Loc;
                     <?if($item['PREVIEW_PICTURE']['SRC']):?>
                     <img src="<?=$item['PREVIEW_PICTURE']['SRC']?>" alt="<?=$item['PREVIEW_PICTURE']['ALT']?>" title="<?=$item['PREVIEW_PICTURE']['TITLE']?>" width="248" height="260" class="img-responsive center-block">
                     <?else:?>
-                        <span style="background: url(/upload/resize_cache/iblock/51e/248_260_1/Persona_sign_gold_01_1.jpg) no-repeat center / contain;    width: 100%; height: 260px; display: block;">&nbsp;</span>
+                        <span style="background: url(/bitrix/templates/persona/images/Persona_sign_gold_01_1.jpg) no-repeat center / contain;    width: 100%; height: 260px; display: block;">&nbsp;</span>
                     <?endif?>
                     </a>
                 <div style="display:none" data-entity="quantity-block"><?=['PROPERTIES']['quantity_cust']['VALUE']?></div>
@@ -64,8 +64,23 @@ use \Bitrix\Main\Localization\Loc;
                     <?endif?>
                 </div>
 
-                <p class="price"><?=$item['PROPERTIES']['price']['VALUE']?><span class="rur">руб.</span> <!--span class="sr-only">р.</span><span class="roboto-forced ruble" aria-hidden="true" style="display:none;"></span-->
-                </p>
+
+
+                <div class="price">
+					<span class="price-old"><?=$item['PROPERTIES']['price']['VALUE']?>
+                        <span class="sr-only">р.</span>
+						<!--span class="roboto-forced ruble" aria-hidden="true" style="display:none;     font-weight: 400;"></span--><!--&nbsp;-->
+                    </span>
+                    <span class="price-new"><?=$item['PROPERTIES']['sale']['VALUE']?>
+                        <span class="sr-only">р.</span>
+                        <span class="roboto-forced ruble" aria-hidden="true" style="display:none;     font-weight: 400;"></span>
+                    </span>
+
+                </div>
+
+
+
+
                 <?$r = CatalogItemComponent::choozeFeedback($item['ID']);
                 # r[0] - rating, r[1] - feeds?>
                 <p class="rating">

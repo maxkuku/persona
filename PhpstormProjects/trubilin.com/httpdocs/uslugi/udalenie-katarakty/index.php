@@ -19,7 +19,7 @@ $APPLICATION->SetAdditionalCSS( "/uslugi/udalenie-katarakty/custom.css" );
 			<div class="inline inline-text">
 				<div class="text-header-block">
 					<div>
-						<h2>Операция по удалению катаракты в Москве</h2>
+						<h1>Операция по удалению катаракты в Москве</h1>
 					</div>
 				<div>
  <span class="red-bg">Под ключ <nobr> от 35 000 руб.</nobr></span>

@@ -3458,7 +3458,7 @@ a.btn.disabled, fieldset[disabled] a.btn {
     content: '\f291';
 }
 
-input[name=brand] {
+input[name="brand[]"] {
     visibility: hidden;
     width: 5px;
 }
@@ -6304,7 +6304,7 @@ body .modal/*.fade*/.in .modal-dialog{
 }
 
 div#limit-button{
-    width: 120px;
+    /*width: 120px;*/
 }
 button.btn.btn-default.filt-but {
     border-left: none;
@@ -8712,6 +8712,7 @@ header > .container.text-center {
     padding: 5px 10px;
     max-width: 130px;
     text-transform: uppercase;
+    background-color: transparent;
 }
 
 .dropup .btn.btn-addtocart{
@@ -8904,7 +8905,7 @@ button.btn.btn-addtocart.qview:hover {
 #content td .price-old,
 #content td .price-old .ruble:before{
     color: #e4003a;
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 300;
     text-decoration: line-through
 }
@@ -9560,7 +9561,7 @@ form > .buttons {
 .product-layout .caption .price .price-old {
     text-decoration: line-through;
     color: #e4003a;
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 300
 }
 
@@ -11450,9 +11451,15 @@ footer a {
     position: absolute;
     top: 0;
     left: 0;
-    max-width: none
+    max-width: none;
+    height: auto!important;
+    max-height:344px;
 }
-
+.price-old span.roboto-forced.ruble {
+    color: #e4003a;
+    text-decoration: line-through;
+    font-size: 18px;
+}
 .nivo-main-image {
     display: block !important;
     position: relative !important;
@@ -13883,6 +13890,7 @@ li {
     box-shadow: none;
     border-color: #AD8A28;
 }
+
 @media (min-width: 768px) and (max-width:1200px){
     .phone span.two-small-phones {
         font-size: 17px;

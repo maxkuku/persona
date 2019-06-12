@@ -1,6 +1,6 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
-$APPLICATION->SetTitle("Новости компании");
+$APPLICATION->SetTitle("Тексты рубрик");
 ?>
 <p><?$APPLICATION->IncludeComponent("bitrix:news", "for_news_page", Array(
 	"IBLOCK_TYPE" => "news",	// Тип инфоблока

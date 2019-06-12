@@ -59,7 +59,6 @@ $APPLICATION->SetTitle( "«Персона» маркет" ); ?><div class="conte
 				<div class="row custom-blocks">
 					<div class="col-sm-4">
 						<div class="custom-block">
- <a href="bonus">
 							<div class="image">
  <img alt="Акции и скидки" src="/bitrix/templates/persona/images/bonus-icon-50x50.png">
 							</div>
@@ -68,10 +67,9 @@ $APPLICATION->SetTitle( "«Персона» маркет" ); ?><div class="conte
 									 Лояльность для любимых клиентов
 								</div>
 								<p style="word-wrap: break-word;">
-									 Накопительная бонусная система
+									 Постоянные скидки и спецпредложения
 								</p>
 							</div>
- </a>
 						</div>
 					</div>
 					<div class="col-sm-4">
@@ -315,33 +313,31 @@ Array(
 	)
 );?>
 				<div class="home_text">
-					 Вы заслуживаете лучшего! Так разрешите себе иметь сногсшибательный вид, покупая средства професионального ухода за волосами и телом по приемлемым ценам. Это уникальная возможность навсегда проститься с малоэффективной и изжившей себя косметикой из супермаркета!
 					<div style="text-align: center;">
-						<h2>Богатый выбор </h2>
+						<h2>О магазине</h2>
 					</div>
-					 Наши клиенты не задумываются над тем, где купить качественные косметические средства, эффект которых способен приятно поразить. Мы знаем, что вам нужно для того, чтобы выглядеть на все 200%, не беспокоясь о том, как сэкономить. Наш онлайн-маркет предлагает вам широчайший выбор косметики для прекрасного и сильного пола. Ассортимент составляют популярные мировые бренды по суперценам:
+					 Персона Маркет – магазин профессиональной косметики, территория парикмахеров, стилистов и тех, кто привык делать ставку в пользу высших результатов, качества и инноваций в Beauty-сегменте, а также предпочитает выглядеть безупречно. На весь ассортимент продукции имеются сертификаты безопасности и соответствия требованиям всех международных нормативов. Мы сотрудничаем только с проверенными официальными поставщиками мировых брендов. Купить косметику и инструменты у нас – значит существенно сэкономить время и средства. Мы, как никто другой, знаем, что в современном высокоскоростном жизненном темпе каждая свободная минута – дороже золота.
+					<div style="text-align: center;">
+						<h3>Почему стоит выбрать Персона Маркет? </h3>
+					</div>
+					 Большая часть косметических средств, которая находятся на прилавках современных магазинов, невысокого качества, а также она малоэффективна. Вы заслуживаете лучшего! Так разрешите себе иметь сногсшибательный вид, покупая средства профессионального ухода за волосами и телом по лучшим ценам. У Вас есть уникальная возможность навсегда проститься с неэффективной и изжившей себя косметикой из супермаркета! Профессиональная косметика давно перестала быть прерогативой только салонов красоты и парикмахерских. Сейчас производители косметики премиум класса стараются делать ее доступной для всех и простой в применении. Более того, профессиональная косметика не только позволяет создать незабываемый образ, но и заботится о Вашем здоровье. <br>
+ <br>
+					 Наши клиенты знают, где выгоднее всего купить качественные косметические средства, эффект которых способен приятно поразить. Потому что мы знаем, что вам нужно для того, чтобы выглядеть на все 200%. При этом Вам совершенно не нужно беспокоиться о том, как сэкономить. Наш онлайн-маркет предлагает широчайший выбор косметики для прекрасного и сильного пола по демократичным ценам. Ассортимент составляют популярные мировые бренды, такие как DEMI, TIGI, Helen Seward, GHD, Nioxin, Redken, WELLA и многие другие. Всю бренды и их продукцию Вы можете просмотреть в каталоге.
+					<div style="text-align: center;">
+						<h3>У нас Вы можете найти все:</h3>
+					</div>
 					<ol>
-						<li>Средства для химической завивки, кератиновых процедур и ламинирования</li>
-						<li>
-						Продукция для окрашивания, тонирования и осветления волос</li>
-						<li>
-						Ухаживающая косметика для волос (шампуни, маски, спреи, бальзамы)</li>
-						<li>
-						Стайлинги и укладки</li>
-						<li>
-						Краски для ресниц и бровей</li>
+						<li>Средства для химической завивки, кератиновых процедур и ламинирования </li>
+						<li>Продукция для окрашивания, тонирования и осветления волос</li>
+						<li>Ухаживающая косметика для волос (шампуни, маски, спреи, бальзамы)</li>
+						<li>Стайлинги и укладки</li>
+						<li>Краски для ресниц и бровей</li>
 						<li>Парикмахерский инструментарий.</li>
 					</ol>
-					<ol>
-					</ol>
 					<div style="text-align: center;">
-						<h3>Почему мы? </h3>
+						<h3>Как сделать заказ?</h3>
 					</div>
-					 Персона Маркет – территория профессиональных парикмахеров и тех, кто привык делать ставку в пользу высших результатов, качества и новаций в Beauty-сегменте, а также предпочитает выглядеть безупречно. На весь ассортимент продукции имеются сертификаты безопасности и соответствия требованиям всех международных нормативов. Мы сотрудничаем только с проверенными официальными поставщиками мировых брендов. Купить косметику и инструменты у нас – значит существенно сэкономить время и средства. В высокоскоростном жизненном ритме каждая свободная минута – дороже золота.
-					<div style="text-align: center;">
-						<h3>Как купить? </h3>
-					</div>
-					 Сделать заказа на сайте – дело 2-3 минут. Ваша задача довольно проста – заполняете блок своими контактными данными, выбираете удобный способ доставки и оплаты. А если есть вопросы, можно в любое время суток связаться с нашим консультантом по телефону, представленному на сайте.
+						 Это не займет у Вас много времени. Все предельно просто – Вы заполняете блок своими контактными данными, выбираете удобный для Вас способ доставки и оплаты. А если есть вопросы, то Вы можете в любое время суток связаться с нашим консультантом по телефону, представленному на сайте.
 					<hr>
 				</div>
 				 <!--feeds--> <?$APPLICATION->IncludeComponent(
@@ -447,12 +443,10 @@ Array(
 		"SORT_BY1" => "SORT",
 		"SORT_ORDER1" => "ASC"
 	)
-);?> <!--for recent--> <? $arrFilter = array("=PROPERTY_RECENT" => "1")?>
-                    <?$APPLICATION->IncludeComponent(
+);?> <!--for recent--> <? $arrFilter = array("=PROPERTY_RECENT" => "1")?> <?$APPLICATION->IncludeComponent(
 	"persona:recent.real",
 	"",
 	Array(
-		"LIMIT" => "8",
 		"ADD_SECTIONS_CHAIN" => "N",
 		"AJAX_MODE" => "N",
 		"AJAX_OPTION_ADDITIONAL" => "",
@@ -479,6 +473,7 @@ Array(
 		"IBLOCK_ID" => "4",
 		"IBLOCK_TYPE" => "goods",
 		"INCLUDE_IBLOCK_INTO_CHAIN" => "N",
+		"LIMIT" => "8",
 		"NEWS_COUNT" => "1",
 		"PAGER_DESC_NUMBERING" => "N",
 		"PAGER_DESC_NUMBERING_CACHE_TIME" => "36000000",
@@ -502,7 +497,9 @@ Array(
 );?>
 					<div id="cmswidget-8" class="cmswidget">
 						<div class="panel panel-default">
-                            <div class="panel-heading"><a href="/texts/">Статьи</a></div>
+							<div class="panel-heading">
+ <a href="/ads_block/">Статьи</a>
+							</div>
 							<div class="seocmspro_content record_columns coloring_record_columns">
 								 <?$APPLICATION->IncludeComponent(
 	"persona:news.list",
@@ -587,48 +584,43 @@ Array(
 			 <?$show_partners = "N";
             if($show_partners == "Y"):?>
 			<div class="col-sm-12" id="home_position_3">
-				<div id="carousel0" class="carousel <?=(MOB!=1)?"owl-carousel":""?>>
-					 <?
+				<div id="carousel0" class="carousel <span id=" title="Код PHP: &lt;?=(MOB!=1)?&quot;owl-carousel&quot;:&quot;&quot;?&gt;">
+					 <?=(MOB!=1)?"owl-carousel":""?><span class="bxhtmled-surrogate-inner"><span class="bxhtmled-right-side-item-icon"></span><span class="bxhtmled-comp-lable" unselectable="on" spellcheck="false">Код PHP</span></span>&gt; <?
 
-                    if ($handle = opendir( __DIR__ . '/bitrix/templates/persona/images/partners/')) {
-                        while (false !== ($entry = readdir($handle))) {
-                            if ($entry != "." && $entry != "..") {
-                                $i++;
-                                /*сломано*/
-                                ?>
+                if ($handle = opendir( __DIR__ . '/bitrix/templates/persona/images/partners/')) {
+                while (false !== ($entry = readdir($handle))) {
+                if ($entry != "." && $entry != "..") {
+                $i++;
+                /*сломано*/
+                ?>
 					<div class="item text-center">
-                        <a href="echosline">
-                            <img src="<?=$entry?>" alt="Persona-market partner <?=$i?>" class="img-responsive">
-                        </a>
-                    </div>
+ <a href="echosline"> <img alt="Persona-market partner <?=$i?>" src="<?=$entry?>
+						 " class="img-responsive"> </a>
+					</div>
 					 <?
-                            }
-                        }
-                        closedir($handle);
-                    }
-                    else{
-                        echo "No pics in partners :(\r\n";
-                    }
+            }
+            }
+            closedir($handle);
+            }
+            else{
+                echo "No pics in partners :(\r\n";
+            }
 
-                    ?>
-            <?if(MOB!=1):?>
-            <script type="text/javascript">
-                        domReady(function(){
-                            $('#carousel0').owlCarousel({
-                                items: 6,
-                                autoPlay: 3000,
-                                navigation: true,
-                                theme: 'carousel',
-                                navigationText: ['<i class="fa fa-chevron-left"></i>', '<i class="fa fa-chevron-right"></i>'],
-                                pagination: false
-                            });
-                        });
-                    </script>
-                    <?endif?>
+            ?> <?if(MOB!=1):?> <script type="text/javascript">
+                domReady(function(){
+                    $('#carousel0').owlCarousel({
+                        items: 6,
+                        autoPlay: 3000,
+                        navigation: true,
+                        theme: 'carousel',
+                        navigationText: ['<i class="fa fa-chevron-left"></i>', '<i class="fa fa-chevron-right"></i>'],
+                        pagination: false
+                    });
+                });
+            </script> <?endif?>
 				</div>
 			</div>
-			 <?endif;?>
-			<!--div class="row">
+			 <?endif;?> <!--div class="row">
 				<div style="text-align: center;">
 					<h2>Тематические статьи</h2>
 				</div>
@@ -694,7 +686,7 @@ Array(
 	"addresses",
 	Array(
 		"ACTIVE_DATE_FORMAT" => "d.m.Y",
-		"ADD_SECTIONS_CHAIN" => "Y",
+		"ADD_SECTIONS_CHAIN" => "N",
 		"AJAX_MODE" => "N",
 		"AJAX_OPTION_ADDITIONAL" => "",
 		"AJAX_OPTION_HISTORY" => "N",
@@ -718,7 +710,7 @@ Array(
 		"HIDE_LINK_WHEN_NO_DETAIL" => "N",
 		"IBLOCK_ID" => "15",
 		"IBLOCK_TYPE" => "news",
-		"INCLUDE_IBLOCK_INTO_CHAIN" => "Y",
+		"INCLUDE_IBLOCK_INTO_CHAIN" => "N",
 		"INCLUDE_SUBSECTIONS" => "Y",
 		"MESSAGE_404" => "",
 		"NEWS_COUNT" => "10020",
@@ -728,7 +720,7 @@ Array(
 		"PAGER_SHOW_ALL" => "N",
 		"PAGER_SHOW_ALWAYS" => "N",
 		"PAGER_TEMPLATE" => ".default",
-		"PAGER_TITLE" => "Новости",
+		"PAGER_TITLE" => "Адреса",
 		"PARENT_SECTION" => "",
 		"PARENT_SECTION_CODE" => "",
 		"PREVIEW_TRUNCATE_LEN" => "",
@@ -755,8 +747,7 @@ Array(
 							</div>
 						</div>
 					</div>
-					 <script src="//maps.api.2gis.ru/2.0/loader.js"></script>
-                    <script type="text/javascript">
+					 <script src="//maps.api.2gis.ru/2.0/loader.js"></script> <script type="text/javascript">
                             window.map;
 
                             DG.then(function () {
@@ -809,8 +800,8 @@ Array(
 		                            "SET_META_KEYWORDS" => "N",
 		                            "SET_META_DESCRIPTION" => "N",
 		                            "SET_LAST_MODIFIED" => "N",
-		                            "INCLUDE_IBLOCK_INTO_CHAIN" => "Y",
-		                            "ADD_SECTIONS_CHAIN" => "Y",
+		                            "INCLUDE_IBLOCK_INTO_CHAIN" => "N",
+		                            "ADD_SECTIONS_CHAIN" => "N",
 		                            "HIDE_LINK_WHEN_NO_DETAIL" => "N",
 		                            "PARENT_SECTION" => "",
 		                            "PARENT_SECTION_CODE" => "",
@@ -847,4 +838,5 @@ Array(
 			});
          </script>
 	</div>
-</div><? require( $_SERVER["DOCUMENT_ROOT"] . "/bitrix/footer.php" ); ?>
+</div>
+ <br><? require( $_SERVER["DOCUMENT_ROOT"] . "/bitrix/footer.php" ); ?>

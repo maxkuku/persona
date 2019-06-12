@@ -118,7 +118,7 @@ RewriteRule "/\.|^\.(?!well-known/)" - [F]
 # (https://www.example.com/... will be redirected to https://example.com/...)
 # uncomment the following:
 RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
-RewriteRule ^ http%{ENV:protossl}://%1%{REQUEST_URI} [L,R=301]
+RewriteRule ^ https%{ENV:protossl}://%1%{REQUEST_URI} [L,R=301]
 
 # Modify the RewriteBase if you are using Drupal in a subdirectory or in a
 # VirtualDocumentRoot and the rewrite rules are not working properly.
@@ -192,8 +192,9 @@ RewriteRule ^diagnos\/$ diagnos/fvd/ [L,NC,R=301]
 
 
 
+Redirect 301 /content/vyzov-pulmonologa-na-dom          https://integramed.info/pulmonology/vyzov-pulmonologa-na-dom
 Redirect 301 /oncology/special/                         https://integramed.info
-Redirect 301 https://integramed.info/header/index.html   https://integramed.info
+Redirect 301 https://integramed.info/header/index.html  https://integramed.info
 Redirect 301 /diagnostic/		                        https://integramed.info/services/service4
 Redirect 301 /ru/services/services/service4/s1/		    https://integramed.info/services/service4/s1
 Redirect 301 /ru/services/services/service4/s2/		    https://integramed.info/oncology/checkup
