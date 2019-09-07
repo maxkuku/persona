@@ -5,7 +5,7 @@ $APPLICATION->SetTitle("Ajax");
 CModule::IncludeModule('iblock');
 CModule::IncludeModule('form');
 
-$BX_USER_ID = $_COOKIE['BX_USER_ID'];
+$BX_USER_ID = htmlspecialchars($_COOKIE['BX_USER_ID'],3);
 $SESSION_ID = end(explode('=', bitrix_sessid_get()));
 
 # function show_all is in init.php
@@ -33,9 +33,10 @@ if ($PRODUCT_ID && $WEB_FORM_ID) {
         $arFields = $ob->GetFields();
         $PROD_NAME = $arFields['NAME'];
         if($arFields['PROPERTY_SALE_VALUE']):
-        $PRICE = $arFields['PROPERTY_SALE_VALUE'];
+            $PRICE = $arFields['PROPERTY_SALE_VALUE'];
+            $product_variant = $arFields['PROPERTY_PRICE_VALUE'] - $arFields['PROPERTY_SALE_VALUE'];
         else:
-        $PRICE = $arFields['PROPERTY_PRICE_VALUE'];
+            $PRICE = $arFields['PROPERTY_PRICE_VALUE'];
         endif;
         $P_URL = $arFields['DETAIL_PAGE_URL'];
     }
@@ -44,7 +45,7 @@ if ($PRODUCT_ID && $WEB_FORM_ID) {
         "form_text_8" => $PRODUCT_ID,
         "form_text_6" => $BX_USER_ID,
         "form_text_7" => $PROD_NAME,
-        "form_text_9" => $product_variant,
+        "form_text_9" => $product_variant, // здесь специально оставлен вариант
         "form_text_10" => $PRICE,
     );
 
@@ -122,6 +123,7 @@ if ($PRODUCT_ID > 0 && $UPD > 0) {
         $arFields = $ob->GetFields();
         $PROD_NAME = $arFields['NAME'];
         $PRICE = $arFields['PROPERTY_PRICE_VALUE'];
+        $SALE = $arFields['PROPERTY_SALE_VALUE'];
         $P_URL = $arFields['DETAIL_PAGE_URL'];
     }
 
@@ -130,7 +132,8 @@ if ($PRODUCT_ID > 0 && $UPD > 0) {
         "form_text_8" => $PRODUCT_ID,
         "form_text_6" => $BX_USER_ID,
         "form_text_7" => $PROD_NAME,
-        "form_text_9" => $product_variant,
+        "form_text_9" => $SALE,
+        "form_text_23" => $product_variant,
         "form_text_10" => $PRICE,
     );
 

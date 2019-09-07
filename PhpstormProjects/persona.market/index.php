@@ -1,5 +1,6 @@
 <? require( $_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php" );
-$APPLICATION->SetTitle("«Персона» маркет");
+$APPLICATION->SetPageProperty("description", "Интернет-магазин профессиональной косметики для волос и тела имидж-лаборатории Персона Lab. Мы сотрудничаем с такими брендами, как TIGI, Wella и др. Наша сеть салонов находится по всей Москве.");
+$APPLICATION->SetTitle("Персона Маркет - интернет-магазин профессиональной косметики для волос в Москве");
 $APPLICATION->SetTitle( "«Персона» маркет" ); ?><div class="content-wrapper">
 	<div class="container">
 		<div class="row">
@@ -94,14 +95,14 @@ $APPLICATION->SetTitle( "«Персона» маркет" ); ?><div class="conte
 						<div class="custom-block">
  <a href="http://persona.market/payment-delivery">
 							<div class="image">
- <img alt="Бесплатная доставка" src="/bitrix/templates/persona/images/free-delivery-icon-50x50.png">
+ <img alt="Скидка при доставке" src="/bitrix/templates/persona/images/free-delivery-icon-50x502.png">
 							</div>
 							<div class="text">
 								<div class="title">
-									 Бесплатная доставка и самовывоз
+									 Скидка 20% при заказе доставкой
 								</div>
 								<p style="word-wrap: break-word;">
-									 По Москве бесплатно при заказе от 3000 рублей
+									 Скидки не суммируются
 								</p>
 							</div>
  </a>
@@ -337,7 +338,7 @@ Array(
 					<div style="text-align: center;">
 						<h3>Как сделать заказ?</h3>
 					</div>
-						 Это не займет у Вас много времени. Все предельно просто – Вы заполняете блок своими контактными данными, выбираете удобный для Вас способ доставки и оплаты. А если есть вопросы, то Вы можете в любое время суток связаться с нашим консультантом по телефону, представленному на сайте.
+					 Это не займет у Вас много времени. Все предельно просто – Вы заполняете блок своими контактными данными, выбираете удобный для Вас способ доставки и оплаты. А если есть вопросы, то Вы можете в любое время суток связаться с нашим консультантом по телефону, представленному на сайте.
 					<hr>
 				</div>
 				 <!--feeds--> <?$APPLICATION->IncludeComponent(

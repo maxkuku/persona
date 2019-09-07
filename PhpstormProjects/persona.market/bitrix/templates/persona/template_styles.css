@@ -9297,11 +9297,11 @@ form > .buttons {
 }
 
 .addtocart-group #button-cart {
-    width: 70%
+    width: 68%
 }
 
 .addtocart-group #button-fastorder {
-    width: 27%
+    width: 13.5%
 }
 
 .filter-item {
@@ -9946,7 +9946,8 @@ form > .buttons {
     display: inline-block;
     vertical-align: middle;
     white-space: normal;
-    position: relative
+    position: relative;
+    color:black
 }
 
 #modal-cart .product .image {
@@ -11616,8 +11617,12 @@ footer a {
     -moz-osx-font-smoothing: grayscale
 }
 
-.roboto-forced:before{
+.roboto-forced.ruble:before{
     content:"руб."!important;
+}
+
+.roboto-forced.perc.ruble:before{
+    content:"%"!important;
 }
 
 .roboto-forced.ruble:before {
@@ -13045,11 +13050,11 @@ td.sc-stat-vertical-middle,.sc-stat-vertical-middle {
     width: 314px!important;
 }
 .item_actions_line {
-
+    position: relative;
     height: 205px;
     display: block;
     float: left;
-    margin: 7px 2px 20px;
+    margin: 7px 0 20px;
     border: 5px solid #F2F3F3;
     text-align: center;
     background-color: #000000;
@@ -13628,6 +13633,13 @@ button, input, optgroup, select, textarea {
     margin: 0 auto;
     padding: 0px 0px 0px;
     display: block;
+    transition: 5s ease;
+    transition-delay: 1s;
+    /*width: 10200px;*/
+    text-align: left;
+}
+.whole-name.top-nav ul:hover{
+    transform: translateX(-50%);
 }
 .whole-name > div {
     text-align: center;
@@ -13890,7 +13902,9 @@ li {
     box-shadow: none;
     border-color: #AD8A28;
 }
-
+#modal-cart .alert {
+    color: #000;
+}
 @media (min-width: 768px) and (max-width:1200px){
     .phone span.two-small-phones {
         font-size: 17px;
@@ -13941,6 +13955,9 @@ li {
     }
 }
 @media (max-width: 478px) {
+    .item_actions_line_shadow {
+        width: auto;
+    }
     #top h1 {
         display: inline-block;
         line-height: 1.4;
@@ -14079,6 +14096,7 @@ li {
     }
     .whole-name.top-nav ul {
         display: flex;
+        width:460vw;
     }
     .whole-name .container.top-menu-container {
         text-align: center;

@@ -30,8 +30,8 @@ if(CLightHTMLEditor::IsMobileDevice()){
 	<meta name="msapplication-TileImage" content="<?= SITE_TEMPLATE_PATH ?>/images/mstile-144x144.png">
 	<meta name="theme-color" content="#ffffff">
 	<link rel="shortcut icon" type="image/x-icon" href="<?= SITE_TEMPLATE_PATH ?>/favicon.ico"/>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" type="text/css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" type="text/css"/>
+	<link rel="stylesheet" href="<?=SITE_TEMPLATE_PATH?>/css/bootstrap.min.css" type="text/css">
+	<link rel="stylesheet" href="<?=SITE_TEMPLATE_PATH?>/css/font-awesome.css" type="text/css"/>
     <link rel="stylesheet" href="<?= SITE_TEMPLATE_PATH?>/bal_style.css" type="text/css"/>
     <link rel="stylesheet"  href="<?= SITE_TEMPLATE_PATH?>/customscrollbar.css" type="text/css"/>
 	<script type="text/javascript">
@@ -43,6 +43,21 @@ if(CLightHTMLEditor::IsMobileDevice()){
 	<? $APPLICATION->ShowHead();
 	CJSCore::Init(array('ajax', 'window'));
     ?>
+
+    <script type="text/javascript" >
+       (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+       m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+       (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+       ym(54107791, "init", {
+            clickmap:true,
+            trackLinks:true,
+            accurateTrackBounce:true,
+            webvisor:true
+       });
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/54107791" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+
 </head>
 <?if($APPLICATION->GetCurPage() == '/'){
    $class = "home-page";
@@ -311,7 +326,13 @@ else{
 
                     <div class="row">
                         <?if(CSite::InDir('/catalog/')){?>
+                        <form id="catalog_form">
                         <div class="filter-left col-sm-2 col-xs-12">
+                            <div class="form_group" id="clear_filter" style="display:none; cursor:pointer" onclick="location.href='/catalog/'">
+                                <div class="filter-header">
+                                    <span>Очистить фильтр</span>
+                                </div>
+                            </div>
                             <div class="form_group" id="vid-tovara-select">
                                 <div class="filter-header">
                                     <span>Вид товара</span>
@@ -319,21 +340,17 @@ else{
                                 <div class="select-wrap">
                                     <select name="vid_tovara" class="form-control">
                                     <option value="off">Выберите</option>
-                                    <?$res = $DB->Query("SELECT DISTINCT VALUE FROM `b_iblock_element_property` WHERE IBLOCK_PROPERTY_ID = 29 ORDER BY VALUE");
+                                    <?$vid_tovara_requested = htmlspecialchars($_REQUEST['vid_tovara']);
+                                    $res = $DB->Query("SELECT DISTINCT VALUE FROM `b_iblock_element_property` WHERE IBLOCK_PROPERTY_ID = 29 ORDER BY VALUE");
                                     while ($ob = $res->Fetch()):
                                         $name = $ob['VALUE'];
                                         $en_name = rus2translit($name)?>
-                                        <option id="<?=$en_name?>_opt" value="<?=$name?>"/><?=$name?></option>
+                                        <option id="<?=$en_name?>_opt" value="<?=$name?>" <?=($name==$vid_tovara_requested)?"selected":""?>/><?=$name?></option>
                                     <?endwhile;
                                     ?>
                                     </select>
                                 </div>
                             </div>
-
-
-
-
-
                             <div class="form_group" id="dlya-select">
                                 <div class="filter-header">
                                     <span>Предназначение</span>
@@ -345,12 +362,6 @@ else{
                                     </select>
                                 </div>
                             </div>
-
-
-
-
-
-
                             <div id="brand-checkbox" class="form_group">
                                 <div class="filter-header">
                                     <span>Бренд</span>
@@ -365,13 +376,10 @@ else{
                             <p class="show_all"><a href="#" title="" class=""></a></p>
                             <style>
                                 div#brand-checkbox.active {
-                                    height: <?=$GLOBALS['brandmenuitems'] * 28?>px;
+                                    height: <?=$GLOBALS['brandmenuitems'] * 30?>px;
                                 }
 
                             </style>
-
-
-
                             <script>
                                 domReady(function () {
                                     $('.show_all a').click(function (e) {
@@ -380,49 +388,52 @@ else{
                                     });
                                 });
                             </script>
-
-
                             <div id="price-checkbox" class="form_group">
                                 <div class="filter-header">
                                     <span>Цена</span>
                                 </div>
                                 <?$res = $DB->Query("SELECT MAX(VALUE) AS vmax FROM `b_iblock_element_property` WHERE IBLOCK_PROPERTY_ID = 2 AND VALUE REGEXP '^-?[0-9]+$'");
+                                #var_dump($res);
                                 $ob = $res->Fetch();
                                 $max = $ob['vmax'];
                                 $res = $DB->Query("SELECT MIN(VALUE) AS vmin FROM `b_iblock_element_property` WHERE IBLOCK_PROPERTY_ID = 2 AND VALUE REGEXP '^-?[0-9]+$' AND VALUE > 0");
                                 $ob1 = $res->Fetch();
-                                $min = $ob['vmin'];
+
+                                $min = $ob1['vmin'];
                                 $dist = 0;
                                 if(($max - $min) > 0)
                                     $dist = ( $max - $min ) / 5;
+
+                                parse_str($_SERVER['QUERY_STRING'], $pric);
                                 ?>
                                 <script>
                                     window.dist = '<?=$dist?>';
                                 </script>
                                 <div><label for="price1_chk">
-                                    <i class="fa fa-check fa-square-o"></i>
-                                    <i class="fa fa-check fa-check-square-o" style="display: none"></i>
-                                    <input id="price1_chk" type="checkbox" name="price" value="<?=$min?>"/> До <?=$min?> </label></div>
+                                    <i class="fa fa-check fa-square-o" style="<?=($pric['price']==$min)?"display:none":""?>"></i>
+                                    <i class="fa fa-check fa-check-square-o" style="<?=($pric['price']==$min)?"display:inline-block":"display:none"?>"></i>
+                                    <input id="price1_chk" type="checkbox" name="price" value="<?=$min?>" <?=($pric['price']==$min)?"checked":""?>> До <?=$min?> </label></div>
                                 <? $l = 2;
                                 for ($i = $min + $dist - 1;  $i < $max - $dist; $i += $dist):
                                     ?>
                                     <div><label for="price<?=$l?>_chk">
-                                            <i class="fa fa-check fa-square-o"></i>
-                                            <i class="fa fa-check fa-check-square-o" style="display: none"></i>
-                                            <input id="price<?=$l?>_chk" type="checkbox" name="price" value="<?=round($i/100)*100?>"/> <?=round($i/100)*100?></label></div>
+                                            <i class="fa fa-check fa-square-o" style="<?=($pric['price']==(round($i/100)*100))?"display:none":""?>"></i>
+                                            <i class="fa fa-check fa-check-square-o" style="<?=($pric['price']==(round($i/100)*100))?"display:inline-block":"display:none"?>"></i>
+                                            <input id="price<?=$l?>_chk" type="checkbox" name="price" value="<?=round($i/100)*100?>" <?=($pric['price']==(round($i/100)*100))?"checked":""?>> <?=round($i/100)*100?></label></div>
                                     <?
                                 $l++;
                                 endfor;?>
                                 <?if(($max - 500) > $min):?>
                                 <div>
                                     <label for="price<?=$l?>_chk">
-                                        <i class="fa fa-check fa-square-o"></i>
-                                        <i class="fa fa-check fa-check-square-o" style="display: none"></i>
-                                        <input id="price<?=$l?>_chk" type="checkbox" name="price" value="<?=$max - 500?>"/> Более <?=$max - 500?></label>
+                                        <i class="fa fa-check fa-square-o" style="<?=($pric['price']==($max-500))?"display:none":""?>"></i>
+                                        <i class="fa fa-check fa-check-square-o" style="<?=($pric['price']==($max-500))?"display:inline-block":"display:none"?>"></i>
+                                        <input id="price<?=$l?>_chk" type="checkbox" name="price" value="<?=$max - 500?>" <?=($pric['price']==($max-500))?"checked":""?>> Более <?=$max - 500?></label>
                                 </div>
                                 <?endif?>
                             </div>
                         </div>
+                        </form>
                         <?$fil = "Y"?>
                         <?}?>
 

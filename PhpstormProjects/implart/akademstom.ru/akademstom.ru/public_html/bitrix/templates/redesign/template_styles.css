@@ -1,0 +1,636 @@
+@font-face {
+    font-family: 'Gotham_Pro_bold';
+    src: url('css/fonts/Gotham_Pro_bold.eot');
+    src: local('☺'), url('css/fonts/Gotham_Pro_bold.woff') format('woff'), url('css/fonts/Gotham_Pro_bold.ttf') format('truetype'), url('css/fonts/Gotham_Pro_bold.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'Gotham_Pro_regular';
+    src: url('css/fonts/Gotham_Pro_regular.eot');
+    src: local('☺'), url('css/fonts/Gotham_Pro_regular.woff') format('woff'), url('css/fonts/Gotham_Pro_regular.ttf') format('truetype'), url('css/fonts/Gotham_Pro_regular.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gotham_Pro_light';
+    src: url('css/fonts/Gotham_Pro_light.eot');
+    src: local('☺'), url('css/fonts/Gotham_Pro_light.woff') format('woff'), url('css/fonts/Gotham_Pro_light.ttf') format('truetype'), url('css/fonts/Gotham_Pro_light.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/** all and header */
+
+html {
+    width:100%;
+    height: 100%;
+    line-height: inherit!important;
+    background-color: white;
+}
+
+body
+{
+	height:100%;
+	margin:0;
+	padding:0;
+	font-family: "Gotham_Pro_light", sans-serif;
+	font-weight:300;
+    font-size: 15px;
+	position:relative;
+    -webkit-overflow-scrolling: touch;
+    overflow-scrolling: touch;
+}
+body h1, body h2, body h3, body strong, body b {
+    color: #222;
+    font-family: Gotham_Pro_bold, sans-serif;
+}
+.heading h1:after{
+    display: block;
+    content:"";
+    width: 80px;
+    height: 5px;
+    background-color: #c64482;
+    margin-top: 20px;
+}
+.heading p {
+    font-size: 16px;
+    line-height: 33px;
+}
+input, textarea{
+    font-family: Gotham_Pro_light, sans-serif;
+}
+#header{
+    border-bottom: 1px solid #ccc;
+}
+#topmenu{
+    width: 100%;
+    margin: 10px auto 0;
+    position: relative;
+    height: 70px;
+    z-index: 1;
+}
+.width1350{
+    max-width: 1350px;
+    margin-left: auto;
+    margin-right: auto;
+}
+#topmenu:after{
+    content: "";
+    position: absolute;
+    background: url(/bitrix/templates/redesign/images/dots.png) no-repeat left top / contain;
+    width: 120px;
+    height: 75px;
+    right: 0;
+    z-index: -1;
+}
+.logo-name, .top-conts, .tel-and-hours, .hours, .addr {
+    display: inline-block;
+    margin-right: 20px;
+    vertical-align: middle;
+    text-align: left;
+}
+.order-call a, .addr a, .hours b {
+    color: #222;
+    font-family: Gotham_Pro_bold, sans-serif;
+    font-size: 15px;
+}
+.order-call a:hover, .addr a:hover {
+    color: #222;
+}
+.order-call a.call{
+    font-family: Gotham_Pro_light, sans-serif;
+    color:#666;
+}
+.order-call, .hours > div, .addr > div {
+    display: inline-block;
+    vertical-align: middle;
+}
+.tel-and-hours img, .hours img, .addr img {
+    display: inline-block;
+    vertical-align: middle;
+    height: 25px;
+    margin-right: 4px;
+}
+.logo-name img {
+    height: 50px;
+}
+.top-conts {
+    width: 77%;
+    width: calc(100% - 258px);
+    text-align: right;
+    margin-right: 0;
+}
+.up-line > ul > li {
+    margin-top: 10px;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+.menu-from-fam ul li a {
+    color: #222;
+    padding: 4px;
+    font-family: Gotham_Pro_regular, sans-serif;
+}
+.menu-from-fam ul ul li a {
+    font-family: Gotham_Pro_regular, sans-serif;
+}
+.st1 ul {
+    display: block;
+    position: absolute;
+    z-index: 10;
+}
+.st1.closed ul {
+    display: none;
+}
+.menu-from-fam ul li a:hover {
+    text-decoration: none;
+    border-bottom: 1px solid;
+}
+div#contact-menu {
+    display: none;
+}
+.search img {
+    height: 18px;
+}
+.search:hover img {
+    cursor: pointer;
+    opacity: .8;
+}
+input[name="q"] {
+    outline: none;
+    height: 18px;
+    display: inline-block;
+    vertical-align: middle;
+    transition: .3s;
+    border: 1px solid transparent;
+    width: 0px;
+    background-color: transparent;
+}
+.search form:hover input[name="q"]{
+    width: 131px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+}
+.search input[name="q"]:focus{
+    width: 131px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+}
+input[name="image"] {
+    outline: none;
+    height: 18px;
+    display: inline-block;
+    vertical-align: middle;
+    transition: .3s;
+}
+.search form {
+}
+.up-line li.search {
+    float: right;
+}
+.menu-clear-left {
+    clear: both;
+}
+#header-wrap{
+    background: url(/bitrix/templates/redesign/images/bg.jpg) no-repeat top right / auto 100%;
+}
+.heading {
+    width: 50%;
+    display: inline-block;
+    padding: 0 50px;
+}
+div#under-menu {
+    margin: 50px auto;
+    position: relative;
+}
+#under-menu > img {
+    margin: auto;
+    display: inline-block;
+    object-position: center;
+    vertical-align: top;
+}
+a.colored {
+    padding: 16px 40px;
+    background-color: #c64482;
+    color: white;
+    border-radius: 50px;
+    box-shadow: 0px 16px 23px #ee8dbb;
+    text-decoration: none;
+    transition: .3s;
+}
+a.colored:hover{
+    color: white;
+    text-decoration: none;
+    box-shadow: 0px 8px 17px #ee8dbb;
+}
+img.r-arr{
+    width: 15px;
+    margin-bottom: 3px;
+}
+p.but {
+    margin-top: 60px;
+}
+p.but a span{
+    margin-right: 10px;
+}
+.h1-and-image:after{
+    content: "";
+    position: absolute;
+    background: url(/bitrix/templates/redesign/images/dots.png) no-repeat left top / contain;
+    width: 120px;
+    height: 75px;
+    z-index: -1;
+    left: -20px;
+}
+/** end all and header */
+
+
+
+/** main page */
+
+table.six-in-line {
+    width: 100%;
+    table-layout: fixed;
+    border: 10px solid #eee;
+}
+#main {
+    margin-top: 80px;
+}
+td.redwrap > div {
+    display: inline-block;
+    vertical-align: middle;
+}
+.redwrap .red {
+    color: #0c5ba6;
+    font-family: Gotham_Pro_bold, sans-serif;
+    font-size: 57px;
+}
+td.redwrap {
+    text-align: center;
+    padding: 20px 0;
+}
+td.redwrap .left-border{
+    text-align: left;
+    margin-left: 10px;
+    font-size: 15px;
+}
+.doctor > div img, .doctor .doctor-info, .doctor .chair-info {
+    display: inline-block;
+}
+table.docinfo {
+    margin: 60px 0;
+}
+img#doc {
+    width: 598px;
+    border-radius: 13px;
+    box-shadow: 19px 18px 0px #c64482;
+}
+.doctor-info{
+    position: relative;
+}
+.doctor-info .name b {
+    font-size: 26px;
+}
+.upper{
+    text-transform: uppercase;
+}
+.docinfo td.left {
+    padding: 0 50px 0 0;
+    position: relative;
+}
+.docinfo td.right {
+    padding: 0 0 0 50px;
+    position: relative;
+}
+.doctor-info:before{
+    content: "";
+    position: absolute;
+    background: url(/bitrix/templates/redesign/images/dots.png) no-repeat left top / contain;
+    width: 120px;
+    height: 75px;
+    z-index: -1;
+    right: -20px;
+}
+.h2ted:after{
+    content: "";
+    position: absolute;
+    background: url(/bitrix/templates/redesign/images/dots.png) no-repeat left top / contain;
+    width: 140px;
+    height: 85px;
+    z-index: 1;
+    right: 350px;
+    top: -60px;
+    filter: brightness(0.9);
+}
+.h2ted{
+    position: relative;
+}
+.doctor-info:after{
+    content: "";
+    position: absolute;
+    background: url(/bitrix/templates/redesign/images/quotes.png) no-repeat right bottom / contain;
+    width: 120px;
+    height: 75px;
+    z-index: -1;right: 0;
+    bottom: -10px;
+}
+p.name:before{
+    content: "";
+    position: absolute;
+    background: url(/bitrix/templates/redesign/images/quotes-top.png) no-repeat left top / contain;
+    width: 120px;
+    height: 75px;
+    z-index: -1;
+    top: -30px;
+    left: -30px;
+}
+table.waved {
+    border-collapse: collapse;
+    border: 0;
+    table-layout: fixed;
+    width: 100%;
+}
+tr, td{
+    border: 0;
+}
+td#top-wave {
+    width: 100%;
+    height: 140px;
+}
+td#bottom-wave {
+    width: 100%;
+    height: 140px;
+}
+td#mid-wave {
+    background-color: #f8f8f8;
+}
+span.by-price {
+    color: #0c5ba6;
+    font-family: Gotham_Pro_bold, sans-serif;
+    line-height: 20px;
+}
+.inner-four td {
+    width: 25%;
+}
+.inner-four {
+    table-layout: fixed;
+}
+.inner-four .blanked {
+    width: 60%;
+    background: #fff;
+    padding: 50px 30px;
+    border-radius: 6px;
+    position: relative;
+    z-index: 1;
+}
+img#jaws {
+    position: absolute;
+    right: 0;
+    margin-top: -280px;
+    width: 470px;
+    z-index: 0;
+}
+a.more {
+    color: #c64482;
+    font-family: Gotham_Pro_bold, sans-serif;
+}
+#before_td:before{
+    content: "";
+    position: absolute;
+    background: url(/bitrix/templates/redesign/images/dots.png) no-repeat left top / contain;
+    width: 160px;
+    height: 95px;
+    z-index: 0;
+    right: 130px;
+    filter: brightness(0.9);
+    bottom: -40px;
+}
+#percent99{
+    width: 400px;
+    z-index: 10;
+    position: relative;
+}
+#before_td b {
+    margin-top: 30px;
+    display: block;
+    font-size: 17px;
+}
+table.zubinfo {
+    position: relative;
+    z-index: 2;
+}
+#another_td:before{
+    content: "";
+    position: absolute;
+    background: url(/bitrix/templates/redesign/images/dots.png) no-repeat left top / contain;
+    width: 180px;
+    height: 105px;
+    z-index: 1;
+    left: 130px;
+    filter: brightness(0.9);
+}
+h3.form {
+    font-size: 27px;
+}
+img#hands {
+    width: 598px;
+    border-radius: 13px;
+    box-shadow: 19px -18px 0 #c64482;
+    max-width: 295px;
+}
+.zubinfo .padding50{
+    padding: 0 50px;
+    position: relative;
+}
+.u50{
+    margin: 0 0 50px;
+}
+.up50bo{
+    margin: 50px 0;
+}
+.inner-three td {
+    width: 30%;
+}
+.inner-three {
+    table-layout: fixed;
+    text-align: center;
+}
+.second{
+    position: relative;
+}
+.second:after{
+    content: "";
+    position: absolute;
+    background: url(/bitrix/templates/redesign/images/dots.png) no-repeat left top / contain;
+    width: 140px;
+    height: 85px;
+    z-index: 0;
+    right: 10%;
+    bottom: -100px;
+}
+.h2doc{
+    position: relative;
+}
+.face {
+    display: inline-block;
+    vertical-align: top;
+    width: 27%;
+    z-index: 3;
+}
+.in-face {
+    background: #fff;
+    position: relative;
+    padding-bottom: 230px;
+}
+.surr {
+    padding: 40px;
+    padding: 2vw;
+    text-align: left;
+    position: absolute;
+    top: 360px;
+}
+.surr b {
+    font-size: 19px;
+    position: absolute;
+    top: 20px;
+}
+img#chair {
+    width: 598px;
+    border-radius: 13px;
+    box-shadow: 19px 18px 0px #c64482;
+    max-width: 295px;
+}
+
+/** maun page end */
+
+/** footer */
+
+#footer-slogan:before{
+    display: block;
+    width: 100%;
+    content: "";
+    background: url(/bitrix/templates/redesign/images/bot-blue.png?f=3) no-repeat 0 bottom / 100%;
+    height: 200px;
+}
+.like-send-back[type=submit] {
+    padding: 16px 40px;
+    background: #c64482 url(/bitrix/templates/redesign/images/arrow-right.png) no-repeat 70%!important;
+    color: white!important;
+    border-radius: 50px!important;
+    box-shadow: 0 16px 23px #444;
+    text-decoration: none;
+    transition: .3s;
+    border: none;
+    cursor: pointer;
+}
+.footer-blocks {
+    background: #0c5ba6;
+}
+.footer-blocks .uk-form input[type=text],
+.footer-blocks .uk-form input[type=tel]{
+    height: 46px;
+    max-width: 100%;
+    padding: 4px 25px;
+    border: none;
+    background: #fff!important;
+    color: #666;
+    transition: all .3s linear;
+    border-radius: 30px;
+}
+h3.foot-h3, h3.foot-h3 + p {
+    color: white;
+}
+.block-footer-left {
+    width: 40%;
+}
+.block-footer-left {
+    width: 30%;
+    display: inline-block;
+    padding: 40px 0;
+    margin-right: 8%;
+    vertical-align: top;
+}
+.block-footer-right {
+    width: 60%;
+    display: inline-block;
+    padding: 40px 0;
+    vertical-align: top;
+}
+@media(max-width: 1350px){
+    #main{
+        padding: 0 10px;
+    }
+}
+@media(max-width: 1296px){
+    .face .surr {
+        position: relative;
+        top: unset;
+    }
+    .face .surr b {
+        position: relative;
+        top: unset;
+    }
+    .face .in-face {
+        padding-bottom: initial;
+    }
+}
+@media(max-width: 1024px){
+    td #percent99 {
+        width: 40vw;
+    }
+    #topmenu {
+        height: 50px;
+    }
+    .up-line ul ul {
+        position: absolute;
+    }
+    .logo-name, .top-conts, .tel-and-hours, .hours, .addr {
+        margin-right: 2px;
+    }
+    .order-call a, .addr a, .hours b, .hours span, .addr > div {
+        font-size: 13px;
+    }
+    .logo-name img {
+        height: 30px;
+    }
+    .top-conts {
+        width: 79%;
+        width: calc(100% - 201px);
+    }
+    .up-line ul{
+        position: relative;
+    }
+    .up-line li.search {
+        position: absolute;
+        right: 10px;
+        top: 50px;
+    }
+    td.redwrap .left-border {
+        display: inline-block;
+    }
+    td.redwrap > div {
+        display: block;
+    }
+    .docinfo td {
+        padding: 0 15px;
+    }
+    .tel-and-hours img, .hours img, .addr img {
+        height: 20px;
+        margin-right: 0px;
+    }
+    .up-line ul li ul li {
+        background: #e8e8e8;
+    }
+    .st1 ul li:hover {
+        background: #c64482;
+    }
+    .st1 ul li:hover a{
+        color:white
+    }
+    .heading p {
+        text-shadow: 1px 1px 0px #fff;
+    }
+}

@@ -1,15 +1,31 @@
-<?
+<?/*$limit = 16;
+if ( isset ( $_REQUEST['limit'] ) && (int)$_REQUEST['limit'] > 0 && !isset($_REQUEST['filter_clear'])){
+    setcookie("limit", (int)$_REQUEST['limit'], time() + 3600 * 24 * 365, "/", $_SERVER['HTTP_HOST']);
+    $limit = (int)$_REQUEST['limit'];
+}
+else if ( (int)$_REQUEST['limit'] == 0 && isset( $_COOKIE['limit'] ) && (int)$_COOKIE['limit'] > 0 )  {
+    $limit = (int)htmlspecialchars($_COOKIE['limit'],3);
+}
+else if ( htmlspecialchars($_REQUEST['filter_clear'],3) == "Y" ) {
+    setcookie("limit", "", time() - 3600 * 24 * 365, "/", $_SERVER['HTTP_HOST']);
+    $limit = 16;
+}*/
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
-
+// попытка подключить модуль убирающий яндекс советник к каталогу
 $APPLICATION->IncludeComponent( "abricos:antisovetnik", "", array(), false);
-
 $APPLICATION->SetTitle("Каталог «Персона» маркет");
 $url_arr = explode('/',$_SERVER['REQUEST_URI']);
 $cat_code = array_slice($url_arr,-2,1)[0];
 $brand = (htmlspecialchars($_REQUEST['brand_name'],3)) ? htmlspecialchars($_REQUEST['brand_name'],3) : "";
 $arrFilter = [];
+$from = ['%20'];
+$to = [' '];
+$limit = 16;
+if( isset($_GET['limit']) )
+    $limit = htmlspecialchars($_GET['limit'],3);
+
 if($brand)
-    $arrFilter = ["PROPERTY_BRAND"=>$brand];
+    $arrFilter = ["PROPERTY_BRAND"=>str_replace( $from, $to, $brand )];
 
 $sort = "ID";
 $sort_order = "ASC";
@@ -28,11 +44,15 @@ if($rating) {
 ?>
 	<div class="list-selection-element">
 <?
-$arrFilter = [];
+#$arrFilter = [];
 if(htmlspecialchars($_REQUEST['ajax'],3) == "Y" &&
 strlen(htmlspecialchars($_REQUEST['brand'],3) ) > 0){
-    array_push($arrFilter, ["PROPERTY_BRAND" => htmlspecialchars($_REQUEST['brand'],3)]);
+    array_push($arrFilter, ["PROPERTY_BRAND" => str_replace( $from, $to, htmlspecialchars($_REQUEST['brand'],3) )]);
 }
+
+
+
+
 
 $APPLICATION->IncludeComponent(
 	"persona:catalog.section", 
@@ -53,7 +73,7 @@ $APPLICATION->IncludeComponent(
 		"CACHE_FILTER" => "Y",
 		"CACHE_GROUPS" => "Y",
 		"CACHE_TIME" => "36000000",
-		"CACHE_TYPE" => "A",
+		"CACHE_TYPE" => "N",
 		"COMPATIBLE_MODE" => "Y",
 		"DETAIL_URL" => "/catalog/#SECTION_CODE#/#CODE#/",
 		"DISABLE_INIT_JS_IN_COMPONENT" => "Y",
@@ -85,7 +105,7 @@ $APPLICATION->IncludeComponent(
 		"MESS_NOT_AVAILABLE" => "Нет в наличии",
 		"META_DESCRIPTION" => "ELEMENT_META_DESCRIPTION",
 		"META_KEYWORDS" => "ELEMENT_META_KEYWORDS",
-		"OFFERS_LIMIT" => (htmlspecialchars($_REQUEST['limit'],3))?htmlspecialchars($_REQUEST['limit'],3):16,
+		"OFFERS_LIMIT" => 0,
 		"PAGER_BASE_LINK_ENABLE" => "Y",
 		"PAGER_DESC_NUMBERING" => "N",
 		"PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",
@@ -93,7 +113,7 @@ $APPLICATION->IncludeComponent(
 		"PAGER_SHOW_ALWAYS" => "Y",
 		"PAGER_TEMPLATE" => "hairmarket",
 		"PAGER_TITLE" => "Страницы",
-		"PAGE_ELEMENT_COUNT" => (htmlspecialchars($_REQUEST['limit'],3))?htmlspecialchars($_REQUEST['limit'],3):16,
+		"PAGE_ELEMENT_COUNT" => $limit,
 		"PARTIAL_PRODUCT_PROPERTIES" => "Y",
 		"PRICE_CODE" => array(
 		),

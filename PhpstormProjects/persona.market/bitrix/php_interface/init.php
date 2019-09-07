@@ -23,12 +23,13 @@ define( 'PROTOCOL', $protocol );
 define( 'SITE_URL', siteURL() );
 define( 'MIN_ORDER_PRICE', 990 );
 define( 'COUNTDOWN', '2039-08-31' );
-define( 'PHONE', "+7 (499) 649-06-02" );
-define( 'PHONE2', "+7 (499) 649-06-02" );
-define( 'WHATSAPP_PHONE_SIMPLE', "79778350206" );
-define( 'WHATSAPP_PHONE', "+7(977) 835-02-06" );
+define( 'PHONE', "+7 (967) 153-30-73" );
+define( 'PHONE2', "+7 (967) 153-30-73" );
+define( 'WHATSAPP_PHONE_SIMPLE', "79671533073" );
+define( 'WHATSAPP_PHONE', "+7(967) 153-30-73" );
 define( 'EMAIL', "info@persona.market" );
 define( 'COMPANY_NAME', "«Персона» маркет" );
+define( 'PERCENT_SALE_DELIVERY', "20" ); # процент скидки при заказе с доставкой
 
 
 

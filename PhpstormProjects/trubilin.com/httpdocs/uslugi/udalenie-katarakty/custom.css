@@ -19,10 +19,49 @@ section.smt-page-header {
     width: 100%;
 	padding: 0;
 }
-.page-header-pic:before {
-    left: -10000%;
+.night.page-header-pic{
+background: #eaf8fb; /* Old browsers */
+background: -moz-linear-gradient(top, #eaf8fb 0%, #d1e7f2 70%, #fdfffe 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, #eaf8fb 0%,#d1e7f2 70%,#fdfffe 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, #eaf8fb 0%,#d1e7f2 70%,#fdfffe 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eaf8fb', endColorstr='#fdfffe',GradientType=0 ); /* IE6-9 */
+}
+.night.page-header-pic:before {
+    left: -100%;
     content: "";
-    width: 10000%;
+    width: 100%;
+    background: #eaf8fb; /* Old browsers */
+background: -moz-linear-gradient(top, #eaf8fb 0%, #d1e7f2 70%, #fdfffe 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, #eaf8fb 0%,#d1e7f2 70%,#fdfffe 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, #eaf8fb 0%,#d1e7f2 70%,#fdfffe 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eaf8fb', endColorstr='#fdfffe',GradientType=0 ); /* IE6-9 */
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    display: block;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+}
+.night.page-header-pic:after {
+    right: -100%;
+    content: "";
+    width: 100%;
+    background: #eaf8fb; /* Old browsers */
+background: -moz-linear-gradient(top, #eaf8fb 0%, #d1e7f2 70%, #fdfffe 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, #eaf8fb 0%,#d1e7f2 70%,#fdfffe 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, #eaf8fb 0%,#d1e7f2 70%,#fdfffe 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eaf8fb', endColorstr='#fdfffe',GradientType=0 ); /* IE6-9 */
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    display: block;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+}
+.page-header-pic:before {
+    left: -100%;
+    content: "";
+    width: 100%;
     background: #b3c6d4;
     background: -webkit-linear-gradient(top, #b3c6d4 0%,#eef7f6 100%);
     background: -webkit-gradient(linear, left top, left bottom, from(#b3c6d4),to(#eef7f6));
@@ -37,9 +76,9 @@ section.smt-page-header {
 	        box-sizing: border-box;
 }
 .page-header-pic:after {
-    right: -10000%;
+    right: -100%;
     content: "";
-    width: 10000%;
+    width: 100%;
     background: #b3c6d4;
     background: -webkit-linear-gradient(top, #b3c6d4 0%,#eef7f6 100%);
     background: -webkit-gradient(linear, left top, left bottom, from(#b3c6d4),to(#eef7f6));
@@ -54,9 +93,9 @@ section.smt-page-header {
 	        box-sizing: border-box;
 }
 .wide-blue:before {
-    left: -10000%;
+    left: -100%;
     content: "";
-    width: 10000%;
+    width: 100%;
     background:#004f94;
     position: absolute;
     top: 0;
@@ -66,9 +105,9 @@ section.smt-page-header {
 	        box-sizing: border-box;
 }
 .wide-blue:after {
-    right: -10000%;
+    right: -100%;
     content: "";
-    width: 10000%;
+    width: 100%;
     background:#004f94;
     position: absolute;
     top: 0;
@@ -78,9 +117,9 @@ section.smt-page-header {
 	        box-sizing: border-box;
 }
 .bottom:before {
-    left: -10000%;
+    left: -100%;
     content: "";
-    width: 10000%;
+    width: 100%;
     background:red;
     position: absolute;
     top: 0;
@@ -90,9 +129,9 @@ section.smt-page-header {
 	        box-sizing: border-box;
 }
 .bottom:after {
-    right: -10000%;
+    right: -100%;
     content: "";
-    width: 10000%;
+    width: 100%;
     background:red;
     position: absolute;
     top: 0;
@@ -208,6 +247,7 @@ section:before{
     font-size: 40px;
     color: #000;
     text-align: left;
+    line-height: 44px;
 }
 .text-header-block ul {
     padding-left: 0;
@@ -341,8 +381,12 @@ section li{
             -ms-flex: 25%;
                 flex: 25%;
     }
+
 }
 @media(max-width: 992px){
+	.page-header-pic .inline.inline-text {
+        width: 100%;
+    }
 	.page-header-pic img{
 		height:auto;
 	}
@@ -350,7 +394,7 @@ section li{
         display:none;
     }
 	span.red-bg {
-		white-space: nowrap;
+		/*white-space: nowrap;*/
 		font-size: 22px;
 	}
     .wrap {

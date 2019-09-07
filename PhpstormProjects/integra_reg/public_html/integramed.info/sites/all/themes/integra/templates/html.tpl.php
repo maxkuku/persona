@@ -41,22 +41,7 @@
   gtag('config', 'UA-139306911-1');
 </script>
 
-<!--noindex-->
-<!-- Yandex.Metrika counter -->
-<script type="text/javascript" >
-   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-   m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
-   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
 
-   ym(53500543, "init", {
-        clickmap:true,
-        trackLinks:true,
-        accurateTrackBounce:true,
-        webvisor:true
-   });
-</script>
-<noscript><div><img src="https://mc.yandex.ru/watch/53500543" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-<!-- /Yandex.Metrika counter -->
 
 
 
@@ -151,7 +136,25 @@
 <!--          <a href="#" class="d-inline-block"><img src="/sites/all/themes/integra/img/instagram2.png" alt=""></a>-->
           <a rel="nofollow" href="https://www.facebook.com/%D0%A6%D0%B5%D0%BD%D1%82%D1%80-%D0%A0%D0%B5%D1%81%D0%BF%D0%B8%D1%80%D0%B0%D1%82%D0%BE%D1%80%D0%BD%D0%BE%D0%B9-%D0%BC%D0%B5%D0%B4%D0%B8%D1%86%D0%B8%D0%BD%D1%8B-%D0%98%D0%BD%D1%82%D0%B5%D0%B3%D1%80%D0%B0%D0%9C%D0%B5%D0%B4%D1%81%D0%B5%D1%80%D0%B2%D0%B8%D1%81-121895424577293/?rc=p" class="d-inline-block"><img src="/sites/all/themes/integra/img/facebook.png" alt=""></a>
           <a rel="nofollow" href="//www.youtube.com/channel/UCfmeP6mEga4grBRvtIeCdWw" class="d-inline-block"><img src="/sites/all/themes/integra/img/youtube.png" alt=""></a>
+
+
         </div>
+
+
+          <?php
+          $current_time = strtotime("now");
+          $sunrise = strtotime("10:00");
+          $sunset = strtotime("20:00");
+          if ($current_time > $sunrise && $current_time < $sunset && date('w') > 0 && date('w') < 6)
+          {
+              ?><a href="https://wa.me/79039637722" target="_blank" class="chat_social_item chat_social_wh"></a><?
+          }
+          else
+          {
+              ?><div style="display: none" id="wa_wi" data-info="<?=$current_time . ' ' . $sunrise . ' ' . $sunset?>">С 10:00 до 20:00</div><?
+          }
+          ?>
+
 
       </div>
       <div class="col-12 col-md-2">
@@ -204,7 +207,55 @@ unset($blocks_build[$module_name . '_' . $block_delta]['#theme_wrappers']);
 //        kpr($main_menu);
         ?>
 
+<!--noindex-->
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+    (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
 
+    ym(53500543, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true,
+        webvisor:true
+    });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/53500543" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+<script>
+    $(document).ready(function(){
+        setTimeout(function(){
+        if($('h1 + .banner').length < 1){
+            if(document.URL.indexOf('161')>-1){
+                var a = '<div class="banner" style="display:block; flex: none; background-color: #FF4160; margin: 2em 0; padding: 1.2em 1em 8px; width: 100%;">\n' +
+                    '<p style="color: white; font-size: 26px; text-align: center; line-height: 40px;">\n' +
+                    'Акция! Первичная консультация врача-иммунолога 1000 руб.\n' +
+                    '</p>\n' +
+                    '</div>';
+                $('h1').after(a);
+            }
+            else {
+                var a = '<div class="banner" style="display:block; flex: none; background-color: #FF4160; margin: 2em 0; padding: 1.2em 1em 8px; width: 100%;">\n' +
+                    '<p style="color: white; font-size: 26px; text-align: center; line-height: 40px;">\n' +
+                    'Акция! <a href="/pulmonology" style="color: white;">Первичная консультация врача-пульмонолога 1500 руб.</a>\n' +
+                    '</p>\n' +
+                    '</div>';
+                $('h1').after(a);
+            }
+        }
+        },500);
+    });
+</script>
+<script>
+    $(document).ready(function () {
+        $("[href*='79039637722']").on('click tap', function (e) {
+            e.preventDefault();
+            yaCounter53500543.reachGoal('whatsapp');
+            window.open($(this).attr('href'), '_blank');
+        });
+    });
+</script>
 <!-- calltouch -->
 <script src="https://mod.calltouch.ru/init.js?id=bh3rqdn7"></script>
 <script type="text/javascript">
@@ -239,5 +290,6 @@ unset($blocks_build[$module_name . '_' . $block_delta]['#theme_wrappers']);
     });
 </script>
 <!-- /calltouch -->
+
 </body>
 </html>

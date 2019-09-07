@@ -9138,6 +9138,34 @@ header .address {
         font-size: 0.9rem;
         padding: 1rem;
     }
+    .p-5 {
+        padding: 2rem !important;
+    }
+    .old-styles .block ul.person {
+        padding-left: 0px;
+    }
+    .region-left .content a {
+        margin: auto;
+        display: block;
+        position: relative;
+        width: auto;
+    }
+    .region-left .content a img.img-fluid {
+        margin: auto;
+        display: block;
+    }
+    .old-styles iframe {
+        height: calc(95vw * 9 / 16);
+    }
+    .old-styles .p_adaptive img {
+        margin: 0;
+    }
+    .soc_new {
+        margin: auto 1em;
+    }
+    .old-styles .block ul.ya-share2__list {
+        padding-left: 0;
+    }
 }
 
 header .phone-wrapper .phone a {

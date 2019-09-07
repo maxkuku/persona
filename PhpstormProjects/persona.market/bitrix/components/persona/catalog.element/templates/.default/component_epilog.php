@@ -128,3 +128,18 @@ if (isset($templateData['JS_OBJ']))
 		<?
 	}
 }
+
+
+
+
+if (isset($arResult['MY_TITLE']))
+    $APPLICATION->SetTitle($arResult['MY_TITLE']);
+
+if (isset($arResult['MY_KEYWORDS']))
+    $APPLICATION->SetPageProperty('keywords', $arResult['MY_KEYWORDS']);
+
+if (isset($arResult['MY_H1']))
+    $APPLICATION->SetPageProperty('h1', $arResult['MY_H1']);
+
+if (isset($arResult['MY_DESCRIPTION']))
+    $APPLICATION->SetPageProperty('description', $arResult['MY_DESCRIPTION']);

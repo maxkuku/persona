@@ -15,6 +15,7 @@ CJSCore::Init();
         <ul id="top-menu-list" class="top-menu">
             <? foreach ( $arResult["ALL_ITEMS"] as $itemID => $arLink ): ?>
             <li><a href="/catalog/brands/?brand_name=<?=$arLink['NAME']?>"><?=$arLink['NAME']?></a></li>
+                
             <? endforeach ?>
         </ul>
     </div>

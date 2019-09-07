@@ -1,4 +1,4 @@
-(function(window){
+/*(function(window){
 	'use strict';
 
 	if (window.JCCatalogElement)
@@ -3513,4 +3513,4 @@
 			}
 		}
 	}
-})(window);
+})(window);*/

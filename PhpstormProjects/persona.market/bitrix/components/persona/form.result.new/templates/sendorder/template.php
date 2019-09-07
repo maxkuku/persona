@@ -97,11 +97,11 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
         <div class="simplecheckout-block" id="simplecheckout_comment">
             <div class="checkout-heading panel-heading">Комментарий к заказу (не обязательно)</div>
             <div class="simplecheckout-block-content">
-                <textarea name="form_textarea_17" cols="47" rows="3" class="inputtextarea form-control" id="comment"
+                <textarea name="form_textarea_17" cols="47" rows="7" class="inputtextarea form-control" id="comment"
                           placeholder="Можете оставить свой комментарий к заказу"
                           data-reload-payment-form="true"></textarea>
-                <textarea style="display:none" name="form_textarea_18" cols="47" rows="3"
-                          class="inputtextarea"><?= implode("", $item_to_form) ?></textarea>
+                <textarea style="display:none" name="form_textarea_18" cols="47" rows="7"
+                          class="inputtextarea"><?= $item_to_form ?></textarea>
             </div>
         </div>
         <div class="simplecheckout-button-block buttons" id="buttons">
@@ -145,11 +145,15 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
             <div class="simplecheckout-block-content">
                 <fieldset class="form-horizontal">
                     <div class="form-group required row-payment_address_country_id">
-                        <label class="control-label col-sm-4">Самовывоз</label>
+                        <label class="control-label col-sm-4">Самовывоз / доставка<sup>1</sup></label>
                         <div class="col-sm-8">
-
-                            <select class="form-control" name="form_text_23" id="samo_address_country_id">
-                                <option value="0">Выберите при самовывозе</option>
+                            <script>
+                                window.delivery_sale = <?=PERCENT_SALE_DELIVERY?>;
+                            </script>
+                            <select class="form-control" name="form_text_23" id="samo_address_country_id" required>
+                                <option></option>
+                                <option data-select="delivery" value="Доставка">Доставка</option>
+                                <!--option value="0">Выберите при самовывозе</option-->
                                 <? $APPLICATION->IncludeComponent(
                                     "persona:news.list",
                                     "addresses_for_order",
@@ -222,14 +226,18 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
                                      data-required="true">Выберите адрес
                                 </div>
                             </div>
+
                         </div>
+                        <p class="sup" style="margin-left: 16px;">________<br>
+                            <sup>1</sup> параметры доставки оговариваются отдельно по звонку менеджера. Скидка при заказе с доставкой — <?=PERCENT_SALE_DELIVERY?>%. Скидки не суммируются.</p>
                     </div>
                 </fieldset>
                 <input type="hidden" name="samo_address[current_address_id]" id="psamo_address_current_address_id"
                        value="0">
             </div>
         </div>
-        <div class="simplecheckout-block" id="simplecheckout_payment_address">
+
+        <!--div class="simplecheckout-block" id="simplecheckout_payment_address">
             <div class="checkout-heading panel-heading">Адрес доставки</div>
             <div class="simplecheckout-block-content">
                 <fieldset class="form-horizontal">
@@ -258,12 +266,7 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
                                 </ul>
                             </select>
 
-                            <!--div class="simplecheckout-rule-group" data-for="payment_address_zone_id">
-                                <div style="display:none;" data-for="payment_address_zone_id" data-rule="notEmpty"
-                                     class="simplecheckout-error-text simplecheckout-rule" data-not-empty="1"
-                                     data-required="true">Выберите регион!
-                                </div>
-                            </div-->
+
                         </div>
                     </div>
                     <div class="form-group required row-payment_address_city">
@@ -295,7 +298,7 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
                                      data-length-max="128" data-required="true">Город должен быть от 2 до 128 символов!
                                 </div>
                             </div>
-                            <!--div class="simplecheckout-tooltip" data-for="payment_address_city">Начните вводить и выберите из предложенного</div-->
+
                         </div>
                     </div>
                     <div class="form-group  row-payment_address_postcode">
@@ -321,8 +324,7 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
                         <div class="col-sm-8">
 
                             <input type="text" class="inputtext form-control" name="form_text_16" value=""
-                                   id="payment_address_address_1" value="" placeholder="Заполните для доставки!"
-                                   data-onchange="reloadAll">
+                                   id="payment_address_address_1" value="" placeholder="Заполните для доставки!">
                             <div class="simplecheckout-rule-group" data-for="payment_address_address_1">
                                 <div style="display:none;" data-for="payment_address_address_1" data-rule="byLength"
                                      class="simplecheckout-error-text simplecheckout-rule" data-length-min="3"
@@ -338,7 +340,9 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
                 <input type="hidden" name="payment_address[current_address_id]" id="payment_address_current_address_id"
                        value="0">
             </div>
-        </div>
+
+        </div-->
+
     </div>
     <?
     /* foreach ($arResult["QUESTIONS"] as $FIELD_SID => $arQuestion)

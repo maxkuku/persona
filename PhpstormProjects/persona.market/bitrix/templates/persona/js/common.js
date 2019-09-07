@@ -321,6 +321,52 @@ var cart = {
             }
         });
     },
+    'add2': function (key, quantity) {
+        $.ajax({
+            url: '/ajax/index.php',
+            type: 'post',
+            data: 'WEB_FORM_ID=2&web_form_submit=1&key=' + key + '&quantity=' + (typeof(quantity) != 'undefined' ? quantity : 1),
+            dataType: 'json',
+            beforeSend: function () {
+                $('#cart > button').button('loading');
+            },
+            success: function (json) {
+                $('#cart > button').button('reset');
+                if (json['redirect']) {
+                    location = json['redirect'];
+                }
+                if (json) {
+                    $('#cart > button').addClass('cart_active');
+                    $('#modal-cart .modal-body').prepend('<div class="alert alert-success">' +
+                        '<button type="button" class="close" data-dismiss="alert">&times;</button>' +
+                        '<i class="fa fa-info-circle"></i>&nbsp;&nbsp;' + json['good'] + '</div>');
+                    $('#modal-cart .modal-body').find('.text-center').hide();
+                    $('#modal-cart').modal('show');
+                    //setTimeout(function () {
+                    $('#cart-total').html(json['totals']);
+                    //}, 100);
+                    $.ajax({ // TODO: обновление миникорзины
+                        url: '/ajax/index.php',
+                        type: 'get',
+                        data: 'read=Y',
+                        dataType: 'json',
+                        beforeSend: function () {
+                            $('.cartMask').show();
+                        },
+                        success: function (data) {
+                            $('.cartMask').hide();
+                            $('#cart-total').html(data['button']);
+
+                        }
+                    });
+                }
+                $('#cart > button').addClass('cart_active');
+            },
+            error: function (xhr, ajaxOptions, thrownError) {
+                alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
+            }
+        });
+    },
     'update': function (product_id, quantity) {
         $.ajax({
             url: '/ajax/index.php',

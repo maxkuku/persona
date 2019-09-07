@@ -20,8 +20,7 @@ $APPLICATION->AddHeadScript( "/uslugi/keratokonus/script.js" );
 						 Лечения кератоконуса
 					</div>
 					<div id="femto-text">
-						 Скидка 50% на комплексное<br>
-						 обследование и консультацию!
+ <br>
 					</div>
 				</div>
 			</div>
@@ -187,7 +186,7 @@ $APPLICATION->AddHeadScript( "/uslugi/keratokonus/script.js" );
 				 Консультация и комплексное обследование при кератоконусе
 			</td>
 			<td>
- <span style="color: red;">3 150 руб.<sup>*</sup></span>
+ <span style="color: red;"><span style="color: #000000;">6 300</span><span style="color: #000000;">&nbsp;руб.</span></span>
 			</td>
 		</tr>
 		<tr>
@@ -211,7 +210,7 @@ $APPLICATION->AddHeadScript( "/uslugi/keratokonus/script.js" );
 				 Акселерированный кросс-линкинг с рибофлавином
 			</td>
 			<td>
-				 35 000 руб.
+				 35&nbsp;000 руб.
 			</td>
 		</tr>
 		<tr>
@@ -227,7 +226,7 @@ $APPLICATION->AddHeadScript( "/uslugi/keratokonus/script.js" );
 				 Имплантация факичной линзы
 			</td>
 			<td>
-				 120 000 руб.
+				 120&nbsp;000 руб.
 			</td>
 		</tr>
 		<tr>
@@ -241,16 +240,11 @@ $APPLICATION->AddHeadScript( "/uslugi/keratokonus/script.js" );
 		</tbody>
 		</table>
 		<p class="red">
- <sup>*</sup> Цена указана с 50% скидкой.
+ <br>
 		</p>
 	</div>
- <br>
-
-
 	<div class="bottom">
-		 Бесплатная консультация по телефону: <span class="call_phone_2"><a href="tel:+84951233121">8 495 1233121</a></span>
+		 Бесплатная консультация по телефону: 8 495 123 3121
 	</div>
-
-
 </div>
 <!--femto--><?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>

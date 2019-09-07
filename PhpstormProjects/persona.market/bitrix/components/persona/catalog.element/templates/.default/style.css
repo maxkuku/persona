@@ -9,7 +9,13 @@
 	margin-bottom: 20px;
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
-
+.rating .stars {
+	top: 1px;
+	position: relative;
+}
+.width100 .comment_rating .stars {
+	margin-left: 13px;
+}
 .product-item-detail-info-container-title {
 	margin-bottom: 3px;
 	color: #000;
@@ -1021,3 +1027,13 @@ input[type='number'] { -moz-appearance: textfield; }
 
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button { -webkit-appearance: none; }
+
+.short-attr-table tr.kolichestvo {
+	display: none;
+}
+.price + .alert-alt.alert-success-alt {
+	display: none;
+}
+.modal-body > div {
+	color: white;
+}

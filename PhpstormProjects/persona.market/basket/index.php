@@ -25,14 +25,15 @@ if($SHOW_ALL == "Y") {
 
 
 	# если авторизован, то выберем все незаконченные формы
-	if ( $USER->GetID() ) {
+
+    /*if ( $USER->GetID() ) {
 		$forms = $DB->Query( "SELECT ID FROM b_form_result WHERE FORM_ID = " . $FORM_ID . " AND USER_ID = " . $USER->GetID() );
 
 		while ( $form = $forms->Fetch() ) {
 			$RIDS_ARR[] = $form['ID'];
 		}
 		$RIDS = implode( ",", $RIDS_ARR );
-	}
+	}*/
 
 
 	# у одного заказа в форме несколько строк
@@ -44,6 +45,8 @@ if($SHOW_ALL == "Y") {
 	}
 
 
+    $saleAnswer = Array();
+
 	if ( $res->SelectedRowsCount() > 0 ) {
 
 		$arAnswer1 = [];
@@ -51,21 +54,28 @@ if($SHOW_ALL == "Y") {
 			$arAnswer1[] = $arAnswer['RESULT_ID'];
 		}
 		$ids = implode( ',', $arAnswer1 );
-		# FIELD_ID = 8 -> item ID, 10 -> price
+
+
+		# FIELD_ID = 8 -> item ID, 10 -> price, 9 -> price, 23 -> product-variant. Здесь сумма скидки, если есть скидка
 		$res1 = $DB->Query( "SELECT USER_TEXT FROM b_form_result_answer WHERE FORM_ID = " . $FORM_ID . " AND RESULT_ID IN ($ids) AND FIELD_ID = 8" );
 		$res2 = $DB->Query( "SELECT USER_TEXT FROM b_form_result_answer WHERE FORM_ID = " . $FORM_ID . " AND RESULT_ID IN ($ids) AND FIELD_ID = 10" );
+		$res3 = $DB->Query( "SELECT USER_TEXT FROM b_form_result_answer WHERE FORM_ID = " . $FORM_ID . " AND RESULT_ID IN ($ids) AND FIELD_ID = 9" );
 
 
 
 
-		while ( $idAnswer = $res1->Fetch() AND $priceAnswer = $res2->Fetch() ) {
+		while ( $idAnswer = $res1->Fetch()
+            AND $priceAnswer = $res2->Fetch()
+            AND $saleAnswer = $res3->Fetch()
+        ) {
 			$x                   = $idAnswer['USER_TEXT'];
 			$ITEM[ $x ]['ITEM']  = [ $idAnswer['USER_TEXT'], $priceAnswer['USER_TEXT'] ];
 			$ITEM[ $x ]['NAME']  = $idAnswer['USER_TEXT'];
 			$ITEM[ $x ]['ID']    = $idAnswer['USER_TEXT'];
 			$ITEM[ $x ]['PRICE'] = $priceAnswer['USER_TEXT'];
+			$ITEM[ $x ]['SALE']  = $saleAnswer['USER_TEXT'];
 			$ITEM[ $x ]['QUAN'] ++;
-            $ITEM[ $x ]['FID'] = $idAnswer['ID'];
+            $ITEM[ $x ]['FID']   = $idAnswer['ID'];
 			$price += $priceAnswer['USER_TEXT'];
 			$quan ++;
 
@@ -114,7 +124,7 @@ if($SHOW_ALL == "Y") {
 
 
                                             <?
-                                            $item_to_form[] = "\t\tНазвание\tАртикул\tID\tКоличество\tЦена\n";
+                                            $item_to_form = "Название\t\t\t\t\t\t\t\t\t\tАртикул\t\t\tID\tКоличество\tСкидка\tЦена\n";
 
 
 
@@ -139,7 +149,7 @@ if($SHOW_ALL == "Y") {
                                                 <td class="name">
                                                     <div class="image">
                                                         <a href="/catalog/detail.php?ID=<?=$it["ID"]?>"><img src="<?=$ar["FILE"]['src']?>" alt="<?=$ar_res["NAME"]?>" title="<?=$ar_res["NAME"]?>"></a>
-                                                        <? $item_to_form[] = $ar_res["NAME"] . "\t" . $SrcPropID . "\t" . $it["ID"] . "\t" . $it['QUAN'] . "\t" . $it["PRICE"] . "\n"?>
+                                                        <? $item_to_form .= $ar_res["NAME"] . "\t\t" . $SrcPropID . "\t\t\t" . $it["ID"] . "\t" . $it['QUAN'] . "\t" . $it['SALE'] . "\t" . $it["PRICE"] . "\n"?>
                                                     </div>
                                                     <a href="/catalog/detail.php?ID=<?=$it["ID"]?>"><?=$ar_res["NAME"]?></a>
                                                     <div class="options">
@@ -153,7 +163,7 @@ if($SHOW_ALL == "Y") {
                                     <i class="fa fa-minus"></i>
                                 </button>
                             </span-->
-                                                        <span class="form-control" type="text" data-onchange="changeProductQuantity" name="quantity[<?=$it["ID"]?>]" value="<?=$it["QUAN"]?>" size="1"><?=$it["QUAN"]?></span>
+                                                        <span class="form-control item-quan" type="text" data-onchange="changeProductQuantity" name="quantity[<?=$it["ID"]?>]" value="<?=$it["QUAN"]?>" size="1"><?=$it["QUAN"]?></span>
                             <!--span class="input-group-btn">
                                 <button class="btn btn-primary" data-onclick="increaseProductQuantity" data-toggle="tooltip" type="submit" data-original-title="Убрать" title="Убрать">
                                     <i class="fa fa-plus"></i>
@@ -164,8 +174,8 @@ if($SHOW_ALL == "Y") {
                             </span-->
                                                     </div>
                                                 </td>
-                                                <td class="price"><?=$it["PRICE"]?> <span class="sr-only">р.</span><span class="roboto-forced ruble" aria-hidden="true" style="display:none;"></span></td>
-                                                <td class="total"><?=$it["PRICE"] * $it["QUAN"]?> <span class="sr-only">р.</span><span class="roboto-forced ruble" aria-hidden="true" style="display:none;"></span></td>
+                                                <td class="price" data-sale="<?=($it["SALE"])?$it["SALE"]:0?>"><span class="price-val"><?=$it["PRICE"]?></span> <span class="sr-only">р.</span><span class="roboto-forced ruble" aria-hidden="true" style="display:none;"></span></td>
+                                                <td class="total"><span class="total-val"><?=$it["PRICE"] * $it["QUAN"]?></span> <span class="sr-only">р.</span><span class="roboto-forced ruble" aria-hidden="true" style="display:none;"></span></td>
                                                 <td class="remove" style="text-align: center;">
                                                     <div class="cartCellContent">
                                                         <a href="#" onclick="cart.remove(<?=$it["ID"]?>,'Y');return false;" title="Удалить" class=""><i class="fa fa-trash-o fa-lg"></i></a>
@@ -175,6 +185,7 @@ if($SHOW_ALL == "Y") {
 
                                             <?
 	                                            $all_items += $it["QUAN"];
+	                                            $all_sale  += $it["SALE"];
 	                                            $all_price += $it["PRICE"] * $it["QUAN"];
                                             }?>
                                             </tbody>
@@ -190,14 +201,21 @@ if($SHOW_ALL == "Y") {
                                     </div>
                                     <div class="simplecheckout-cart-total" id="total_total">
                                         <span><b>Итого:</b></span>
-                                        <span class="simplecheckout-cart-total-value"><?=($all_price)?$all_price:0?> <span class="sr-only">р.</span><span class="roboto-forced ruble" aria-hidden="true" style="display:none;"></span></span>
-                                        <?$item_to_form[] = "ИТОГО:" . "\t" . ($all_items)?$all_items:0 . " шт.\t" . ($all_price)?$all_price:0 . "руб.\n"?>
+                                        <span class="simplecheckout-cart-total-value"><span id="itogo-sum"><?=($all_price)?$all_price:0?></span> <span class="sr-only">р.</span><span class="roboto-forced ruble" aria-hidden="true" style="display:none;"></span></span>
+                                        <?$item_to_form .= "Штук:" . "\t\t\t\t\t\t" . $all_items . "\n"?>
+                                        <?$item_to_form .= "ИТОГО:" . "\t\t\t\t\t\t" . $all_price . " руб.\n"?>
                                         <span class="simplecheckout-cart-total-remove">
                                             </span>
                                     </div>
-                                    <!--div class="simplecheckout-cart-total">
-                                        <span class="inputs">Купон:&nbsp;<input class="form-control" type="text" data-onchange="reloadAll" name="coupon" value=""></span>
-                                    </div-->
+                                    <?#if($all_sale>0):?>
+                                    <div class="simplecheckout-cart-total" id="sale" >
+                                        <span><b>Учтена скидка:</b></span>
+                                        <span id="sale-sum"><?=($all_sale)?$all_sale:0?></span> <span class="roboto-forced sale ruble" aria-hidden="true" style="display:none;"></span>
+                                        <span class="simplecheckout-cart-total-remove"></span>
+                                    </div>
+                                        <?$item_to_form .= "Скидка:" . "\t\t\t\t\t\t" . $all_sale . " руб.(%)\n"?>
+                                    
+                                    <?#endif?>
                                     <!--div class="simplecheckout-cart-total">
                                         <span class="inputs">Подарочный сертификат:&nbsp;<input class="form-control" type="text" name="voucher" data-onchange="reloadAll" value=""></span>
                                     </div-->

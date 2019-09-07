@@ -1,4 +1,4 @@
-<?php
+<?php #echo __FILE__;
 /**
  * Created by PhpStorm.
  * User: kuper

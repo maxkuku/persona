@@ -2,10 +2,32 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="438354ea-5184-4bad-a1c5-8517365ee221" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/dictionaries/maksimkukuskin.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/components/dlin/menu/templates/another_desktop/template.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/components/dlin/news.detail/templates/.default/style.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/components/dlin/news.detail/templates/.default/template.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/components/dlin/news.list/templates/specs_brt_main/template.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/components/dlin/news.list/templates/specs_on_main/template.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/components/dlin/news.list/templates/youtube_slider/template.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/components/dlin/other.articles/templates/main_promo/template.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/dlin/footer.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/dlin/header.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/dlin/images/000.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/dlin/images/blokada.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/dlin/images/elektroforez.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/dlin/images/injection.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/dlin/js/jquery-2.1.4.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/dlin/js/lightbox.min.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/dlin/styles.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/dlin/template_styles.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/method/osteopathy/index_old.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public_html/integramed.info/test.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../trubilin.com/httpdocs/upload/tmp/noneed.php" />
+      <change beforePath="$PROJECT_DIR$/../implart/akademstom.ru/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../implart/akademstom.ru/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/public_html/integramed.info/sites/all/themes/integra/css/style.css" afterPath="$PROJECT_DIR$/public_html/integramed.info/sites/all/themes/integra/css/style.css" />
+      <change beforePath="$PROJECT_DIR$/public_html/integramed.info/sites/all/themes/integra/template.php" afterPath="$PROJECT_DIR$/public_html/integramed.info/sites/all/themes/integra/template.php" />
       <change beforePath="$PROJECT_DIR$/public_html/integramed.info/sites/all/themes/integra/templates/html.tpl.php" afterPath="$PROJECT_DIR$/public_html/integramed.info/sites/all/themes/integra/templates/html.tpl.php" />
-      <change beforePath="$PROJECT_DIR$/../persona.market/bitrix/.settings.php" afterPath="$PROJECT_DIR$/../persona.market/bitrix/.settings.php" />
+      <change beforePath="$PROJECT_DIR$/../trubilin.com/httpdocs/uslugi/udalenie-katarakty/index.php" afterPath="$PROJECT_DIR$/../trubilin.com/httpdocs/uslugi/udalenie-katarakty/index.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -15,7 +37,31 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
+      <file leaf-file-name="html.tpl.php" pinned="true" current-in-tab="true">
+        <entry file="remoteDeploymentFS://&lt;5b6d34e5-36b5-44cd-8f51-ba46fc0a759a&gt;/public_html/integramed.info/sites/all/themes/integra/templates/html.tpl.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="458">
+              <caret line="276" column="78" lean-forward="false" selection-start-line="276" selection-start-column="78" selection-end-line="276" selection-end-column="78" />
+              <folding>
+                <marker date="0" expanded="true" signature="9643:9748" ph="..." />
+                <marker date="0" expanded="true" signature="9787:9856" ph="..." />
+                <marker date="0" expanded="true" signature="10127:10232" ph="..." />
+                <marker date="0" expanded="true" signature="10271:10340" ph="..." />
+                <marker date="0" expanded="true" signature="10406:10419" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -26,11 +72,14 @@
       <find>http://</find>
       <find>custom_block_block_save</find>
       <find>h1</find>
+      <find>&lt;p class=&quot;p1&quot;&gt;&amp;nbsp;&lt;/p&gt;</find>
+      <find>block</find>
     </findStrings>
     <replaceStrings>
       <replace>//</replace>
       <replace>https://</replace>
       <replace>'</replace>
+      <replace>&lt;li&gt;$1&lt;/li&gt;</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -43,7 +92,6 @@
         <option value="&lt;5b6d34e5-36b5-44cd-8f51-ba46fc0a759a&gt;/public_html/integramed.su/mail2.php" />
         <option value="&lt;5b6d34e5-36b5-44cd-8f51-ba46fc0a759a&gt;/public_html/integramed.su/landing/mail.php" />
         <option value="&lt;5b6d34e5-36b5-44cd-8f51-ba46fc0a759a&gt;/public_html/integramed.su/.htaccess" />
-        <option value="&lt;5b6d34e5-36b5-44cd-8f51-ba46fc0a759a&gt;/public_html/integramed.info/sites/all/themes/integra/css/style.css" />
         <option value="&lt;5b6d34e5-36b5-44cd-8f51-ba46fc0a759a&gt;/public_html/integramed.info/index.php" />
         <option value="&lt;5b6d34e5-36b5-44cd-8f51-ba46fc0a759a&gt;/public_html/integramed.info/sites/default/settings.php" />
         <option value="&lt;5b6d34e5-36b5-44cd-8f51-ba46fc0a759a&gt;/public_html/integramed.info/.htaccess" />
@@ -53,6 +101,8 @@
         <option value="&lt;5b6d34e5-36b5-44cd-8f51-ba46fc0a759a&gt;/public_html/integramed.info/sites/all/modules/firstmod/firstmod.module" />
         <option value="&lt;5b6d34e5-36b5-44cd-8f51-ba46fc0a759a&gt;/public_html/integramed.info/sites/all/themes/integra/templates/node--faq.tpl.php" />
         <option value="&lt;5b6d34e5-36b5-44cd-8f51-ba46fc0a759a&gt;/public_html/integramed.info/sites/all/themes/integra/template.php" />
+        <option value="$PROJECT_DIR$/public_html/integramed.info/test.html" />
+        <option value="&lt;5b6d34e5-36b5-44cd-8f51-ba46fc0a759a&gt;/public_html/integramed.info/sites/all/themes/integra/css/style.css" />
         <option value="&lt;5b6d34e5-36b5-44cd-8f51-ba46fc0a759a&gt;/public_html/integramed.info/sites/all/themes/integra/templates/html.tpl.php" />
       </list>
     </option>
@@ -73,7 +123,7 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="35" />
     <option name="y" value="104" />
-    <option name="width" value="1781" />
+    <option name="width" value="1591" />
     <option name="height" value="856" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -98,7 +148,6 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -130,26 +179,7 @@
               <item name="public_html" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="integramed.info" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="sites" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="all" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="integra_reg" type="b2602c69:ProjectViewProjectNode" />
-              <item name="integra_reg" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="public_html" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="integramed.info" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="sites" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="all" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="modules" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="integra_reg" type="b2602c69:ProjectViewProjectNode" />
-              <item name="integra_reg" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="public_html" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="integramed.info" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="sites" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="all" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="modules" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="firstmod" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="default" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="integra_reg" type="b2602c69:ProjectViewProjectNode" />
@@ -158,11 +188,23 @@
               <item name="integramed.info" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="sites" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="default" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="files" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="integra_reg" type="b2602c69:ProjectViewProjectNode" />
+              <item name="integra_reg" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="public_html" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="integramed.info" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="sites" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="default" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="files" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="uploaded" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -174,6 +216,7 @@
     <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
     <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -216,6 +259,9 @@
       <workItem from="1558374039737" duration="587000" />
       <workItem from="1558798748519" duration="5782000" />
       <workItem from="1560011523087" duration="179000" />
+      <workItem from="1560687063379" duration="961000" />
+      <workItem from="1562987641415" duration="3551000" />
+      <workItem from="1563593950997" duration="904000" />
     </task>
     <task id="LOCAL-00001" summary="integra reg">
       <created>1558375059685</created>
@@ -228,10 +274,11 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17093000" />
+    <option name="totallyTimeSpent" value="22509000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="35" y="104" width="1781" height="856" extended-state="0" />
+    <frame x="35" y="104" width="1591" height="856" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -239,8 +286,8 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Remote Host" active="true" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21052632" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25274727" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23651722" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1735107" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -273,6 +320,13 @@
     <entry file="file://$PROJECT_DIR$/public_html/integramed.info/source/1-meropr-po-uluchsh-usl-truda.jpg">
       <provider selected="true" editor-type-id="images">
         <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public_html/integramed.info/test.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="502">
+          <caret line="76" column="5" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="76" selection-end-column="5" />
+        </state>
       </provider>
     </entry>
   </component>
