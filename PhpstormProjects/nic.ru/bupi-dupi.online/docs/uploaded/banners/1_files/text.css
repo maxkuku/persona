@@ -1,0 +1,495 @@
+html, body{
+	background-color:#FFF;
+	color:#000;
+	font:13px Arial, sans-serif;
+	line-height:19px;
+}
+table{
+	border:0;
+	border:collapse
+}
+td{
+	padding:0;
+	color:#000;
+	font:13px Arial, sans-serif;
+}
+.clmn3 table td{
+	vertical-align:top !important;
+}
+.clmn3 table.bd{
+	border-top:1px solid #FFF;
+	border-left:1px solid #FFF;
+	margin:5px 0;
+}
+.clmn3 table.bd td, .clmn3 table.bd th{
+	border-bottom:1px solid #FFF;
+	border-right:1px solid #FFF;
+	padding:5px 3px;
+	vertical-align:top;
+	background-color:#d6f1f8
+}
+.clmn3 table.bd th{
+	vertical-align:top;
+	font-weight:normal;
+	text-align:left;
+	color:#036A92
+}
+p{
+	margin:0;
+}
+img{
+	border:0;
+}
+input.string, input.email, textarea{
+	color:#424242;
+	font:13px Arial,sans-serif;
+	height:17px;
+	text-transform: none;
+	border:1px solid #ABCFD8;
+	width:300px;
+	margin:0 0 5px 0;
+}
+textarea{
+	height:150px;
+}
+label.before{
+	float:left;
+	width:90px;
+	color:#0F8DC3;
+}
+.captcha_div{
+	float:left;
+}
+.captcha_div img{
+	margin-bottom:3px;
+}
+input.short{
+	width:100px;
+}
+div.line{
+	clear:both;
+}
+input.button{
+	color:#000;
+	border:0;
+	font:13px Arial,sans-serif;
+	margin:0 0 0 90px;
+	background:url(green2.jpg) 0 0 no-repeat;
+	padding-top:2px;
+	padding-bottom:6px;
+}
+input.error, textarea.error, select.error{
+	background-color:#ECE9AE;
+	border-color:#D3CC43
+}
+select{
+	color:#424242;
+	font:13px Arial,sans-serif;
+	height:17px;
+	text-transform: none;
+	border:1px solid #B7C8CC
+}
+form{
+	margin:0;
+}
+.error, .red, .required{
+	color:#ED1C24;
+}
+a{
+	color:#036A92;
+	text-decoration:none;
+	background:url(punktir.gif) 0 100% repeat-x;
+}
+a:hover{
+	color:#88A725;
+	text-decoration:none;
+}
+a img{
+	background:none
+}
+h1{
+	font-size:19px;
+	line-height:19px;
+	font-weight:normal;
+	text-transform:uppercase;
+	margin:0 0 10px 0;
+	padding:0 0 3px 0;
+	background:url(punktir.gif) 0 100% repeat-x;
+	color:#0068a6;
+}
+h1.simple{
+
+}
+/*h1.simple{
+	font-size:19px !important;
+	line-height:19px !important;
+	font-weight:normal !important;
+	text-transform:uppercase !important;
+	margin:0 0 10px 0 !important;
+	padding:0 0 3px 0 !important;
+	background:url(/i/punktir.gif) 0 100% repeat-x !important;
+	color:#000 !important;
+}*/
+h1.small{
+	font-size:15px;
+}
+h1 a{
+	color:#0068a6;
+	text-decoration:none;
+	background-position:0 100px;
+}
+h1 a:hover{
+	color:#0078C1;
+	text-decoration:none;
+}
+h1.margintop{
+	margin-top:20px;
+}
+
+/*.clmn2 h1{
+	text-transform:none;
+	background-color:#87A725;
+	background-image:none;
+	font-size:12px;
+	font-weight:bold;
+	padding:3px 5px 4px 5px;
+	line-height:14px;
+	margin:0 0 7px 0;
+	color:#FFF;
+}
+.clmn2 h1 a{
+	color:#FFF;
+	text-decoration:none
+}
+.clmn2 h1 a:hover{
+	color:#AAD7E8
+}*/
+h2{
+	font-weight:normal;
+	font-size:17px;
+	margin:0 0 10px 0;
+	padding:0 0 3px 0;
+}
+h2.now{
+	background:url(punktir.gif) 0 100% repeat-x;
+	font-weight:bold
+}
+h2.now a{
+	background:none;
+	color:#000
+}
+h2.now2{
+	background:url(punktir.gif) 0 100% repeat-x;
+	color:#036A92
+}
+h2.now2 a{
+	background:none;
+	color:#000
+}
+h4{
+	font-size:13px;
+	font-weight:bold;
+	margin:10px 0;
+}
+hr{
+	border:0;
+	height:1px;
+	background:url(punktir.gif) 0 0 repeat-x;
+	margin:0;
+}
+
+.clmn2 h1{
+	text-transform:none;
+	background:url(green.gif) 100% 0 no-repeat;
+	font-size:12px;
+	line-height:14px;
+	font-weight:bold;
+	padding:3px 5px 2px 5px;
+	_padding:3px 5px 8px 5px;
+	min-height:19px;
+	margin:0 0 7px 0;
+	color:#000;
+}
+.clmn2 h1 a{
+	color:#000;
+	text-decoration:none
+}
+
+
+#maincontent .clmn1 h1{
+	background:#DFF28D url(green.gif) 0 0 no-repeat;
+	font-size:13px;
+	line-height:13px;
+	font-weight:bold;
+	padding:4px 5px 2px 5px;
+	_padding:4px 5px 8px 5px;
+	min-height:18px;
+	overflow:hidden;
+	margin:0 0 7px 0
+}
+.clmn1 h1 a, .clmn1 h1{
+	color:#000;
+}
+
+ul.large{
+	text-transform:uppercase;
+	font-size:11px;
+	margin-top:1px !important;
+}
+.list{
+	margin:0;
+	padding:0;
+	list-style:none;
+	line-height:15px;
+}
+.list li, .list div.list_in{
+	margin:0 0 8px 0;
+	/*border-bottom:1px solid #fff;*/
+}
+.list div.list_in{
+	height:23px;
+	margin:0
+}
+.list li.last{
+	margin:0;
+}
+.list li.now{
+	font-weight:bold;
+}
+.list span{
+	color:#626262;
+	text-transform:lowercase;
+}
+.list a{
+	text-decoration:none;
+	color:#000;
+	background:none;
+}
+.list a:hover{
+	text-decoration:none;
+	color:#0078C1
+}
+ul.half{
+	width:334px;
+	float:left;
+	margin:0 20px 0 0;
+}
+ul.half_last{
+	width:334px;
+	float:left;
+	margin:0;
+}
+ul.half2{
+	width:152px;
+	float:left;
+	margin:0 10px 0 0;
+}
+ul.half_last2{
+	width:152px;
+	float:left;
+	margin:0;
+}
+.clmn2 ul.half2, .clmn2 ul.half_last2{
+	width:100px;
+}
+a.more{
+	display:block;
+	clear:both;
+	text-align:right;
+	color:#036A92;
+	background:url(more.gif) 100% 5px no-repeat;
+	padding:0 12px 0 0 !important;
+}
+a.more:hover{
+	color:#88A725;
+	background:url(more.gif) 100% -21px no-repeat;
+	padding:0 12px 0 0 !important;
+}
+a.more2{
+	display:block;
+	text-align:right;
+	color:#036A92;
+	background:url(more.gif) 100% 5px no-repeat;
+	padding:0 12px 0 0;
+}
+a.more2:hover{
+	color:#88A725;
+	background:url(more.gif) 100% 100% no-repeat;
+}
+.clear{
+	clear:both;
+}
+/*	zoom:1;
+}
+a.more:after{
+	 content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}*/
+
+.person{
+	margin:0 0 10px 10px;
+	width:339px;
+	float:left;	
+	background-color:#F1F9FB;
+}
+.person_first{
+	margin-left:0
+}
+.person div{
+	background-repeat:no-repeat;
+	background-position:0 0;
+	height:150px;
+	border:1px solid #D2E9EF;
+}
+.person a div:hover{
+	border:1px solid #A1BBBA;
+}
+.person .name{
+	margin:15px 5px 5px 160px;
+	line-height:14px;
+	font-weight:bold;
+}
+.person .doljnost{
+	margin:0 5px 0 160px;
+	font-size:11px;
+	line-height:14px;
+	color:#626262
+}
+.person_selected .doljnost a{
+	text-decoration:none;
+	background:url(punktir.gif) 0 100% repeat-x;
+	color:#0078C1 !important
+}
+.person a{
+	display:block;
+	text-decoration:none;
+	color:#000;
+	cursor:pointer;
+	cursor:hand;
+	background:none;
+}
+.person .doljnost a{
+	display:inline;
+	text-decoration:none;
+	color:#000;
+	cursor:pointer;
+	cursor:hand;
+}
+.person .doljnost a:hover{
+	color:#0078c1
+}
+.person .doljnost2 a{
+	color:#036A92;
+	text-decoration:none;
+	background:url(punktir.gif) 0 100% repeat-x;
+}
+
+.person .name a, .person a .name{
+	color:#0078C1
+}
+.person a:hover .name span{
+	color:#88A725
+	
+}
+.person_selected{
+	width:688px;
+	float:none;
+	clear:both;
+	margin-left:0;
+}
+.person_selected div{
+	height:auto;
+	border:1px solid #A1BBBA;
+}
+.person_selected div.biography{
+	margin:20px 10px 20px 160px;
+	border:0 !important
+}
+.person2 div{
+	height:160px;
+	background-position:0 100%;
+}
+.person2 .name{
+	margin:8px 5px 5px 135px;
+	line-height:14px;
+}
+.person2 .doljnost{
+	margin:0 5px 0 135px;
+	line-height:14px;
+}
+.person4 .name{
+	margin:15px 5px 5px 115px;
+	font-weight:bold;
+}
+.person4 .doljnost{
+	margin:0 5px 0 115px;
+	font-size:11px;
+	line-height:17px;
+	color:#626262
+}
+.person2 .doljnost a{
+	color:#0078C1 !important;
+	background:url(punktir.gif) 0 100% repeat-x !important;
+}
+
+.person3{
+	width:auto;
+	float:none;
+	background-color:transparent;
+	background:url(punktir.gif) 0 100% repeat-x;
+	padding:0 0 7px 0;
+	margin:0 0 10px 0 !important;
+}
+.person3 div{
+	height:auto;
+	border:0;
+	border-bottom:0;
+	/*background-color:#FFF;*/
+}
+.person3_last{
+	border:0;
+}
+.person3 .name{
+	margin:5px 5px 0 0;
+	color:#02639a
+}
+.person3 .subname{
+	margin:0 5px 5px 0;
+}
+.person3 .doljnost{
+	margin:0 5px 10px 0;
+	line-height:14px;
+}
+.half .person2, .half_last .person2{
+	margin-left:0 !important;
+	float:none !important;
+}
+.znak{
+	margin:-80px 0 0 20px;
+	float:right;
+	display:block;
+	background:none	
+	width:200px !important;
+	text-align:right;
+	border:0 !important;
+}
+.znak a{
+	display:inline;
+	background:none	
+}
+.znak img{
+	margin:0 10px;
+}
+table.partners td{
+	vertical-align: middle !important;
+	padding:0 0 5px 0
+}
+table.partners td.first{
+	text-align:center !important
+}
+table.partners img{
+	margin:0 5px 0 0
+}

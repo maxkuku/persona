@@ -1,30 +1,10 @@
-@font-face {
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap&subset=cyrillic');
 
-    font-family: "Circe";
-
-    src: url("fonts/Circe-Regular.eot") format("eot"),
-
-
-    url("fonts/Circe-Regular.woff") format("woff"),
-    url("fonts/Circe-Regular.ttf") format("ttf"),
-
-    url("fonts/Circe-Regular.svg") format("svg");
-
-}
-
-@font-face {
-
-    font-family: "CirceBold";
-
-    src: url("fonts/Circe-Bold.eot") format("eot"),
-
-    url("fonts/Circe-Bold.ttf") format("ttf"),
-	
-	url("fonts/Circe-Bold.woff") format("woff"),
-
-    url("fonts/Circe-Bold.svg") format("svg");
-
-}
+/*@font-face {
+    font-family: 'Roboto';
+    font-display: auto;
+    src: local('Roboto'), url(https://fonts.gstatic.com/s/roboto/v20/KFOmCnqEu92Fr1Mu72xKOzY.woff2) format('woff2');
+}*/
 
 html {
     width:100%;
@@ -351,6 +331,12 @@ span#menu-switch {
     padding-bottom: 28px;
 }
 #desktop-menu .up-line ul li.st1.closed ul {
+    padding-bottom: 0px!important;
+}
+#desktop-menu .up-line ul li.pr1 ul {
+    padding-bottom: 28px;
+}
+#desktop-menu .up-line ul li.pr1.closed ul {
     padding-bottom: 0px!important;
 }
 .light-eee {
@@ -1384,6 +1370,9 @@ div#copy-bottom {
 .st1 > ul {
     column-count: 2;
 }
+.pr1 > ul {
+    column-count: 2;
+}
 .youtube {
     width: 100%;
 }
@@ -2025,7 +2014,8 @@ div#top-buttons.all-on-4-all-on-6 {
     -webkit-justify-content: space-around;
     -webkit-align-items: center;
 }
-.st1 ul li:first-child {
+.st1 ul li:first-child,
+.pr1 ul li:first-child {
     margin-top: 11px;
 }
 #desktop-menu .menu-from-fam {
@@ -2038,20 +2028,23 @@ div#top-buttons.all-on-4-all-on-6 {
 .blue .h2 {
     margin-bottom: 22px;
 }
-.st1 > a:after{
+.st1 > a:after,
+.pr1 > a:after{
     display: inline-block;
     width: 14px;
     height: 14px;
     font-size: 14px;
     margin-left: 4px;
 }
-.st1.closed > a:after {
+.st1.closed > a:after,
+.pr1.closed > a:after {
     /*content: "▼";*/
     content: "\f107";
     font-family: 'fontawesome';
     font-size: 24px;
 }
-.st1 > a:after{
+.st1 > a:after,
+.pr1 > a:after{
     content: "\f106";
     font-family: 'fontawesome';
     font-size: 24px;
@@ -2093,7 +2086,8 @@ div#top-buttons.all-on-4-all-on-6 {
 .lightgrey .banner_text ul li {
     color: #000;
 }
-.foot-menu .st1 a:after{
+.foot-menu .st1 a:after,
+.foot-menu .pr1 a:after{
     display:none
 }
 h4 font {
@@ -2106,7 +2100,8 @@ div#foot {
     display: block;
     z-index: 10;
 }
-.st1 ul li:hover {
+.st1 ul li:hover ,
+.pr1 ul li:hover {
     /*background: rgba(255,255,255,.5);*/
 }
 .up-line ul li ul{
@@ -2142,20 +2137,24 @@ ul li ul a {
 ul li ul li:hover a {
     color: #fff;
 }
-.st1 ul li {
+.st1 ul li,
+.pr1 ul li {
     line-height: 2em;
     padding: 0 3em 0 1em;
 }
-.foot-menu li.st1 ul {
+.foot-menu li.st1 ul,
+.foot-menu li.pr1 ul {
     position: absolute;
     column-count: initial!important;
     bottom: 43px;
 }
-.foot-menu li.st1 > ul li{
+.foot-menu li.st1 > ul li,
+.foot-menu li.pr1 > ul li{
     display: block;
     width: 100%!important;
 }
-.foot-menu li.st1 ul li a{
+.foot-menu li.st1 ul li a,
+.foot-menu li.pr1 ul li a{
     padding: 0;
     font-size: 15px;
     line-height: 19px;
@@ -2163,7 +2162,8 @@ ul li ul li:hover a {
 .foot-menu .menu-from-fam .up-line > ul li.st1{
     position:relative;
 }
-ul li.st1:hover ul{
+ul li.st1:hover ul,
+ul li.pr1:hover ul{
     display: block;
 }
 ul li ul li {
@@ -2649,7 +2649,8 @@ body .item-wrap.articles.six {
         padding: 2em 0 0;
     }
 
-    .st1 ul li.li5 {
+    .st1 ul li.li5 ,
+    .pr1 ul li.li5 {
         margin-top: 0px;
     }
  

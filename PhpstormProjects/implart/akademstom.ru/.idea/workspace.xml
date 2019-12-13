@@ -2,105 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ab59b16c-0731-4108-80dd-ff430e4816fe" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/../../dlin_reg/www/doctordlin.ru/bitrix/components/dlin/menu/templates/another_desktop/template.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../../dlin_reg/www/doctordlin.ru/bitrix/components/dlin/news.detail/templates/.default/style.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../../dlin_reg/www/doctordlin.ru/bitrix/components/dlin/news.detail/templates/.default/template.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../../dlin_reg/www/doctordlin.ru/bitrix/components/dlin/news.list/templates/specs_brt_main/template.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../../dlin_reg/www/doctordlin.ru/bitrix/components/dlin/news.list/templates/specs_on_main/template.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../../dlin_reg/www/doctordlin.ru/bitrix/components/dlin/news.list/templates/youtube_slider/template.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../../dlin_reg/www/doctordlin.ru/bitrix/components/dlin/other.articles/templates/main_promo/template.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../../dlin_reg/www/doctordlin.ru/bitrix/templates/dlin/footer.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../../dlin_reg/www/doctordlin.ru/bitrix/templates/dlin/header.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../../dlin_reg/www/doctordlin.ru/bitrix/templates/dlin/images/000.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../../dlin_reg/www/doctordlin.ru/bitrix/templates/dlin/images/blokada.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../../dlin_reg/www/doctordlin.ru/bitrix/templates/dlin/images/elektroforez.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../../dlin_reg/www/doctordlin.ru/bitrix/templates/dlin/images/injection.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../../dlin_reg/www/doctordlin.ru/bitrix/templates/dlin/js/jquery-2.1.4.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../../dlin_reg/www/doctordlin.ru/bitrix/templates/dlin/js/lightbox.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../../dlin_reg/www/doctordlin.ru/bitrix/templates/dlin/styles.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../../dlin_reg/www/doctordlin.ru/bitrix/templates/dlin/template_styles.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../../dlin_reg/www/doctordlin.ru/method/osteopathy/index_old.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/akademstom.ru/public_html/bitrix/components/redesign/menu/.description.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/akademstom.ru/public_html/bitrix/components/redesign/menu/.parameters.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/akademstom.ru/public_html/bitrix/components/redesign/menu/class.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/akademstom.ru/public_html/bitrix/components/redesign/menu/component.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/akademstom.ru/public_html/bitrix/components/redesign/menu/images/menu.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/akademstom.ru/public_html/bitrix/components/redesign/menu/lang/en/.description.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/akademstom.ru/public_html/bitrix/components/redesign/menu/lang/en/.parameters.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/akademstom.ru/public_html/bitrix/components/redesign/menu/lang/en/component.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/akademstom.ru/public_html/bitrix/components/redesign/menu/lang/en/help/.tooltips.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/akademstom.ru/public_html/bitrix/components/redesign/menu/lang/ru/.description.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/akademstom.ru/public_html/bitrix/components/redesign/menu/lang/ru/.parameters.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/akademstom.ru/public_html/bitrix/components/redesign/menu/lang/ru/component.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/akademstom.ru/public_html/bitrix/components/redesign/menu/lang/ru/help/.tooltips.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/akademstom.ru/public_html/bitrix/components/redesign/menu/stub.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/akademstom.ru/public_html/bitrix/components/redesign/menu/templates/another_desktop/.description.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/akademstom.ru/public_html/bitrix/components/redesign/menu/templates/another_desktop/images/arrow.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/akademstom.ru/public_html/bitrix/components/redesign/menu/templates/another_desktop/images/header_menu_bg.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/akademstom.ru/public_html/bitrix/components/redesign/menu/templates/another_desktop/images/lock.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/akademstom.ru/public_html/bitrix/components/redesign/menu/templates/another_desktop/lang/en/.description.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/akademstom.ru/public_html/bitrix/components/redesign/menu/templates/another_desktop/lang/en/template.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/akademstom.ru/public_html/bitrix/components/redesign/menu/templates/another_desktop/lang/ru/.description.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/akademstom.ru/public_html/bitrix/components/redesign/menu/templates/another_desktop/lang/ru/template.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/akademstom.ru/public_html/bitrix/components/redesign/menu/templates/another_desktop/script.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/akademstom.ru/public_html/bitrix/components/redesign/menu/templates/another_desktop/script.map.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/akademstom.ru/public_html/bitrix/components/redesign/menu/templates/another_desktop/script.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/akademstom.ru/public_html/bitrix/components/redesign/menu/templates/another_desktop/style.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/akademstom.ru/public_html/bitrix/components/redesign/menu/templates/another_desktop/style.min.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/akademstom.ru/public_html/bitrix/components/redesign/menu/templates/another_desktop/template.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/akademstom.ru/public_html/bitrix/components/redesign/menu/templates/mobile/.description.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/akademstom.ru/public_html/bitrix/components/redesign/menu/templates/mobile/images/_nb.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/akademstom.ru/public_html/bitrix/components/redesign/menu/templates/mobile/images/_nb_active.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/akademstom.ru/public_html/bitrix/components/redesign/menu/templates/mobile/images/arrow.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/akademstom.ru/public_html/bitrix/components/redesign/menu/templates/mobile/images/item_bg.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/akademstom.ru/public_html/bitrix/components/redesign/menu/templates/mobile/images/lock.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/akademstom.ru/public_html/bitrix/components/redesign/menu/templates/mobile/lang/en/.description.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/akademstom.ru/public_html/bitrix/components/redesign/menu/templates/mobile/lang/en/template.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/akademstom.ru/public_html/bitrix/components/redesign/menu/templates/mobile/lang/ru/.description.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/akademstom.ru/public_html/bitrix/components/redesign/menu/templates/mobile/lang/ru/template.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/akademstom.ru/public_html/bitrix/components/redesign/menu/templates/mobile/script.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/akademstom.ru/public_html/bitrix/components/redesign/menu/templates/mobile/script.map.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/akademstom.ru/public_html/bitrix/components/redesign/menu/templates/mobile/script.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/akademstom.ru/public_html/bitrix/components/redesign/menu/templates/mobile/style.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/akademstom.ru/public_html/bitrix/components/redesign/menu/templates/mobile/style.min.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/akademstom.ru/public_html/bitrix/components/redesign/menu/templates/mobile/template.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/akademstom.ru/public_html/bitrix/templates/redesign/js/watch.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../../integra_reg/public_html/integramed.info/test.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../../trubilin.com/httpdocs/upload/tmp/noneed.php" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/../../integra_reg/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../../integra_reg/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/../../integra_reg/public_html/integramed.info/sites/all/themes/integra/css/style.css" afterPath="$PROJECT_DIR$/../../integra_reg/public_html/integramed.info/sites/all/themes/integra/css/style.css" />
-      <change beforePath="$PROJECT_DIR$/../../integra_reg/public_html/integramed.info/sites/all/themes/integra/template.php" afterPath="$PROJECT_DIR$/../../integra_reg/public_html/integramed.info/sites/all/themes/integra/template.php" />
-      <change beforePath="$PROJECT_DIR$/../../integra_reg/public_html/integramed.info/sites/all/themes/integra/templates/html.tpl.php" afterPath="$PROJECT_DIR$/../../integra_reg/public_html/integramed.info/sites/all/themes/integra/templates/html.tpl.php" />
-      <change beforePath="$PROJECT_DIR$/../../nic.ru/webdevelop.tech/docs/bitrix/components/aspro/pages.detail/templates/.default/part19.php" afterPath="$PROJECT_DIR$/../../nic.ru/webdevelop.tech/docs/bitrix/components/aspro/pages.detail/templates/.default/part19.php" />
-      <change beforePath="$PROJECT_DIR$/../../persona.market/.htaccess" afterPath="$PROJECT_DIR$/../../persona.market/.htaccess" />
-      <change beforePath="$PROJECT_DIR$/../../persona.market/ajax/index.php" afterPath="$PROJECT_DIR$/../../persona.market/ajax/index.php" />
-      <change beforePath="$PROJECT_DIR$/../../persona.market/basket/index.php" afterPath="$PROJECT_DIR$/../../persona.market/basket/index.php" />
-      <change beforePath="$PROJECT_DIR$/../../persona.market/bitrix/components/persona/brand_menu/templates/brands_menu_name/template.php" afterPath="$PROJECT_DIR$/../../persona.market/bitrix/components/persona/brand_menu/templates/brands_menu_name/template.php" />
-      <change beforePath="$PROJECT_DIR$/../../persona.market/bitrix/components/persona/catalog.element/templates/.default/component_epilog.php" afterPath="$PROJECT_DIR$/../../persona.market/bitrix/components/persona/catalog.element/templates/.default/component_epilog.php" />
-      <change beforePath="$PROJECT_DIR$/../../persona.market/bitrix/components/persona/catalog.element/templates/.default/lang/en/.parameters.php" afterPath="$PROJECT_DIR$/../../persona.market/bitrix/components/persona/catalog.element/templates/.default/lang/en/.parameters.php" />
-      <change beforePath="$PROJECT_DIR$/../../persona.market/bitrix/components/persona/catalog.element/templates/.default/result_modifier.php" afterPath="$PROJECT_DIR$/../../persona.market/bitrix/components/persona/catalog.element/templates/.default/result_modifier.php" />
-      <change beforePath="$PROJECT_DIR$/../../persona.market/bitrix/components/persona/catalog.element/templates/.default/script.js" afterPath="$PROJECT_DIR$/../../persona.market/bitrix/components/persona/catalog.element/templates/.default/script.js" />
-      <change beforePath="$PROJECT_DIR$/../../persona.market/bitrix/components/persona/catalog.element/templates/.default/style.css" afterPath="$PROJECT_DIR$/../../persona.market/bitrix/components/persona/catalog.element/templates/.default/style.css" />
-      <change beforePath="$PROJECT_DIR$/../../persona.market/bitrix/components/persona/catalog.element/templates/.default/template.php" afterPath="$PROJECT_DIR$/../../persona.market/bitrix/components/persona/catalog.element/templates/.default/template.php" />
-      <change beforePath="$PROJECT_DIR$/../../persona.market/bitrix/components/persona/form.result.new/templates/sendorder/template.php" afterPath="$PROJECT_DIR$/../../persona.market/bitrix/components/persona/form.result.new/templates/sendorder/template.php" />
-      <change beforePath="$PROJECT_DIR$/../../persona.market/bitrix/components/persona/system.auth.form/templates/.default/template.php" afterPath="$PROJECT_DIR$/../../persona.market/bitrix/components/persona/system.auth.form/templates/.default/template.php" />
-      <change beforePath="$PROJECT_DIR$/../../persona.market/bitrix/php_interface/init.php" afterPath="$PROJECT_DIR$/../../persona.market/bitrix/php_interface/init.php" />
-      <change beforePath="$PROJECT_DIR$/../../persona.market/bitrix/templates/persona/header.php" afterPath="$PROJECT_DIR$/../../persona.market/bitrix/templates/persona/header.php" />
-      <change beforePath="$PROJECT_DIR$/../../persona.market/bitrix/templates/persona/js/common.js" afterPath="$PROJECT_DIR$/../../persona.market/bitrix/templates/persona/js/common.js" />
-      <change beforePath="$PROJECT_DIR$/../../persona.market/bitrix/templates/persona/template_styles.css" afterPath="$PROJECT_DIR$/../../persona.market/bitrix/templates/persona/template_styles.css" />
-      <change beforePath="$PROJECT_DIR$/../../persona.market/catalog/.section.php" afterPath="$PROJECT_DIR$/../../persona.market/catalog/.section.php" />
-      <change beforePath="$PROJECT_DIR$/../../persona.market/catalog/index.php" afterPath="$PROJECT_DIR$/../../persona.market/catalog/index.php" />
-      <change beforePath="$PROJECT_DIR$/../../persona.market/index.php" afterPath="$PROJECT_DIR$/../../persona.market/index.php" />
-      <change beforePath="$PROJECT_DIR$/../../persona.market/www/floating-persona.ru/php/drnjuyt.twq" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../persona.market/www/persona.market/bitrix/components/persona/catalog.element/templates/.default/template.php" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../persona.market/www/persona.market/bitrix/components/persona/catalog.item/templates/.default/template.php" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../persona.market/www/persona.market/bitrix/components/persona/news.list/templates/recomend_goods/template.php" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../persona.market/www/persona.market/bitrix/templates/persona/template_styles.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../trubilin.com/httpdocs/price/index.php" afterPath="$PROJECT_DIR$/../../trubilin.com/httpdocs/price/index.php" />
-      <change beforePath="$PROJECT_DIR$/../../trubilin.com/httpdocs/uslugi/keratokonus/index.php" afterPath="$PROJECT_DIR$/../../trubilin.com/httpdocs/uslugi/keratokonus/index.php" />
-      <change beforePath="$PROJECT_DIR$/../../trubilin.com/httpdocs/uslugi/udalenie-katarakty/custom.css" afterPath="$PROJECT_DIR$/../../trubilin.com/httpdocs/uslugi/udalenie-katarakty/custom.css" />
-      <change beforePath="$PROJECT_DIR$/../../trubilin.com/httpdocs/uslugi/udalenie-katarakty/index.php" afterPath="$PROJECT_DIR$/../../trubilin.com/httpdocs/uslugi/udalenie-katarakty/index.php" />
+      <change beforePath="$PROJECT_DIR$/akademstom.ru/public_html/bitrix/components/redesign/menu/templates/mobile/style.css" afterPath="$PROJECT_DIR$/akademstom.ru/public_html/bitrix/components/redesign/menu/templates/mobile/style.css" />
+      <change beforePath="$PROJECT_DIR$/akademstom.ru/public_html/bitrix/templates/redesign/header.php" afterPath="$PROJECT_DIR$/akademstom.ru/public_html/bitrix/templates/redesign/header.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -114,33 +18,48 @@
       <file leaf-file-name="template_styles.css" pinned="true" current-in-tab="false">
         <entry file="remoteDeploymentFS://&lt;d870e8eb-417e-4467-b693-0c01346bf934&gt;/akademstom.ru/public_html/bitrix/templates/redesign/template_styles.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="478">
-              <caret line="652" column="1" lean-forward="false" selection-start-line="652" selection-start-column="1" selection-end-line="652" selection-end-column="1" />
+            <state relative-caret-position="480">
+              <caret line="895" column="13" lean-forward="false" selection-start-line="895" selection-start-column="13" selection-end-line="895" selection-end-column="13" />
               <folding>
-                <element signature="e#12966#13036#0" expanded="false" />
-                <element signature="e#13037#13271#0" expanded="false" />
-                <element signature="e#13272#14246#0" expanded="false" />
+                <element signature="e#13573#14516#0" expanded="false" />
+                <element signature="e#14517#14751#0" expanded="false" />
+                <element signature="e#14752#15728#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="footer.php" pinned="true" current-in-tab="true">
-        <entry file="remoteDeploymentFS://&lt;d870e8eb-417e-4467-b693-0c01346bf934&gt;/akademstom.ru/public_html/bitrix/templates/redesign/footer.php">
+      <file leaf-file-name="script.js" pinned="false" current-in-tab="true">
+        <entry file="remoteDeploymentFS://&lt;d870e8eb-417e-4467-b693-0c01346bf934&gt;/akademstom.ru/public_html/bitrix/templates/redesign/js/script.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="74">
-              <caret line="61" column="82" lean-forward="false" selection-start-line="61" selection-start-column="82" selection-end-line="61" selection-end-column="82" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding>
-                <element signature="n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
-                <element signature="n#style#0;n#td#0;n#tr#0;n#table#0;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#td#0;n#tr#0;n#table#0;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
-                <element signature="e#4771#4777#0#HTML" expanded="true" />
-                <element signature="n#script#1;n#!!top" expanded="false" />
-                <element signature="n#script#2;n#!!top" expanded="false" />
-                <element signature="n#script#4;n#!!top" expanded="false" />
-                <element signature="n#style#0;n#img#0;n#div#0;n#noscript#0;n#!!top" expanded="true" />
-                <element signature="n#script#7;n#!!top" expanded="false" />
+                <element signature="n#!!doc" expanded="true" />
+                <element signature="e#913#1133#0" expanded="false" />
+                <element signature="e#1587#3928#0" expanded="false" />
+                <element signature="e#3978#4547#0" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="style.css" pinned="true" current-in-tab="false">
+        <entry file="remoteDeploymentFS://&lt;d870e8eb-417e-4467-b693-0c01346bf934&gt;/akademstom.ru/public_html/bitrix/components/redesign/menu/templates/mobile/style.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="426">
+              <caret line="25" column="14" lean-forward="false" selection-start-line="25" selection-start-column="14" selection-end-line="25" selection-end-column="14" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="header.php" pinned="true" current-in-tab="false">
+        <entry file="remoteDeploymentFS://&lt;d870e8eb-417e-4467-b693-0c01346bf934&gt;/akademstom.ru/public_html/bitrix/templates/redesign/header.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="133">
+              <caret line="136" column="61" lean-forward="false" selection-start-line="136" selection-start-column="16" selection-end-line="136" selection-end-column="61" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -149,7 +68,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>font-weight(.*)300</find>
       <find>bold</find>
       <find>.h2, .h3</find>
       <find>--&gt;</find>
@@ -169,6 +87,17 @@
       <find>http</find>
       <find>like</find>
       <find>.docinfo td.left</find>
+      <find>before</find>
+      <find>введи</find>
+      <find>.menu-from-fam .up-line &gt; ul</find>
+      <find>ul#vertical-multilevel-menu li &gt; *</find>
+      <find>.h1-and-image img</find>
+      <find>top-men</find>
+      <find>another</find>
+      <find>bars</find>
+      <find>top-conts</find>
+      <find>#topmenu:after</find>
+      <find>#header.fixed</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -202,11 +131,14 @@
         <option value="&lt;d870e8eb-417e-4467-b693-0c01346bf934&gt;/akademstom.ru/public_html/bitrix/components/ak_new/menu/templates/another_desktop/style.css" />
         <option value="&lt;d870e8eb-417e-4467-b693-0c01346bf934&gt;/akademstom.ru/public_html/bitrix/components/redesign/menu/templates/another_desktop/template.php" />
         <option value="&lt;d870e8eb-417e-4467-b693-0c01346bf934&gt;/akademstom.ru/public_html/bitrix/components/redesign/menu/templates/another_desktop/style.css" />
-        <option value="&lt;d870e8eb-417e-4467-b693-0c01346bf934&gt;/akademstom.ru/public_html/bitrix/templates/redesign/header.php" />
-        <option value="&lt;d870e8eb-417e-4467-b693-0c01346bf934&gt;/akademstom.ru/public_html/bitrix/components/redesign/sendfeedback/templates/.default/template.php" />
         <option value="&lt;d870e8eb-417e-4467-b693-0c01346bf934&gt;/akademstom.ru/public_html/new/index.php" />
-        <option value="&lt;d870e8eb-417e-4467-b693-0c01346bf934&gt;/akademstom.ru/public_html/bitrix/templates/redesign/template_styles.css" />
         <option value="&lt;d870e8eb-417e-4467-b693-0c01346bf934&gt;/akademstom.ru/public_html/bitrix/templates/redesign/footer.php" />
+        <option value="&lt;d870e8eb-417e-4467-b693-0c01346bf934&gt;/akademstom.ru/public_html/bitrix/components/redesign/sendfeedback/templates/.default/template.php" />
+        <option value="&lt;d870e8eb-417e-4467-b693-0c01346bf934&gt;/akademstom.ru/public_html/bitrix/components/redesign/menu/templates/mobile/template.php" />
+        <option value="&lt;d870e8eb-417e-4467-b693-0c01346bf934&gt;/akademstom.ru/public_html/bitrix/templates/redesign/header.php" />
+        <option value="&lt;d870e8eb-417e-4467-b693-0c01346bf934&gt;/akademstom.ru/public_html/bitrix/components/redesign/menu/templates/mobile/style.css" />
+        <option value="&lt;d870e8eb-417e-4467-b693-0c01346bf934&gt;/akademstom.ru/public_html/bitrix/templates/redesign/template_styles.css" />
+        <option value="&lt;d870e8eb-417e-4467-b693-0c01346bf934&gt;/akademstom.ru/public_html/bitrix/templates/redesign/js/script.js" />
       </list>
     </option>
   </component>
@@ -282,6 +214,14 @@
               <item name="akademstom.ru" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="public_html" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="bitrix" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="components" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="akademstom.ru" type="b2602c69:ProjectViewProjectNode" />
+              <item name="akademstom.ru" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="akademstom.ru" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="public_html" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="bitrix" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="templates" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
@@ -292,16 +232,6 @@
               <item name="bitrix" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="templates" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="redesign" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="akademstom.ru" type="b2602c69:ProjectViewProjectNode" />
-              <item name="akademstom.ru" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="akademstom.ru" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="public_html" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="bitrix" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="templates" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="redesign" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="images" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
@@ -361,7 +291,7 @@
       <workItem from="1565197052068" duration="2284000" />
       <workItem from="1567442854855" duration="1954000" />
       <workItem from="1567528758080" duration="9417000" />
-      <workItem from="1567704922142" duration="7669000" />
+      <workItem from="1567704922142" duration="19063000" />
     </task>
     <task id="LOCAL-00001" summary="Akademstom добавки компонентов">
       <created>1560341141402</created>
@@ -370,14 +300,22 @@
       <option name="project" value="LOCAL" />
       <updated>1560341141402</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Akademstom новый шаблон redesign">
+      <created>1567872911497</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1567872911497</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="43484000" />
+    <option name="totallyTimeSpent" value="54878000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="83" y="78" width="1726" height="862" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -386,7 +324,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2562724" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2628435" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2628435" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -408,8 +346,11 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_NEW_TODO" value="false" />
     <MESSAGE value="Akademstom добавки компонентов" />
-    <option name="LAST_COMMIT_MESSAGE" value="Akademstom добавки компонентов" />
+    <MESSAGE value="Akademstom новый шаблон redesign" />
+    <option name="LAST_COMMIT_MESSAGE" value="Akademstom новый шаблон redesign" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

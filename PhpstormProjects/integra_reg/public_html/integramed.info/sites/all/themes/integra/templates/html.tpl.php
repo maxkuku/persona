@@ -1,9 +1,4 @@
 <?php
-
-
-
-
-
   $menu = menu_tree_all_data('main_menu',0,1);
 //  $menu = drupal_render(menu_tree_output($menu));
 //  kpr($menu);
@@ -28,7 +23,7 @@
 
   <?php
     if ($is_front) print '<script src="//cdn.jsdelivr.net/jquery.touchswipe/1.6.5/jquery.touchSwipe.min.js"></script>';  ?>
-    <script src="/sites/all/themes/integra/js/scrips.js?v=13"></script>
+    <script src="/sites/all/themes/integra/js/scrips.js?v=14"></script>
     <?php print $scripts;?>
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -54,11 +49,12 @@
       <div class="col-12 col-md-5">
 <!--         Ссылка с логотипом и текстом-->
               <a class="navbar-brand row align-self-center" href="/">
-                <div class=" align-top col-4 pr-0"><img src="/sites/all/themes/integra/img/logo.png" class="img-fluid align-top " width=""  alt="Интеграмедсервис"></div>
+                  <img src="/uploaded/logo_n.png" class="align-top pr-0" alt="КЛИНИКА РЕСПИРАТОРНОЙ МЕДИЦИНЫ ИНТЕГРАМЕД"/>
+                <!--div class=" align-top col-4 pr-0"><img src="/sites/all/themes/integra/img/logo.png" class="img-fluid align-top " width=""  alt="Интеграмедсервис"></div>
                 <div class="col-8 pl-1 align-self-center">
                             <div class="heading-bold">ИНТЕГРАМЕДСЕРВИС</div>
                             <div class="heading-normal">КЛИНИКА РЕСПИРАТОРНОЙ МЕДИЦИНЫ</div>
-                        </div>
+                        </div-->
               </a>
       </div>
       <div class="col-12 col-md-2 phone-wrapper heading-bold text-primary">
@@ -120,13 +116,15 @@
     <div class="row">
       <div class="col-12 col-md-3">
         <div>
-          <a class="navbar-brand d-none d-md-block " href="/">
+          <!--a class="navbar-brand d-none d-md-block " href="/">
             <img src="/sites/all/themes/integra/img/logo.png" class="d-inline-block align-top " width="80" alt="...">
             <span class="d-inline-block ">
                             <span class="d-block heading-bold">ИНТЕРГАМЕДСЕРВИС</span>
                             <span class="d-block heading-normal">КЛИНИКА РЕСПИРАТОРНОЙ МЕДИЦИНЫ</span>
                         </span>
-          </a>
+          </a-->
+            <a class="navbar-brand row align-self-center a-logo-bottom" href="/">
+                <img style="height: 80px;" src="/uploaded/logo_n.png" class="align-top pr-0" alt="КЛИНИКА РЕСПИРАТОРНОЙ МЕДИЦИНЫ ИНТЕГРАМЕД"/>
         </div>
         <div>
 <!--          Многопрофильный респираторный медицинский центр-->
@@ -142,7 +140,9 @@
 
 
           <?php
-          $current_time = strtotime("now");
+          /* whatsup widget
+
+           * $current_time = strtotime("now");
           $sunrise = strtotime("10:00");
           $sunset = strtotime("20:00");
           if ($current_time > $sunrise && $current_time < $sunset && date('w') > 0 && date('w') < 6)
@@ -152,7 +152,7 @@
           else
           {
               ?><div style="display: none" id="wa_wi" data-info="<?=$current_time . ' ' . $sunrise . ' ' . $sunset?>">С 10:00 до 20:00</div><?
-          }
+          }*/
           ?>
 
 
@@ -224,28 +224,7 @@ unset($blocks_build[$module_name . '_' . $block_delta]['#theme_wrappers']);
 <noscript><div><img src="https://mc.yandex.ru/watch/53500543" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 <!-- /Yandex.Metrika counter -->
 <script>
-    $(document).ready(function(){
-        setTimeout(function(){
-        if($('h1 + .banner').length < 1){
-            if(document.URL.indexOf('161')>-1){
-                var a = '<div class="banner" style="display:block; flex: none; background-color: #FF4160; margin: 2em 0; padding: 1.2em 1em 8px; width: 100%;">\n' +
-                    '<p style="color: white; font-size: 26px; text-align: center; line-height: 40px;">\n' +
-                    'Акция! Первичная консультация врача-иммунолога 1000 руб.\n' +
-                    '</p>\n' +
-                    '</div>';
-                $('h1').after(a);
-            }
-            else {
-                var a = '<div class="banner" style="display:block; flex: none; background-color: #FF4160; margin: 2em 0; padding: 1.2em 1em 8px; width: 100%;">\n' +
-                    '<p style="color: white; font-size: 26px; text-align: center; line-height: 40px;">\n' +
-                    'Акция! <a href="/pulmonology" style="color: white;">Первичная консультация врача-пульмонолога 1500 руб.</a>\n' +
-                    '</p>\n' +
-                    '</div>';
-                $('h1').after(a);
-            }
-        }
-        },500);
-    });
+    
 </script>
 <script>
     $(document).ready(function () {
@@ -253,6 +232,30 @@ unset($blocks_build[$module_name . '_' . $block_delta]['#theme_wrappers']);
             e.preventDefault();
             yaCounter53500543.reachGoal('whatsapp');
             window.open($(this).attr('href'), '_blank');
+        });
+    });
+</script>
+<script>
+    $(document).ready(function () {
+        $("#webform-client-form-5146 .form-submit").on('click tap', function () {
+            yaCounter53500543.reachGoal('leftcons');
+            return true;
+        });
+    });
+</script>
+<script>
+    $(document).ready(function () {
+        $("#webform-client-form-5147 .form-submit").on('click tap', function () {
+            yaCounter53500543.reachGoal('skype');
+            return true;
+        });
+    });
+</script>
+<script>
+    $(document).ready(function () {
+        $("#webform-client-form-5020 .form-submit").on('click tap', function () {
+            yaCounter53500543.reachGoal('online');
+            return true;
         });
     });
 </script>

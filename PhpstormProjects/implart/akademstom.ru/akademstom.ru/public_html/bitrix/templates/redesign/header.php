@@ -27,6 +27,7 @@
     <?$APPLICATION->ShowHead();?>
     <!--[if lte IE 6]>
     <![endif]-->
+    <script type="text/javascript" src="<?=SITE_TEMPLATE_PATH?>/js/uikit.min.js"></script>
     <script type="text/javascript" src="<?=SITE_TEMPLATE_PATH?>/js/jquery.inputmask.js"></script>
     <script type="text/javascript" src="<?=SITE_TEMPLATE_PATH?>/js/modal.js"></script>
     <script type="text/javascript" src="<?=SITE_TEMPLATE_PATH?>/js/modernizr-custom.js"></script>

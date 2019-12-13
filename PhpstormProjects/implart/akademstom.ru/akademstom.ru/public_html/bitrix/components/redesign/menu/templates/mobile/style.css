@@ -6,22 +6,8 @@ ul#vertical-multilevel-menu, #vertical-multilevel-menu ul
 }
 
 ul#vertical-multilevel-menu {
-    column-count: 2;
 	max-width:1124px;
 	margin:0 auto;
-	xborder: 1px black solid;
-    padding: 15px;
-    -webkit-column-count: 2;
-    -moz-column-count: 2;
-    column-count: 2;
-    -webkit-column-gap: 44px;
-    -moz-column-gap: 44px;
-    column-gap: 44px;
-    -webkit-column-rule: 2px solid #eee;
-    -moz-column-rule: 2px solid #eee;
-    column-rule: 2px solid #eee;
-	/*transition:.3s ease;*/
-	box-sizing: border-box;
 }
 
 #top-menu .close{
@@ -33,32 +19,48 @@ div#top-menu-inner {
 }
 div#top-menu {
     position: fixed;
-    width: 1124px;
+    width: 100%;
     margin: 0 auto;
-    left: calc((100% - 1124px) / 2);
-	z-index:3;
-	top: -50vw;
-    /*transition: .3s ease;*/
-	background-color:#256fbc;
+    left: 0;
+    z-index: 3;
+    top: 0;
+    transition: .3s ease;
+    background-color: #f8f8f8;
 }
 div#top-menu.active{
 	top: 69px;
 }
 li.second.root-item {
-    margin-left: 22px;
-	margin-bottom: 22px;
-    margin-top: 11px;
+    margin-left: 20px;
+	margin-bottom: 20px;
+    margin-top: 10px;
+}
+#top-menu input[name="q"]{
+    width: 77%;
+    border: 1px solid #ccc;
+    padding: 10px;
+    font-size: 14px;
+}
+#top-menu .uk-close:after {
+    content: "×";
+    color: black;
+    cursor: pointer;
+}
+#top-menu #search-li span {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
 }
 #top-menu li.second.root-item a {
-    font-size: 20px;
-    margin-left: 22px;
-    line-height: 21px;
+    font-size: 18px;
+    margin-left: 20px;
+    line-height: 20px;
     display: block;
 }
 ul#vertical-multilevel-menu li > * {
-    margin: 11px 20%;
-    color: #eee;
+    margin: 10px;
+    color: #000;
     line-height: 2em;
-    font-size: 22px;
+    font-size: 18px;
     text-decoration: none;
 }
