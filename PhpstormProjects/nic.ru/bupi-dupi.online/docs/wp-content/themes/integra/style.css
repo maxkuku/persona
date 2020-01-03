@@ -89,6 +89,8 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
     display: block;
 }
 
+
+
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -610,31 +612,10 @@ pre code {
     .container {
         max-width: 1200px;
     }
-    .home main .otzivi{
-        position: relative;
-    }
-    .home main .otzivi:before{
-        left: -100%;
-        content: "";
-        width: 100%;
-        background: #ededed;
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        display: block;
-        box-sizing: border-box;
-    }
-    .home main .otzivi:after{
-        right: -100%;
-        content: "";
-        width: 100%;
-        background: #ededed;
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        display: block;
-        box-sizing: border-box;
-    }
+}
+
+a.color-white{
+    color:white;
 }
 
 .container-fluid {
@@ -3896,7 +3877,12 @@ input[type="button"].btn-block {
     align-items: center;
     justify-content: space-between;
     padding: 0.5rem 1rem;
+    transition: .3s;
 }
+
+/*nav.navbar.navbar-expand-lg.navbar-light {
+    padding: 0.5rem 1rem 17px;
+}*/
 
 .navbar > .container,
 .navbar > .container-fluid {
@@ -9700,7 +9686,8 @@ li.page_item {
     display: inline-block;
     width: 0;
     height: 0;
-    margin-left: 0.255em;
+    /*margin-left: 0.255em;*/
+    margin-left: -1.745em;
     vertical-align: 0.255em;
     content: "";
     color: #fff;
@@ -9708,7 +9695,7 @@ li.page_item {
     border-right: 0.3em solid transparent;
     border-bottom: 0;
     border-left: 0.3em solid transparent;
-    position: absolute;
+    /*position: absolute;*/
     top: 18px;
     right: 18px;
 }
@@ -9767,6 +9754,95 @@ li.page_item {
     flex-flow: column-reverse;
 }
 /*end cforms*/
+
+.st_form_date br {
+    display: none;
+}
+
+.doctor {
+    display: inline-block;
+    width: 49%;
+    margin: 0 6px 16px 0;
+    vertical-align: top;
+    height: 210px;
+    border: 1px solid #D2E9EF;
+    background-color: white;
+    position: relative;
+}
+
+.doctor > div:first-child {
+    background-repeat: no-repeat;
+    padding-left: 52%;
+    background-position: 0 21px;
+    background-size: auto 100%;
+    height: 100%;
+}
+.doctor .inner-doc{
+    display: inline-block;
+    vertical-align: middle;
+}
+[id*=doctor]:first-of-type:before {
+    clear: both;
+    float: none;
+    display: block;
+    content: "";
+}
+.doctor:after{
+    display: inline-block;
+    vertical-align: middle;
+    width: 0;
+    content: "";
+    height: 100%;
+}
+
+.doctor a.doc-name-href{
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+    position: relative;
+    vertical-align: middle;
+    top: 4px;
+    right: 10px;
+    text-align: right;
+    margin-bottom: 10px;
+}
+.st-lic a {
+    width: 47%;
+    display: inline-block;
+    box-shadow: 2px 2px 4px #999;
+    margin: 3px 3px;
+}
+.doljnost + p {
+    line-height: 14px;
+    text-align: right;
+    font-style: italic;
+}
+.doljnost a:hover,
+.doctor .doljnost p{
+    color:initial;
+}
+.doljnost a {
+    font-size: 12px;
+    text-decoration: none;
+}
+
+.doctor .doljnost {
+    font-size: 12px;
+    line-height: 14px;
+    color: #005f9d;
+    font-style: italic;
+    vertical-align: middle;
+    right: 10px;
+    text-align: right;
+    float: right;
+    margin-bottom: 10px;
+    text-decoration: none;
+    position: absolute;
+    width: 50%;
+    top: 60%;
+    transform: translateY(-50%);
+}
+
 @media (max-width: 991.98px) {
     footer .navbar-brand .heading-normal {
         font-size: 0.7rem;

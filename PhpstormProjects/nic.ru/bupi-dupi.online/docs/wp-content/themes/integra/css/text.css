@@ -58,11 +58,15 @@
     line-height: 20px;
 }
 
+.st_meeting_form_left h2 {
+    padding-top: 0!important;
+}
+
 .old-styles th:first-child {
     border-right: 1px #bdc6c8 dotted;
 }
 
-.old-styles .odd {
+.old-styles .column-1 {
     border-right: 1px #bdc6c8 dotted;
 }
 
@@ -111,7 +115,7 @@
     max-width: 100%;
 }
 
-.old-styles .menu_left .current-menu-item a {
+.old-styles .menu_left .current-menu-item > a {
     color: #4c535c;
     font-weight: bold;
 }
@@ -207,12 +211,16 @@
     box-sizing: border-box;
 }
 
-/*.old-styles .right_bl_11 p {
-    font-size: 13px;
-}*/
+.old-styles .entry-content .st_meeting_form p {
+    margin: 0;
+}
 
 .old-styles .blue {
     color: #005f9d;
+}
+
+.st_form_date > p {
+    display: inline-block;
 }
 
 .old-styles div.blue {
@@ -478,10 +486,60 @@
     text-decoration: none;
 }
 
+.old-styles .block form p {
+    text-align: left;
+}
 .old-styles .block p {
     margin: 15px auto 20px;
     font-size: 15px;
     line-height: 21px;
+
+}
+
+.region h2.widgettitle {
+    display: none;
+}
+
+.block ul li{
+    list-style-position: inside;
+}
+
+.region li {
+    list-style-type: none;
+}
+
+.region .menu .menu_left_caption {
+    display: table;
+    /*height: 46px;*/
+    vertical-align: middle;
+    width: 100%;
+    line-height: 43px;
+}
+
+.region .menu li.current-menu-item > a{
+    font-weight: bold;
+}
+
+.region .textwidget p {
+    text-align: center;
+}
+
+.region .menu li a {
+    display: block;
+    padding: 6px 0 8px 17px;
+    /*width: 223px;*/
+    text-decoration: none;
+    line-height: 20px;
+}
+
+.region .menu li {
+    background: #ebecec;
+    padding: 0;
+    margin-bottom: 3px;
+}
+
+.region .menu li.current-menu-item {
+    background: #ccc;
 }
 
 .old-styles .clear {
@@ -549,6 +607,16 @@
     padding: 0;
     list-style: none;
 }
+
+
+.st-etap ul li {
+    color: white;
+}
+
+.st-etap ul {
+    padding:20px;
+}
+
 
 .old-styles .company li {
     margin: 0 0 15px 15px;
@@ -1440,8 +1508,11 @@
     color: #424242;
     text-transform: none;
     border: 1px solid #999;
-    margin-bottom: 10px;
     width: 54%;
+}
+
+.ya-share2 {
+    margin-bottom: 30px;
 }
 
 .old-styles form {
@@ -1880,6 +1951,10 @@
     border-radius: 10px;
     margin: 20px 0;
     background-color: #ECF8FE;
+}
+
+.old-styles [class*=left] .blue-bg {
+    margin-top: 0;
 }
 
 .old-styles .blue-bg h2 {
@@ -2774,6 +2849,13 @@
 .old-styles img,
 .old-styles video {
     vertical-align: middle;
+    height: auto;
+}
+
+.old-styles img {
+    vertical-align: middle;
+    height: auto;
+    object-fit: cover;
 }
 
 .old-styles fieldset {
@@ -2907,9 +2989,7 @@
 .old-styles .container {
     max-width: 1200px;
     width: 98%;
-    /*width: 969px;*/
     margin: 0 auto;
-    background-color: #fbfbfb;
 }
 
 .old-styles .header_top_menu_bg .container {
@@ -3335,6 +3415,7 @@
     background: #ebecec;
     margin-bottom: 3px;
     padding: 0;
+    list-style-type:none;
 }
 
 .old-styles .menu_left a {
@@ -3355,11 +3436,16 @@
     color: #fff;
 }
 
-.old-styles .menu_left_caption {
+.old-styles .menu .menu_left_caption {
     color: #fff;
     background: #8cc63e;
     font-weight: bold;
-    padding-left: 17px;
+    /*padding-left: 17px;*/
+}
+
+.old-styles .menu ul.sub-menu {
+    /*margin: 0 0 10px 0;
+    padding-left: 20px;*/
 }
 
 .old-styles .menu_left_caption div {
@@ -4187,7 +4273,7 @@
 
 .old-styles .st_form_date input {
     width: 140px;
-    margin: 0 0 0 25px;
+    margin: 0;
     height: 35px;
     background: #fff;
     border: 1px #cfdae0 solid;
@@ -4196,6 +4282,10 @@
     padding: 0;
     box-sizing: border-box;
     padding: 0 0 0 10px;
+}
+
+#st_form .cont {
+    display: flex;
 }
 
 .old-styles .st_form_date select {
@@ -4293,9 +4383,103 @@
 }
 
 .old-styles .st_meeting_form_right input[type="submit"]:hover {
-    /* box-shadow: 2px 2px 0px #fff inset; */
-    transform: translateX(1px) translateY(1px);
+     box-shadow: 2px 2px 2px #333 inset;
     transition: .1s;
+}
+
+nav.navigation.pagination {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.nav-links {
+    margin: auto;
+    display: inline-block;
+    position: relative;
+}
+
+.nav-links > span, .nav-links > a {
+    margin: auto 16px;
+    display: inline-block;
+    vertical-align: middle;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    background-color: #eee;
+    border-radius: 50%;
+    text-decoration: none;
+    line-height: 30px;
+}
+
+.nav-links a.next svg {
+    position: absolute;
+    right: -20px;
+    line-height: 29px;
+    height: 30px;
+    background-color: #d9def5;
+    border-radius: 40px;
+    width: 30px;
+}
+
+
+.nav-links a.prev svg {
+    position: absolute;
+    left: -20px;
+    line-height: 29px;
+    height: 30px;
+    background-color: #d9def5;
+    border-radius: 40px;
+    width: 30px;
+}
+
+.nav-links a span {
+    display: inline-block;
+    vertical-align: middle;
+    width: auto!important;
+}
+
+.nav-links > span.page-numbers.current {
+    background-color: #d9def5;
+}
+
+.nav-links > a.prev.page-numbers,
+.nav-links > a.next.page-numbers {
+    width: auto;
+    border-radius: 20px;
+    padding: 0 17px;
+    line-height: 28px;
+}
+
+.nav-links a svg {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+div#main-inner {
+    margin: 50px 0;
+}
+
+img.mr-3.im200x200 {
+    width: 100%;
+    margin-bottom: 20px;
+    min-height: 200px;
+    transition: .3s;
+}
+
+a:hover img.im200x200 {
+    filter: sepia(.5);
+}
+
+.articles-card h6.card-title {
+    margin: 0 20px 20px;
+}
+
+#main-inner .col-md-4.col-12 {
+    margin-bottom: 20px;
+}
+
+.screen-reader-text {
+    display: none;
 }
 
 .old-styles .entry-content p{
@@ -5193,18 +5377,43 @@
     width: 48%;
 }
 
+.menu_p-item {
+    position: relative;
+    background-color: #fff;
+    padding: 15px 0 15px 15px;
+    cursor: pointer;
+    margin-bottom: 4px;
+}
+
+.menu_p-item h2 {
+    margin: 0;
+    padding: 0 0 0 30px!important;
+    line-height: 1.2;
+    font-size: 32px;
+    color: #8aaf1a;
+    font-weight: normal;
+    cursor: pointer;
+}
+
+.old-styles select#sel_form {
+    width: auto;
+}
+
+input#datepicker {
+    width: 158px;
+}
+
+.entry-content > .block > p {
+    text-align: left;
+}
+
+div#page {
+    background-color: #fbfbfb;
+}
+
 @media screen and (max-width: 720px) {
     .old-styles {
-        /*├▒├│├б├м├е├н├╛*/
-        /*.ill_js .ill_caption_c, .simptom_js .simptom_caption_c, .left_js .leftmenutitle_c, .js .header_bottom_menu_title_c{
-            height:50px
-        }
-        .js .header_bottom_menu_title_c{
-            margin-top:40px
-        }*/
-        /* Second level menu */
-        /* Navigation is opened */
-        /*person*/
+
     }
 
     .old-styles h1 {
@@ -5247,6 +5456,7 @@
         width: 100%;
         float: none;
         padding: 0;
+        margin: 0;
     }
 
     .old-styles .vaj p {
@@ -5822,31 +6032,52 @@
         padding: 3px 3px 0 3px;
     }
     .old-styles .block .leftmenutitle_c ul {
-        padding-left: 0px;
+        padding-left: 0;
         width: 100%;
     }
     .block .lightbox-enabled img {
         width: 100%;
     }
-}
+    body .doctor {
+        width: 100%;
+    }
+    .main-menu-more {
+        display: none;
+    }
+    #main_menu .menu-item {
+        background-color: #fff;
+    }
+    header #main_menu li > a {
+        padding: 13px 40px 14px 30px;
+        color: #0f5a9e;
+    }
+    .navbar-toggler:not(:disabled):not(.disabled):focus {
+        outline: none;
+    }
+    #main_menu .dropdown-item.dropdown:after {
+        color: #0f5a9e;
+    }
+    body #main_menu li.show > a {
+        background-color: transparent;
+    }
+    .dropdown.show ul.sub-menu {
+        padding-left: 20px;
+    }
+    .navbar-collapse {
+        display: block;
+        width: 90%;
+    }
+    .entry-content p img {
+        width: 100%!important;
+        display: block;
+        float: none!important;
+        margin: auto!important;
+    }
+    .entry-content li{
+        list-style-position: inside;
+    }
+    div#sidebar-first {
+        margin-bottom: 20px;
+    }
 
-.menu_p-item {
-    position: relative;
-    background-color: #fff;
-    padding: 15px 0 15px 15px;
-    padding-right: 0px;
-    cursor: pointer;
-    margin-bottom: 4px;
 }
-
-.menu_p-item h2 {
-    margin: 0;
-    padding: 0 0 0 30px;
-    line-height: 1.2;
-    font-size: 32px;
-    color: #8aaf1a;
-    font-weight: normal;
-    cursor: pointer;
-}
-
-/*# sourceMappingURL=text.css.map */

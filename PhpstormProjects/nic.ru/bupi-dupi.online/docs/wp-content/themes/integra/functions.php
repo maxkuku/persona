@@ -17,6 +17,140 @@ if ( version_compare( $GLOBALS['wp_version'], '4.7', '<' ) ) {
 	return;
 }
 
+
+    /**
+     * для общей страницы докторов получить всех
+     * */
+function get_by_parent($a){ // 991 специалисты
+    $args = array(
+        'sort_order'   => 'ASC',
+        'sort_column'  => 'post_date',
+        'hierarchical' => 1,
+        'exclude'      => '',
+        'include'      => '',
+        'meta_key'     => '',
+        'meta_value'   => '',
+        'authors'      => '',
+        'child_of'     => 0,
+        'parent'       => $a["parent_id"],
+        'exclude_tree' => '',
+        'number'       => '',
+        'offset'       => 0,
+        'post_type'    => 'page',
+        'post_status'  => 'publish',
+    );
+    $pages = get_pages( $args );
+    foreach( $pages as $post ){
+        setup_postdata( $post );
+
+
+        $custom = get_post_custom($post->ID);
+        $an = "";
+        if(isset($custom['annotation'])) {
+            $an =  $custom['annotation'][0];
+        }
+
+        ?>
+        <div class="card col-12">
+
+
+            <div class="row border-bottom p-4 m-1">
+                <div class="col-md-4 col-12">
+                    <a href="<?=get_the_permalink($post->ID)?>">
+                        <img src="<?=get_the_post_thumbnail_url($post->ID)?>" alt="<?=$post->post_title?>"/>
+                    </a>
+                </div>
+                <div class="col-md-8 col-12">
+                    <div class="h1">
+                        <p class="personNewName"><a href="<?=get_the_permalink($post->ID)?>"><?=$post->post_title?></a>
+                        </p>
+                    </div>
+                    <p>
+                        <strong><?=$an?></strong>
+                    </p>
+                    <p class="personNewDoljnost" style="font-weight:bold">
+                        <?=$post->post_excerpt?>
+                    </p>
+                </div>
+                <!--<?=$post->ID?>--></div>
+        </div>
+        <?
+    }
+    wp_reset_postdata();
+}
+
+add_shortcode( 'posts', 'get_by_parent' );
+
+
+
+    /**
+    * для страницы вопрос-ответ список всех вопросов
+    *
+    */
+function get_faq_by_parent($a){ // 1792 faq
+    $page = (get_query_var('paged')) ? get_query_var('paged') : 1;
+    $args = array(
+        'sort_order'   => 'ASC',
+        'sort_column'  => 'post_date',
+        'hierarchical' => 1,
+        'exclude'      => '',
+        'include'      => '',
+        'meta_key'     => '',
+        'meta_value'   => '',
+        'authors'      => '',
+        'child_of'     => 0,
+        'parent'       => $a["parent_id"],
+        'exclude_tree' => '',
+        'number'       => $page,
+        'paged'        => $page,
+        'posts_per_page' => 15,
+        'post_type'    => 'page',
+        'post_status'  => 'publish',
+    );
+    $pages = query_posts( $args );
+
+    foreach( $pages as $post ){
+        setup_postdata( $post );
+
+
+
+
+        ?>
+        <div class="view-content">
+            <div class="views-row views-row-2 col-12">
+                <h2><a href="<?=get_the_permalink($post->ID)?>"><?=$post->post_title?></a></h2>
+                <?=$post->post_content?>
+            </div>
+        </div>
+        <?
+    }
+
+    ?>
+    <div class="navigation">
+        <div class="alignleft"><?php previous_posts_link('&laquo; Назад') ?></div>
+        <div class="alignright"><?php next_posts_link('Вперед &raquo;') ?></div>
+    </div>
+    <?
+    wp_reset_query();
+}
+
+add_shortcode( 'faqs', 'get_faq_by_parent' );
+
+
+/** получает page по названию страницы */
+function get_page_by_post_name($post_name, $output = OBJECT, $post_type = 'page' ){
+    global $wpdb;
+    $page = $wpdb->get_var( $wpdb->prepare( "SELECT ID FROM $wpdb->posts WHERE post_title = %s AND post_type= %s", $post_name, $post_type ) );
+
+    if ( $page ) return get_post( $page, $output );
+
+    return null;
+}
+
+add_action('init','get_page_by_post_name');
+
+
+
 if ( ! function_exists( 'twentynineteen_setup' ) ) :
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
@@ -56,11 +190,39 @@ if ( ! function_exists( 'twentynineteen_setup' ) ) :
 		// This theme uses wp_nav_menu() in two locations.
 		register_nav_menus(
 			array(
-				'menu-1' => __( 'Primary', 'twentynineteen' ),
-				'menu-2' => __( 'About', 'twentynineteen' ),
-				'menu-3' => __( 'Pulmonology', 'twentynineteen' ),
-				'footer' => __( 'Footer Menu', 'twentynineteen' ),
-				'social' => __( 'Social Links Menu', 'twentynineteen' ),
+				'menu-1'        => __( 'Primary', 'twentynineteen' ),
+				'menu-2'        => __( 'About', 'twentynineteen' ),
+				'menu-3'        => __( 'Pulmonology', 'twentynineteen' ),
+				'menu-4'        => __( 'Allergology', 'twentynineteen' ),
+				'menu-5'        => __( 'Lor', 'twentynineteen' ),
+				'menu-6'        => __( 'Diag', 'twentynineteen' ),
+				'menu-7'        => __( 'Somnology', 'twentynineteen' ),
+				'menu-8'        => __( 'Therapy', 'twentynineteen' ),
+				'menu-9'        => __( 'Cardio', 'twentynineteen' ),
+				'menu-10'       => __( 'Neuro', 'twentynineteen' ),
+				'menu-11'       => __( 'Contacts', 'twentynineteen' ),
+				'menu-12'       => __( 'Program', 'twentynineteen' ),
+				'menu-13'       => __( 'Endo', 'twentynineteen' ),
+				'footer'        => __( 'Footer Menu', 'twentynineteen' ),
+				'footer-service'=> __( 'Footer-service Menu', 'twentynineteen' ),
+				'footer-info'   => __( 'Footer-info Menu', 'twentynineteen' ),
+				'footer-help'   => __( 'Footer-help Menu', 'twentynineteen' ),
+				'lorproblemy'   => __( 'Lorproblemy Menu', 'twentynineteen' ),
+				'vse-o-somno'   => __( 'Vse-o-somno Menu', 'twentynineteen' ),
+				'social'        => __( 'Social Links Menu', 'twentynineteen' ),
+				'diseases-1'    => __( 'Diseases Pulmo', 'twentynineteen' ),
+				'diseases-2'    => __( 'Diseases Allergo', 'twentynineteen' ),
+				'diseases-3'    => __( 'Diseases Lor', 'twentynineteen' ),
+				'diseases-4'    => __( 'Diseases Therapy', 'twentynineteen' ),
+				'diseases-5'    => __( 'Diseases Cardio', 'twentynineteen' ),
+				'diseases-6'    => __( 'Diseases Neuro', 'twentynineteen' ),
+				'diseases-7'    => __( 'Diseases Endo', 'twentynineteen' ),
+				'simptom-1'     => __( 'Simptom Pulmo', 'twentynineteen' ),
+				'simptom-2'     => __( 'Simptom Lor', 'twentynineteen' ),
+				'simptom-3'     => __( 'Simptom Somno', 'twentynineteen' ),
+				'simptom-4'     => __( 'Simptom Therapy', 'twentynineteen' ),
+				'simptom-5'     => __( 'Simptom Cardio', 'twentynineteen' ),
+				'simptom-6'     => __( 'Simptom Neuro', 'twentynineteen' ),
 			)
 		);
 
@@ -331,6 +493,17 @@ function itsme_disable_feed() {
     wp_die( __( 'No feed available, please visit the <a href="'. esc_url( home_url( '/' ) ) .'">homepage</a>!' ) );
 }
 
+
+
+function add_excerpt_to_pages()
+{
+     add_post_type_support( 'page', 'excerpt' );
+}
+
+add_action('init', 'add_excerpt_to_pages');
+
+
+
 add_action('do_feed', 'itsme_disable_feed', 1);
 add_action('do_feed_rdf', 'itsme_disable_feed', 1);
 add_action('do_feed_rss', 'itsme_disable_feed', 1);
@@ -346,17 +519,262 @@ remove_action( 'wp_head', 'feed_links', 2 );
 add_filter('xmlrpc_enabled', '__return_false');
 
 
+# get root parent
+function get_root_parent_id( $page_id ) {
+    global $wpdb;
+    $parent = $wpdb->get_var( "SELECT post_parent FROM $wpdb->posts WHERE post_type='page' AND post_status='publish' AND ID = '$page_id'" );
+    if( $parent == 0 ) {
+        return $page_id;
+    } else {
+        return get_root_parent_id( $parent );
+    }
+}
+
+
 # add sidebar
-function custom_sidebar() {
+function Program_sidebar() {
     register_sidebar(
         array (
-            'name' => __( 'Custom', 'integra' ),
-            'id' => 'custom-side-bar',
-            'description' => __( 'Custom Sidebar', 'integra' ),
+            'name' => __( 'Program', 'integra' ),
+            'id' => 'program-side-bar',
+            'description' => __( 'Program Sidebar', 'integra' ),
         )
     );
 }
-add_action( 'widgets_init', 'custom_sidebar' );
+add_action( 'widgets_init', 'Program_sidebar' );
+
+
+# add sidebar
+function Articledetail_sidebar() {
+    register_sidebar(
+        array (
+            'name' => __( 'Articledetail', 'integra' ),
+            'id' => 'articledetail-side-bar',
+            'description' => __( 'Articledetail Sidebar', 'integra' ),
+        )
+    );
+}
+add_action( 'widgets_init', 'Articledetail_sidebar' );
+
+
+
+# add sidebar
+function About_sidebar() {
+    register_sidebar(
+        array (
+            'name' => __( 'About', 'integra' ),
+            'id' => 'about-side-bar',
+            'description' => __( 'About Sidebar', 'integra' ),
+        )
+    );
+}
+add_action( 'widgets_init', 'About_sidebar' );
+
+
+
+# add sidebar
+function Pulmo_sidebar() {
+    register_sidebar(
+        array (
+            'name' => __( 'Pulmo', 'integra' ),
+            'id' => 'pulmo-side-bar',
+            'description' => __( 'Pulmo Sidebar', 'integra' ),
+        )
+    );
+}
+add_action( 'widgets_init', 'Pulmo_sidebar' );
+
+
+
+# add sidebar
+function Allerg_sidebar() {
+    register_sidebar(
+        array (
+            'name' => __( 'Allerg', 'integra' ),
+            'id' => 'allerg-side-bar',
+            'description' => __( 'Allerg Sidebar', 'integra' ),
+        )
+    );
+}
+add_action( 'widgets_init', 'Allerg_sidebar' );
+
+
+# add sidebar
+function Articles_sidebar() {
+    register_sidebar(
+        array (
+            'name' => __( 'Articles', 'integra' ),
+            'id' => 'articles-side-bar',
+            'description' => __( 'Articles Sidebar', 'integra' ),
+        )
+    );
+}
+add_action( 'widgets_init', 'Articles_sidebar' );
+
+
+
+# add sidebar
+function Lor_sidebar() {
+    register_sidebar(
+        array (
+            'name' => __( 'Lor', 'integra' ),
+            'id' => 'lor-side-bar',
+            'description' => __( 'Lor Sidebar', 'integra' ),
+        )
+    );
+}
+add_action( 'widgets_init', 'Lor_sidebar' );
+
+
+
+# add sidebar
+function Diag_sidebar() {
+    register_sidebar(
+        array (
+            'name' => __( 'Diag', 'integra' ),
+            'id' => 'diag-side-bar',
+            'description' => __( 'Diag Sidebar', 'integra' ),
+        )
+    );
+}
+add_action( 'widgets_init', 'Diag_sidebar' );
+
+
+
+# add sidebar
+function Somno_sidebar() {
+    register_sidebar(
+        array (
+            'name' => __( 'Somnology', 'integra' ),
+            'id' => 'somno-side-bar',
+            'description' => __( 'Somnology Sidebar', 'integra' ),
+        )
+    );
+}
+add_action( 'widgets_init', 'Somno_sidebar' );
+
+
+
+# add sidebar
+function Therapy_sidebar() {
+    register_sidebar(
+        array (
+            'name' => __( 'Therapy', 'integra' ),
+            'id' => 'therapy-side-bar',
+            'description' => __( 'Therapy Sidebar', 'integra' ),
+        )
+    );
+}
+add_action( 'widgets_init', 'Therapy_sidebar' );
+
+
+
+
+# add sidebar
+function Cardio_sidebar() {
+    register_sidebar(
+        array (
+            'name' => __( 'Cardio', 'integra' ),
+            'id' => 'cardio-side-bar',
+            'description' => __( 'Cardio Sidebar', 'integra' ),
+        )
+    );
+}
+add_action( 'widgets_init', 'Cardio_sidebar' );
+
+
+
+
+# add sidebar
+function Neuro_sidebar() {
+    register_sidebar(
+        array (
+            'name' => __( 'Neuro', 'integra' ),
+            'id' => 'neuro-side-bar',
+            'description' => __( 'Neuro Sidebar', 'integra' ),
+        )
+    );
+}
+add_action( 'widgets_init', 'Neuro_sidebar' );
+
+
+
+# add sidebar
+function Endo_sidebar() {
+    register_sidebar(
+        array (
+            'name' => __( 'Endo', 'integra' ),
+            'id' => 'endo-side-bar',
+            'description' => __( 'Endo Sidebar', 'integra' ),
+        )
+    );
+}
+add_action( 'widgets_init', 'Endo_sidebar' );
+
+
 
 
 remove_filter( 'the_content', 'wpautop' );
+#add_filter( 'the_content', 'wpautop' , 99 );
+#add_filter( 'the_content', 'shortcode_unautop', 100 );
+
+
+
+
+
+function catch_that_image() {
+    global $post, $posts;
+    $first_img = '';
+    ob_start();
+    ob_end_clean();
+    $output = preg_match_all('/<img.+src=[\'"]([^\'"]+)[\'"].*>/i', $post->post_content, $matches);
+    $first_img = $matches [1] [0];
+
+    if(empty($first_img)){ //Defines a default image
+        $first_img = "/images/default.jpg";
+    }
+    return $first_img;
+}
+
+
+
+
+function doctor_function($atts) {
+    $name = $atts['name'];
+    @$public = ($atts['public']>0)?$atts['public']:0;
+
+    $dop = "";
+    if(!$public){
+        $dop = " AND post_status = 'publish' ";
+    }
+
+    global $wpdb;
+    $query = $wpdb->get_results( $wpdb->prepare("SELECT * FROM $wpdb->posts WHERE  post_title LIKE '%s' ".$dop." LIMIT 1", '%'. $wpdb->esc_like( $name ) .'%') );
+
+    $line = '';
+    foreach( $query as $q ){
+
+        $an = $q->post_excerpt;
+        $custom = get_post_custom($q->ID);
+        if(isset($custom['annotation'])) {
+            $an =  $custom['annotation'][0];
+        }
+
+        $id = $q->ID;
+        $line .= '
+        <div class="doctor" id="doctor_'.$q->ID.'">
+            <div class="inner-doc" style="background-image:url('.get_the_post_thumbnail_url($id).')" class="in-doctor">
+                <a class="doc-name-href" rel="noopener norefferer" href="/team/'.$q->post_name.'">'.$q->post_title.'</a>
+                <div class="doljnost">
+                    <a class="doc-excerpt-href" rel="noopener norefferer" href="/team/'.$q->post_name.'">'.$an.'</a>
+                </div>
+            </div>
+        </div>
+        ';
+    }
+
+    return $line;
+}
+
+add_shortcode( 'doctor', 'doctor_function' );
+
