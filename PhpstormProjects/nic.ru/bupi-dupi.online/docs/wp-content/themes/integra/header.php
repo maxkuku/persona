@@ -38,14 +38,14 @@
 <header>
     <div class="container">
         <div class="row align-items-center">
-            <div class="col-12 col-md-5">
+            <div class="col-12 col-md-5 col-sm-4">
                 <!--         Ссылка с логотипом и текстом-->
                 <a class="navbar-brand row align-self-center" href="/">
                     <img src="/uploaded/logo_n.png" class="align-top pr-0" alt="КЛИНИКА РЕСПИРАТОРНОЙ МЕДИЦИНЫ ИНТЕГРАМЕД"/>
 
                 </a>
             </div>
-            <div class="col-12 col-md-2 phone-wrapper heading-bold text-primary">
+            <div class="col-12 col-md-2 col-sm-8 phone-wrapper heading-bold text-primary">
 
                 <span class="phone col-6 col-md-12 p-md-0"></i><a href="tel:84956629924" rel="nofollow">8 495 662-99-24</a></span>
 

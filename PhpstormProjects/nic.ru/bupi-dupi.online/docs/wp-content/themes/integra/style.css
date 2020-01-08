@@ -89,8 +89,6 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
     display: block;
 }
 
-
-
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -120,6 +118,10 @@ h1, h2, h3, h4, h5, h6 {
 p {
     margin-top: 0;
     margin-bottom: 1rem;
+}
+
+ul {
+    padding-left: 20px;
 }
 
 abbr[title],
@@ -586,7 +588,7 @@ pre code {
     margin-left: auto;
 }
 
-.old-styles .otzivi .container{
+.old-styles .otzivi .container {
     background-color: transparent;
 }
 
@@ -614,8 +616,8 @@ pre code {
     }
 }
 
-a.color-white{
-    color:white;
+a.color-white {
+    color: white;
 }
 
 .container-fluid {
@@ -9232,7 +9234,7 @@ header .phone-wrapper .phone a {
 
 @media (max-width: 991.98px) {
     header .soc {
-        padding-top: 2rem;
+        padding-top: 16px;
         display: flex;
     }
 
@@ -9278,6 +9280,10 @@ header .navbar-brand {
 
 header #main_menu {
     text-transform: uppercase;
+}
+
+header #main_menu li.dropdown-item:hover {
+    background-color: transparent;
 }
 
 header #main_menu li {
@@ -9468,7 +9474,7 @@ main .vrachi .card-body .btn {
     bottom: 10px;
     left: 10%;
     right: 10%;
-    color:white;
+    color: white;
     text-decoration: none;
 }
 
@@ -9678,8 +9684,9 @@ li.page_item {
 }
 
 #main_menu li > a {
-    padding: 13px 40px 14px 30px;
+    padding: 13px 40px 14px 14px;
     color: #fff;
+    margin-left: 16px;
 }
 
 .dropdown-item.dropdown:after {
@@ -9702,69 +9709,84 @@ li.page_item {
 
 #main_menu li.show > a {
     background-color: #fff;
-    color:#0F5A9E;
+    color: #0F5A9E;
 }
 
-#main_menu li.show:after{
-    color:#0F5A9E;
+#main_menu li.show:after {
+    color: #0F5A9E;
 }
 
-#main_menu ul li.dropdown-item.dropdown.show ul li a:hover{
-    color:#4d4d4d;
+#main_menu ul li.dropdown-item.dropdown.show ul li a:hover {
+    color: #4d4d4d;
 }
 
 /*cforms*/
 .compojoom-bootstrap button.btn.btn-default.btnPrev,
-.compojoom-bootstrap button.btn.btn-default.btnNext{
+.compojoom-bootstrap button.btn.btn-default.btnNext {
     display: none;
 }
+
 .compojoom-bootstrap select#field_6 {
     color: #333;
 }
+
 .compojoom-bootstrap .twocolumns-left .steps .fa {
     color: #d4eefc;
 }
+
 .compojoom-bootstrap form .btn-success {
     color: #fff;
     background-color: #8aaf1a;
     border-color: #8aaf1a;
 }
+
 [name="cformsForm"] .twocolumns-left, [name="cformsForm"] canvas-design-before {
     background: #fff;
 }
+
 [name="cformsForm"] .twocolumns-left p {
-    color:#333;
+    color: #333;
 }
+
 [name="cformsForm"] i.fa.fa-home {
     color: #eee;
 }
-[name="cformsForm"] p.green{
-    color:#8aaf1a;
+
+[name="cformsForm"] p.green {
+    color: #8aaf1a;
     font-weight: bold;
 }
-.compojoom-bootstrap [name="cformsForm"] h2{
-    color:#8aaf1a;
+
+.compojoom-bootstrap [name="cformsForm"] h2 {
+    color: #8aaf1a;
 }
+
 .blue li {
     list-style-position: inside;
 }
+
 /*в бутстрапе форма размещается перед страницей, чтобы поправить код*/
 .compojoom-bootstrap {
     display: flex;
     flex-flow: column-reverse;
 }
+
 /*end cforms*/
 
 .st_form_date br {
     display: none;
 }
 
+.ya-share2__badge {
+    margin-bottom: 6px;
+}
+
 .doctor {
     display: inline-block;
-    width: 49%;
+    width: 48%;
     margin: 0 6px 16px 0;
     vertical-align: top;
-    height: 210px;
+    height: 220px;
     border: 1px solid #D2E9EF;
     background-color: white;
     position: relative;
@@ -9777,17 +9799,20 @@ li.page_item {
     background-size: auto 100%;
     height: 100%;
 }
-.doctor .inner-doc{
+
+.doctor .inner-doc {
     display: inline-block;
     vertical-align: middle;
 }
+
 [id*=doctor]:first-of-type:before {
     clear: both;
     float: none;
     display: block;
     content: "";
 }
-.doctor:after{
+
+.doctor:after {
     display: inline-block;
     vertical-align: middle;
     width: 0;
@@ -9795,7 +9820,7 @@ li.page_item {
     height: 100%;
 }
 
-.doctor a.doc-name-href{
+.doctor a.doc-name-href {
     text-decoration: none;
     font-weight: bold;
     display: block;
@@ -9806,21 +9831,25 @@ li.page_item {
     text-align: right;
     margin-bottom: 10px;
 }
+
 .st-lic a {
     width: 47%;
     display: inline-block;
     box-shadow: 2px 2px 4px #999;
     margin: 3px 3px;
 }
+
 .doljnost + p {
     line-height: 14px;
     text-align: right;
     font-style: italic;
 }
+
 .doljnost a:hover,
-.doctor .doljnost p{
-    color:initial;
+.doctor .doljnost p {
+    color: initial;
 }
+
 .doljnost a {
     font-size: 12px;
     text-decoration: none;
@@ -9843,18 +9872,51 @@ li.page_item {
     transform: translateY(-50%);
 }
 
+.widget [id*=simptom],
+.widget [class*=container] {
+    margin-bottom: 40px;
+}
+
+.blue-bg p:empty {
+    display: none;
+}
+
+p:empty {
+    display: none;
+}
+
+#wpcf7-f1780-p1778-o1 input, #wpcf7-f1780-p1778-o1 select, #wpcf7-f1780-p1778-o1 textarea {
+    padding: 7px 17px;
+    border-radius: 4px;
+}
+
+#wpcf7-f1780-p1778-o1 [type="submit"] {
+    margin-bottom: 40px;
+}
+
+@media (max-width:1100px) {
+    .main-menu-more {
+        display: none;
+    }
+    a.a-logo-bottom img.align-top.pr-0 {
+        height: 50px!important;
+    }
+}
+
 @media (max-width: 991.98px) {
     footer .navbar-brand .heading-normal {
         font-size: 0.7rem;
     }
+
+
 
     .tabs ul.primary {
         white-space: initial;
     }
 
     a.navbar-brand.row.align-self-center img {
-        height: 60px;
-        margin: 10px auto;
+        height: 50px;
+        margin: 2px auto;
         display: block;
     }
 

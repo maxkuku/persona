@@ -111,10 +111,6 @@ function get_faq_by_parent($a){ // 1792 faq
 
     foreach( $pages as $post ){
         setup_postdata( $post );
-
-
-
-
         ?>
         <div class="view-content">
             <div class="views-row views-row-2 col-12">
@@ -124,7 +120,6 @@ function get_faq_by_parent($a){ // 1792 faq
         </div>
         <?
     }
-
     ?>
     <div class="navigation">
         <div class="alignleft"><?php previous_posts_link('&laquo; Назад') ?></div>
@@ -559,6 +554,21 @@ add_action( 'widgets_init', 'Articledetail_sidebar' );
 
 
 # add sidebar
+function Contact_sidebar() {
+    register_sidebar(
+        array (
+            'name' => __( 'Contact', 'integra' ),
+            'id' => 'contact-side-bar',
+            'description' => __( 'Contact Sidebar', 'integra' ),
+        )
+    );
+}
+add_action( 'widgets_init', 'Contact_sidebar' );
+
+
+
+
+# add sidebar
 function About_sidebar() {
     register_sidebar(
         array (
@@ -610,6 +620,21 @@ function Articles_sidebar() {
     );
 }
 add_action( 'widgets_init', 'Articles_sidebar' );
+
+
+
+
+# add sidebar
+function Specs_sidebar() {
+    register_sidebar(
+        array (
+            'name' => __( 'Specs', 'integra' ),
+            'id' => 'specs-side-bar',
+            'description' => __( 'Specs Sidebar', 'integra' ),
+        )
+    );
+}
+add_action( 'widgets_init', 'Specs_sidebar' );
 
 
 

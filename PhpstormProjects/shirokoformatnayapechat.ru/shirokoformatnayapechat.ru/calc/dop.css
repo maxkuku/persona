@@ -1,0 +1,5 @@
+@media (max-width: 991px) {
+    .left-menu-md aside.sidebar {
+        display: block;
+    }
+}

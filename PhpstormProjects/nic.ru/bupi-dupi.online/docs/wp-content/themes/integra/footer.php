@@ -23,28 +23,56 @@
                 </div>
                 <div class="col-12 col-md-2">
                     <div class="head">ИнтеграМед Сервис</div>
-                    <ul>
-                        <li><a href="/about">О нас</a></li>
-                        <li><a href="/events">Новости</a></li>
-                        <li><a href="/team">Врачи</a></li>
-                        <li><a href="/smi">СМИ о нас</a></li>
-                    </ul>
+                    <?php if ( has_nav_menu( 'footer-service' ) ) : ?>
+                        <?php
+                        wp_nav_menu(
+                            array(
+                                'theme_location'  => 'footer-service',
+                                'container'       => 'div',
+                                'container_class' => 'justify-content-md-center',
+                                'container_id' => 'footer_service__menu',
+                                'menu_class'      => 'footer-nav',
+                                'items_wrap'      => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+                            )
+                        );
+                        ?>
+                    <?php endif; ?>
                 </div>
                 <div class="col-12 col-md-2 pl-auto pl-md-5">
                     <div class="head">Информация</div>
-                    <ul>
-                        <li><a href="/pulmonology">Специализации</a></li>
-                        <li><a href="/about/licensi">Сертификаты</a></li>
-                    </ul>
+                    <?php if ( has_nav_menu( 'footer-info' ) ) : ?>
+                        <?php
+                        wp_nav_menu(
+                            array(
+                                'theme_location'  => 'footer-info',
+                                'container'       => 'div',
+                                'container_class' => 'justify-content-md-center',
+                                'container_id' => 'footer_info__menu',
+                                'menu_class'      => 'footer-nav',
+                                'items_wrap'      => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+                            )
+                        );
+                        ?>
+                    <?php endif; ?>
                 </div>
                 <div class="col-12 col-md-2">
                     <div class="head">Помощь</div>
-                    <ul>
-                        <li><a href="/articles">Статьи</a></li>
-                        <li><a href="/contacts/faq">Вопрос-Ответ</a></li>
-                    </ul>
+                    <?php if ( has_nav_menu( 'footer-help' ) ) : ?>
+                        <?php
+                        wp_nav_menu(
+                            array(
+                                'theme_location'  => 'footer-help',
+                                'container'       => 'div',
+                                'container_class' => 'justify-content-md-center',
+                                'container_id' => 'footer_help__menu',
+                                'menu_class'      => 'footer-nav',
+                                'items_wrap'      => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+                            )
+                        );
+                        ?>
+                    <?php endif; ?>
                 </div>
-                <div class="col-12 col-md-3 p-5 m-auto p-md-0 m-md-0">
+                <div class="col-12 col-md-3 m-auto p-md-0 m-md-0">
                     <div class="footer-contacts">
                         <div class="head">Контакты</div>
                         <div>107023, г. Москва, ст. м. Электрозаводская,
@@ -94,6 +122,23 @@
 	</footer-->
 
 </div>
+
+
+    <div class="modal fade" id="forma-zapisi" tabindex="-1" role="dialog" aria-labelledby="forma-zapisiLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="forma-zapisiLabel">Запись на приём</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <?=do_shortcode('[contact-form-7 id="1912" title="Запись на прием попап"]')?>
+                </div>
+            </div>
+        </div>
+    </div>
 
 <?php wp_footer(); ?>
 

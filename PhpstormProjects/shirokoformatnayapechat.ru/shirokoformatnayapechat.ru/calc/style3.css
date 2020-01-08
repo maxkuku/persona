@@ -1,0 +1,62 @@
+input[type="number"]{max-width:100px;text-align: center;}
+/* label[for="calc_data_banner"], #calc_data_banner{display:none !important;} */
+input[type=number]::-webkit-inner-spin-button{opacity: 1;}
+input{text-align:center;}
+
+@media  (min-width:768px){
+    div.col-sm-7.five-three{width:60% !important;}
+    div.col-sm-5.five-two{width:40% !important;}
+}
+
+#calc_all_prices .row{margin-bottom:0px;}
+
+.eyelets_price.change_look p{margin:0 !important;}
+.pockets_price.change_look p{margin:0 !important;}
+.pruning_price.change_look p{margin:0 !important;}
+.strengs_price.change_look p{margin:0 !important;}
+.shnur_price.change_look p{margin:0 !important;}
+
+.active.border_left{display:block !important;}
+.active.border_top{display:block !important;}
+.active.border_bottom{display:block !important;}
+.active.border_right{display:block !important;}
+
+.step .printing_options .option{text-align:center;margin:0 15px;}
+.step .printing_options .option .title_option{white-space:nowrap;margin:0 0 5px 0;}
+.step .printing_options .option .title_option span{color:#000;margin:0px 0px 0 4px;}
+.step .printing_options .option .title_option span.all{margin:0;background:none;padding:0 3px;cursor:pointer;}
+.step .printing_options .option .title_option a{color:#4199d2;font:12px Arial, Helvetica, sans-serif;text-decoration:none;border-bottom:1px dotted #92c5e6;}
+
+.step .printing_options .option .selection_hand{position:relative;padding:20px;width:78px;margin:0 auto;}
+.step .printing_options .option .selection_hand label.left{position:absolute;top:50%;left:0;margin-top:-7px;}
+.step .printing_options .option .selection_hand label.bottom{position:absolute;bottom:0;left:50%;margin-left:-7px;}
+.step .printing_options .option .selection_hand label.top{position:absolute;top:0;left:50%;margin-left:-7px;}
+.step .printing_options .option .selection_hand label.right{position:absolute;top:50%;right:0;margin-top:-7px;}
+
+.step .printing_options .option .selection_hand .option3{position:relative;background:#ccc;width:38px;height:37px;margin-bottom:8px;}
+
+.step .printing_options .option .selection_hand .border1 .border_left{position:absolute;top:-4px;left:-4px;display:none;background: url(/calc/option1_left.png) repeat-y;width:7px;height:118%;}
+.step .printing_options .option .selection_hand .border1 .border_bottom{position:absolute;bottom:-4px;left:-4px;display:none;background: url(/calc/option1_top.png) repeat-y;width:118%;height:7px;}
+.step .printing_options .option .selection_hand .border1 .border_right{position:absolute;top:-4px;right:-4px;display:none;background: url(/calc/option1_left.png) repeat-y;width:7px;height:118%;}
+.step .printing_options .option .selection_hand .border1 .border_top{position:absolute;top:-4px;left:-4px;display:none;background: url(/calc/option1_top.png) repeat-y;width:118%;height:7px;}
+
+.step .printing_options .option .selection_hand .border2 .border_top{position:absolute;top:0;left:0;display:none;background: url(/calc/option2_top.png) repeat-x;width:100%;height:4px;}
+.step .printing_options .option .selection_hand .border2 .border_bottom{position:absolute;bottom:0;left:0;display:none;background: url(/calc/option2_bottom.png) repeat-x;width:100%;height:4px;}
+.step .printing_options .option .selection_hand .border2 .border_left{position:absolute;top:0;left:0;display:none;background: url(/calc/option2_left.png) repeat-y;width:4px;height:100%;}
+.step .printing_options .option .selection_hand .border2 .border_right{position:absolute;top:0;right:0;display:none;background: url(/calc/option2_right.png) repeat-y;width:4px;height:100%;}
+
+.step .printing_options .option .selection_hand .border3 .border_top{position:absolute;top:0;left:0px;z-index:1;display:none;background: url(/calc/option3_bottom.png) repeat-x;width:100%;height:5px;}
+.step .printing_options .option .selection_hand .border3 .border_left{position:absolute;top:0px;left:0;display:none;background: url(/calc/option3_left.png) repeat-y;width:5px;height:100%;}
+.step .printing_options .option .selection_hand .border3 .border_bottom{position:absolute;bottom:0;left:0px;z-index:1;display:none;background: url(/calc/option3_bottom.png) repeat-x;width:100%;height:5px;}
+.step .printing_options .option .selection_hand .border3 .border_right{position:absolute;top:0px;right:0;display:none;background: url(/calc/option3_left.png) repeat-y;width:5px;height:100%;}
+
+.step .printing_options .option .selection_hand .border4 .border_top{position:absolute;top:0;left:0;z-index:1;display:none;background: url(/calc/option4_top.png) repeat-x;width:100%;height:2px;}
+.step .printing_options .option .selection_hand .border4 .border_bottom{position:absolute;bottom:0;left:0;z-index:1;display:none;background: url(/calc/option4_bottom.png) repeat-x;width:100%;height:2px;}
+.step .printing_options .option .selection_hand .border4 .border_left{position:absolute;top:0;left:0;display:none;background: url(/calc/option4_left.png) repeat-y;width:2px;height:100%;}
+.step .printing_options .option .selection_hand .border4 .border_right{position:absolute;top:0;right:0;display:none;background: url(/calc/option4_right.png) repeat-y;width:2px;height:100%;}
+
+.step .printing_options .option .selection_hand .border5 .border_top{position:absolute;top:0;left:0;display:none;background: url(/calc/option5_top.png) repeat-x;width:100%;height:4px;}
+.step .printing_options .option .selection_hand .border5 .border_bottom{position:absolute;bottom:-2px;left:0;display:none;background: url(/calc/option5_bottom.png) repeat-x;width:100%;height:4px;}
+.step .printing_options .option .selection_hand .border5 .border_left{position:absolute;top:0;left:0;display:none;background: url(/calc/option5_left.png) repeat-y;width:4px;height:100%;}
+.step .printing_options .option .selection_hand .border5 .border_right{position:absolute;top:0;right:-2px;display:none;background: url(/calc/option5_right.png) repeat-y;width:4px;height:100%;}
+

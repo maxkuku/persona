@@ -434,7 +434,7 @@
 
 .old-styles ul {
     margin: 0;
-    padding: 0;
+    padding: 0 0 0 20px;
 }
 
 .old-styles section ul {
@@ -1142,6 +1142,7 @@
 
 .old-styles .onePerson h4 {
     margin: 0 0 5px 0;
+    display: inline-block;
 }
 
 .old-styles .onePerson .sertificates {
@@ -5411,6 +5412,45 @@ div#page {
     background-color: #fbfbfb;
 }
 
+.entry-content ul li {
+    list-style-position: inside;
+}
+
+.single-post #primary {
+    padding-bottom: 40px;
+}
+
+.modal form input, .modal form select, .modal form textarea {
+    padding: 7px 17px;
+    border-radius: 5px;
+}
+.post-1944 tbody {
+    padding: 10px;
+    display: block;
+}
+.search main#main {
+    padding: 20px;
+}
+.entry-answer .doc {
+    margin: 60px 0 40px;
+}
+
+img#doc_image {
+    width: 100px;
+    float: left;
+    margin-right: 20px;
+}
+.widget_search input.search-field {
+    border: 1px solid #ccc;
+    padding: 7px 17px;
+}
+li.widget_search{
+    list-style-type: none;
+    margin-top: 74px;
+}
+.widget_search input[type=submit] {
+    padding: 6px;
+}
 @media screen and (max-width: 720px) {
     .old-styles {
 
@@ -6048,8 +6088,11 @@ div#page {
         background-color: #fff;
     }
     header #main_menu li > a {
-        padding: 13px 40px 14px 30px;
+        padding: 13px 40px 14px 10px;
         color: #0f5a9e;
+    }
+    body header .navbar-light {
+        background: #efeeea;
     }
     .navbar-toggler:not(:disabled):not(.disabled):focus {
         outline: none;
@@ -6061,11 +6104,15 @@ div#page {
         background-color: transparent;
     }
     .dropdown.show ul.sub-menu {
-        padding-left: 20px;
+        padding-left: 10px;
     }
     .navbar-collapse {
         display: block;
         width: 90%;
+    }
+    table:not(.tablepress) td {
+        display: block;
+        margin: 30px 10px;
     }
     .entry-content p img {
         width: 100%!important;
