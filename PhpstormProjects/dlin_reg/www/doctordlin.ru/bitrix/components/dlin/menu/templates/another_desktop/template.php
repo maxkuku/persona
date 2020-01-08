@@ -17,7 +17,7 @@ if (!empty($arResult)):?>
                     <ul>
                         <?else:?>
                         
-                        <li<?if ($arItem["SELECTED"]):?> class="item-selected st1"<?endif?>>
+                        <li<?if ($arItem["SELECTED"]):?> class="item-selected <?if($arItem["LINK"]!='/treatment/'):?>st1<?else:?>pr1<?endif?>"<?endif?>>
                             <a <?if($arItem["LINK"]):?>href="<?=$arItem["LINK"]?>"<?endif?> class="parent"><?=$arItem["TEXT"]?></a>
                             <ul>
                                 <?endif?>

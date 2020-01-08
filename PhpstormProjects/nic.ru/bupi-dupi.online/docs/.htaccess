@@ -15,6 +15,22 @@ require valid-user
 <IfModule mod_rewrite.c>
 RewriteEngine On
 RewriteBase /
+
+
+# for science articles
+RewriteRule ^science-articles/(\d*)$ http://bupi-dupi.online/articles/science-articles-$1 [R=301,L]
+
+# privacy
+RewriteRule ^uploaded/private-policy\.html$ /private-policy  [R=301,L]
+
+# diagnos -> fvd
+RewriteRule ^diagnos$ /diagnos/fvd  [R=301,L]
+
+# for diseases
+# RewriteRule ^(.*)/diseases/(\d*)$ http://bupi-dupi.online/$1/diseases/$2-2$3 [R=301,L]
+
+
+
 RewriteRule ^index\.php$ - [L]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
