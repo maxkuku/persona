@@ -94,7 +94,6 @@ function returnResultCache($timeSeconds, $cacheId, $callback, $arCallbackParams 
 # for items in order. Show'em all!
 function show_all(){
     $BX_USER_ID = $_COOKIE['BX_USER_ID'];
-	#$SESSION_ID = end(explode('=', bitrix_sessid_get()));
 	global $USER;
 	global $DB;
 	$FORM_ID = 2;
@@ -102,31 +101,13 @@ function show_all(){
 	$price = 0;
 	$quan  = 0;
 	$json = [];
-    $RIDS = "";
-
-	# если авторизован, то выберем все незаконченные формы
-
-
-    
-	/*if($USER->GetID()) {
-		$forms = $DB->Query("SELECT ID FROM b_form_result WHERE FORM_ID = ".$FORM_ID." AND USER_ID = " . $USER->GetID());
-
-		while ($form = $forms->Fetch()) {
-			$RIDS_ARR[] = $form['ID'];
-		}
-		$RIDS = implode(",", $RIDS_ARR);
-	}*/
-
 
 
 	# у одного заказа в форме несколько строк
 	# выберем все строки с id сессии
-	if(strlen($RIDS) > 0) {
-		$res = $DB->Query("SELECT RESULT_ID FROM b_form_result_answer WHERE FORM_ID = ".$FORM_ID." AND USER_TEXT = '$BX_USER_ID' OR RESULT_ID IN ($RIDS)");
-	}
-	else{
-		$res = $DB->Query("SELECT RESULT_ID FROM b_form_result_answer WHERE FORM_ID = ".$FORM_ID." AND USER_TEXT = '$BX_USER_ID'");
-	}
+
+	$res = $DB->Query("SELECT RESULT_ID FROM b_form_result_answer WHERE FORM_ID = ".$FORM_ID." AND USER_TEXT = '$BX_USER_ID'");
+
 
 
 
@@ -138,16 +119,20 @@ function show_all(){
 			$arAnswer1[] = $arAnswer['RESULT_ID'];
 		}
 		$ids = implode( ',', $arAnswer1 );
-		# FIELD_ID = 8 -> item ID, 10 -> price
-		$res1       = $DB->Query( "SELECT USER_TEXT FROM b_form_result_answer WHERE FORM_ID = ".$FORM_ID." AND RESULT_ID IN ($ids) AND FIELD_ID = 8" );
+		# FIELD_ID = 8 -> item ID, 10 -> price, 9 -> discount/sale
+		$res1      = $DB->Query( "SELECT USER_TEXT FROM b_form_result_answer WHERE FORM_ID = ".$FORM_ID." AND RESULT_ID IN ($ids) AND FIELD_ID = 8" );
 		$res2      = $DB->Query( "SELECT USER_TEXT FROM b_form_result_answer WHERE FORM_ID = ".$FORM_ID." AND RESULT_ID IN ($ids) AND FIELD_ID = 10" );
+		$res3      = $DB->Query( "SELECT USER_TEXT FROM b_form_result_answer WHERE FORM_ID = ".$FORM_ID." AND RESULT_ID IN ($ids) AND FIELD_ID = 9" );
 
 
 
-		while ( $idAnswer = $res1->Fetch() AND $priceAnswer = $res2->Fetch() ) {
+		while ( $idAnswer = $res1->Fetch()
+            AND $priceAnswer = $res2->Fetch()
+            AND $saleAnswer = $res3->Fetch() ) {
 			$x = $idAnswer['USER_TEXT'];
 			$ITEM[$x]['ITEM'] = [$idAnswer['USER_TEXT'], $priceAnswer['USER_TEXT']];
 			$ITEM[$x]['ID'] = $idAnswer['USER_TEXT'];
+			$ITEM[$x]['SALE'] += $saleAnswer['USER_TEXT'];
 			$ITEM[$x]['PRICE'] += $priceAnswer['USER_TEXT'];
 			$ITEM[$x]['QUAN']++;
 			$price += $priceAnswer['USER_TEXT'];

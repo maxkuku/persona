@@ -4,533 +4,199 @@
     <list default="true" id="438354ea-5184-4bad-a1c5-8517365ee221" name="Default" comment="">
       <change beforePath="" afterPath="$APPLICATION_CONFIG_DIR$/consoles/db/f97ce2eb-0524-43eb-99f9-60e0aceeccf5/console.sql" />
       <change beforePath="" afterPath="$APPLICATION_CONFIG_DIR$/options/runner.layout.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/.styles.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/bespl_kons.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/bottom_button.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/css/ajax-loader.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/css/font-awesome.min.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/css/fonts/Roboto-Black.ttf" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/css/fonts/Roboto-BlackItalic.ttf" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/css/fonts/Roboto-Bold.ttf" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/css/fonts/Roboto-BoldItalic.ttf" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/css/fonts/Roboto-Italic.ttf" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/css/fonts/Roboto-Light.ttf" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/css/fonts/Roboto-LightItalic.ttf" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/css/fonts/Roboto-Medium.ttf" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/css/fonts/Roboto-MediumItalic.ttf" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/css/fonts/Roboto-Regular.ttf" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/css/fonts/Roboto-Thin.ttf" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/css/fonts/Roboto-ThinItalic.ttf" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/css/fonts/Roboto-regular.woff2" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/css/fonts/fontawesome-webfont.eot" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/css/fonts/fontawesome-webfont.svg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/css/fonts/fontawesome-webfont.ttf" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/css/fonts/fontawesome-webfont.woff" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/css/fonts/fontawesome-webfont.woff2" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/css/fonts/roboto-bold-latin.woff2" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/css/fonts/roboto-bold.woff2" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/css/fonts/roboto-italic-latin.woff2" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/css/fonts/roboto-italic.woff2" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/css/fonts/roboto-light-latin.woff2" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/css/fonts/roboto-light.woff2" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/css/fonts/roboto-regular-latin.woff2" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/css/fonts/slick.eot" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/css/fonts/slick.svg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/css/fonts/slick.ttf" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/css/fonts/slick.woff" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/css/images/close.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/css/images/loading.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/css/images/next.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/css/images/prev.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/css/lightbox.min.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/css/roboto.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/css/slick-theme.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/css/slick.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/css/uikit.docs.min.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/css/uikit.min.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/description.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/doctor_inc.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/favicon.ico" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/fonts/Circe-Bold.eot" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/fonts/Circe-Bold.svg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/fonts/Circe-Bold.ttf" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/fonts/Circe-Bold.woff" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/fonts/Circe-Regular.eot" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/fonts/Circe-Regular.svg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/fonts/Circe-Regular.ttf" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/fonts/Circe-Regular.woff" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/fonts/FontAwesome.otf" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/fonts/fontawesome-webfont.ttf" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/fonts/fontawesome-webfont.woff" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/fonts/fontawesome-webfont.woff2" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/footer.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/header.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/images/010.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/images/010.webp" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/images/1cont.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/images/1cont.webp" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/images/2cont.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/images/2cont.webp" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/images/3cont.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/images/3cont.webp" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/images/4cont.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/images/4cont.webp" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/images/Osteohondroz-004-660x330.jpeg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/images/abstrakcii-sinij-l.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/images/abstrakcii-sinij-l.webp" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/images/abstrakcii-sinij.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/images/abstrakcii-sinij.webp" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/images/adres-blue.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/images/after-o.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/images/artroz-taz.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/images/artroz.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/images/beliakovBig.JPG" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/images/beliakovBig.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/images/beliakovBig.webp" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/images/beliakovBigP.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/images/beliakovBigP.webp" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/images/belyakov.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/images/belyakov.webp" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/images/bg.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/images/bg.webp" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/images/billboard.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/images/blokada.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/images/bursit.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/images/bystr-lech.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/images/bystr-lech.webp" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/images/center.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/images/center.webp" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/images/cerebral.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/images/cerebral.webp" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/images/check.svg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/images/child-o.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/images/chiro1.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/images/chiro1.webp" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/images/chiropractic-spinal-mobilisation.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/images/chiropractic-spinal-mobilisation.webp" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/images/close.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/images/conditions-inner-bg.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/images/conditions-inner-bg.webp" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/images/di-tazin-ter.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/images/di-tazin-ter.webp" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/images/di-tazin.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/images/di-tazin.webp" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/images/dinamicheskaya-nervno-myshechnaya-stabilizaciya.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/images/dlin-bottom.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/images/dlin-bottom.webp" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/images/dlin-bottom1.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/images/dlin-bottom1.webp" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/images/dlin-grey.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/images/dlin-grey.webp" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/images/dlin-minus-bg-475.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/images/dlin-minus-bg-475.webp" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/images/dlin-minus-bg.webp" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/images/dlin.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/images/dlin.webp" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/images/elektroforez.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/images/fizio.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/images/fizio.webp" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/images/flags.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/images/funkcionalnaya-ocenka-dvizheniy.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/images/gal-green.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/images/gigroma_kolennogo_sustava.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/images/giliar.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/images/gryzha-grudnogo-otdela.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/images/gryzha-poyasnichnogo-otdela.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/images/hall.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/images/hall.webp" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/images/headache-o.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/images/icon1.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/images/icon1.webp" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/images/icon2.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/images/icon2.webp" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/images/icon3.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/images/icon3.webp" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/images/icon4.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/images/icon4.webp" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/images/img_266833.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/images/img_266833.webp" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/images/injection.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/images/inov-meth.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/images/inov-meth.webp" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/images/ishias.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/images/ishias_lechenie.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/images/klimivBig.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/images/klimivBig.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/images/klimivBig.webp" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/images/klimivBigP.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/images/klimivBigP.webp" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/images/klimov.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/images/klimov.webp" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/images/kolen.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/images/laseroterapiya.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/images/lazer.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/images/lazer.webp" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/images/lic1.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/images/lic2.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/images/lic3.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/images/liumbalgiya.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/images/loading.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/images/logo-dlin.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/images/logo-dlin.webp" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/images/logo-p.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/images/logo-p.webp" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/images/logo-p1.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/images/logo-p1.webp" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/images/logo-webtomed.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/images/logo.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/images/logo.webp" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/images/logo_w2m.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/images/manual.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/images/manualno-myshechnoe-testirovanie.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/images/map-marker-2-xxl.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/images/map-marker-2-xxl.webp" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/images/marker-bottom.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/images/marker-bottom.webp" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/images/marker.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/images/marker.webp" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/images/mezhrebernaya-nevralgiya.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/images/mezhrebernaya_nevralgiya.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/images/miofascialnaya-relaksaciya.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/images/narush_statiki_pozv.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/images/neck.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/images/neck.webp" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/images/neizv-l.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/images/neizv-l.webp" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/images/neizv.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/images/neizv.webp" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/images/nestabil_nost_shejnyh_pozvonkov.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/images/net-c.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/images/net.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/images/next.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/images/neyro-kineticheskaya-terapiya.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/images/old-o.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/images/ost.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/images/osteo-01.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/images/osteo.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/images/osteo.webp" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/images/phone-blue.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/images/phone-bottom.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/images/phone-bottom.webp" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/images/phone.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/images/phone.webp" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/images/planing-o.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/images/play.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/images/plechelopatochnyy-periartrit.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/images/pojas-krestsov.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/images/prev.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/images/preview.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/images/protruzia.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/images/pushkino.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/images/quote_left_60.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/images/quote_left_60_b.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/images/quote_left_filled1600.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/images/radikulit.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/images/radikulit_poyasnichnyj.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/images/rody-o.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/images/sc_dlin_map.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/images/screenshot.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/images/sheya.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/images/smeschenie_poyasnichnyh_pozvonkov.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/images/spine-o.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/images/spondilez_shejnyj.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/images/spondiloartroz_pozvonochnika.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/images/stelka.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/images/vhod.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/images/video1.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/images/video2.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/images/video3.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/images/video4.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/images/video5.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/images/video6.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/images/we_cure.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/inc_certs.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/inc_doctor.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/inc_lic.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/js/bxslider.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/js/footerfuncs.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/js/jquery-2.1.4.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/js/jquery.inputmask.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/js/lightbox.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/js/modal.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/js/modernizr-custom.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/js/owl.carousel.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/js/responsiveslides.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/js/script.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/js/slick.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/js/tag.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/js/uikit.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/js/uikit.min.js.old" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/page_templates/.content.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/page_templates/sidebar_right.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/page_templates/wrap.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/responsiveslides.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/styles.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/template_styles.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../nic.ru/.idea/dataSources.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../nic.ru/.idea/encodings.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../nic.ru/bupi-dupi.online/docs/img/kong1-s.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../nic.ru/bupi-dupi.online/docs/img/kong2-s.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../nic.ru/bupi-dupi.online/docs/img/kong3-s.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../nic.ru/bupi-dupi.online/docs/img/kong4-s.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../nic.ru/bupi-dupi.online/docs/wp-content/themes/integra/404.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../nic.ru/bupi-dupi.online/docs/wp-content/themes/integra/archive.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../nic.ru/bupi-dupi.online/docs/wp-content/themes/integra/classes/class-twentynineteen-svg-icons.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../nic.ru/bupi-dupi.online/docs/wp-content/themes/integra/classes/class-twentynineteen-walker-comment.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../nic.ru/bupi-dupi.online/docs/wp-content/themes/integra/comments.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../nic.ru/bupi-dupi.online/docs/wp-content/themes/integra/image.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../nic.ru/bupi-dupi.online/docs/wp-content/themes/integra/img/2018_09_16-1.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../nic.ru/bupi-dupi.online/docs/wp-content/themes/integra/img/240x320-samoilenko.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../nic.ru/bupi-dupi.online/docs/wp-content/themes/integra/img/320kh250-razbegaeva.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../nic.ru/bupi-dupi.online/docs/wp-content/themes/integra/img/IMG_0011_0.JPG" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../nic.ru/bupi-dupi.online/docs/wp-content/themes/integra/img/aliya240.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../nic.ru/bupi-dupi.online/docs/wp-content/themes/integra/img/andreenko_3.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../nic.ru/bupi-dupi.online/docs/wp-content/themes/integra/img/chikina240.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../nic.ru/bupi-dupi.online/docs/wp-content/themes/integra/img/img-article.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../nic.ru/bupi-dupi.online/docs/wp-content/themes/integra/img/kardanova240.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../nic.ru/bupi-dupi.online/docs/wp-content/themes/integra/img/kuleshov240.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../nic.ru/bupi-dupi.online/docs/wp-content/themes/integra/img/kuleshova-300_0.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../nic.ru/bupi-dupi.online/docs/wp-content/themes/integra/img/mesheryakova240.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../nic.ru/bupi-dupi.online/docs/wp-content/themes/integra/img/nikitina240.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../nic.ru/bupi-dupi.online/docs/wp-content/themes/integra/img/personal_stamp.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../nic.ru/bupi-dupi.online/docs/wp-content/themes/integra/img/pnevmonia-s.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../nic.ru/bupi-dupi.online/docs/wp-content/themes/integra/img/popova.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../nic.ru/bupi-dupi.online/docs/wp-content/themes/integra/img/vapeimg2206.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../nic.ru/bupi-dupi.online/docs/wp-content/themes/integra/img/yangina-big.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../nic.ru/bupi-dupi.online/docs/wp-content/themes/integra/inc/back-compat.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../nic.ru/bupi-dupi.online/docs/wp-content/themes/integra/inc/color-patterns.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../nic.ru/bupi-dupi.online/docs/wp-content/themes/integra/inc/customizer.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../nic.ru/bupi-dupi.online/docs/wp-content/themes/integra/inc/icon-functions.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../nic.ru/bupi-dupi.online/docs/wp-content/themes/integra/inc/template-functions.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../nic.ru/bupi-dupi.online/docs/wp-content/themes/integra/inc/template-tags.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../nic.ru/bupi-dupi.online/docs/wp-content/themes/integra/index.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../nic.ru/bupi-dupi.online/docs/wp-content/themes/integra/js/customize-controls.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../nic.ru/bupi-dupi.online/docs/wp-content/themes/integra/js/customize-preview.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../nic.ru/bupi-dupi.online/docs/wp-content/themes/integra/js/lightbox.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../nic.ru/bupi-dupi.online/docs/wp-content/themes/integra/js/priority-menu.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../nic.ru/bupi-dupi.online/docs/wp-content/themes/integra/js/skip-link-focus-fix.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../nic.ru/bupi-dupi.online/docs/wp-content/themes/integra/js/touch-keyboard-navigation.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../nic.ru/bupi-dupi.online/docs/wp-content/themes/integra/package-lock.json" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../nic.ru/bupi-dupi.online/docs/wp-content/themes/integra/package.json" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../nic.ru/bupi-dupi.online/docs/wp-content/themes/integra/page.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../nic.ru/bupi-dupi.online/docs/wp-content/themes/integra/postcss.config.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../nic.ru/bupi-dupi.online/docs/wp-content/themes/integra/price.txt" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../nic.ru/bupi-dupi.online/docs/wp-content/themes/integra/print.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../nic.ru/bupi-dupi.online/docs/wp-content/themes/integra/print.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../nic.ru/bupi-dupi.online/docs/wp-content/themes/integra/readme.txt" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../nic.ru/bupi-dupi.online/docs/wp-content/themes/integra/sass/_normalize.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../nic.ru/bupi-dupi.online/docs/wp-content/themes/integra/sass/blocks/_blocks.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../nic.ru/bupi-dupi.online/docs/wp-content/themes/integra/sass/elements/_elements.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../nic.ru/bupi-dupi.online/docs/wp-content/themes/integra/sass/elements/_lists.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../nic.ru/bupi-dupi.online/docs/wp-content/themes/integra/sass/elements/_tables.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../nic.ru/bupi-dupi.online/docs/wp-content/themes/integra/sass/forms/_buttons.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../nic.ru/bupi-dupi.online/docs/wp-content/themes/integra/sass/forms/_fields.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../nic.ru/bupi-dupi.online/docs/wp-content/themes/integra/sass/forms/_forms.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../nic.ru/bupi-dupi.online/docs/wp-content/themes/integra/sass/layout/_layout.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../nic.ru/bupi-dupi.online/docs/wp-content/themes/integra/sass/media/_captions.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../nic.ru/bupi-dupi.online/docs/wp-content/themes/integra/sass/media/_galleries.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../nic.ru/bupi-dupi.online/docs/wp-content/themes/integra/sass/media/_media.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../nic.ru/bupi-dupi.online/docs/wp-content/themes/integra/sass/mixins/_mixins-master.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../nic.ru/bupi-dupi.online/docs/wp-content/themes/integra/sass/mixins/_utilities.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../nic.ru/bupi-dupi.online/docs/wp-content/themes/integra/sass/modules/_accessibility.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../nic.ru/bupi-dupi.online/docs/wp-content/themes/integra/sass/modules/_alignments.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../nic.ru/bupi-dupi.online/docs/wp-content/themes/integra/sass/modules/_clearings.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../nic.ru/bupi-dupi.online/docs/wp-content/themes/integra/sass/navigation/_links.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../nic.ru/bupi-dupi.online/docs/wp-content/themes/integra/sass/navigation/_menu-footer-navigation.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../nic.ru/bupi-dupi.online/docs/wp-content/themes/integra/sass/navigation/_menu-main-navigation.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../nic.ru/bupi-dupi.online/docs/wp-content/themes/integra/sass/navigation/_menu-social-navigation.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../nic.ru/bupi-dupi.online/docs/wp-content/themes/integra/sass/navigation/_navigation.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../nic.ru/bupi-dupi.online/docs/wp-content/themes/integra/sass/navigation/_next-previous.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../nic.ru/bupi-dupi.online/docs/wp-content/themes/integra/sass/site/_site.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../nic.ru/bupi-dupi.online/docs/wp-content/themes/integra/sass/site/footer/_site-footer.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../nic.ru/bupi-dupi.online/docs/wp-content/themes/integra/sass/site/header/_site-featured-image.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../nic.ru/bupi-dupi.online/docs/wp-content/themes/integra/sass/site/header/_site-header.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../nic.ru/bupi-dupi.online/docs/wp-content/themes/integra/sass/site/primary/_archives.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../nic.ru/bupi-dupi.online/docs/wp-content/themes/integra/sass/site/primary/_comments.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../nic.ru/bupi-dupi.online/docs/wp-content/themes/integra/sass/site/primary/_posts-and-pages.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../nic.ru/bupi-dupi.online/docs/wp-content/themes/integra/sass/site/secondary/_widgets.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../nic.ru/bupi-dupi.online/docs/wp-content/themes/integra/sass/typography/_copy.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../nic.ru/bupi-dupi.online/docs/wp-content/themes/integra/sass/typography/_headings.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../nic.ru/bupi-dupi.online/docs/wp-content/themes/integra/sass/typography/_typography.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../nic.ru/bupi-dupi.online/docs/wp-content/themes/integra/sass/variables-site/_colors.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../nic.ru/bupi-dupi.online/docs/wp-content/themes/integra/sass/variables-site/_columns.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../nic.ru/bupi-dupi.online/docs/wp-content/themes/integra/sass/variables-site/_fonts.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../nic.ru/bupi-dupi.online/docs/wp-content/themes/integra/sass/variables-site/_structure.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../nic.ru/bupi-dupi.online/docs/wp-content/themes/integra/sass/variables-site/_transitions.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../nic.ru/bupi-dupi.online/docs/wp-content/themes/integra/sass/variables-site/_variables-site.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../nic.ru/bupi-dupi.online/docs/wp-content/themes/integra/search.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../nic.ru/bupi-dupi.online/docs/wp-content/themes/integra/single.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../nic.ru/bupi-dupi.online/docs/wp-content/themes/integra/style-editor-customizer.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../nic.ru/bupi-dupi.online/docs/wp-content/themes/integra/style-editor-customizer.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../nic.ru/bupi-dupi.online/docs/wp-content/themes/integra/style-editor.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../nic.ru/bupi-dupi.online/docs/wp-content/themes/integra/style-editor.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../nic.ru/bupi-dupi.online/docs/wp-content/themes/integra/style-rtl.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../nic.ru/bupi-dupi.online/docs/wp-content/themes/integra/style.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../nic.ru/bupi-dupi.online/docs/wp-content/themes/integra/template-parts/content/content-excerpt.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../nic.ru/bupi-dupi.online/docs/wp-content/themes/integra/template-parts/content/content-none.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../nic.ru/bupi-dupi.online/docs/wp-content/themes/integra/template-parts/content/content-page.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../nic.ru/bupi-dupi.online/docs/wp-content/themes/integra/template-parts/content/content-single.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../nic.ru/bupi-dupi.online/docs/wp-content/themes/integra/template-parts/content/content.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../nic.ru/bupi-dupi.online/docs/wp-content/themes/integra/template-parts/content/excerpt.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../nic.ru/bupi-dupi.online/docs/wp-content/themes/integra/template-parts/footer/footer-widgets.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../nic.ru/bupi-dupi.online/docs/wp-content/themes/integra/template-parts/header/entry-header.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../nic.ru/bupi-dupi.online/docs/wp-content/themes/integra/template-parts/post/author-bio.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../nic.ru/bupi-dupi.online/docs/wp-content/themes/integra/template-parts/post/discussion-meta.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../shirokoformatnayapechat.ru/presswall-presswall.ru/wp-content/themes/like2017/404.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../shirokoformatnayapechat.ru/presswall-presswall.ru/wp-content/themes/like2017/README.txt" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../shirokoformatnayapechat.ru/presswall-presswall.ru/wp-content/themes/like2017/archive.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../shirokoformatnayapechat.ru/presswall-presswall.ru/wp-content/themes/like2017/assets/css/colors-dark.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../shirokoformatnayapechat.ru/presswall-presswall.ru/wp-content/themes/like2017/assets/css/editor-style.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../shirokoformatnayapechat.ru/presswall-presswall.ru/wp-content/themes/like2017/assets/css/ie8.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../shirokoformatnayapechat.ru/presswall-presswall.ru/wp-content/themes/like2017/assets/css/ie9.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../shirokoformatnayapechat.ru/presswall-presswall.ru/wp-content/themes/like2017/assets/fonts/GothaProBla.otf" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../shirokoformatnayapechat.ru/presswall-presswall.ru/wp-content/themes/like2017/assets/fonts/GothaProBlaIta.otf" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../shirokoformatnayapechat.ru/presswall-presswall.ru/wp-content/themes/like2017/assets/fonts/GothaProBol.otf" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../shirokoformatnayapechat.ru/presswall-presswall.ru/wp-content/themes/like2017/assets/fonts/GothaProBolIta.otf" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../shirokoformatnayapechat.ru/presswall-presswall.ru/wp-content/themes/like2017/assets/fonts/GothaProIta.otf" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../shirokoformatnayapechat.ru/presswall-presswall.ru/wp-content/themes/like2017/assets/fonts/GothaProLig.otf" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../shirokoformatnayapechat.ru/presswall-presswall.ru/wp-content/themes/like2017/assets/fonts/GothaProLigIta.otf" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../shirokoformatnayapechat.ru/presswall-presswall.ru/wp-content/themes/like2017/assets/fonts/GothaProMed.otf" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../shirokoformatnayapechat.ru/presswall-presswall.ru/wp-content/themes/like2017/assets/fonts/GothaProMedIta.otf" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../shirokoformatnayapechat.ru/presswall-presswall.ru/wp-content/themes/like2017/assets/fonts/GothaProNarBol.otf" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../shirokoformatnayapechat.ru/presswall-presswall.ru/wp-content/themes/like2017/assets/fonts/GothaProNarMed.otf" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../shirokoformatnayapechat.ru/presswall-presswall.ru/wp-content/themes/like2017/assets/fonts/GothaProReg.otf" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../shirokoformatnayapechat.ru/presswall-presswall.ru/wp-content/themes/like2017/assets/fonts/font-icons.eot" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../shirokoformatnayapechat.ru/presswall-presswall.ru/wp-content/themes/like2017/assets/fonts/font-icons.svg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../shirokoformatnayapechat.ru/presswall-presswall.ru/wp-content/themes/like2017/assets/fonts/font-icons.ttf" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../shirokoformatnayapechat.ru/presswall-presswall.ru/wp-content/themes/like2017/assets/fonts/font-icons.woff" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../shirokoformatnayapechat.ru/presswall-presswall.ru/wp-content/themes/like2017/assets/fonts/lined-icons.eot" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../shirokoformatnayapechat.ru/presswall-presswall.ru/wp-content/themes/like2017/assets/fonts/lined-icons.svg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../shirokoformatnayapechat.ru/presswall-presswall.ru/wp-content/themes/like2017/assets/fonts/lined-icons.ttf" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../shirokoformatnayapechat.ru/presswall-presswall.ru/wp-content/themes/like2017/assets/fonts/lined-icons.woff" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../shirokoformatnayapechat.ru/presswall-presswall.ru/wp-content/themes/like2017/assets/fonts/open-iconic.eot" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../shirokoformatnayapechat.ru/presswall-presswall.ru/wp-content/themes/like2017/assets/fonts/open-iconic.otf" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../shirokoformatnayapechat.ru/presswall-presswall.ru/wp-content/themes/like2017/assets/fonts/open-iconic.svg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../shirokoformatnayapechat.ru/presswall-presswall.ru/wp-content/themes/like2017/assets/fonts/open-iconic.ttf" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../shirokoformatnayapechat.ru/presswall-presswall.ru/wp-content/themes/like2017/assets/fonts/open-iconic.woff" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../shirokoformatnayapechat.ru/presswall-presswall.ru/wp-content/themes/like2017/assets/images/coffee.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../shirokoformatnayapechat.ru/presswall-presswall.ru/wp-content/themes/like2017/assets/images/espresso.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../shirokoformatnayapechat.ru/presswall-presswall.ru/wp-content/themes/like2017/assets/images/header.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../shirokoformatnayapechat.ru/presswall-presswall.ru/wp-content/themes/like2017/assets/images/sandwich.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../shirokoformatnayapechat.ru/presswall-presswall.ru/wp-content/themes/like2017/assets/images/svg-icons.svg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../shirokoformatnayapechat.ru/presswall-presswall.ru/wp-content/themes/like2017/assets/js/customize-controls.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../shirokoformatnayapechat.ru/presswall-presswall.ru/wp-content/themes/like2017/assets/js/customize-preview.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../shirokoformatnayapechat.ru/presswall-presswall.ru/wp-content/themes/like2017/assets/js/global.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../shirokoformatnayapechat.ru/presswall-presswall.ru/wp-content/themes/like2017/assets/js/html5.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../shirokoformatnayapechat.ru/presswall-presswall.ru/wp-content/themes/like2017/assets/js/jquery.scrollTo.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../shirokoformatnayapechat.ru/presswall-presswall.ru/wp-content/themes/like2017/assets/js/navigation.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../shirokoformatnayapechat.ru/presswall-presswall.ru/wp-content/themes/like2017/assets/js/skip-link-focus-fix.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../shirokoformatnayapechat.ru/presswall-presswall.ru/wp-content/themes/like2017/comments.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../shirokoformatnayapechat.ru/presswall-presswall.ru/wp-content/themes/like2017/css/ajax-loader.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../shirokoformatnayapechat.ru/presswall-presswall.ru/wp-content/themes/like2017/css/fontawesome.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../shirokoformatnayapechat.ru/presswall-presswall.ru/wp-content/themes/like2017/css/magnific-popup.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../shirokoformatnayapechat.ru/presswall-presswall.ru/wp-content/themes/like2017/css/owl.carousel.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../shirokoformatnayapechat.ru/presswall-presswall.ru/wp-content/themes/like2017/css/owl.theme.default.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../shirokoformatnayapechat.ru/presswall-presswall.ru/wp-content/themes/like2017/css/uikit.min.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../shirokoformatnayapechat.ru/presswall-presswall.ru/wp-content/themes/like2017/custom.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../shirokoformatnayapechat.ru/presswall-presswall.ru/wp-content/themes/like2017/fonts/fontawesome-webfont.eot" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../shirokoformatnayapechat.ru/presswall-presswall.ru/wp-content/themes/like2017/fonts/fontawesome-webfont.svg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../shirokoformatnayapechat.ru/presswall-presswall.ru/wp-content/themes/like2017/fonts/fontawesome-webfont.ttf" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../shirokoformatnayapechat.ru/presswall-presswall.ru/wp-content/themes/like2017/fonts/fontawesome-webfont.woff" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../shirokoformatnayapechat.ru/presswall-presswall.ru/wp-content/themes/like2017/fonts/fontawesome-webfont.woff2" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../shirokoformatnayapechat.ru/presswall-presswall.ru/wp-content/themes/like2017/fonts/fontawesome.otf" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../shirokoformatnayapechat.ru/presswall-presswall.ru/wp-content/themes/like2017/footer.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../shirokoformatnayapechat.ru/presswall-presswall.ru/wp-content/themes/like2017/front-page.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../shirokoformatnayapechat.ru/presswall-presswall.ru/wp-content/themes/like2017/functions.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../shirokoformatnayapechat.ru/presswall-presswall.ru/wp-content/themes/like2017/header.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../shirokoformatnayapechat.ru/presswall-presswall.ru/wp-content/themes/like2017/inc/back-compat.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../shirokoformatnayapechat.ru/presswall-presswall.ru/wp-content/themes/like2017/inc/color-patterns.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../shirokoformatnayapechat.ru/presswall-presswall.ru/wp-content/themes/like2017/inc/custom-header.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../shirokoformatnayapechat.ru/presswall-presswall.ru/wp-content/themes/like2017/inc/customizer.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../shirokoformatnayapechat.ru/presswall-presswall.ru/wp-content/themes/like2017/inc/icon-functions.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../shirokoformatnayapechat.ru/presswall-presswall.ru/wp-content/themes/like2017/inc/template-functions.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../shirokoformatnayapechat.ru/presswall-presswall.ru/wp-content/themes/like2017/inc/template-tags.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../shirokoformatnayapechat.ru/presswall-presswall.ru/wp-content/themes/like2017/index.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../shirokoformatnayapechat.ru/presswall-presswall.ru/wp-content/themes/like2017/js/inputmask.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../shirokoformatnayapechat.ru/presswall-presswall.ru/wp-content/themes/like2017/js/jquery.1.12.4.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../shirokoformatnayapechat.ru/presswall-presswall.ru/wp-content/themes/like2017/js/jquery.magnific-popup.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../shirokoformatnayapechat.ru/presswall-presswall.ru/wp-content/themes/like2017/js/magnific-popup.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../shirokoformatnayapechat.ru/presswall-presswall.ru/wp-content/themes/like2017/js/owl.carousel.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../shirokoformatnayapechat.ru/presswall-presswall.ru/wp-content/themes/like2017/js/uikit-icons.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../shirokoformatnayapechat.ru/presswall-presswall.ru/wp-content/themes/like2017/js/uikit.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../shirokoformatnayapechat.ru/presswall-presswall.ru/wp-content/themes/like2017/options.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../shirokoformatnayapechat.ru/presswall-presswall.ru/wp-content/themes/like2017/page.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../shirokoformatnayapechat.ru/presswall-presswall.ru/wp-content/themes/like2017/rtl.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../shirokoformatnayapechat.ru/presswall-presswall.ru/wp-content/themes/like2017/screenshot.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../shirokoformatnayapechat.ru/presswall-presswall.ru/wp-content/themes/like2017/screenshot.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../shirokoformatnayapechat.ru/presswall-presswall.ru/wp-content/themes/like2017/script.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../shirokoformatnayapechat.ru/presswall-presswall.ru/wp-content/themes/like2017/search.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../shirokoformatnayapechat.ru/presswall-presswall.ru/wp-content/themes/like2017/searchform.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../shirokoformatnayapechat.ru/presswall-presswall.ru/wp-content/themes/like2017/sidebar.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../shirokoformatnayapechat.ru/presswall-presswall.ru/wp-content/themes/like2017/single.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../shirokoformatnayapechat.ru/presswall-presswall.ru/wp-content/themes/like2017/style.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../shirokoformatnayapechat.ru/presswall-presswall.ru/wp-content/themes/like2017/template-parts/footer/footer-widgets.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../shirokoformatnayapechat.ru/presswall-presswall.ru/wp-content/themes/like2017/template-parts/footer/site-info.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../shirokoformatnayapechat.ru/presswall-presswall.ru/wp-content/themes/like2017/template-parts/header/header-image.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../shirokoformatnayapechat.ru/presswall-presswall.ru/wp-content/themes/like2017/template-parts/header/site-branding.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../shirokoformatnayapechat.ru/presswall-presswall.ru/wp-content/themes/like2017/template-parts/navigation/navigation-top.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../shirokoformatnayapechat.ru/presswall-presswall.ru/wp-content/themes/like2017/template-parts/page/content-front-page-panels.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../shirokoformatnayapechat.ru/presswall-presswall.ru/wp-content/themes/like2017/template-parts/page/content-front-page.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../shirokoformatnayapechat.ru/presswall-presswall.ru/wp-content/themes/like2017/template-parts/page/content-page.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../shirokoformatnayapechat.ru/presswall-presswall.ru/wp-content/themes/like2017/template-parts/post/content-audio.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../shirokoformatnayapechat.ru/presswall-presswall.ru/wp-content/themes/like2017/template-parts/post/content-excerpt.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../shirokoformatnayapechat.ru/presswall-presswall.ru/wp-content/themes/like2017/template-parts/post/content-gallery.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../shirokoformatnayapechat.ru/presswall-presswall.ru/wp-content/themes/like2017/template-parts/post/content-image.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../shirokoformatnayapechat.ru/presswall-presswall.ru/wp-content/themes/like2017/template-parts/post/content-none.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../shirokoformatnayapechat.ru/presswall-presswall.ru/wp-content/themes/like2017/template-parts/post/content-video.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../shirokoformatnayapechat.ru/presswall-presswall.ru/wp-content/themes/like2017/template-parts/post/content.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../shirokoformatnayapechat.ru/shirokoformatnayapechat.ru/bitrix/templates/aspro-digital/css/custom.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../shirokoformatnayapechat.ru/shirokoformatnayapechat.ru/bitrix/templates/aspro-digital/page_blocks/header_7.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../shirokoformatnayapechat.ru/shirokoformatnayapechat.ru/bitrix/templates/aspro-digital/styles.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../shirokoformatnayapechat.ru/shirokoformatnayapechat.ru/calc/.section.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../shirokoformatnayapechat.ru/shirokoformatnayapechat.ru/calc/bumaga.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../shirokoformatnayapechat.ru/shirokoformatnayapechat.ru/calc/bumaga/index.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../shirokoformatnayapechat.ru/shirokoformatnayapechat.ru/calc/calc.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../shirokoformatnayapechat.ru/shirokoformatnayapechat.ru/calc/calc_index.txt" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../shirokoformatnayapechat.ru/shirokoformatnayapechat.ru/calc/calc_minify.txt" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../shirokoformatnayapechat.ru/shirokoformatnayapechat.ru/calc/dop.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../shirokoformatnayapechat.ru/shirokoformatnayapechat.ru/calc/icon_option1.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../shirokoformatnayapechat.ru/shirokoformatnayapechat.ru/calc/icon_option2.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../shirokoformatnayapechat.ru/shirokoformatnayapechat.ru/calc/icon_option3.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../shirokoformatnayapechat.ru/shirokoformatnayapechat.ru/calc/icon_option4.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../shirokoformatnayapechat.ru/shirokoformatnayapechat.ru/calc/icon_option5.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../shirokoformatnayapechat.ru/shirokoformatnayapechat.ru/calc/index.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../shirokoformatnayapechat.ru/shirokoformatnayapechat.ru/calc/option1_left.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../shirokoformatnayapechat.ru/shirokoformatnayapechat.ru/calc/option1_top.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../shirokoformatnayapechat.ru/shirokoformatnayapechat.ru/calc/option2_bottom.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../shirokoformatnayapechat.ru/shirokoformatnayapechat.ru/calc/option2_left.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../shirokoformatnayapechat.ru/shirokoformatnayapechat.ru/calc/option2_right.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../shirokoformatnayapechat.ru/shirokoformatnayapechat.ru/calc/option2_top.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../shirokoformatnayapechat.ru/shirokoformatnayapechat.ru/calc/option3_bottom.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../shirokoformatnayapechat.ru/shirokoformatnayapechat.ru/calc/option3_left.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../shirokoformatnayapechat.ru/shirokoformatnayapechat.ru/calc/option4_bottom.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../shirokoformatnayapechat.ru/shirokoformatnayapechat.ru/calc/option4_left.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../shirokoformatnayapechat.ru/shirokoformatnayapechat.ru/calc/option4_right.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../shirokoformatnayapechat.ru/shirokoformatnayapechat.ru/calc/option4_top.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../shirokoformatnayapechat.ru/shirokoformatnayapechat.ru/calc/option5_bottom.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../shirokoformatnayapechat.ru/shirokoformatnayapechat.ru/calc/option5_left.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../shirokoformatnayapechat.ru/shirokoformatnayapechat.ru/calc/option5_right.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../shirokoformatnayapechat.ru/shirokoformatnayapechat.ru/calc/option5_top.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../shirokoformatnayapechat.ru/shirokoformatnayapechat.ru/calc/pvh.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../shirokoformatnayapechat.ru/shirokoformatnayapechat.ru/calc/samokl.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../shirokoformatnayapechat.ru/shirokoformatnayapechat.ru/calc/script_calc.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../shirokoformatnayapechat.ru/shirokoformatnayapechat.ru/calc/style3.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../shirokoformatnayapechat.ru/shirokoformatnayapechat.ru/calc/tkan.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../shirokoformatnayapechat.ru/shirokoformatnayapechat.ru/contacts/index.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../shirokoformatnayapechat.ru/shirokoformatnayapechat.ru/contacts/page_contacts_custom.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../shirokoformatnayapechat.ru/shirokoformatnayapechat.ru/include/contacts-site-schedule.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../shirokoformatnayapechat.ru/shirokoformatnayapechat.ru/include/header-schedule.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../shirokoformatnayapechat.ru/shirokoformatnayapechat.ru/portfolio/index.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../shirokoformatnayapechat.ru/shirokoformatnayapechat.ru/produktsiya/.left.menu.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../shirokoformatnayapechat.ru/shirokoformatnayapechat.ru/uslugi/.left.menu.php" />
-      <change beforePath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/components/dlin/menu/templates/another_desktop/template.php" afterPath="$PROJECT_DIR$/../dlin_reg/www/doctordlin.ru/bitrix/components/dlin/menu/templates/another_desktop/template.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/modules/aspro.digital/classes/general/CDigital.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/.styles.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/components/bitrix/news.detail/page_teplate/part1.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/components/bitrix/news.detail/page_teplate/part19.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/components/bitrix/news.detail/page_teplate/part2.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/components/bitrix/news.detail/page_teplate/template.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/components/bitrix/news.list/banners/template.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/css/animation/animate.min.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/css/animation/animation_ext.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/css/bootstrap.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/css/bootstrap.min.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/css/custom.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/css/custom.tar.gz" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/css/flaticon.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/css/flaticon.eot" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/css/flaticon.ttf" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/css/flaticon.woff" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/css/flaticon1.eot" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/css/flaticon1.ttf" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/css/flaticon1.woff" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/css/flaticon2.ttf" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/css/flaticon2.woff" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/css/flaticon3.eot" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/css/flaticon3.ttf" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/css/flaticon3.woff" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/css/font-1.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/css/font-2.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/css/font-3.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/css/font-4.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/css/font-5.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/css/font-6.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/css/font-7.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/css/font-8.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/css/font-9.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/css/fonts/font-awesome/css/font-awesome.min.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/css/fonts/font-awesome/fonts/FontAwesome.otf" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/css/fonts/font-awesome/fonts/fontawesome-webfont.eot" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/css/fonts/font-awesome/fonts/fontawesome-webfont.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/css/fonts/font-awesome/fonts/fontawesome-webfont.ttf" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/css/fonts/font-awesome/fonts/fontawesome-webfont.woff" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/css/fonts/font-awesome/fonts/fontawesome-webfont.woff2" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/css/fonts/open_sans/LICENSE.txt" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/css/fonts/open_sans/OpenSans-Bold.ttf" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/css/fonts/open_sans/OpenSans-BoldItalic.ttf" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/css/fonts/open_sans/OpenSans-ExtraBold.ttf" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/css/fonts/open_sans/OpenSans-ExtraBoldItalic.ttf" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/css/fonts/open_sans/OpenSans-Light.ttf" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/css/fonts/open_sans/OpenSans-LightItalic.ttf" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/css/fonts/open_sans/OpenSans-Regular.ttf" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/css/fonts/open_sans/OpenSans-RegularItalic.ttf" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/css/fonts/open_sans/OpenSans-SemiBold.ttf" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/css/fonts/open_sans/OpenSans-SemiBoldItalic.ttf" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/css/h1-bold.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/css/h1-normal.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/css/jquery.fancybox.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/css/print.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/css/print.min.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/css/responsive.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/css/responsive.min.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/css/spectrum.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/css/spectrum.min.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/css/theme-elements.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/css/theme-responsive.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/css/width-1.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/css/width-2.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/css/width-3.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/css/width-4.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/description.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/footer.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/footer.php_old" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/header.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/header.php_OLD" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/page_blocks/__header_top_line_2.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/page_blocks/_old/header_header1.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/page_blocks/_old/header_header2.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/page_blocks/_old/header_header3.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/page_blocks/_old/header_top_line_1.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/page_blocks/_old/header_top_line_2.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/page_blocks/_old/header_top_line_3.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/page_blocks/_old/header_top_line_custom.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/page_blocks/footer_1.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/page_blocks/footer_2.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/page_blocks/footer_3.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/page_blocks/footer_4.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/page_blocks/footer_custom.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/page_blocks/header_1.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/page_blocks/header_10.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/page_blocks/header_11.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/page_blocks/header_12.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/page_blocks/header_13.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/page_blocks/header_14.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/page_blocks/header_15.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/page_blocks/header_2.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/page_blocks/header_3.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/page_blocks/header_4.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/page_blocks/header_5.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/page_blocks/header_6.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/page_blocks/header_7.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/page_blocks/header_8.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/page_blocks/header_9.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/page_blocks/header_custom.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/page_blocks/header_fixed_1.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/page_blocks/header_fixed_2.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/page_blocks/header_fixed_custom.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/page_blocks/header_mobile_1.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/page_blocks/header_mobile_2.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/page_blocks/header_mobile_custom.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/page_blocks/header_mobile_menu_1.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/page_blocks/header_mobile_menu_2.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/page_blocks/header_mobile_menu_custom.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/page_blocks/page_title_1.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/page_blocks/page_title_2.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/page_blocks/page_title_3.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/page_blocks/page_title_4.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/page_blocks/page_title_custom.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/page_templates/.content.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/page_templates/constreuctor.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/page_templates/include_area.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/page_templates/standart.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/snippets/.content.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/snippets/snippet0001.snp" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/snippets/snippet0002.snp" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/snippets/snippet0003.snp" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/snippets/snippet0004.snp" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/snippets/snippet0005.snp" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/snippets/snippet0006.snp" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/snippets/snippet0007.snp" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/snippets/snippet0008.snp" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/snippets/snippet0009.snp" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/snippets/snippet0010.snp" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/snippets/snippet0011.snp" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/snippets/snippet0012.snp" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/snippets/snippet0013.snp" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/snippets/snippet0014.snp" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/styles.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/styles.min.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/template_styles.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/template_styles.min.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/themes/1/colors.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/themes/1/lang/ru/big.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/themes/10/colors.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/themes/10/lang/ru/big.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/themes/11/colors.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/themes/11/lang/ru/big.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/themes/12/colors.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/themes/12/lang/ru/big.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/themes/13/colors.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/themes/13/lang/ru/big.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/themes/14/colors.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/themes/14/lang/ru/big.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/themes/15/colors.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/themes/15/lang/ru/big.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/themes/16/colors.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/themes/16/lang/ru/big.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/themes/17/colors.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/themes/17/lang/ru/big.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/themes/2/colors.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/themes/2/lang/ru/big.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/themes/3/colors.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/themes/3/lang/ru/big.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/themes/4/colors.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/themes/4/lang/ru/big.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/themes/5/colors.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/themes/5/lang/ru/big.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/themes/6/colors.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/themes/6/lang/ru/big.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/themes/7/colors.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/themes/7/lang/ru/big.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/themes/8/colors.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/themes/8/lang/ru/big.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/themes/9/colors.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/themes/9/lang/ru/big.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/themes/CUSTOM_s1/colors.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/vendor/bootstrap.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/vendor/flexslider/__jquery.flexslider-min.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/vendor/flexslider/__jquery.flexslider.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/vendor/flexslider/flexslider.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/vendor/flexslider/fonts/flexslider-icon.eot" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/vendor/flexslider/fonts/flexslider-icon.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/vendor/flexslider/fonts/flexslider-icon.ttf" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/vendor/flexslider/fonts/flexslider-icon.woff" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/vendor/flexslider/images/bg_play_pause.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/vendor/flexslider/jquery.flexslider-2.7.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/vendor/flexslider/jquery.flexslider.min.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/vendor/jquery.appear.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/vendor/jquery.cookie.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/vendor/jquery.easing.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/vendor/jquery.validate.min.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/vendor/jquery.viewportchecker.min.js" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/../nic.ru/bupi-dupi.online/docs/.htaccess" afterPath="$PROJECT_DIR$/../nic.ru/bupi-dupi.online/docs/.htaccess" />
-      <change beforePath="$PROJECT_DIR$/../nic.ru/bupi-dupi.online/docs/wp-content/themes/integra/css/text.css" afterPath="$PROJECT_DIR$/../nic.ru/bupi-dupi.online/docs/wp-content/themes/integra/css/text.css" />
-      <change beforePath="$PROJECT_DIR$/../nic.ru/bupi-dupi.online/docs/wp-content/themes/integra/footer.php" afterPath="$PROJECT_DIR$/../nic.ru/bupi-dupi.online/docs/wp-content/themes/integra/footer.php" />
-      <change beforePath="$PROJECT_DIR$/../nic.ru/bupi-dupi.online/docs/wp-content/themes/integra/functions.php" afterPath="$PROJECT_DIR$/../nic.ru/bupi-dupi.online/docs/wp-content/themes/integra/functions.php" />
-      <change beforePath="$PROJECT_DIR$/../nic.ru/bupi-dupi.online/docs/wp-content/themes/integra/header.php" afterPath="$PROJECT_DIR$/../nic.ru/bupi-dupi.online/docs/wp-content/themes/integra/header.php" />
-      <change beforePath="$PROJECT_DIR$/../nic.ru/bupi-dupi.online/docs/wp-content/themes/integra/style.css" afterPath="$PROJECT_DIR$/../nic.ru/bupi-dupi.online/docs/wp-content/themes/integra/style.css" />
+      <change beforePath="$PROJECT_DIR$/public_html/integramed.info/.htaccess" afterPath="$PROJECT_DIR$/public_html/integramed.info/.htaccess" />
+      <change beforePath="$PROJECT_DIR$/public_html/integramed.info/index.php" afterPath="$PROJECT_DIR$/public_html/integramed.info/index.php" />
+      <change beforePath="$PROJECT_DIR$/public_html/integramed.info/robots.txt" afterPath="$PROJECT_DIR$/public_html/integramed.info/robots.txt" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -539,8 +205,31 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_TABLE_DETAILS" value="true" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <expand />
+    <select />
+  </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
+      <file leaf-file-name=".htaccess" pinned="true" current-in-tab="true">
+        <entry file="remoteDeploymentFS://&lt;5b6d34e5-36b5-44cd-8f51-ba46fc0a759a&gt;/public_html/integramed.info/.htaccess">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="350">
+              <caret line="40" column="0" lean-forward="true" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -561,12 +250,17 @@
       <find>&lt;p class=&quot;p1&quot;&gt;&amp;nbsp;&lt;/p&gt;</find>
       <find>block</find>
       <find>bebas</find>
+      <find>_integ</find>
+      <find>https</find>
+      <find>http://i</find>
+      <find>main #slider .carousel-caption</find>
     </findStrings>
     <replaceStrings>
       <replace>//</replace>
       <replace>https://</replace>
       <replace>'</replace>
       <replace>&lt;li&gt;$1&lt;/li&gt;</replace>
+      <replace>https://i</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -581,7 +275,6 @@
         <option value="&lt;5b6d34e5-36b5-44cd-8f51-ba46fc0a759a&gt;/public_html/integramed.su/.htaccess" />
         <option value="&lt;5b6d34e5-36b5-44cd-8f51-ba46fc0a759a&gt;/public_html/integramed.info/index.php" />
         <option value="&lt;5b6d34e5-36b5-44cd-8f51-ba46fc0a759a&gt;/public_html/integramed.info/sites/default/settings.php" />
-        <option value="&lt;5b6d34e5-36b5-44cd-8f51-ba46fc0a759a&gt;/public_html/integramed.info/.htaccess" />
         <option value="&lt;5b6d34e5-36b5-44cd-8f51-ba46fc0a759a&gt;/public_html/integramed.info/sites/all/modules/custom/adsblock/adsblock.info" />
         <option value="&lt;5b6d34e5-36b5-44cd-8f51-ba46fc0a759a&gt;/public_html/integramed.info/sites/all/modules/custom/adsblock/adsblock.module" />
         <option value="&lt;5b6d34e5-36b5-44cd-8f51-ba46fc0a759a&gt;/public_html/integramed.info/sites/all/modules/firstmod/firstmod.info" />
@@ -591,6 +284,16 @@
         <option value="$PROJECT_DIR$/public_html/integramed.info/test.html" />
         <option value="&lt;5b6d34e5-36b5-44cd-8f51-ba46fc0a759a&gt;/public_html/integramed.info/sites/all/themes/integra/css/style.css" />
         <option value="&lt;5b6d34e5-36b5-44cd-8f51-ba46fc0a759a&gt;/public_html/integramed.info/sites/all/themes/integra/templates/html.tpl.php" />
+        <option value="&lt;5b6d34e5-36b5-44cd-8f51-ba46fc0a759a&gt;/public_html/integramed.info/sitemap.xml" />
+        <option value="&lt;5b6d34e5-36b5-44cd-8f51-ba46fc0a759a&gt;/public_html/old.integramed.info/sites/default/settings.php" />
+        <option value="&lt;5b6d34e5-36b5-44cd-8f51-ba46fc0a759a&gt;/public_html/old.integramed.info/cgi-bin/.htpasswd" />
+        <option value="&lt;5b6d34e5-36b5-44cd-8f51-ba46fc0a759a&gt;/public_html/old.integramed.info/sites/all/themes/integra/templates/html.tpl.php" />
+        <option value="&lt;5b6d34e5-36b5-44cd-8f51-ba46fc0a759a&gt;/public_html/integramed.info/wp-content/themes/integra/functions.php" />
+        <option value="&lt;5b6d34e5-36b5-44cd-8f51-ba46fc0a759a&gt;/public_html/integramed.info/wp-content/themes/integra/page.php" />
+        <option value="&lt;5b6d34e5-36b5-44cd-8f51-ba46fc0a759a&gt;/public_html/old.integramed.info/.htaccess" />
+        <option value="&lt;5b6d34e5-36b5-44cd-8f51-ba46fc0a759a&gt;/public_html/integramed.info/wp-content/themes/integra/css/text.css" />
+        <option value="&lt;5b6d34e5-36b5-44cd-8f51-ba46fc0a759a&gt;/public_html/integramed.info/wp-content/themes/integra/style.css" />
+        <option value="&lt;5b6d34e5-36b5-44cd-8f51-ba46fc0a759a&gt;/public_html/integramed.info/.htaccess" />
       </list>
     </option>
   </component>
@@ -610,7 +313,7 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="59" />
     <option name="y" value="93" />
-    <option name="width" value="1591" />
+    <option name="width" value="1473" />
     <option name="height" value="856" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -634,7 +337,28 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="ProjectPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="integra_reg" type="b2602c69:ProjectViewProjectNode" />
+              <item name="integra_reg" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="integra_reg" type="b2602c69:ProjectViewProjectNode" />
+              <item name="integra_reg" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="public_html" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="integra_reg" type="b2602c69:ProjectViewProjectNode" />
+              <item name="integra_reg" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="public_html" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="integramed.info" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="Scope" />
       <pane id="Scratches" />
     </panes>
@@ -702,6 +426,10 @@
       <workItem from="1576168751932" duration="60000" />
       <workItem from="1578031763892" duration="371000" />
       <workItem from="1578500240629" duration="1887000" />
+      <workItem from="1578503895884" duration="2526000" />
+      <workItem from="1578677776300" duration="469000" />
+      <workItem from="1578730546818" duration="4316000" />
+      <workItem from="1578934367851" duration="2728000" />
     </task>
     <task id="LOCAL-00001" summary="integra reg">
       <created>1558375059685</created>
@@ -714,23 +442,24 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28862000" />
+    <option name="totallyTimeSpent" value="38901000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="59" y="93" width="1591" height="856" extended-state="0" />
+    <frame x="59" y="93" width="1473" height="856" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info id="Remote Host" active="true" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23651722" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25615764" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18128654" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934552" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32972974" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -765,6 +494,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="502">
           <caret line="76" column="5" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="76" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public_html/integramed.info/.htaccess">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>

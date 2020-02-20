@@ -48,3 +48,14 @@
 .home-page .shops-list {
     height: 486px;
 }
+@media(max-width:768px){
+    .shops-list {
+        width: 100%;
+    }
+    .shops-map {
+        width: 100%;
+    }
+    .modal-footer .row .row {
+        margin: 0;
+    }
+}

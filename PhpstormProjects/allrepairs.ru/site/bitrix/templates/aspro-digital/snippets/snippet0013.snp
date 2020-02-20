@@ -1,0 +1,51 @@
+<blockquote class="info">  
+<b>Содержание:</b>
+<div class="fl_r razvernut"><b>Свернуть</b><span class="dispn">Развернуть</span></div>
+<ol>
+    <li><a href="#part2">Преимущества</a></li>
+    <li><a href="#part3">Текст вкладки</a></li>
+    <li><a href="#part4">Преимущества иконки</a></li>
+    <li><a href="#part5">Цена и класс</a></li>
+    <li><a href="#part6">процесс работ</a></li>
+    <li><a href="#part7">паралакс1</a></li>
+    <li><a href="#part8">Прайс</a></li>
+    <li><a href="#part9">О компании</a></li>
+    <li><a href="#part10">Портфолио</a></li>
+    <li><a href="#part11">Фото</a></li>
+    <li><a href="#part12">Видео</a></li>
+    <li><a href="#part13">паралакс2</a></li>
+	<li><a href="#part14">Схема работы</a></li>
+    <li><a href="#part15">Выезд замерщика</a></li>
+	<li><a href="#part16">Калькулятор</a></li>
+	<li><a href="#part17">Консультация</a></li>
+	<li><a href="#part18">Клиенты</a></li>
+	<li><a href="#part19">Сертификаты</a></li>
+	<li><a href="#part20">Доп услуги</a></li>
+	<li><a href="#part29">Доп направления2</a></li>
+	<li><a href="#part21">Доп направления</a></li>
+	<li><a href="#part22">НАШИ ПРЕИМУЩЕСТВА</a></li>
+	<li><a href="#part23">Текст(блок1)</a></li>
+	<li><a href="#part24">Текст(блок2)</a></li>
+	<li><a href="#part25">Текст(блок3)</a></li>
+	<li><a href="#part26">Текст(блок4)</a></li>
+	<li><a href="#part27">Текст(блок5)</a></li>
+	<li><a href="#part28">Текст(блок6)</a></li>
+	<li><a href="#part30">Баннер01</a></li>
+	<li><a href="#part31">Баннер02</a></li>
+	<li><a href="#part32">Баннер03</a></li>
+	<li><a href="#part33">Аккордион01</a></li>
+	<li><a href="#part34">Аккордион02</a></li>
+	<li><a href="#part35">Аккордион03</a></li>
+	<li><a href="#part36">Баннер04</a></li>
+	<li><a href="#part37">Видео</a></li>
+	<li><a href="#part38">Видео2</a></li>
+	<li><a href="#part39">Подменю</a></li>
+</ol></blockquote>
+<script>
+
+$(".razvernut").click(function () {
+	$('.razvernut span').toggleClass('dispn');
+$('.razvernut b').toggleClass('dispn');
+$(this).next('ol').slideToggle('normal'); });
+
+</script>

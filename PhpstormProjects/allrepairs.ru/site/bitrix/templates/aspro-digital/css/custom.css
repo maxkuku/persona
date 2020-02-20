@@ -1,0 +1,259 @@
+/* CSS kod pishite v etom faile, chotobi pri ustanovke obnovlenii ne bilo problem  */
+/* --------------------------------------- */
+/* Here you can put custom css rules for your site */
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+.indent_1{margin-bottom: 10px; margin-right:10px}
+.indent_2{margin-bottom: 10px}
+.indent_3{margin-bottom:10px; margin-left:10px}
+.indent_4{margin-right:10px}
+.indent_6{margin-left:10px}
+.custw{width: 393px;}
+
+.submenu-h2{    
+	font-size: 24px;
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 15px;
+}
+
+.maxwidth-theme-custom{max-width: 1200px; background-color: white;}
+
+.cfonts{font-size: 24px; text-align: center;}
+.cfonts3{font-size: 19px; text-align: center;}
+
+.part23 .image.shine,
+.part24 .image.shine{
+    margin: 0px 15px 0px 0px !important;
+}
+
+.part23 .blog.list-type-block.item-views .item .body-info,
+.part24 .blog.list-type-block.item-views .item .body-info{
+    padding-left: 0px;
+}
+.body-info {
+    line-height: 25px;
+}
+
+.item-views.list .item .image {
+    overflow: hidden;
+    padding: 0px;
+    margin: 24px 0 24px 0px;
+}
+
+.part26 .previewtext .link-block-more {
+    position: absolute;
+    bottom: -25px;
+}
+
+.part26 .previewtext.col-md-6 {
+    margin-bottom: 35px;
+}
+
+
+a[href="javascript:void(0);"],
+a[href="javascript:void(0);"] {
+    cursor: default;
+}
+
+a.btn[href="javascript:void(0);"]{
+    visibility: hidden;
+}
+
+.part30 h3, .part30 h4,
+.part31 h3, .part31 h4,
+.part32 h3, .part32 h4{
+    text-align: center;
+}
+
+.calc-room-type__item.js-select-item {
+    text-align: center;
+}
+
+.flex-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.flex-center img,
+.flex-center video{
+    width: 100%;
+    padding: 20px;
+}
+
+.center-img {
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: contain;
+}
+
+.center-img.right {
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    filter: FlipH;
+    -ms-filter: "FlipH";
+}
+
+#part24 .info .title{
+    text-align: center;
+}
+
+.flexslider .slides img,
+.video_all iframe{
+    border: 1px solid #fff;
+}
+
+
+.vc_inner .center-img.left ,
+.vc_inner .center-img.right {
+    width: 80px;
+}
+
+.vc_inner .inner-flex.row {
+    justify-content: space-around;
+}
+
+#owl-demo .owl-prev:before {
+    content: "❮";
+    display: inline-block;
+    font-family: Courier, monospace;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: #eee;
+    width: 30px;
+    height: 30px;
+    line-height: 33px;
+    border-radius: 50%;
+    text-align: center;
+    position: relative;
+}
+
+#owl-demo .owl-next:before {
+    content: "❯";
+    display: inline-block;
+    font-family: Courier, monospace;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: #eee;
+    width: 30px;
+    height: 30px;
+    line-height: 33px;
+    border-radius: 50%;
+    text-align: center;
+    position: relative;
+}
+#owl-demo .owl-prev {
+    content: "";
+    width: 30px;
+    height: 30px;
+    overflow: hidden;
+    display: inline-block;
+    text-align: center;
+    position: absolute;
+    left: -40px;
+}
+#owl-demo .owl-next {
+    content: "";
+    width: 30px;
+    height: 30px;
+    overflow: hidden;
+    display: inline-block;
+    text-align: center;
+    position: absolute;
+    right: -40px;
+}
+#owl-demo .owl-buttons{
+    display:none
+}
+iframe{
+    border:none
+}
+.order_services_frame.jqmWindow.jqm-init.show {
+    width: 90%!important;
+    margin-left: 0!important;
+    transform: translateX(-50%);
+}
+.order_services_frame{
+    height: 85vh;
+}
+#map-outer .form.order {
+    margin: 0;
+    padding: 0;
+}
+.shops-map-image {
+    position: relative;
+    display: block;
+    height: 100%;
+}
+.item-views.tarifs.type_3 .item .image .top_block .name {
+    color: #fff;
+    margin: 10px 0;
+}
+@media(min-width:768px){
+    .item-views.tarifs.type_3 .item .image .top_block{
+        background: rgb(0,0,0);
+        background: linear-gradient(0deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 100%);
+    }
+    .order_services_frame .jqmClose {
+        right: -40px!important;
+        background: url(/bitrix/templates/aspro-digital/images/digital.png) -160px -172px no-repeat!important;
+        transform: rotate(45deg) scale(1.5);
+    }
+    div#map-outer .wrap,
+    div#map-outer {
+        margin: 0;
+        padding: 0;
+    }
+}
+@media(min-width:568px) {
+    #owl-demo .owl-buttons {
+        display: block;
+        position: absolute;
+        top: 260px;
+        width: 1200px;
+    }
+    ul.flex-direction-nav.opacity1 {
+        display: block;
+    }
+    div#part19 {
+        padding-bottom: 70px;
+    }
+    .video_all iframe {
+        height: 197px;
+    }
+}
+@media(max-width:768px){
+    ul#navigation.breadcrumb {
+        margin: 10px 12px;
+    }
+    video {
+        display: block;
+        margin: auto;
+    }
+    #part15 .vc_column-inner{
+        margin:0!important;
+    }
+    #part36 .wpb_column.col-sm-3.flex-center {
+        display: none;
+    }
+    #part36 .wpb_column.flex-center.col-sm-1 {
+        display: none;
+    }
+    .row {
+        margin: 0!important;
+    }
+    .main iframe[allowfullscreen] {
+        width: 100%;
+        height: calc((100vw - 40px) * 9 / 16);
+    }
+    .right_dok {
+        display: none;
+    }
+}

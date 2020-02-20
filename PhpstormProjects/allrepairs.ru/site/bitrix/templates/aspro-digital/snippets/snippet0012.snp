@@ -1,0 +1,5 @@
+<ul class="breadcrumb">
+	<li itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a href="/" title="Главная" itemprop="url"><span itemprop="title">Главная</span></a></li>
+	<li itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a href="/otdelka/otdelka-pomeshcheniy/" title="Отделка помещений" itemprop="url"><span itemprop="title">Отделка помещений</span></a></li>
+	<li class="active" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb" ><span itemprop="title">Заголовок</span></li>
+</ul>
