@@ -37,7 +37,7 @@
                                                 <meta itemprop="url" content="<?=$arResult['PROPERTIES']['cena_class_ssilka']['VALUE'][$i];?>">
                                                 <h3><span itemprop="name"><?=$title?></span></h3>
                                             </div>
-                                            <h4 class="section_name"><?=$arResult['PROPERTIES']['cena_class_h4']['VALUE'][$i];?></h4>
+                                            <!--h4 class="section_name"><?=$arResult['PROPERTIES']['cena_class_h4']['VALUE'][$i];?></h4-->
                                             <div class="section_div"><?=$arResult['PROPERTIES']['cena_avtokrany']['VALUE'][$i]?></div>
                                             <?if($arResult['PROPERTIES']['v_nalichii']['VALUE'][$i]):?>
                                             <div class="arts">
@@ -123,12 +123,12 @@
         <div id="part5" class="<?=$arResult['PROPERTIES']['pricetype']['VALUE']?> price maxwidth-theme tabs_ajax catalog item-views table catalog_table_2 <?if($arResult['PROPERTIES']['fon5']['VALUE']=='Да'){?>greyline<?}?>" data-slice="Y">
         <div class="item-views tarifs type_3 tarifs_scroll">
         <h2 class="text-center cfonts"><?=$arResult['PROPERTIES']['cena_class_zagolok']['VALUE'];?></h2>
-        <div class="unstyled row dark-nav <?=$arResult['PROPERTIES']['pricetype']['VALUE']?> maxwidth-theme" id="bx_<?=$arResult['ID']?>_490">
-            <div class="flex-viewport">
+        <div class="unstyled row dark-nav flexslider front view-control navigation-vcenter  <?=$arResult['PROPERTIES']['pricetype']['VALUE']?> maxwidth-theme" id="bx_<?=$arResult['ID']?>_490" data-plugin-options='{"useCSS": false, "directionNav": true, "controlNav" :false, "animationLoop": true, "slideshow": false, "counts": [4, 3, 2, 1], "itemMargin": 0}'>
+
                 <ul class="slides flexbox" itemscope="" itemtype="http://schema.org/ItemList">
         <?$i=0;?>
         <?foreach($arResult['PROPERTIES']['cena_class_title']['VALUE'] as $title){?>
-                    <li class="item border shadow active-slides" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/Product">
+                    <li class="col-sm-3 item border shadow active-slides" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/Product">
                         <div class="image">
                             <? $r = str_replace("ʹ", "", transliterator_transliterate('Any-Latin; Latin-ASCII', $arResult['PROPERTIES']['cena_sticker']['VALUE'][$i]));?>
                             <?if($r):?>
@@ -179,7 +179,7 @@
             <?$i++;
         }?>
                 </ul>
-            </div>
+
         </div>
     </div>
     <script>
