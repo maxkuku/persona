@@ -1,7 +1,3 @@
-$(document).ready(function(){
-    var g = $('.bx-no-touch .aside').outerHeight(true);
-    $('.bx-no-touch .aside iframe').height(g)
-})
 jQuery(document).ready(function ($) {
     $(".fancybox").fancybox({
         helpers: {
@@ -13,11 +9,14 @@ jQuery(document).ready(function ($) {
         }
     }); // fancybox
 }); // ready
-/*jQuery(document).ready(function ($) {
-    var video_wrapper = $('.youtube-video-place');
-    if (video_wrapper.length) {
-        $('.youtube-video-place').on('click', function () {
-            $(this).html('<a class="fancybox" target="_blank" href="\' + video_wrapper.data(\'yt-url\') + \'"></a><!--iframe allowfullscreen frameborder="0" class="embed-responsive-item" src="' + video_wrapper.data('yt-url') + '"></iframe-->');
-        });
-    }
-});*/
+
+jQuery(document).ready(function ($) {
+    $('.title-price').click(function(){
+        $(this).parents('.wdropdown').next('.all_price').toggleClass('showen');
+    })
+    $('.all_price .price').click(function(){
+        $(this).parents('.prices').find('.title-price span span').text($(this).text());
+        $(this).parents('.prices').find('.value').text($(this).data('sum'));
+        $('.all_price').removeClass('showen');
+    })
+});

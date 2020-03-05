@@ -9,10 +9,15 @@
                 <div class="items row">
 
                     <? $i = 0; ?> 
-                    <? foreach ($arResult['PROPERTIES']['text6_nazvanie']['VALUE'] as $title) { ?>		
+                    <? foreach ($arResult['PROPERTIES']['text6_nazvanie']['VALUE'] as $title) {
+        $t = 0;
+        if(strpos($arResult['PROPERTIES']['text6_text_small']['~VALUE'][$i]["TEXT"], 'aside') > 0){
+            echo "</div></div></div>";
+            $t = 1;
+        }?>
 
-                        <div class="col-md-12">
-                            <div class="item shadow  wdate clearfix">
+                        <div class=" <?if($t){ echo 'nonpadding'; }?>">
+                            <div class="item shadow wdate clearfix">
 
                                 <div class="body-info">
                                     <div class="title">								
@@ -24,11 +29,18 @@
                                             <?= $arResult['PROPERTIES']['text6_text_full']['~VALUE'][$i]["TEXT"]; ?>
                                         </div>
                                     </div>
+                                    <?if($t){
+                                        echo "</div></div></div><div class=\"clearfix\"></div><div class=\"maxwidth-theme\"><div class=\"item-views list list-type-block image_left blog\"><div class=\"items row\">";
+                                    }?>
                                     <? if ($arResult['PROPERTIES']['text6_text_full']['~VALUE'][$i]["TEXT"]) { ?>
                                     <div class="link-block-more">
                                         <a href="#" class="btn-inline sm rounded black read_next2" title=".text1_<?= $i; ?>" > <span class="span1">Читать далее</span> <span class="span2" style="display:none;">Скрыть</span> <i class="fa fa-angle-right"></i></a>
                                     </div>
                                     <? } ?>
+                                    <?if($t){
+                                        echo "<div class=\"clearfix\"></div><div class=\"maxwidth-theme\"><div class=\"item-views list list-type-block image_left blog\"><div class=\"items row\">";
+                                    }?>
+
                                     <div class=" row">
                                         <div class="col-md-6">
                                             <? if ($arResult['PROPERTIES']['text6_text_foto1']) { ?>

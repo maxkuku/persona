@@ -20,6 +20,9 @@
 		<?if(CModule::IncludeModule("aspro.digital")) {CDigital::Start(SITE_ID);}?>
 		<!--link rel="preload" href="/bitrix/templates/aspro-digital/css/flaticon.css" as="style"-->
 		<link rel="stylesheet"  href="/bitrix/templates/aspro-digital/css/flaticon.css" type="text/css" media="all">
+        <?if($APPLICATION->GetCurPage() == "/otdelka/dekorativnaya-otdelka/"):?>
+		<link rel="stylesheet"  href="/bitrix/templates/aspro-digital/css/newmenu.css?v=<?=rand(0,999)?>" type="text/css" media="all">
+        <?endif?>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-97466577-1"></script>
 <script>

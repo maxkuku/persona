@@ -39,9 +39,11 @@ return array(
         array(
             'value' =>
                 array(
-                    'debug' => true,
-                    'handled_errors_types' => 4437,
-                    'exception_errors_types' => 4437,
+                    'debug' => false,
+                    #'handled_errors_types' => 4437,
+                    'handled_errors_types' => E_ALL & ~E_NOTICE & ~E_STRICT & ~E_USER_NOTICE,
+                    #'exception_errors_types' => 4437,
+                    'exception_errors_types' => E_ALL & ~E_NOTICE & ~E_WARNING & ~E_STRICT & ~E_USER_WARNING & ~E_USER_NOTICE & ~E_COMPILE_WARNING & ~E_DEPRECATED,
                     'ignore_silence' => false,
                     'assertion_throws_exception' => true,
                     'assertion_error_type' => 256,

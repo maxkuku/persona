@@ -31,6 +31,7 @@ $this->addExternalJS(SITE_TEMPLATE_PATH."/js/owl/owl.autoplay.js");
 $this->addExternalJS(SITE_TEMPLATE_PATH."/js/owl/owl.autorefresh.js");
 $this->addExternalJS(SITE_TEMPLATE_PATH."/js/owl/owl.hash.js");
 $this->addExternalJS(SITE_TEMPLATE_PATH."/js/owl/owl.navigation.js");
+//$this->addExternalJS(SITE_TEMPLATE_PATH."/js/jquery.flexslider.js");
 
 
 
@@ -47,7 +48,7 @@ elseif ($cache->startDataCache()) {*/
 ?>
 <? $poradok = array(); ?>
 <? $i = 1; ?>
-<? while ($i < 46) { ?>
+<? while ($i < 49) { ?>
     <? if ($arResult['PROPERTIES']['poradok' . $i]['VALUE']) { ?>
         <?
         $poradok[$i]['nomer'] = $arResult['PROPERTIES']['poradok' . $i]['VALUE'];
@@ -61,9 +62,10 @@ foreach ($poradok as $v)
     $rate[] = $v['nomer'];
 array_multisort($rate, SORT_ASC, $poradok);
 ?>
-    <div class="right_dok">
+    <div class="right_dok" data-id="<?=$arResult['ID']?>">
 <span class="link" title="Заказать звонок">
-<span class="animate-load" data-event="jqm" data-param-id="19" data-name="callback"><i class="svg inline  svg-inline-call" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+<span class="animate-load" data-event="jqm" data-param-id="19" data-name="callback"><i class="svg inline  svg-inline-call" aria-hidden="true">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
 <defs>
 <style>.bccls-1{fill:#969ba4;fill-rule:evenodd}</style>
 </defs>
@@ -72,7 +74,8 @@ array_multisort($rate, SORT_ASC, $poradok);
 </i></span>
 </span>
         <span class="link" title="Задать вопрос">
-<span class="animate-load" data-event="jqm" data-param-id="18" data-name="question"><i class="svg inline  svg-inline-ask" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="14" viewBox="0 0 18 14">
+<span class="animate-load" data-event="jqm" data-param-id="18" data-name="question"><i class="svg inline  svg-inline-ask" aria-hidden="true">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="14" viewBox="0 0 18 14">
 <defs>
 <style>.cls-1{fill:#222;fill-rule:evenodd}</style>
 </defs>
@@ -89,222 +92,83 @@ array_multisort($rate, SORT_ASC, $poradok);
 </span>
     </div>
 <? if ($arResult['PROPERTIES']['slider_on']['VALUE'] == 'Да') { ?>
-    <?if($APPLICATION->GetCurPage() == "/otdelka-doma/otdelka-doma-pod-klyuch/"){?>
-        <? CModule::IncludeModule("iblock");
-        $filter = array("IBLOCK_ID"=>43, "ACTIVE"=>"Y");
-        $items_sel =  (new CIBlockElement())->GetList(["SORT"=>"ASC"], $filter, 0, 0, ['ID', 'IBLOCK_ID', 'NAME', 'PREVIEW_PICTURE', 'PREVIEW_TEXT', 'DETAIL_PICTURE', 'DETAIL_TEXT', 'PROPERTY_VIDEO', 'PROPERTY_HREF', 'PROPERTY_TEXT', 'PROPERTY_BOK', 'PROPERTY_WHICH']);
+    <div data-path="<?=$APPLICATION->GetCurPage()?>" class="greyline row margin0 block-with-bg" style="position: relative; z-index: 1;">
+        <div class="banners-big front <?=(mob_detect())?"view_2":""?>">
+            <div class="maxwidth-banner">
 
-        $items = [];
+                <div class="slider_toppp_video">
 
-        $arRes['ITEMS_SELECTED'] = $items_sel->SelectedRowsCount();
+                    <video id="player_844" class="video cover" preload="auto" autoplay muted loop style="width:100%;">
+                        <source src="/bitrix/templates/aspro-digital/images/video.mp4" type="video/mp4">
+                        <!--source src="/bitrix/templates/aspro-digital/images/video.webm" type="video/webm"-->
+                        <!--source src="/bitrix/templates/aspro-digital/images/video.ogg" type='video/ogg'-->
+                        <a href="/bitrix/templates/aspro-digital/images/video.mp4">Скачайте видео</a>.
+                    </video>
 
-        if(!$arRes['ITEMS_SELECTED']) {
-            $ids = [];
-        } else {?>
-            <div id="triple" class="drag-block container" data-class="BIG_BANNER_INDEX_drag" data-order="1">
-            <div class="row margin0">
-            <div class="mixed_banners clearfix">
-            <div class="big_banners_block">
-                <div class="banners-big wmix_banner front view_2">
-                    <div class="maxwidth-banner">
-                        <div class="flexslider unstyled dark-nav flexslider-control-nav flexslider-direction-nav" data-plugin-options='{"directionNav": true, "customDirection": ".nav-carousel a", "controlNav": true, "nav" : "normal", "slideshow": true, "animation": "slide", "direction": "horizontal", "slideshowSpeed": 5000, "animationSpeed": 600, "animationLoop": true}'>
-                            <ul class="slides items">
-                                <?
-                                while ($item = $items_sel->Fetch()) {
+                    <video id="player_845" class="video cover" preload="auto" autoplay muted loop style="width:100%;">
+                        <source src="/bitrix/templates/aspro-digital/images/video1.mp4" type="video/mp4">
+                        <!--source src="/bitrix/templates/aspro-digital/images/video1.webm" type="video/webm"-->
+                        <!--source src="/bitrix/templates/aspro-digital/images/video1.ogg" type='video/ogg'-->
+                        <a href="/bitrix/templates/aspro-digital/images/video.mp4">Скачайте видео</a>.
+                    </video>
 
-                                    $items[] = $item;
-
-                                    if ($arResult['ID'] == $item['PROPERTY_WHICH_VALUE']) {
-
-                                        if($item['PROPERTY_BOK_VALUE'] <> "Да"):
-
-
-                                            if ($item['PROPERTY_VIDEO_VALUE'])
-                                                $v = $item['PROPERTY_VIDEO_VALUE'];
-
-                                            $im_pr = CFile::ResizeImageGet($item['PREVIEW_PICTURE'], array('width' => 570), BX_RESIZE_IMAGE_EXACT, true);
-
-                                            $im_det = CFile::ResizeImageGet($item['DETAIL_PICTURE'], array('width' => 1427, 'height' => 628), BX_RESIZE_IMAGE_EXACT, true);
-
-                                            ?>
-                                            <li class="44 box item <?= ($v) ? "wvideo" : "" ?>" id="bx_3218110189_<?= $item['ID'] ?>"
-                                                style="background: url(<?=$im_det['src']?>) center center / cover no-repeat !important;" data-slide_index="0"
-                                                data-video_source="PROPERTY" data-video_player="HTML5" data-video_src="<?= $v ?>" data-video_autoplay="1"
-                                                data-video_disable_sound="1" data-video_loop="1" data-video_cover="1" aria-hidden="true">
-                                                <? if ($v): ?>
-                                                    <div class="wrapper_video">
-                                                        <video autobuffer="" playsinline="" webkit-playsinline="" id="player_<?= $item['ID'] ?>"
-                                                               class="video cover" loop="" muted="" autoplay>
-                                                            <source src="<?= $v ?>" type="video/mp4; codecs=&quot;avc1.42E01E, mp4a.40.2&quot;">
-                                                        </video>
-                                                    </div>
-                                                <?endif ?>
-                                                <div class="maxwidth-theme">
-                                                    <div class="row light ">
-                                                        <div class="col-md-6 text">
-                                                            <div class="inner" style="padding-top: 183px;">
-                                                                <div class="section"><?= $item['PREVIEW_TEXT'] ?></div>
-                                                                <div class="title"><?= $item['NAME'] ?></div>
-                                                                <div class="text-block"><?= $item['DETAIL_TEXT'] ?></div>
-                                                                <div class="buttons">
-                                                                    <a href="<?= $item['PROPERTY_HREF_VALUE'] ?>"
-                                                                       class="btn btn-default"><?= $item['PROPERTY_TEXT_VALUE'] ?></a>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-md-6 img">
-                                                            <div class="inner">
-                                                                <?if($item['PREVIEW_PICTURE']):?>
-                                                                <img class="plaxy" src="<?=$im_pr['src']?>" alt="<?=$item['NAME']?>" title="<?=$item['NAME']?>">
-                                                                <?endif?>
-                                                            </div>
-                                                        </div>
-                                                        <div class="loading_video">
-                                                            <hr>
-                                                            <hr>
-                                                            <hr>
-                                                            <hr>
-                                                        </div>
-                                                        <div class="wrap">
-                                                            <div class="inner">
-                                                                <div class="tablet_img"
-                                                                     style="background:url(<?=$im_det['src']?>) center center / cover no-repeat"><?if($item['PREVIEW_PICTURE']):?>
-                                                                        <img class="plaxy" src="<?=$im_pr['src']?>" alt="<?=$item['NAME']?>" title="<?=$item['NAME']?>">
-                                                                    <?endif?>
-                                                                </div>
-                                                                <div class="tablet_text">
-                                                                    <div class="title"><?= $item['NAME'] ?></div>
-                                                                    <div class="text-block"><?= $item['DETAIL_TEXT'] ?></div>
-                                                                    <div class="banner_buttons">
-                                                                        <a href="<?= $item['PROPERTY_HREF_VALUE'] ?>"
-                                                                           class="btn btn-default btn-transparent-bg"><?= $item['PROPERTY_TEXT_VALUE'] ?></a>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="overlay dark"></div>
-                                            </li>
-                                            <?
-                                            endif;
-
-                                    } // which
-
-                                }?>
-                            </ul>
-                        </div>
-                    </div>
                 </div>
-            </div>
-            <div class="small_banners_block">
-                <div class="mix_banners <?=(mob_detect())?"bottom":""?> clearfix">
-                    <?
-                    foreach($items as $item) {
-
-                        #pr($item);
-
-                        if ($arResult['ID'] == $item['PROPERTY_WHICH_VALUE']) {
-                            if ($item['PROPERTY_BOK_VALUE'] == "Да"):
-                                $im_det = CFile::ResizeImageGet($item['DETAIL_PICTURE'], array('width' => 476, 'height' => 314), BX_RESIZE_IMAGE_EXACT, true);
-                                ?>
-                                <div class="item light" id="bx_3218110189_<?=$item['ID']?>" style="background:url('<?=$im_det['src']?>') center center / cover no-repeat">
-                                    <div class="text">
-                                        <div class="section"><?=$item['PREVIEW_TEXT']?></div>
-                                        <div class="title"><?=$item['NAME']?></div>
-                                    </div>
-                                    <a href="<?=$item['PROPERTY_HREF_VALUE']?>"></a>
-                                </div>
-                            <?endif;
-                        }
-
-                    }
-                    ?>
-                </div>
-            </div>
-            <?
-        }
-        ?>
-        </div>
-        </div>
-        </div>
-    <?}
-    else{?>
-        <div data-path="<?=$APPLICATION->GetCurPage()?>" class="greyline row margin0 block-with-bg" style="position: relative; z-index: 1;">
-            <div class="banners-big front <?=(mob_detect())?"view_2":""?>">
-                <div class="maxwidth-banner">
-
-                    <div class="slider_toppp_video">
-
-                        <video id="player_844" class="video cover" preload="auto" autoplay muted loop style="width:100%;">
-                            <source src="/bitrix/templates/aspro-digital/images/video.mp4" type="video/mp4">
-                            <!--source src="/bitrix/templates/aspro-digital/images/video.webm" type="video/webm"-->
-                            <!--source src="/bitrix/templates/aspro-digital/images/video.ogg" type='video/ogg'-->
-                            <a href="/bitrix/templates/aspro-digital/images/video.mp4">Скачайте видео</a>.
-                        </video>
-
-                        <video id="player_845" class="video cover" preload="auto" autoplay muted loop style="width:100%;">
-                            <source src="/bitrix/templates/aspro-digital/images/video1.mp4" type="video/mp4">
-                            <!--source src="/bitrix/templates/aspro-digital/images/video1.webm" type="video/webm"-->
-                            <!--source src="/bitrix/templates/aspro-digital/images/video1.ogg" type='video/ogg'-->
-                            <a href="/bitrix/templates/aspro-digital/images/video.mp4">Скачайте видео</a>.
-                        </video>
-
-                    </div>
 
 
 
-                    <div class="flexslider unstyled slider_toppp " data-plugin-options='{"directionNav": true, "customDirection": ".nav-carousel a", "controlNav": true, "slideshow": true, "animation": "slide", "direction": "horizontal", "slideshowSpeed": 5000, "animationSpeed": 600, "animationLoop": true}'>
+                <div class="flexslider unstyled slider_toppp " data-plugin-options='{"directionNav": true, "customDirection": ".nav-carousel a", "controlNav": true, "slideshow": true, "animation": "slide", "direction": "horizontal", "slideshowSpeed": 5000, "animationSpeed": 600, "animationLoop": true}'>
 
 
-                        <ul class="slides items">
+                    <ul class="slides items">
 
-                            <? $i = 0; ?>
-                            <? foreach ($arResult['PROPERTIES']['slider_stroka1']['VALUE'] as $iteam) { ?>
-                                <li class="item" data-slide_index="0" >
-                                    <div class="text_videoo maxwidth-theme">
-                                        <div class="row light ">
+                        <? $i = 0; ?>
+                        <? foreach ($arResult['PROPERTIES']['slider_stroka1']['VALUE'] as $iteam) { ?>
+                            <li class="item" data-slide_index="0" >
+                                <div class="text_videoo maxwidth-theme">
+                                    <div class="row light ">
 
-                                            <div class="col-md-12 text">
-                                                <div class="inner">
-                                                    <div class="text-block"><?= $iteam; ?></div>
-                                                    <div class="title"><?= $arResult['PROPERTIES']['slider_stroka2']['VALUE'][$i]; ?></div>
-                                                    <div class="text-block"><?= $arResult['PROPERTIES']['slider_stroka3']['VALUE'][$i]; ?></div>
+                                        <div class="col-md-12 text">
+                                            <div class="inner">
+                                                <div class="text-block"><?= $iteam; ?></div>
+                                                <div class="title"><?= $arResult['PROPERTIES']['slider_stroka2']['VALUE'][$i]; ?></div>
+                                                <div class="text-block"><?= $arResult['PROPERTIES']['slider_stroka3']['VALUE'][$i]; ?></div>
 
-                                                    <span class="animate-load twosmallfont colored  white btn-default btn" data-event="jqm" data-param-id="<?= $arResult['PROPERTIES']['slider_but_id1']['VALUE'][$i]; ?>" data-name="<?= $arResult['PROPERTIES']['slider_but_ssilka1']['VALUE'][$i]; ?>"><?= $arResult['PROPERTIES']['slider_but_text1']['VALUE'][$i]; ?></span>
-                                                    <span onclick="return location.href = '<?= $arResult['PROPERTIES']['slider_but_ssilka2']['VALUE'][$i]; ?>'"    class="callback-block animate-load twosmallfont colored  blue btn-default btn"><?= $arResult['PROPERTIES']['slider_but_text2']['VALUE'][$i]; ?></span>
-                                                </div>
+                                                <span class="animate-load twosmallfont colored  white btn-default btn" data-event="jqm" data-param-id="<?= $arResult['PROPERTIES']['slider_but_id1']['VALUE'][$i]; ?>" data-name="<?= $arResult['PROPERTIES']['slider_but_ssilka1']['VALUE'][$i]; ?>"><?= $arResult['PROPERTIES']['slider_but_text1']['VALUE'][$i]; ?></span>
+                                                <span onclick="return location.href = '<?= $arResult['PROPERTIES']['slider_but_ssilka2']['VALUE'][$i]; ?>'"    class="callback-block animate-load twosmallfont colored  blue btn-default btn"><?= $arResult['PROPERTIES']['slider_but_text2']['VALUE'][$i]; ?></span>
                                             </div>
-
                                         </div>
+
                                     </div>
-                                </li>
-                                <? $i++; ?>
-                            <? } ?>
-
-                        </ul>
-
-                        <div class="maxwidth-theme">
-                            <div class="col-md-12">
-                                <div class="nav-carousel">
-                                    <ul class="flex-direction-nav">
-                                        <li class="flex-nav-prev">
-                                            <a href="javascript:void(0)" class="flex-prev"><span>Prev</span></a>
-                                        </li>
-                                        <li class="flex-nav-next">
-                                            <a href="javascript:void(0)" class="flex-next"><span>Next</span></a>
-                                        </li>
-                                    </ul>
                                 </div>
+                            </li>
+                            <? $i++; ?>
+                        <? } ?>
+
+                    </ul>
+
+                    <div class="maxwidth-theme">
+                        <div class="col-md-12">
+                            <div class="nav-carousel">
+                                <ul class="flex-direction-nav">
+                                    <li class="flex-nav-prev">
+                                        <a href="javascript:void(0)" class="flex-prev"><span>Prev</span></a>
+                                    </li>
+                                    <li class="flex-nav-next">
+                                        <a href="javascript:void(0)" class="flex-next"><span>Next</span></a>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
-
                     </div>
+
                 </div>
             </div>
         </div>
-    <?}?>
-<? } ?>
+    </div>
+<?}?>
+<? if ($arResult['PROPERTIES']['slider2_on']['VALUE'] == 'Да') { ?>
+    <? include('part48.php'); ?>
+<?}?>
 <?//Заголовок?>
 <?if(!empty($arResult['PROPERTIES']['zgolovok_h1']['VALUE'])):?>
     <div class="<?if($arResult['PROPERTIES']['zgolovok_fon']['VALUE'] != 'Нет'):?>greyline<?endif;?> row margin0 block-with-bg" style="position: relative; z-index: 2;">
@@ -430,6 +294,8 @@ else { ?>
     <?//НАШИ УСЛУГИ ?>
     <?php include('part44.php');?>
     <?//НАШИ УСЛУГИ ?>
+    <?php include('part45.php');?>
+    <?//О компании ?>
     <?php include('part45.php');?>
     <?
 }

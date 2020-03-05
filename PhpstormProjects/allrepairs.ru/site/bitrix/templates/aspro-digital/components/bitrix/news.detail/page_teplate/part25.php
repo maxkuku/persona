@@ -1,10 +1,7 @@
 <?if($arResult['PROPERTIES']['text3_on']['VALUE']=='Да'){?>
-
 <div id="part25" class="<?if($arResult['PROPERTIES']['fon17']['VALUE']=='Да'){?>greyline<?}?> row margin0 block-with-bg pad_bot" >
 <div class="maxwidth-theme">
 <h2 class="text-center cfonts"><?=$arResult['PROPERTIES']['text3_title']['~VALUE'];?> </h2>
-		
-
 	<div class="item-views list list-type-block image_left blog">
 		<div class="items row">
 			
@@ -40,10 +37,7 @@
 											
 				
 		</div>
-	</div>	
-
+	</div>
 </div>	
-</div>	
-	
-	
+</div>
 <?}?>

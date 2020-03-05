@@ -196,11 +196,15 @@ iframe{
     color: #fff;
     margin: 10px 0;
 }
+.order_services_frame div[id*=comp_] {
+    height: 100%;
+}
+.order_services_frame .form.popup{
+    height: 100%;
+    overflow: auto;
+}
 @media(min-width:768px){
-    .item-views.tarifs.type_3 .item .image .top_block{
-        background: rgb(0,0,0);
-        background: linear-gradient(0deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 100%);
-    }
+    
     .order_services_frame .jqmClose {
         right: -40px!important;
         background: url(/bitrix/templates/aspro-digital/images/digital.png) -160px -172px no-repeat!important;

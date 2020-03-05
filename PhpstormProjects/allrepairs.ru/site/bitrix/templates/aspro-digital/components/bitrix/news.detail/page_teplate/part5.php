@@ -123,7 +123,7 @@
         <div id="part5" class="<?=$arResult['PROPERTIES']['pricetype']['VALUE']?> price maxwidth-theme tabs_ajax catalog item-views table catalog_table_2 <?if($arResult['PROPERTIES']['fon5']['VALUE']=='Да'){?>greyline<?}?>" data-slice="Y">
         <div class="item-views tarifs type_3 tarifs_scroll">
         <h2 class="text-center cfonts"><?=$arResult['PROPERTIES']['cena_class_zagolok']['VALUE'];?></h2>
-        <div class="unstyled row dark-nav flexslider front view-control navigation-vcenter  <?=$arResult['PROPERTIES']['pricetype']['VALUE']?> maxwidth-theme" id="bx_<?=$arResult['ID']?>_490" data-plugin-options='{"useCSS": false, "directionNav": true, "controlNav" :false, "animationLoop": true, "slideshow": false, "counts": [4, 3, 2, 1], "itemMargin": 0}'>
+        <div class="unstyled row dark-nav flexslider front view-control navigation-vcenter  <?=$arResult['PROPERTIES']['pricetype']['VALUE']?> maxwidth-theme" id="bx_<?=$arResult['ID']?>_490" data-plugin-options='{"useCSS": false, "directionNav": false, "controlNav" :false, "animationLoop": true, "slideshow": false, "counts": [4, 3, 2, 1], "itemMargin": 0}'>
 
                 <ul class="slides flexbox" itemscope="" itemtype="http://schema.org/ItemList">
         <?$i=0;?>

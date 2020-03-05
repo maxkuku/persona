@@ -2041,7 +2041,7 @@ body .maxwidth-theme, body.fill_bg_y .contacts-page-map, body.fill_bg_y .banners
     color: #999;
 }
 .font_upper {
-    font-size: .6667em;
+    font-size: 0.75em;
     line-height: 1.3em;
     text-transform: uppercase;
     letter-spacing: .8px!important;
@@ -2157,12 +2157,20 @@ body .maxwidth-theme, body.fill_bg_y .contacts-page-map, body.fill_bg_y .banners
 
 }
 
-div:not(.portfolio-items) .item-views .item {
+.item-views div:not(.portfolio-items) .item {
     position: relative;
     margin-top: 16px;
     margin-bottom: 16px;
 }
 
+video.video.cover {
+    height: initial!important;
+    margin-top: initial!important;
+}
+
+.item-views.portfolio .portfolio-items .item {
+    margin: 0;
+}
 /*СЛАЙДЕР*/
 .drag-block[data-order="1"] {
     -webkit-box-ordinal-group: 2;
@@ -2627,6 +2635,20 @@ body:not(.with_decorate) .wmix_banner.banners-big .item .video {
 .bottom-block{
     display: none;
 }
+
+.prior-h2 {
+    position: relative;
+    z-index: 1;
+    color: #333;
+    line-height: 1.35em;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    letter-spacing: normal;
+    font-family: "Montserrat" ,Arial,sans-serif;
+    font-weight: normal;
+    font-size: 2em;
+}
+
 /* НАШИ УСЛУГИ */
 
 /* Тизеры */
@@ -2750,3 +2772,353 @@ html[xmlns] .clearfix {
 }
 
 /* Тизеры */
+
+
+/*О компании*/
+.COMPANY_INDEX {
+    padding-top: 20px;
+}
+.drag-block.container {
+    margin-bottom: 0;
+    position: relative;
+}
+.drag-block[data-order="10"] {
+    -webkit-box-ordinal-group: 11;
+    -ms-flex-order: 10;
+    order: 10;
+}
+body .drag-block.container:not(.hidden) {
+    border-bottom: 1px solid #ebebef;
+}
+.container:after, .container:before, .row:after, .row:before {
+    display: table;
+    content: " ";
+}
+.btn-group-vertical>.btn-group:after, .btn-toolbar:after, .clearfix:after, .container:after, .dropdown-menu>li>a, .form-horizontal .form-group:after, .modal-footer:after, .navbar-collapse:after, .navbar-header:after, .navbar:after, .pager:after, .panel-body:after, .row:after {
+    clear: both;
+}
+.border_content>.row, .container>.row, .greyline>.row, .logo_and_menu-row>.row, .main>.row, section.page-top>.row {
+    margin-left: 0;
+    margin-right: 0;
+}
+.COMPANY_INDEX .title_block {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+@media (min-width: 992px) {
+    .col-md-12 {
+        width: 100%;
+    }
+}
+.COMPANY_INDEX .row .maxwidth-theme .title_block h3 {
+    line-height: 39px;
+    font-size: 30px;
+    margin: 30px 0 41px -1px;
+}
+.COMPANY_INDEX .row .maxwidth-theme .title_block .right_link_block {
+    line-height: 18px;
+    font-size: .9335em;
+}
+.container>.row>.maxwidth-theme, .greyline>.row>.maxwidth-theme, .logo_and_menu-row>.row>.maxwidth-theme, .main>.row>.maxwidth-theme, section.page-top>.row>.maxwidth-theme {
+    padding: 0;
+}
+.COMPANY_INDEX .company-front.flexbox {
+    align-items: flex-start;
+    padding-bottom: 60px;
+}
+.maxwidth-theme:after, .maxwidth-theme:before {
+    content: "";
+    display: block;
+    clear: both;
+}
+.option-bold {
+    font-weight: 500!important;
+}
+.COMPANY_INDEX .company-front>div:first-child h4 {
+    margin: -6px 20px 17px 0;
+    line-height: 29px;
+    font-size: 1.3335em;
+}
+.COMPANY_INDEX .company {
+    margin-bottom: 17px;
+    width: 90%;
+}
+.COMPANY_INDEX .company_buttons {
+    padding-top: 15px;
+}
+.COMPANY_INDEX .btn.btn-default {
+    margin-right: 18px;
+}
+.flexslider {
+    margin: 0;
+    padding: 0;
+}
+.flexslider {
+    position: relative;
+    margin-top: 0!important;
+    border: 0;
+    border-radius: 2px;
+    box-shadow: none;
+}
+.flex-viewport {
+    max-height: 2000px;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    transition: all 1s ease;
+}
+html[xmlns] .flexslider .slides {
+    display: block;
+}
+.flexslider .slides {
+    zoom: 1;
+}
+.flex-control-nav, .flex-direction-nav, .slides, .slides>li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.flex-control-nav, .flex-direction-nav, .slides, .slides>li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.flexslider .slides:after {
+    content: "\0020";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+.COMPANY_INDEX .navigation-vcenter .flex-direction-nav {
+    margin-top: -23px;
+    top: auto;
+    bottom: 63px;
+    right: 87px;
+    left: auto;
+    width: auto;
+}
+.COMPANY_INDEX .navigation-vcenter .flex-direction-nav li {
+    visibility: visible;
+    right: 3px;
+}
+.front .flex-direction-nav>li {
+    position: absolute;
+    width: 100%;
+    padding: 0;
+}
+.COMPANY_INDEX .flexslider.inside.navigation-vcenter .flex-direction-nav .flex-prev {
+    background: #f6f7fa;
+}
+.flexslider.inside.navigation-vcenter .flex-direction-nav .flex-prev, .flexslider.inside.navigation-vcenter:hover .flex-direction-nav .flex-prev {
+    right: auto;
+}
+li {
+    line-height: 24px;
+}
+.front .flex-direction-nav>li {
+    position: absolute;
+    width: 100%;
+    padding: 0;
+}
+.COMPANY_INDEX .navigation-vcenter .flex-direction-nav li {
+    visibility: visible;
+}
+.COMPANY_INDEX .flexslider .flex-direction-nav li.flex-nav-next, .COMPANY_INDEX .flexslider:hover .flex-direction-nav li.flex-nav-next {
+    right: -47px;
+}
+.flexslider.inside.navigation-vcenter .flex-direction-nav .flex-next, .flexslider.inside.navigation-vcenter:hover .flex-direction-nav .flex-next {
+    left: auto;
+}
+
+.COMPANY_INDEX .flexslider.inside.navigation-vcenter:hover .flex-direction-nav .flex-next, .flexslider.inside.navigation-vcenter .flex-direction-nav .flex-next {
+    right: -20px !important;
+    background: #f6f7fa;
+}
+.flex-direction-nav a:before, .front .flex-direction-nav a:before {
+    content: "";
+    left: 50%;
+    position: absolute;
+    top: 6px;
+
+    width: 20px;
+    height: 18px;
+    margin: 0 0 0 -10px;
+    opacity: .7;
+    transition: opacity .3s;
+}
+.COMPANY_INDEX .flex-direction-nav a:before {
+    left: 65%;
+    top: 13px;
+}
+.COMPANY_INDEX .flexslider .flex-direction-nav li.flex-nav-prev a:before {
+    background: url(https://heat.centino-demo.ru/bitrix/templates/centino-heat/images/svg/left_Arrow_banner_sm_grey.svg) -1px 0 no-repeat;
+    opacity: 1;
+}
+.flex-direction-nav a:before, .front .flex-direction-nav a:before {
+    content: "";
+    left: 50%;
+    position: absolute;
+    top: 6px;
+
+    width: 20px;
+    height: 18px;
+    margin: 0 0 0 -10px;
+    opacity: .7;
+    transition: opacity .3s;
+}
+.COMPANY_INDEX .flexslider .flex-direction-nav li.flex-nav-next a:before {
+    background: url(https://heat.centino-demo.ru/bitrix/templates/centino-heat/images/svg/right_Arrow_banner_sm_grey.svg) -1px 0 no-repeat;
+    opacity: 1;
+    left: 70%;
+}
+ul.flex-direction-nav.opacity0 {
+    opacity: 1 !important;
+}
+.flex-direction-nav a.flex-disabled {
+    opacity: 1 !important;
+}
+/*О компании*/
+
+/*Услуги c иконками*/
+.item-views.blocks .title_block .right_link_block {
+    float: right;
+    position: relative;
+    z-index: 1;
+}
+.item-views.blocks .title_block .right_link_block {
+    margin-top: 13px;
+}
+.FLOAT_BANNERS_INDEX .float_banners_v1.item-views .title_block .right_link_block {
+    padding-top: 0;
+}
+.drag-block h3 {
+    font-size: 2em;
+}
+.item-views.blocks h3, .item-views.blocks h3.title {
+    padding: 0 0 34px;
+    margin: 0;
+    display: inline-block;
+    position: relative;
+}
+.item-views.blocks h3 {
+    line-height: 39px!important;
+}
+.item-views.blocks .title_block h3 {
+    padding-bottom: 40px;
+}
+body .container .item-views.blocks h3, body .container .item-views.blocks h3.title, body .container .row .maxwidth-theme h3 {
+    margin-left: -2px;
+}
+.item-views.blocks .title_block {
+    clear: both;
+}
+.float_banners_v1 .items .item .title {
+    margin-bottom: 19px;
+    max-height: 48px;
+    overflow: hidden;
+}
+.option-bold {
+    font-weight: 500!important;
+}
+.color-333 {
+    color: #333;
+}
+.lh-145 {
+    line-height: 1.45em;
+}
+.fs-17 {
+    font-size: 1.1335em;
+}
+.float_banners_v1 .items .item .preview_text {
+    max-height: 64px;
+    overflow: hidden;
+    margin-bottom: 75px;
+}
+.color-666 {
+    color: #666;
+}
+.float_banners_v1 .items .item .arrow {
+    width: 40px;
+    height: 40px;
+    background-image: url(https://heat.centino-demo.ru/bitrix/templates/centino-heat/images/svg/right_Arrow_banner_sm_grey.svg);
+    background-position: 16px 12px;
+    position: absolute;
+    bottom: 40px;
+    left: 39px;
+}
+
+.b-r-small {
+    border-radius: 2px;
+}
+.border {
+    border: 1px solid #ebebef;
+}
+.bg-no-rep {
+    background-repeat: no-repeat;
+}
+
+.all_prnt_block {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+.float_banners_v1 .items .item {
+    padding: 40px;
+    margin-bottom: 32px;
+}
+
+.item-views .item {
+    margin-bottom: 10px;
+    position: relative;
+    transition: box-shadow .3s;
+}
+.b-r-small {
+    border-radius: 2px;
+}
+.pointer {
+    cursor: pointer;
+}
+.border {
+    border: 1px solid #ebebef;
+}
+
+.row.flexbox {
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.shadow-light-hover:hover {
+    box-shadow: 0 10px 20px rgba(211,215,221,.4)!important;
+}
+.bg-grey1-hover:hover {
+    background-color: #f6f7fa;
+}
+.float_banners_v1 .items .item:hover .arrow {
+    background-color: #00569c;
+    border-color: #00569c;
+}
+.float_banners_v1 .items .item:hover .arrow {
+    background-image: url(https://heat.centino-demo.ru/bitrix/templates/centino-heat/images/svg/right_Arrow_banner_sm_white.svg);
+}
+.option-bold-us {
+    font-weight: 501!important;
+}
+.color-666 {
+    color: #666;
+}
+.lh-150 {
+    line-height: 1.5em;
+}
+.fs-14 {
+    font-size: .9335em;
+}
+/*Услуги c иконками*/

@@ -12,12 +12,12 @@ $basketViewClass = strtolower($arTheme["ORDER_BASKET_VIEW"]["VALUE"]);
 	<div class="logo_and_menu-row">
 		<div class="logo-row">
 			<div class="maxwidth-theme">
-				<div class="logo-block col-md-3 col-sm-3">
+				<div class="logo-block col-md-4 col-sm-4">
 					<div class="logo<?=$logoClass?>">
 						<?=CDigital::ShowLogo();?>
 					</div>
 				</div>
-				<div class="col-md-5 hidden-sm hidden-xs search_wrap center">
+				<div class="col-md-4 hidden-sm hidden-xs search_wrap center">
 					<div class="search-block inner-table-block">
 						<?$APPLICATION->IncludeComponent(
 							"bitrix:main.include",

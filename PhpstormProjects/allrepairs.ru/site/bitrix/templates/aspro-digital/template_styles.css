@@ -108,7 +108,9 @@ img.captcha_img{height:40px;}
 .docs .txt{background:url("images/docs/txt.png") no-repeat;}
 .video .title{text-align:center;margin:5px 0 25px;}
 .dark-color{color:#222;}
-
+body .custw {
+    width: 377px;
+}
 .shine{position:relative;}
 .hover_shine .shine:before{position: absolute;top: 0;left: -45%;z-index: 2;display: block;content: '';width: 25%;height: 100%;
     background: -webkit-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,.3) 100%);
@@ -572,7 +574,7 @@ body.header-v9 .page-top-wrapper.color.v3 {margin-top:0; box-shadow: 0px 4px 10p
 body.mheader-v2 .page-top-wrapper.color.v3{box-shadow: 0px 4px 10px 0px rgba(0,0,0,0.15) inset;}
 
 .body.index header.topmenu-LIGHT .logo_and_menu-row, header.topmenu-LIGHT.fixed .logo_and_menu-row{border:none;}
-.body:not(.index) .main > .container{padding-bottom:100px;}
+.body:not(.index) .main > .container{/*padding-bottom:100px;*/}
 .body.nopadding .main > .container{padding-bottom:0px;}
 
 /* MOBILE HEADER v1 */
@@ -1789,7 +1791,7 @@ body .list-type-block.item-views.reviews .item > .body-info{padding-top:0px;}
 .catalog.item-views.front .flexslider:hover .flex-direction-nav .flex-prev, .catalog.item-views.front .flexslider .flex-direction-nav .flex-prev, .flexslider.navigation-vcenter:hover .flex-direction-nav .flex-prev, .flexslider.navigation-vcenter .flex-direction-nav .flex-prev {left:-40px;right:auto;}
 .flexslider.inside.navigation-vcenter:hover .flex-direction-nav .flex-prev, .flexslider.inside.navigation-vcenter .flex-direction-nav .flex-prev {left:10px;right:auto;}
 .catalog.item-views.front .flexslider:hover .flex-direction-nav .flex-next, .catalog.item-views.front .flexslider .flex-direction-nav .flex-next, .flexslider.navigation-vcenter:hover .flex-direction-nav .flex-next, .flexslider.navigation-vcenter .flex-direction-nav .flex-next{right:-40px;left:auto;}
-.flexslider.inside.navigation-vcenter:hover .flex-direction-nav .flex-next, .flexslider.inside.navigation-vcenter .flex-direction-nav .flex-next {right:10px;left:auto;}
+.flexslider.inside.navigation-vcenter:hover .flex-direction-nav .flex-next, .flexslider.inside.navigation-vcenter .flex-direction-nav .flex-next {right:4px;left:auto;}
 .front .flexslider:hover .flex-direction-nav .flex-next{opacity:1;}
 
 .front .flexslider .flex-control-nav{bottom:25px;z-index:1;}

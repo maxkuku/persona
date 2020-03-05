@@ -9,7 +9,7 @@
                 $i = 0;
 
                 $arFilter = Array('IBLOCK_ID' => 36, 'GLOBAL_ACTIVE' => 'Y');
-                $db_list = CIBlockSection::GetList(Array('SORT' => 'ASC'), $arFilter, true);
+                $db_list = CIBlockSection::GetList(Array("SORT"=>"ASC"), $arFilter, true);
                 $db_list->NavStart(20);
                 while ($ar_result = $db_list->GetNext()) {
                     ?>
@@ -33,7 +33,7 @@
                                 CModule::IncludeModule('iblock');
                                 $arSelect = Array("ID", "IBLOCK_ID", "NAME", 'PREVIEW_TEXT', 'SECTION_ID', 'PREVIEW_PICTURE', "*");
                                 $arFilter = Array("IBLOCK_ID" => 36, "IBLOCK_SECTION_ID" => $item, "ACTIVE_DATE" => "Y", "ACTIVE" => "Y");
-                                $res = CIBlockElement::GetList(Array(), $arFilter, false, Array("nPageSize" => 50), $arSelect);
+                                $res = CIBlockElement::GetList(Array("SORT"=>"ASC"), $arFilter, false, Array("nPageSize" => 50), $arSelect);
                                 while ($ob = $res->GetNextElement()) {
                                     $arProps = $ob->GetProperties();
                                     $arFields = $ob->GetFields();
