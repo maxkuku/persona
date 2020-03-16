@@ -1,203 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="438354ea-5184-4bad-a1c5-8517365ee221" name="Default" comment="">
-      <change beforePath="" afterPath="$APPLICATION_CONFIG_DIR$/consoles/db/f97ce2eb-0524-43eb-99f9-60e0aceeccf5/console.sql" />
-      <change beforePath="" afterPath="$APPLICATION_CONFIG_DIR$/options/runner.layout.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/modules/aspro.digital/classes/general/CDigital.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/.styles.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/components/bitrix/news.detail/page_teplate/part1.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/components/bitrix/news.detail/page_teplate/part19.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/components/bitrix/news.detail/page_teplate/part2.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/components/bitrix/news.detail/page_teplate/template.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/components/bitrix/news.list/banners/template.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/css/animation/animate.min.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/css/animation/animation_ext.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/css/bootstrap.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/css/bootstrap.min.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/css/custom.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/css/custom.tar.gz" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/css/flaticon.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/css/flaticon.eot" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/css/flaticon.ttf" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/css/flaticon.woff" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/css/flaticon1.eot" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/css/flaticon1.ttf" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/css/flaticon1.woff" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/css/flaticon2.ttf" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/css/flaticon2.woff" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/css/flaticon3.eot" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/css/flaticon3.ttf" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/css/flaticon3.woff" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/css/font-1.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/css/font-2.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/css/font-3.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/css/font-4.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/css/font-5.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/css/font-6.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/css/font-7.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/css/font-8.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/css/font-9.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/css/fonts/font-awesome/css/font-awesome.min.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/css/fonts/font-awesome/fonts/FontAwesome.otf" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/css/fonts/font-awesome/fonts/fontawesome-webfont.eot" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/css/fonts/font-awesome/fonts/fontawesome-webfont.svg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/css/fonts/font-awesome/fonts/fontawesome-webfont.ttf" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/css/fonts/font-awesome/fonts/fontawesome-webfont.woff" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/css/fonts/font-awesome/fonts/fontawesome-webfont.woff2" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/css/fonts/open_sans/LICENSE.txt" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/css/fonts/open_sans/OpenSans-Bold.ttf" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/css/fonts/open_sans/OpenSans-BoldItalic.ttf" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/css/fonts/open_sans/OpenSans-ExtraBold.ttf" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/css/fonts/open_sans/OpenSans-ExtraBoldItalic.ttf" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/css/fonts/open_sans/OpenSans-Light.ttf" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/css/fonts/open_sans/OpenSans-LightItalic.ttf" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/css/fonts/open_sans/OpenSans-Regular.ttf" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/css/fonts/open_sans/OpenSans-RegularItalic.ttf" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/css/fonts/open_sans/OpenSans-SemiBold.ttf" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/css/fonts/open_sans/OpenSans-SemiBoldItalic.ttf" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/css/h1-bold.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/css/h1-normal.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/css/jquery.fancybox.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/css/print.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/css/print.min.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/css/responsive.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/css/responsive.min.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/css/spectrum.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/css/spectrum.min.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/css/theme-elements.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/css/theme-responsive.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/css/width-1.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/css/width-2.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/css/width-3.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/css/width-4.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/description.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/footer.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/footer.php_old" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/header.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/header.php_OLD" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/page_blocks/__header_top_line_2.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/page_blocks/_old/header_header1.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/page_blocks/_old/header_header2.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/page_blocks/_old/header_header3.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/page_blocks/_old/header_top_line_1.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/page_blocks/_old/header_top_line_2.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/page_blocks/_old/header_top_line_3.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/page_blocks/_old/header_top_line_custom.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/page_blocks/footer_1.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/page_blocks/footer_2.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/page_blocks/footer_3.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/page_blocks/footer_4.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/page_blocks/footer_custom.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/page_blocks/header_1.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/page_blocks/header_10.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/page_blocks/header_11.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/page_blocks/header_12.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/page_blocks/header_13.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/page_blocks/header_14.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/page_blocks/header_15.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/page_blocks/header_2.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/page_blocks/header_3.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/page_blocks/header_4.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/page_blocks/header_5.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/page_blocks/header_6.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/page_blocks/header_7.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/page_blocks/header_8.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/page_blocks/header_9.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/page_blocks/header_custom.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/page_blocks/header_fixed_1.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/page_blocks/header_fixed_2.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/page_blocks/header_fixed_custom.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/page_blocks/header_mobile_1.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/page_blocks/header_mobile_2.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/page_blocks/header_mobile_custom.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/page_blocks/header_mobile_menu_1.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/page_blocks/header_mobile_menu_2.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/page_blocks/header_mobile_menu_custom.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/page_blocks/page_title_1.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/page_blocks/page_title_2.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/page_blocks/page_title_3.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/page_blocks/page_title_4.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/page_blocks/page_title_custom.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/page_templates/.content.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/page_templates/constreuctor.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/page_templates/include_area.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/page_templates/standart.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/snippets/.content.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/snippets/snippet0001.snp" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/snippets/snippet0002.snp" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/snippets/snippet0003.snp" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/snippets/snippet0004.snp" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/snippets/snippet0005.snp" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/snippets/snippet0006.snp" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/snippets/snippet0007.snp" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/snippets/snippet0008.snp" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/snippets/snippet0009.snp" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/snippets/snippet0010.snp" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/snippets/snippet0011.snp" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/snippets/snippet0012.snp" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/snippets/snippet0013.snp" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/snippets/snippet0014.snp" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/styles.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/styles.min.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/template_styles.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/template_styles.min.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/themes/1/colors.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/themes/1/lang/ru/big.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/themes/10/colors.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/themes/10/lang/ru/big.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/themes/11/colors.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/themes/11/lang/ru/big.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/themes/12/colors.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/themes/12/lang/ru/big.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/themes/13/colors.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/themes/13/lang/ru/big.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/themes/14/colors.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/themes/14/lang/ru/big.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/themes/15/colors.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/themes/15/lang/ru/big.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/themes/16/colors.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/themes/16/lang/ru/big.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/themes/17/colors.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/themes/17/lang/ru/big.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/themes/2/colors.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/themes/2/lang/ru/big.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/themes/3/colors.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/themes/3/lang/ru/big.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/themes/4/colors.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/themes/4/lang/ru/big.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/themes/5/colors.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/themes/5/lang/ru/big.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/themes/6/colors.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/themes/6/lang/ru/big.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/themes/7/colors.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/themes/7/lang/ru/big.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/themes/8/colors.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/themes/8/lang/ru/big.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/themes/9/colors.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/themes/9/lang/ru/big.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/themes/CUSTOM_s1/colors.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/vendor/bootstrap.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/vendor/flexslider/__jquery.flexslider-min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/vendor/flexslider/__jquery.flexslider.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/vendor/flexslider/flexslider.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/vendor/flexslider/fonts/flexslider-icon.eot" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/vendor/flexslider/fonts/flexslider-icon.svg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/vendor/flexslider/fonts/flexslider-icon.ttf" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/vendor/flexslider/fonts/flexslider-icon.woff" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/vendor/flexslider/images/bg_play_pause.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/vendor/flexslider/jquery.flexslider-2.7.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/vendor/flexslider/jquery.flexslider.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/vendor/jquery.appear.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/vendor/jquery.cookie.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/vendor/jquery.easing.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/vendor/jquery.validate.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../allrepairs.ru/site/bitrix/templates/aspro-digital/vendor/jquery.viewportchecker.min.js" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/public_html/integramed.info/.htaccess" afterPath="$PROJECT_DIR$/public_html/integramed.info/.htaccess" />
-      <change beforePath="$PROJECT_DIR$/public_html/integramed.info/index.php" afterPath="$PROJECT_DIR$/public_html/integramed.info/index.php" />
-      <change beforePath="$PROJECT_DIR$/public_html/integramed.info/robots.txt" afterPath="$PROJECT_DIR$/public_html/integramed.info/robots.txt" />
-    </list>
+    <list default="true" id="438354ea-5184-4bad-a1c5-8517365ee221" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -219,12 +23,39 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name=".htaccess" pinned="true" current-in-tab="true">
-        <entry file="remoteDeploymentFS://&lt;5b6d34e5-36b5-44cd-8f51-ba46fc0a759a&gt;/public_html/integramed.info/.htaccess">
+      <file leaf-file-name="footer.php" pinned="true" current-in-tab="false">
+        <entry file="remoteDeploymentFS://&lt;5b6d34e5-36b5-44cd-8f51-ba46fc0a759a&gt;/public_html/integramed.info/wp-content/themes/integra/footer.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="350">
-              <caret line="40" column="0" lean-forward="true" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+            <state relative-caret-position="-2055">
+              <caret line="29" column="43" lean-forward="false" selection-start-line="29" selection-start-column="43" selection-end-line="29" selection-end-column="43" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="scrips.js" pinned="true" current-in-tab="false">
+        <entry file="remoteDeploymentFS://&lt;5b6d34e5-36b5-44cd-8f51-ba46fc0a759a&gt;/public_html/integramed.info/wp-content/themes/integra/js/scrips.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="203">
+              <caret line="145" column="33" lean-forward="false" selection-start-line="145" selection-start-column="28" selection-end-line="145" selection-end-column="33" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="header.php" pinned="true" current-in-tab="true">
+        <entry file="remoteDeploymentFS://&lt;5b6d34e5-36b5-44cd-8f51-ba46fc0a759a&gt;/public_html/integramed.info/wp-content/themes/integra/header.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="30">
+              <caret line="111" column="31" lean-forward="false" selection-start-line="111" selection-start-column="31" selection-end-line="111" selection-end-column="31" />
+              <folding>
+                <element signature="e#5171#5177#0#HTML" expanded="true" />
+                <element signature="e#5333#5339#0#HTML" expanded="true" />
+                <element signature="e#5495#5501#0#HTML" expanded="true" />
+                <element signature="e#5657#5663#0#HTML" expanded="true" />
+                <element signature="n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#main#0;n#body#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#main#0;n#body#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -254,6 +85,9 @@
       <find>https</find>
       <find>http://i</find>
       <find>main #slider .carousel-caption</find>
+      <find>defaul</find>
+      <find>carous</find>
+      <find>carou</find>
     </findStrings>
     <replaceStrings>
       <replace>//</replace>
@@ -294,6 +128,7 @@
         <option value="&lt;5b6d34e5-36b5-44cd-8f51-ba46fc0a759a&gt;/public_html/integramed.info/wp-content/themes/integra/css/text.css" />
         <option value="&lt;5b6d34e5-36b5-44cd-8f51-ba46fc0a759a&gt;/public_html/integramed.info/wp-content/themes/integra/style.css" />
         <option value="&lt;5b6d34e5-36b5-44cd-8f51-ba46fc0a759a&gt;/public_html/integramed.info/.htaccess" />
+        <option value="&lt;5b6d34e5-36b5-44cd-8f51-ba46fc0a759a&gt;/public_html/integramed.info/wp-content/themes/integra/header.php" />
       </list>
     </option>
   </component>
@@ -313,7 +148,7 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="59" />
     <option name="y" value="93" />
-    <option name="width" value="1473" />
+    <option name="width" value="1664" />
     <option name="height" value="856" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -323,7 +158,7 @@
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1">
+    <navigator proportions="" version="1">
       <flattenPackages />
       <showMembers />
       <showModules />
@@ -336,32 +171,7 @@
       <manualOrder />
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="integra_reg" type="b2602c69:ProjectViewProjectNode" />
-              <item name="integra_reg" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="integra_reg" type="b2602c69:ProjectViewProjectNode" />
-              <item name="integra_reg" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="public_html" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="integra_reg" type="b2602c69:ProjectViewProjectNode" />
-              <item name="integra_reg" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="public_html" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="integramed.info" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
-    </panes>
+    <panes />
   </component>
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="settings.github" />
@@ -430,6 +240,7 @@
       <workItem from="1578677776300" duration="469000" />
       <workItem from="1578730546818" duration="4316000" />
       <workItem from="1578934367851" duration="2728000" />
+      <workItem from="1583857736462" duration="1250000" />
     </task>
     <task id="LOCAL-00001" summary="integra reg">
       <created>1558375059685</created>
@@ -442,13 +253,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="38901000" />
+    <option name="totallyTimeSpent" value="40151000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="59" y="93" width="1473" height="856" extended-state="0" />
+    <frame x="59" y="93" width="1664" height="856" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25615764" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22580644" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18128654" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />

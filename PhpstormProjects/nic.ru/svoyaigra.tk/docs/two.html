@@ -1,0 +1,231 @@
+<?#php header("Access-Control-Allow-Origin: http://webvisor.com");
+#header( "Last-Modified: " . date ("F d Y H:i:s.", filemtime("two.php")) );?>
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="robots" content="noindex, nofollow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Второй раунд</title>
+    <link rel="shortcut icon" href="littlegq.jpg"/>
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="fontawesome.css" type="text/css"/>
+    <link rel="stylesheet" href="style.css?c=<?=rand()?>"/>
+    <script type="application/javascript" src="jquery-3.3.1.min.js"></script>
+    <script type="application/javascript" src="bootstrap.js"></script>
+    <script type="application/javascript" src="aes-min.js"></script>
+    <script type="application/javascript" src="script.js?c=<?=rand()?>"></script>
+    <script>
+        var elem = document.documentElement;
+        function openFullscreen() {
+            if (elem.requestFullscreen) {
+                elem.requestFullscreen();
+            } else if (elem.mozRequestFullScreen) { /* Firefox */
+                elem.mozRequestFullScreen();
+            } else if (elem.webkitRequestFullscreen) { /* Chrome, Safari and Opera */
+                elem.webkitRequestFullscreen();
+            } else if (elem.msRequestFullscreen) { /* IE/Edge */
+                elem.msRequestFullscreen();
+            }
+        }
+        function closeFullscreen() {
+            if (document.exitFullscreen) {
+                document.exitFullscreen();
+            } else if (document.mozCancelFullScreen) { /* Firefox */
+                document.mozCancelFullScreen();
+            } else if (document.webkitExitFullscreen) { /* Chrome, Safari and Opera */
+                document.webkitExitFullscreen();
+            } else if (document.msExitFullscreen) { /* IE/Edge */
+                document.msExitFullscreen();
+            }
+        }
+        $(document).ready(function(){
+            document.addEventListener("keydown", function(event) {
+                if(event.which === 70){
+                    openFullscreen();
+                }
+                if(event.which === 27){
+                    closeFullscreen();
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+
+<div id="wrap" class="two">
+    <img id="logo" src="images/logo-new-b2020.png" alt="logo" class="cornered" />
+    <div id="top"><h1>Второй раунд</h1></div>
+    <div id="mid">
+        <div id="left"></div>
+        <div id="center">
+            <div class="row-line first l1">
+                <div class="col-line first">Моря и реки, горы и равнины</div>
+                <div id="quest_0" class="col-line">100</div>
+                <div id="quest_1" class="col-line">200</div>
+                <div id="quest_2" class="col-line">300</div>
+                <div id="quest_3" class="col-line">400</div>
+                <div id="quest_4" class="col-line last">500</div>
+            </div>
+            <div class="row-line l2">
+                <div class="col-line first">ВЕТХОЗАВЕТНЫЕ ПАТРИАРХИ</div>
+                <div id="quest_5" class="col-line">100</div>
+                <div id="quest_6" class="col-line">200</div>
+                <div id="quest_7" class="col-line">300</div>
+                <div id="quest_8" class="col-line">400</div>
+                <div id="quest_9" class="col-line last">500</div>
+            </div>
+            <div class="row-line l3">
+                <div class="col-line first">НОВОЗАВЕТНЫЕ ЧУДЕСА</div>
+                <div id="quest_10" class="col-line">100</div>
+                <div id="quest_11" class="col-line">200</div>
+                <div id="quest_12" class="col-line">300</div>
+                <div id="quest_13" class="col-line">400</div>
+                <div id="quest_14" class="col-line last">500</div>
+            </div>
+            <div class="row-line l4">
+                <div class="col-line first">ПУТЕШЕСТВУЕМ ПО ХРАМУ И РИЗНИЦЕ</div>
+                <div id="quest_15" class="col-line">100</div>
+                <div id="quest_16" class="col-line">200</div>
+                <div id="quest_17" class="col-line">300</div>
+                <div id="quest_18" class="col-line">400</div>
+                <div id="quest_19" class="col-line last">500</div>
+            </div>
+            <div class="row-line l5">
+                <div class="col-line first">Святители Московские: Петр, Алексий, Иона, Филипп, Иов, Ермоген</div>
+                <div id="quest_20" class="col-line">100</div>
+                <div id="quest_21" class="col-line">200</div>
+                <div id="quest_22" class="col-line">300</div>
+                <div id="quest_23" class="col-line">400</div>
+                <div id="quest_24" class="col-line last">500</div>
+            </div>
+            <div class="row-line last l6">
+                <div class="col-line first">Великий пост и Пасха по книге И.С.Шмелева «Лето Господне»</div>
+                <div id="quest_25" class="col-line">100</div>
+                <div id="quest_26" class="col-line">200</div>
+                <div id="quest_27" class="col-line">300</div>
+                <div id="quest_28" class="col-line">400</div>
+                <div id="quest_29" class="col-line last">500</div>
+            </div>
+        </div>
+        <div id="right">
+            <div class="inner"></div>
+        </div>
+    </div>
+    <div id="bottom">
+        <div class="counts3">
+            <div id="count0" title="Количество вопросов">0</div>
+            <div id="count1">0</div>
+            <div id="count2">0</div>
+            <div id="count3">0</div>
+            <div id="count4" title="Сумма очков общая">0</div>
+            <div id="reset" title="Сброс">C</div>
+            <!--div id="second_round" onclick="location.href='index.html?l=23'" title="Первый раунд"><i class="fa fa-chevron-left"></i></div-->
+            <div id="third_round" onclick="location.href='three.html?l=23'" title="Третий раунд"><i class="fa fa-chevron-right"></i></div>
+        </div>
+    </div>
+    <div class="help">
+
+    </div>
+</div>
+<audio id="audio" src="CombineTimerChime.mp3"></audio>
+<script>
+    /*$(document).ready(function(){
+
+        var html = '<div id="modal-quest" class="modal fade">';
+        html += '  <div class="modal-dialog">';
+        html += '    <div class="modal-content">';
+        html += '      <div class="modal-body alert-success">' +
+            '</div>';
+        html += '    </div>';
+        html += '  </div>';
+        html += '</div>';
+
+        $('.help').append(html);
+
+
+        setTimeout(function() {
+            if (window.online === 1 && document.URL.indexOf('two.html') > -1) {
+                $('.modal-body').html('<p contenteditable>Нужно нажать кнопку от 1 до 6 чтобы выбрать, какую тему убрать</p><br>' +
+                    '<div id="over" style="display: none"><span id="l1" class="sp">1</span>' +
+                    '<span id="l2" class="sp">2</span>' +
+                    '<span id="l3" class="sp">3</span>' +
+                    '<span id="l4" class="sp">4</span>' +
+                    '<span id="l5" class="sp">5</span>' +
+                    '<span id="l6" class="sp">6</span></div>' +
+                    '<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>');
+                $('#modal-quest').addClass('in');
+                $('body').addClass('modal-open');
+
+                if(window.screen.width < 768) {
+                    setTimeout(function() {
+                        $('#over').show();
+                        $('.sp').one('click', function () {
+                            var t = parseInt($(this).attr('id').substring(1)) - 1;
+                            $('.row-line').eq(t).hide();
+                            cl();
+                        });
+                    },1000);
+                }
+
+
+
+                $('.close').click(function (e) {
+                    $('#modal-quest').removeClass('in');
+                    $('body').removeClass('modal-open');
+                });
+            }
+        },500);
+
+
+
+        $('.close').click(function (e) {
+            $('#modal-quest').removeClass('in');
+            $('body').removeClass('modal-open');
+
+        });
+
+
+
+
+
+
+
+        $('body').one("keydown", function(ev5) {
+            if(ev5.which === 49){ //1
+                $('.row-line').eq(0).hide();
+                cl();
+            }
+            if(ev5.which === 50){ //2
+                $('.row-line').eq(1).hide();
+                cl();
+            }
+            if(ev5.which === 51){ //3
+                $('.row-line').eq(2).hide();
+                cl();
+            }
+            if(ev5.which === 52){ //4
+                $('.row-line').eq(3).hide();
+                cl();
+            }
+            if(ev5.which === 53){ //5
+                $('.row-line').eq(4).hide();
+                cl();
+            }
+            if(ev5.which === 54){ //6
+                $('.row-line').eq(5).hide();
+                cl();
+            }
+
+            $('.close').click();
+
+        });
+    });
+    */
+
+    $(document).ready(function readF(){
+        rFile('list2.txt');
+    });
+</script>
+</body>
+</html>
