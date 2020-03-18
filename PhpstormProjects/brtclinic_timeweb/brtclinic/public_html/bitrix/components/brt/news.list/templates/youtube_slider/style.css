@@ -1,0 +1,88 @@
+.slide_wrap {
+	display: flex!important;
+	flex-wrap: nowrap;
+}
+div#slick {
+	padding: 7em 0 1em;
+}
+
+
+.pink button.slick-prev:hover{
+    border: 6px solid rgba(255,255,255,1);
+}
+
+.pink button.slick-prev {
+    left: -10%;
+    background-color: #FF4461;
+    width: 72px;
+    height: 72px;
+    padding: 7px 20px 5px 12px;
+    border-radius: 50%;
+    border: 6px solid rgba(255,255,255,.75);
+}
+.pink button.slick-next:hover{
+    border: 6px solid rgba(255,255,255,1);
+}
+.pink button.slick-next {
+    right: -10%;
+    background-color: #FF4461;
+    width: 72px;
+    height: 72px;
+    padding: 7px 12px 5px 20px;
+    border-radius: 50%;
+    border: 6px solid rgba(255,255,255,.75);
+}
+.slide_text {
+    background-color: white;
+    padding: 2em;
+}
+.slide_image_wrap {
+    flex: 0 0 37%;
+}
+.light .slick-dots,
+.pink .slick-dots {
+    bottom: 50px;
+}
+.light .slick-dots li button:before,
+.pink .slick-dots li button:before {
+    font-size: 24px;
+}
+.light .slick-dots li,
+.pink .slick-dots li {
+    margin: 0 20px;
+}
+.light .slick-dots li button:before,
+.pink .slick-dots li button:before {
+    color: #999;
+}
+.light .slick-dots li.slick-active button:before {
+    color:#00b081;
+}
+.pink .slick-dots li.slick-active button:before {
+    color: #FF4461;
+}
+.pink button.play_button {
+    border: 1px solid #00b081;
+}
+.pink button.play_button {
+    padding: 1em;
+    border: 1px solid #ff415e;
+    cursor: pointer;
+}
+.light .slick-prev {
+    left: -45px;
+}
+.light .slick-next {
+    right: -45px;
+}
+@media(max-width: 420px){
+    .light .slick-dots,
+    .pink .slick-dots {
+        bottom: 20px;
+    }
+}
+@media(min-width:1025px) {
+    div#slick {
+        padding: 7em 0;
+    }
+}
