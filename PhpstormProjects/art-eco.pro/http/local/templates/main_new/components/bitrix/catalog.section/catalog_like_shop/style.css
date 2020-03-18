@@ -1,0 +1,18 @@
+.brand_description {width:700px;margin-bottom:20px;} 
+.catalog_link_list li{ margin-bottom: 10px;width:700px;} 
+.catalog_link_list .link_item {margin-bottom:10px;}
+.catalog_link_list .link_item .file_name{}
+.catalog_link_list .link_item .file_name:hover{    color: #474194;}
+.catalog_item_image img {max-height:100%; margin:auto; display: block}
+.download_file img{width:32px;margin-left:10px;}
+a.shop_link {color:#000;}
+a.shop_link:hover {color: #474194;transition: all .3s ease 0s;}
+
+/*.brands_list {width:700px;float:right;}*/
+.brands_list {width: calc(100% - 360px);float:right;}
+.right_sidebar:empty + .brands_list {
+    width:100%;
+}
+.brands_list .item_list li {width:33.3333%;}
+
+.catalog_link_list  {padding:10px;}

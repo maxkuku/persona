@@ -8,9 +8,9 @@ global $arTheme, $orderViewBasketHtml;
 		<div class="marker-nav"></div>
 		<table>
 			<tr>
-				<?foreach($arResult as $arItem):?>					
+				<?foreach($arResult as $j => $arItem):?>
 					<?$bShowChilds = $arParams["MAX_LEVEL"] > 1;?>
-					<td class="menu-item unvisible <?=($arItem["CHILD"] ? "dropdown" : "")?>  <?=($arItem["SELECTED"] ? "active" : "")?>">
+					<td class="num_<?=$j?> menu-item unvisible <?=($arItem["CHILD"] ? "dropdown" : "")?>  <?=($arItem["SELECTED"] ? "active" : "")?>">
 						<div class="wrap">
 							<a class="<?=($arItem["CHILD"] && $bShowChilds ? "dropdown-toggle" : "")?>" href="<?=$arItem["LINK"]?>">
 								<?=$arItem["TEXT"]?>
@@ -19,9 +19,9 @@ global $arTheme, $orderViewBasketHtml;
 							<?if($arItem["CHILD"] && $bShowChilds):?>
 								<span class="tail"></span>
 								<ul class="dropdown-menu">
-									<?foreach($arItem["CHILD"] as $arSubItem):?>
+									<?foreach($arItem["CHILD"] as $i => $arSubItem):?>
 										<?$bShowChilds = $arParams["MAX_LEVEL"] > 2;?>
-										<li class="<?=($arSubItem["CHILD"] && $bShowChilds ? "dropdown-submenu" : "")?> <?=($arSubItem["SELECTED"] ? "active" : "")?>">
+										<li class="count_<?=$i?> <?=($arSubItem["CHILD"] && $bShowChilds ? "dropdown-submenu" : "")?> <?=($arSubItem["SELECTED"] ? "active" : "")?>">
 											<a href="<?=$arSubItem["LINK"]?>" title="<?=$arSubItem["TEXT"]?>"><?=$arSubItem["TEXT"]?><?=($arSubItem["CHILD"] && $bShowChilds ? '<span class="arrow"><i></i></span>' : '')?></a>
 											<?if($arSubItem["CHILD"] && $bShowChilds):?>
 												<ul class="dropdown-menu">

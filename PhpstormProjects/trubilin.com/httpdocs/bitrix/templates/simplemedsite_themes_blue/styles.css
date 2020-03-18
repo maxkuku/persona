@@ -1,0 +1,28 @@
+img.smt-img-thumbnail {
+}
+
+img.smt-img-thumbnail-left {
+    object-fit: cover;
+    height: 160px;
+}
+
+img.smt-img-thumbnail-right {
+}
+
+p .obj_fit_square {
+	height: 245px;
+	object-position: -310px 0;
+	width: 270px;
+}
+
+.smt-slide__header .text_orig {
+	text-transform: none;
+}
+
+.smt-slide__header .text_middle {
+	font-size: 42px;
+}
+
+.smt-slide__header .white {
+	color: #ffffff;
+}

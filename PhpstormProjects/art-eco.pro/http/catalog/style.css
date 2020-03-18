@@ -1,0 +1,7 @@
+.left_sidebar {
+    float: left;
+    width: 25%;
+    display: block;
+    height: 100%;
+    position: relative;
+}

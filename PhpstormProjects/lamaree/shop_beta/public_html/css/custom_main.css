@@ -1,0 +1,103 @@
+.carousel-inner > .carousel-item > img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center bottom;
+}
+
+.carousel-inner {
+    z-index: 0 !important;
+    height: 861px;
+}
+
+#myCarousel .carousel {
+    z-index: auto;
+}
+
+.header-wrap {
+    z-index: 10;
+    position: relative;
+}
+
+/* reverse menu */
+
+.webp .header-wrap {
+    /*display: flex;
+    flex-flow: column-reverse;*/
+}
+
+.top-panel {
+    position: fixed;
+}
+
+div#headerNav {
+    display: block;
+}
+
+.carousel .carousel-item .gradient-bg.carousel-caption {
+    z-index: auto;
+    background-image: radial-gradient(circle at 51% 10%, rgba(26, 43, 104, 0.8), rgba(26, 43, 104, 0.0));
+}
+
+#mainPage span.glyphicon.glyphicon-menu-right {
+    right: 0;
+}
+
+.right.carousel-control,
+.left.carousel-control {
+    width: 5%;
+}
+
+body {
+    margin-top: 0 !important;
+    position: relative;
+}
+
+@media (max-width: 780px) {
+    .carousel-inner {
+        z-index: -3 !important;
+        height: auto;
+    }
+
+    .carousel .carousel-item .gradient-bg.carousel-caption {
+        z-index: auto;
+        position: absolute;
+    }
+
+    .carousel-inner > .carousel-item > img {
+        height: 640px !important;
+        width: auto;
+        object-position: center;
+    }
+
+    div#headerNav {
+        display: none;
+    }
+
+    div#headerNav.open {
+        display: block;
+        background: white;
+        height: 318px;
+        padding-top: 17px;
+        box-shadow: -5px 0 0 rgba(200, 200, 200, .6);
+        z-index: 100;
+    }
+
+    section#contacts-text img {
+        width: 100%;
+    }
+
+    div#mainPage {
+        position: relative;
+    }
+
+    #mainPage .likeh1 {
+        font-size: 32px;
+        line-height: 32px;
+    }
+
+    .carousel.open {
+        z-index: auto;
+    }
+
+}
