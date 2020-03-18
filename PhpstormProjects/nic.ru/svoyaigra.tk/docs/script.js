@@ -119,6 +119,10 @@ $(document).ready(function main(ev1){
                 $('body').addClass('modal-open');
 
 
+                // add chime and metronom
+                play();
+
+
 
 
 
@@ -132,7 +136,10 @@ $(document).ready(function main(ev1){
                                 $('body').removeClass('modal-open');
                                 cl_and_add();
                             });
-
+                            if(isPlaying(audio)) {
+                                audio.pause();
+                                audio.currentTime = 0
+                            }
                         }
                         else{
                             $('#modal-quest').removeClass('in');
@@ -160,9 +167,6 @@ $(document).ready(function main(ev1){
 
 
                 function isPlaying(audio) { return !audio.paused; }
-
-
-
 
 
 

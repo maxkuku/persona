@@ -120,8 +120,7 @@
             <div id="count3">0</div>
             <div id="count4" title="Сумма очков общая">0</div>
             <div id="reset" title="Сброс">C</div>
-            <!--div id="second_round" onclick="location.href='index.html?l=23'" title="Первый раунд"><i class="fa fa-chevron-left"></i></div-->
-            <div id="third_round" onclick="location.href='three.html?l=23'" title="Третий раунд"><i class="fa fa-chevron-right"></i></div>
+            <div id="third_round" onclick="obnul(); location.href='three.html?l=23'" title="Третий раунд"><i class="fa fa-chevron-right"></i></div>
         </div>
     </div>
     <div class="help">
@@ -130,99 +129,6 @@
 </div>
 <audio id="audio" src="CombineTimerChime.mp3"></audio>
 <script>
-    /*$(document).ready(function(){
-
-        var html = '<div id="modal-quest" class="modal fade">';
-        html += '  <div class="modal-dialog">';
-        html += '    <div class="modal-content">';
-        html += '      <div class="modal-body alert-success">' +
-            '</div>';
-        html += '    </div>';
-        html += '  </div>';
-        html += '</div>';
-
-        $('.help').append(html);
-
-
-        setTimeout(function() {
-            if (window.online === 1 && document.URL.indexOf('two.html') > -1) {
-                $('.modal-body').html('<p contenteditable>Нужно нажать кнопку от 1 до 6 чтобы выбрать, какую тему убрать</p><br>' +
-                    '<div id="over" style="display: none"><span id="l1" class="sp">1</span>' +
-                    '<span id="l2" class="sp">2</span>' +
-                    '<span id="l3" class="sp">3</span>' +
-                    '<span id="l4" class="sp">4</span>' +
-                    '<span id="l5" class="sp">5</span>' +
-                    '<span id="l6" class="sp">6</span></div>' +
-                    '<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>');
-                $('#modal-quest').addClass('in');
-                $('body').addClass('modal-open');
-
-                if(window.screen.width < 768) {
-                    setTimeout(function() {
-                        $('#over').show();
-                        $('.sp').one('click', function () {
-                            var t = parseInt($(this).attr('id').substring(1)) - 1;
-                            $('.row-line').eq(t).hide();
-                            cl();
-                        });
-                    },1000);
-                }
-
-
-
-                $('.close').click(function (e) {
-                    $('#modal-quest').removeClass('in');
-                    $('body').removeClass('modal-open');
-                });
-            }
-        },500);
-
-
-
-        $('.close').click(function (e) {
-            $('#modal-quest').removeClass('in');
-            $('body').removeClass('modal-open');
-
-        });
-
-
-
-
-
-
-
-        $('body').one("keydown", function(ev5) {
-            if(ev5.which === 49){ //1
-                $('.row-line').eq(0).hide();
-                cl();
-            }
-            if(ev5.which === 50){ //2
-                $('.row-line').eq(1).hide();
-                cl();
-            }
-            if(ev5.which === 51){ //3
-                $('.row-line').eq(2).hide();
-                cl();
-            }
-            if(ev5.which === 52){ //4
-                $('.row-line').eq(3).hide();
-                cl();
-            }
-            if(ev5.which === 53){ //5
-                $('.row-line').eq(4).hide();
-                cl();
-            }
-            if(ev5.which === 54){ //6
-                $('.row-line').eq(5).hide();
-                cl();
-            }
-
-            $('.close').click();
-
-        });
-    });
-    */
-
     $(document).ready(function readF(){
         rFile('list2.txt');
     });
