@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="438354ea-5184-4bad-a1c5-8517365ee221" name="Default" comment="" />
+    <list default="true" id="438354ea-5184-4bad-a1c5-8517365ee221" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/../art-eco.pro/http/local/templates/main_new/components/bitrix/catalog.section.list/tree_no_h2/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/../art-eco.pro/http/local/templates/main_new/components/bitrix/catalog.section.list/tree_no_h2/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../brtclinic_timeweb/brtclinic/public_html/bitrix/templates/noscript/mobile.css" beforeDir="false" afterPath="$PROJECT_DIR$/../brtclinic_timeweb/brtclinic/public_html/bitrix/templates/noscript/mobile.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../brtclinic_timeweb/brtclinic/public_html/bitrix/templates/noscript/template_styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/../brtclinic_timeweb/brtclinic/public_html/bitrix/templates/noscript/template_styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../brtclinic_timeweb/brtclinic/public_html/sect_inc.php" beforeDir="false" afterPath="$PROJECT_DIR$/../brtclinic_timeweb/brtclinic/public_html/sect_inc.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../implart/akademstom.ru/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../implart/akademstom.ru/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nic.ru/maxkuku.ru/docs/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/../nic.ru/maxkuku.ru/docs/index.php" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
-    <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -22,45 +28,7 @@
     <select />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="footer.php" pinned="true" current-in-tab="false">
-        <entry file="remoteDeploymentFS://&lt;5b6d34e5-36b5-44cd-8f51-ba46fc0a759a&gt;/public_html/integramed.info/wp-content/themes/integra/footer.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2055">
-              <caret line="29" column="43" lean-forward="false" selection-start-line="29" selection-start-column="43" selection-end-line="29" selection-end-column="43" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="scrips.js" pinned="true" current-in-tab="false">
-        <entry file="remoteDeploymentFS://&lt;5b6d34e5-36b5-44cd-8f51-ba46fc0a759a&gt;/public_html/integramed.info/wp-content/themes/integra/js/scrips.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="203">
-              <caret line="145" column="33" lean-forward="false" selection-start-line="145" selection-start-column="28" selection-end-line="145" selection-end-column="33" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="header.php" pinned="true" current-in-tab="true">
-        <entry file="remoteDeploymentFS://&lt;5b6d34e5-36b5-44cd-8f51-ba46fc0a759a&gt;/public_html/integramed.info/wp-content/themes/integra/header.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="111" column="31" lean-forward="false" selection-start-line="111" selection-start-column="31" selection-end-line="111" selection-end-column="31" />
-              <folding>
-                <element signature="e#5171#5177#0#HTML" expanded="true" />
-                <element signature="e#5333#5339#0#HTML" expanded="true" />
-                <element signature="e#5495#5501#0#HTML" expanded="true" />
-                <element signature="e#5657#5663#0#HTML" expanded="true" />
-                <element signature="n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#main#0;n#body#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#main#0;n#body#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -125,31 +93,24 @@
         <option value="&lt;5b6d34e5-36b5-44cd-8f51-ba46fc0a759a&gt;/public_html/integramed.info/wp-content/themes/integra/functions.php" />
         <option value="&lt;5b6d34e5-36b5-44cd-8f51-ba46fc0a759a&gt;/public_html/integramed.info/wp-content/themes/integra/page.php" />
         <option value="&lt;5b6d34e5-36b5-44cd-8f51-ba46fc0a759a&gt;/public_html/old.integramed.info/.htaccess" />
-        <option value="&lt;5b6d34e5-36b5-44cd-8f51-ba46fc0a759a&gt;/public_html/integramed.info/wp-content/themes/integra/css/text.css" />
-        <option value="&lt;5b6d34e5-36b5-44cd-8f51-ba46fc0a759a&gt;/public_html/integramed.info/wp-content/themes/integra/style.css" />
         <option value="&lt;5b6d34e5-36b5-44cd-8f51-ba46fc0a759a&gt;/public_html/integramed.info/.htaccess" />
+        <option value="&lt;5b6d34e5-36b5-44cd-8f51-ba46fc0a759a&gt;/public_html/integramed.info/wp-content/themes/integra/style.css" />
+        <option value="&lt;5b6d34e5-36b5-44cd-8f51-ba46fc0a759a&gt;/public_html/integramed.info/wp-content/themes/integra/css/text.css" />
         <option value="&lt;5b6d34e5-36b5-44cd-8f51-ba46fc0a759a&gt;/public_html/integramed.info/wp-content/themes/integra/header.php" />
       </list>
     </option>
   </component>
-  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsFlowSettings">
     <service-enabled>true</service-enabled>
     <exe-path />
     <other-services-enabled>true</other-services-enabled>
     <auto-save>true</auto-save>
   </component>
-  <component name="JsGulpfileManager">
-    <detection-done>true</detection-done>
-    <sorting>DEFINITION_ORDER</sorting>
-  </component>
-  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
     <option name="x" value="59" />
     <option name="y" value="93" />
     <option name="width" value="1664" />
-    <option name="height" value="856" />
+    <option name="height" value="902" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -174,15 +135,18 @@
     <panes />
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="settings.github" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="true" />
-    <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
     <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
-    <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
-    <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="settings.github" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -200,9 +164,6 @@
         </RuleState>
       </list>
     </option>
-  </component>
-  <component name="ShelveChangesManager" show_recycled="false">
-    <option name="remove_strategy" value="false" />
   </component>
   <component name="SvnConfiguration">
     <configuration>$USER_HOME$/.subversion</configuration>
@@ -241,6 +202,7 @@
       <workItem from="1578730546818" duration="4316000" />
       <workItem from="1578934367851" duration="2728000" />
       <workItem from="1583857736462" duration="1250000" />
+      <workItem from="1585314534960" duration="1825000" />
     </task>
     <task id="LOCAL-00001" summary="integra reg">
       <created>1558375059685</created>
@@ -253,67 +215,54 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40151000" />
+    <option name="totallyTimeSpent" value="41976000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="59" y="93" width="1664" height="856" extended-state="0" />
-    <editor active="true" />
+    <frame x="59" y="93" width="1664" height="902" extended-state="0" />
     <layout>
-      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22580644" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18128654" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934552" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32972974" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.18128654" />
+      <window_info id="Structure" order="1" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Database Changes" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Terminal" order="9" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="File Transfer" order="11" weight="0.32869786" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info active="true" anchor="right" id="Remote Host" order="3" visible="true" weight="0.22580644" />
+      <window_info anchor="right" id="Database" order="4" weight="0.32934552" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
-  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="integra reg" />
     <option name="LAST_COMMIT_MESSAGE" value="integra reg" />
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager />
-    <watches-manager />
-  </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/public_html/integramed.info/source/1-meropr-po-uluchsh-usl-truda.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
+      <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/public_html/integramed.info/test.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="502">
-          <caret line="76" column="5" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="76" selection-end-column="5" />
+          <caret line="76" column="5" selection-start-line="7" selection-end-line="76" selection-end-column="5" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public_html/integramed.info/.htaccess">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
   <component name="masterDetails">
