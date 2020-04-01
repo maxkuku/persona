@@ -1,24 +1,30 @@
 <?if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();?>
 
 
+
 <div class="over sect">
     <div class="wrap">
     <div id="banner" class="owl-carousel owl-theme_slider">
         <div id="banner-picture1" class="banner-picture owl-item"><!--owl-carousel-->
-            <div style="background-image:url(<?=SITE_TEMPLATE_PATH?>/images/promo1.png)">
-                <div></div>
+            <div id="promo1">
+                <div><img style="width: 100%;" src="<?=SITE_TEMPLATE_PATH?>/images/promo1.jpg" alt="Золотой стандарт реабилитации"/></div>
             </div>
             <div class="banner_text">
                 <h2>Золотой стандарт реабилитации</h2>
                     <ul class="checked">
-                        <li>Восстанавливаем взрослых и детей с патологиями неврологического и ортопедического характера</li>
-                        <li>Применяем современные европейские технологии и авторскую методику реабилитации</li>
+
+<!--                    <li>Восстанавливаем взрослых и детей с патологиями неврологического и ортопедического характера</li>
+                        <li>Применяем современные европейские технологии и авторскую методику реабилитации</li> -->
+
+						<li>20 летний опыт восстановления пациентов после травм, параличей, проблем со спиной и суставами</li>
+                        <li>Современные компьютеризированные технологии и уникальная методика реабилитации</li>
                         <li>В клинике работают профессора в области неврологии и травматологии-ортопедии</li>
                     </ul>
             </div>
         </div>
+<!--
         <div id="banner-picture2" class="banner-picture owl-item">
-            <div style="background-image:url(<?=SITE_TEMPLATE_PATH?>/images/promo2.png)">
+            <div id="promo2" style="">
                 <div></div>
             </div>
             <div class="banner_text">
@@ -31,10 +37,12 @@
             </div>
         </div>
     </div>
+-->
+
     <!--div class="rec" data-uk-modal="{target:'#modal-form'}" data-target="#modal-form"><span>Запишитесь на бесплатную консультацию и диагностику</span></div-->
     </div>
 </div>
-
+</div>
 
 <!--div id="three">
     <img id="cells" src="<?=SITE_TEMPLATE_PATH?>/images/cells.png"/>
@@ -63,11 +71,22 @@
     </div><!--four wrap-->
 </div>
 
+<!--
 
+    <div id="promo">
+        <div class="wrap">
+            <div class="promo-wrap">
+            <div class="red-promo">Стоимость занятия в реабилитационном зале от 3500 руб.</div>
+            <div class="blue-promo">Скидка 50% на первое занятие в центре на Тушинской</div>
 
+            </div>
+</div>
+-->
+<!--
 <div id="four-next" class="">
-    <div class="wrap">
-        <h2>Кому мы помогаем</h2>
+<div class="wrap">
+	<h2>Кому мы помогаем</h2>
+
 		<div class="help"><a href="/rehab/insult/"><img src="<?=SITE_TEMPLATE_PATH?>/images/7.webp" alt="Реабилитация после инсульта" onerror="this.onerror=null; this.src='<?=SITE_TEMPLATE_PATH?>/images/7.png'"/><span class="color black"><i>Реабилитация после инсульта</i></span></a></div>
 		<div class="help"><a href="/rehab/dcp/"><img src="<?=SITE_TEMPLATE_PATH?>/images/1.webp" alt="Реабилитация при ДЦП" onerror="this.onerror=null; this.src='<?=SITE_TEMPLATE_PATH?>/images/1.png'"/><span class="color blue"><i>Реабилитация детей и взрослых при ДЦП</i></span></a></div>
 		<div class="help"><a href="/rehab/vyvih_bedra/"><img src="<?=SITE_TEMPLATE_PATH?>/images/15.webp" alt="Лечение врожденного вывиха бедра" onerror="this.onerror=null; this.src='<?=SITE_TEMPLATE_PATH?>/images/15.jpg'"/><span class="color red"><i>Лечение врожденного вывиха бедра</i></span></a></div>
@@ -79,7 +98,25 @@
 		<div class="help"><a href="/rehab/perelom_sheiki_bedra/"><img src="<?=SITE_TEMPLATE_PATH?>/images/10.webp" alt="Реабилитация после перелома шейки бедра" onerror="this.onerror=null; this.src='<?=SITE_TEMPLATE_PATH?>/images/10.jpg'"/><span class="color blue"><i>Реабилитация после перелома шейки бедра</i></span></a></div>
     </div>
 </div>
+-->
 
+<div id="four-next" class="">
+<div class="wrap">
+	<h2>Кому мы помогаем</h2>
+
+		<div class="help"><a href="/rehab/insult-na-domu/"><img src="<?=SITE_TEMPLATE_PATH?>/images/7.png" alt="Реабилитация после инсульта в клинике и на дому"/><span class="color black"><i>Реабилитация после инсульта на дому и в клинике</i></span></a></div>
+		<div class="help"><a href="/rehab/dcp/"><img src="<?=SITE_TEMPLATE_PATH?>/images/1.png" alt="Реабилитация при ДЦП"/><span class="color blue"><i>Реабилитация детей и взрослых при ДЦП</i></span></a></div>
+		<div class="help"><a href="/rehab/vyvih_bedra/"><img src="<?=SITE_TEMPLATE_PATH?>/images/15.jpg" alt="Лечение врожденного вывиха бедра"/><span class="color red"><i>Лечение врожденного вывиха бедра</i></span></a></div>
+		<div class="help"><a href="/rehab/endoprotezirovanie/"><img src="<?=SITE_TEMPLATE_PATH?>/images/4.png" alt="Реабилитация после эндопротезирования"/><span class="color blue"><i>Реабилитация после эндопротезирования</i></span></a></div>
+		<div class="help"><a href="/rehab/perelom_sheiki_bedra/"><img src="<?=SITE_TEMPLATE_PATH?>/images/10.jpg" alt="Реабилитация после перелома шейки бедра"/><span class="color red"><i>Реабилитация после перелома шейки бедра</i></span></a></div>
+
+		<div class="help"><a href="/rehab/zpr/"><img src="<?=SITE_TEMPLATE_PATH?>/images/16.jpg" alt="Лечение задержки развития у детей" /><span class="color black"><i>Лечение задержки развития у детей</i></span></a></div>
+		<div class="help"><a href="/rehab/spina/"><img src="<?=SITE_TEMPLATE_PATH?>/images/6.png" alt="Лечение заболеваний позвоночника"/><span class="color red"><i>Лечение заболеваний позвоночника</i></span></a></div>
+		<div class="help"><a href="/rehab/ishias/"><img src="/bitrix/templates/brt/images/18.jpg" alt="Лечение ишиаса седалищного нерва"/><span class="color black"><i>Лечение ишиаса седалищного нерва</i></span></a></div>
+		<div class="help"><a href="/rehab/koleno/"><img src="<?=SITE_TEMPLATE_PATH?>/images/3.png" alt="Лечение артроза коленного сустава"/><span class="color blue"><i>Лечение артроза коленного сустава</i></span></a></div>
+
+    </div>
+</div>
 
 <!--div id="seven">
     <div class="wrap">
@@ -194,14 +231,14 @@
 
 <div id="six">
     <div class="wrap">
-        <div class="header-block">Экспертный совет клиники</div>
+        <h2>Экспертный совет клиники</h2>
+		<p><center>В нашем центре работают более 20 специалистов в области реабилитации с разной специализацией.</center></p>
         <?
-        $arFilter = array("ID" => array(86,88,95));
-        $iblock_id = 9;
         $APPLICATION->IncludeComponent(
 	"brt:news.list", 
 	"specs_by_number", 
 	array(
+        "ELEMENT_ID" => array(76,114,78),
 		"VARIANT" => "not-in-use",
 		"ACTIVE_DATE_FORMAT" => "",
 		"ADD_SECTIONS_CHAIN" => "N",
@@ -227,14 +264,13 @@
 			1 => "DETAIL_PICTURE",
 			2 => "",
 		),
-		"FILTER_NAME" => "arFilter",
 		"HIDE_LINK_WHEN_NO_DETAIL" => "N",
 		"IBLOCK_ID" => "9",
 		"IBLOCK_TYPE" => "specs",
 		"INCLUDE_IBLOCK_INTO_CHAIN" => "N",
 		"INCLUDE_SUBSECTIONS" => "N",
 		"MESSAGE_404" => "",
-		"NEWS_COUNT" => "100",
+		"NEWS_COUNT" => "103",
 		"PAGER_BASE_LINK_ENABLE" => "N",
 		"PAGER_DESC_NUMBERING" => "N",
 		"PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",
@@ -266,6 +302,15 @@
 	),
 	false
 );?>
+
+            <p>
+            <center>
+                <div id="header_callback_button">
+                    <a class="btn btn-primary" href="/specs/" target="_blank">Все специалисты</a>
+                </div>
+            </center>
+            </p>
+
     </div>
 </div>
 
@@ -291,16 +336,9 @@
 
         </div>
 
-        <div class="trainer"><div></div></div>
-
-        <style>
-            .no-webp .trainer{
-                background: url(<?=SITE_TEMPLATE_PATH?>/images/hur_n.png) no-repeat center / contain;
-            }
-            .webp .trainer{
-                background: url(<?=SITE_TEMPLATE_PATH?>/images/hur_n.webp) no-repeat center / contain;
-            }
-        </style>
+        <div class="trainer">
+            <img style="width: 100%; border-radius: 50%;" src="<?=SITE_TEMPLATE_PATH?>/images/hur_n.jpg" alt="ТРЕНАЖЕРЫ HUR (ФИНЛЯНДИЯ)"/>
+        </div>
 
     </div>
 </div>

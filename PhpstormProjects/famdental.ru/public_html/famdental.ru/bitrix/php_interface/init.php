@@ -39,5 +39,5 @@ function str2url($str) {
 	$str = trim($str, "-");
 	return $str;
 }
-
+define("PHONE","+7(495)241-93-84");
 ?>

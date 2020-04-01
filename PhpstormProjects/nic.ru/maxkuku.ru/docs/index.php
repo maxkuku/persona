@@ -329,74 +329,89 @@ header('Last-Modified: ' . $t);
             <a class="ihover " href="http://www.mus-connect.com" target="_blank">mus-connect.com</a><br>
             <span>Сайт компании Мюзик коннекшн, Москва. Сайт на Wix, 2016</span> <a
                     class="simple-ajax-popup" data-lightbox="example-set" href="/images/sites/mus-conn.jpg">(Скрин)
-            </a><br>
-
+            </a><br></p>
+        <p>
             <a class="ihover " href="http://www.illuzionarium.ru" target="_blank">illuzionarium.ru</a><br>
             <span>Сайт Иллюзионариум, Екатеринбург. Битрикс, 2016</span> <a
                     class="simple-ajax-popup" data-lightbox="example-set" href="/images/sites/illuzion_screen.jpg">(Скрин)
-            </a><br>
+            </a><br></p>
+        <p>
             <a class="ihover " href="http://licey-dk.ru" target="_blank">licey-dk.ru</a><br>
             <span>Сайт Лицея духовной культуры во имя преп. Серафима Саровского. Битрикс, 2016</span> <a
                     class="simple-ajax-popup" data-lightbox="example-set" href="/images/sites/licey-dk.jpg">(Скрин)
-            </a><br>
+            </a><br></p>
+        <p>
             <a class="ihover " href="http://thaifruits.ru" target="_blank">thaifruits.ru</a><br>
             <span>Интернет-магазин свежих фруктов. WordPress, WooCommerce, 2016</span> <a
                     class="simple-ajax-popup" data-lightbox="example-set" href="/images/sites/thaifruits.jpg">(Скрин)
-            </a><br>
+            </a><br></p>
+        <p>
             <a class="ihover " href="http://green-haus.ru" target="_blank">green-haus.ru</a><br>
             <span>Интернет-магазин косметики. WordPress, WooCommerce, 2016</span> <a
                     class="simple-ajax-popup" data-lightbox="example-set" href="/images/sites/green-haus.jpg">(Скрин)
-            </a><br>
+            </a><br></p>
+        <p>
             <a class="ihover " href="http://mts-med.ru" target="_blank">mts-med.ru</a><br>
             <span>Сайт компании ремонтирующей медоборудование ЗАО «МТС», Битрикс, 2016</span> <a
                     class="simple-ajax-popup" data-lightbox="example-set" href="/images/sites/mts-med.ru.jpg">(Скрин)
-            </a><br>
+            </a><br></p>
+        <p>
             <a class="ihover " href="http://webtomed.ru" target="_blank">webtomed.ru</a><br>
             <span>Сайт компании web-маркетинга WebToMed, WordPress, 2016</span> <a
                     class="simple-ajax-popup" data-lightbox="example-set" href="/images/sites/webtomed.jpg">(Скрин)
-            </a><br>
+            </a><br></p>
+        <p>
             <a class="ihover " href="http://lapushka.info" target="_blank">lapushka.info</a><br>
             <span>Сайт торговой площадки, MODX, перенос нового шаблона, правки компонентов, 2015–2016</span> <a
                     class="simple-ajax-popup" data-lightbox="example-set" href="/images/sites/vesnushka-msk.jpg">(Скрин)
-            </a><br>
+            </a><br></p>
+        <p>
             <a class="ihover ">splean2016.com
             </a><br>
             <span>Сайт-промо концертов Сплин в США в апреле 2016 года, 2016</span> <a
                     class="simple-ajax-popup" data-lightbox="example-set" href="/images/sites/splean2016.jpg">(Скрин)
-            </a><br>
+            </a><br></p>
+        <p>
             <a class="ihover ">itlbridge.ru</a><br>
             <span>Сайт торговой площадки, Битрикс, 2015</span> <a
                     class="simple-ajax-popup" data-lightbox="example-set" href="/images/sites/itlbridge.jpg">(Скрин)
-            </a><br>
+            </a><br></p>
+        <p>
             <a class="ihover " href="//www.pogruzhenye.ru" target="_blank">pogruzhenye.ru</a><br>
             <span>Сайт развлекательного комплекса с расписанием, админской частью и онлайн-платежами, Битрикс,
-        2015</span> <a
-                    class="simple-ajax-popup" data-lightbox="example-set" href="/images/sites/pogr.jpg">(Скрин)
-            </a><br>
+        2015</span> <a class="simple-ajax-popup" data-lightbox="example-set" href="/images/sites/pogr.jpg">(Скрин)
+            </a><br></p>
+        <p>
             <a class="ihover " href="//www.fantazygrad.ru" target="_blank">fantazygrad.ru</a><br>
-            <span>Сайт развлекательного комплекса, Битрикс, 2015</span> <a class="simple-ajax-popup"
-                                                                           data-lightbox="example-set"
-                                                                           href="/images/sites/fantazy.png">(Скрин)
-            </a><br>
+            <span>Сайт развлекательного комплекса, Битрикс, 2015</span>
+            <a class="simple-ajax-popup" data-lightbox="example-set" href="/images/sites/fantazy.png">(Скрин)
+            </a><br></p>
+        <p>
             <a class="ihover " href="//www.geroipark.ru" target="_blank">geroipark.ru</a><br>
-            <span>Сайт развлекательного комплекса, Битрикс, 2015</span> <a class="simple-ajax-popup"
-                                                                           data-lightbox="example-set"
-                                                                           href="/images/sites/geroipark.jpg">(Скрин)
-            </a><br>
+            <span>Сайт развлекательного комплекса, Битрикс, 2015</span>
+            <a class="simple-ajax-popup" data-lightbox="example-set" href="/images/sites/geroipark.jpg">(Скрин)
+            </a><br></p>
+        <p>
             <a class="ihover " href="//www.domstrahov.ru" target="_blank">domstrahov.ru</a><br>
-            <span>Сайт развлекательного комплекса, Битрикс, 2015</span> <a class="simple-ajax-popup"
-                                                                           data-lightbox="example-set"
-                                                                           href="/images/sites/shot-20141112-donstrahov.jpeg">(Скрин)
-            </a><br>
-            <a class="ihover " href="http://www.vypusk.vip" target="_blank">vypusk
-                .vip</a><br>
-            <span>Сайт предложения организации выпускного, Битрикс, 2017</span> <a class="simple-ajax-popup"
-                                                                                   data-lightbox="example-set"
-                                                                                   href="/images/sites/vypusk.jpg">(Скрин)
-            </a><br>
+            <span>Сайт развлекательного комплекса, Битрикс, 2015</span>
+            <a class="simple-ajax-popup" data-lightbox="example-set" href="/images/sites/shot-20141112-donstrahov.jpeg">(Скрин)
+            </a><br></p>
+        <p>
+            <a class="ihover " href="http://www.vypusk.vip" target="_blank">vypusk.vip</a><br>
+            <span>Сайт предложения организации выпускного, Битрикс, 2017</span>
+            <a class="simple-ajax-popup" data-lightbox="example-set" href="/images/sites/vypusk.jpg">(Скрин)
+            </a><br></p>
+        <p>
             <a class="ihover " href="//www.kvestinfo.ru" target="_blank">kvestinfo.ru</a><br>
             <span>Сайт агрегатора квестов, Битрикс, 2016, поддержка</span>
             <a class="simple-ajax-popup" data-lightbox="example-set" href="/images/screen_kv.jpg">(Скрин)
+            </a><br></p>
+        <p>
+            <a class="ihover " href="#" target="_blank">club-citadel.ru</a><br>
+            <span>html, 2013, создание</span>
+            <a class="simple-ajax-popup" rel="lazer" title="club-citadel.ru" data-lightbox="example-set" href="/images/sites/lazertag1.jpg">(Скрин 1)
+            </a>
+            <a class="simple-ajax-popup" rel="lazer" title="club-citadel.ru" data-lightbox="example-set" href="/images/sites/lazertag2.jpg">(Скрин 2)
             </a><br></p>
 
 
@@ -426,7 +441,15 @@ header('Last-Modified: ' . $t);
     <h2>То или иное касательство</h2>
 
     <section class="rubrik">
+        <p>
 
+            <a class="ihover" href="https://agat-co.ru/" target="_blank">agat-co.ru</a><br>
+            <span>Мелкие-мелкие правки верстки, восстановление доступа, редактирование еонтента. 2010-2019</span> <a
+                    class="simple-ajax-popup" data-lightbox="example-set"
+                    href="/images/sites/agat-co-ru.jpg">(Скрин)
+            </a><br>
+
+        </p>
         <p>
 
             <a class="ihover" href="https://centrfood.ru/" target="_blank">centrfood.ru</a><br>

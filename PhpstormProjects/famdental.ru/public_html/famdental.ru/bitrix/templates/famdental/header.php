@@ -43,6 +43,26 @@ IncludeTemplateLangFile(__FILE__);
 			DG.marker([55.798272, 37.494521], {icon: myIcon}).addTo(map)
 		});
 	</script>
+
+
+<!-- Facebook Pixel Code -->
+<script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '2524494487662052');
+  fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=2524494487662052&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Facebook Pixel Code -->
+
 </head>
 
 <body>
@@ -64,24 +84,24 @@ IncludeTemplateLangFile(__FILE__);
 			</script>
 <div class="menu-mobile" style="display:none">
 	<?$APPLICATION->IncludeComponent(
-		"famdental:menu",
-		"mob-line",
-		array(
-			"ALLOW_MULTI_SELECT" => "N",
-			"CHILD_MENU_TYPE" => "top",
-			"DELAY" => "N",
-			"MAX_LEVEL" => "2",
-			"MENU_CACHE_GET_VARS" => array(
-			),
-			"MENU_CACHE_TIME" => "0",
-			"MENU_CACHE_TYPE" => "N",
-			"MENU_CACHE_USE_GROUPS" => "Y",
-			"ROOT_MENU_TYPE" => "top",
-			"USE_EXT" => "N",
-			"COMPONENT_TEMPLATE" => "horizontal_multilevel1"
+	"famdental:menu", 
+	"mob-line", 
+	array(
+		"ALLOW_MULTI_SELECT" => "N",
+		"CHILD_MENU_TYPE" => "top",
+		"DELAY" => "N",
+		"MAX_LEVEL" => "2",
+		"MENU_CACHE_GET_VARS" => array(
 		),
-		false
-	);?>
+		"MENU_CACHE_TIME" => "0",
+		"MENU_CACHE_TYPE" => "N",
+		"MENU_CACHE_USE_GROUPS" => "Y",
+		"ROOT_MENU_TYPE" => "top",
+		"USE_EXT" => "N",
+		"COMPONENT_TEMPLATE" => "mob-line"
+	),
+	false
+);?>
             </div>
 
 

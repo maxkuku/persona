@@ -232,44 +232,32 @@ $(document).ready(function(){
 
 //menu children open
 $(document).ready(function(){
-	$('.st1').hover(function(){
-	    if($(this).hasClass('closed')){
-            $(this).removeClass('closed');
-            $(this).addClass('opened');
+	$('.sta').click( function(evt) {
 
-        }
-        else{
-            $(this).addClass('closed');
-            $(this).removeClass('opened');
-        }
-	});
+        evt.preventDefault();
+        evt.stopImmediatePropagation();
 
-    /*$('.pr1').hover(function(){
-        $(this).toggleClass('closed');
-    });
-	
-	$('.has-children').mouseover(function(){
-		$(this).removeClass('closed');
-		$(this).children('ul').show();
+	    var li = $(this).parents('li');
+        li.toggleClass('closed');
+
+
+        /*$('.st1 > ul').mouseout(function(){
+            li.addClass('closed');
+        })*/
 	});
-	
-	$('.has-children ul').mouseout(function(){
-		$(this).parents('li').addClass('closed');
-		$('.has-children ul').hide();
-	});*/
 	
 });
 
 
 
-$(document).ready(function(){
+/*$(document).ready(function(){
     $('#top-menu .st1 > a').click(function(e){
         e.preventDefault()
     })
     $('#top-menu .parent > a').click(function(e){
         e.preventDefault()
     })
-});
+});*/
 /*$(document).ready(function(){
     $('.close-menu-mobile').click(function(){
         $('body').attr('style','');
@@ -293,15 +281,15 @@ $(document).ready(function() {
     })
 });
 
-$(document).ready(function() {
-    $('li.parent').click(function (e) {
+//$(document).ready(function() {
+    //$('li.parent').click(function (e) {
         //e.preventDefault();
 
-        $(this).toggleClass('closed');
+        //$(this).toggleClass('closed');
         //var t = $('#vertical-multilevel-menu').outerHeight(true);
         //$('#vertical-multilevel-menu').css({'height': t + 'px'});
-    });
-});
+    //});
+//});
 
 $(document).ready(function() {
     var win = "<div class='overlay hidden'><div class='win'><div class='out'><i class='fa fa-close'></i><div id='vid_inner'></div><div class='vid_arrows'><div class='vid_left'><i class='fa fa-arrow-left'></i></div><div class='vid_right'><i class='fa fa-arrow-right'></i></div></div></div></div></div>";
@@ -423,12 +411,23 @@ function send_phone_ajax(tel){
     $.ajax({
         type: 'get',
         url: '/ajax/send_phone_ajax.php',
-        data: 'ajax=Y&header_phone=' + tel + '&count=' + Math.random() + '&adr=' + document.URL,
+        data: 'ajax=Y&header_phone=' + tel + '&count=' + Math.round(Math.random()*1000) + '&adr=' + document.URL,
         dataType: "json",
         success: function (data) {
 
 
             $('#res_form').text(data);
+
+            // pixel fb
+            fbq('track', 'Contact',
+                {
+                    content_name: 'zapis na priem',
+                    contents: [{
+                        id: Math.round(Math.random()*1000),
+                        phone: tel,
+                    }]
+                }
+            );
 
 
         }

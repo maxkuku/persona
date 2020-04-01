@@ -11,7 +11,7 @@ section.white {
 }
 
 .catalog-section-list {
-    padding: 18px 0 23px;
+    padding: 31px 0 23px;
     font-size: 16px;
     line-height: 26px;
     transition: .3s;
@@ -68,6 +68,9 @@ section.white {
     overflow: hidden;
 }
 @media(min-width: 768px){
+    .cat .catalog-section-list {
+        padding-top: 16px;
+    }
     .left_sidebar {
         float: left;
         width: 25%;

@@ -352,7 +352,7 @@ span#menu-switch {
     color:#666;
 }
 #desktop-menu .up-line ul li.st1 ul {
-    /*padding-bottom: 28px;*/
+    display: inline-block;
 }
 #desktop-menu .up-line ul li.st1.closed ul {
     padding-bottom: 0px!important;
@@ -2088,9 +2088,18 @@ div.top-buttons.all-on-4-all-on-6 {
     content: "\f106";
     font-family: 'fontawesome';
     font-size: 24px;
-
-
     display: none;
+}
+.st1>a.sta {
+    background-color: white;
+    color: #666;
+}
+.st1.closed>a.sta {
+    background-color: transparent;
+    color: #fff;
+}
+.st1.closed>a.sta:hover {
+    color: #666;
 }
 .spec-container.wrap {
     margin-bottom: 40px;
@@ -2143,25 +2152,17 @@ div#foot {
     display: block;
     z-index: 10;
 }
-.st1 ul li:hover ,
-.pr1 ul li:hover {
-    /*background: rgba(255,255,255,.5);*/
-}
+
 .up-line ul li ul{
-    /*padding-top: 11px;*/
     margin-left: -19px;
 }
 
 #desktop-menu .up-line ul li ul {
-    /*padding-top: 11px;*/
-    margin-left: 0px;
+    margin-left: 0;
     position: absolute;
     width: auto;
     z-index: 100;
-    /*border: 1px solid #fff;*/
     background-color: #fff;
-    /*transition: .3s;*/
-    /*border-top: 7px solid #fff;*/
 }
 .menu-from-fam ul li ul li {
     border-top: 1px solid rgba(0,0,0,.1);
@@ -2176,7 +2177,7 @@ div#foot {
     overflow: hidden;
 }
 #desktop-menu .up-line ul li ul{
-    height: auto;
+    /*height: auto;*/
     border-bottom: 1px solid #eee;
     border-left: 1px solid #eee;
     border-right: 1px solid #eee;
@@ -2866,6 +2867,9 @@ h1[itemprop="author"]{
 .main-page .ban_rec button:hover {
     box-shadow: inset 3px 3px 3px #333;
 }
+#main .picture-wrap {
+    margin: 60px 0;
+}
 @media(max-width: 1024px){
     #main .picture-wrap{
         z-index: 0;
@@ -2953,9 +2957,7 @@ h1[itemprop="author"]{
         width: 416px!important;
         box-sizing: border-box;
     }
-    .up-line li ul li:first-child {
-        /*margin-top: 8px;*/
-    }
+
     #top_buttons .st1 > a:after {
         display: inline-block;
         width: 100%;
@@ -2970,10 +2972,19 @@ h1[itemprop="author"]{
         transition: .3s;
     }
     .st1.opened > a:after {
-        background: url(/bitrix/templates/tri_tochki/images/tup.svg) no-repeat right 9px / 13px 16px;
+         background: url(/bitrix/templates/tri_tochki/images/tup.svg) no-repeat right 9px / 13px 16px;
     }
+
+    .st1 > a:after {
+        background: url(/bitrix/templates/tri_tochki/images/tupg.svg) no-repeat right 9px / 13px 16px;
+    }
+
     .st1.closed > a:after {
         background: url(/bitrix/templates/tri_tochki/images/tdownw.svg) no-repeat right 9px / 13px 16px;
+    }
+
+    .st1.closed > a:hover:after {
+        background: url(/bitrix/templates/tri_tochki/images/tdowng.svg) no-repeat right 9px / 13px 16px;
     }
 }
 @media(max-width: 420px){

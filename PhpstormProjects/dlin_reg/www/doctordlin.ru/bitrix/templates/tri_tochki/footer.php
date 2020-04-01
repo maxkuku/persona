@@ -2,7 +2,6 @@
 IncludeTemplateLangFile(__FILE__);
 ?>
 </div><!--#main-->
-
 <? if($APPLICATION->GetCurPage()!="/"):?>
 <? $APPLICATION->IncludeFile( SITE_TEMPLATE_PATH . "/bottom_button.php", Array(), Array( "MODE" => "html" ) ); ?>
 <?endif?>
@@ -10,7 +9,7 @@ IncludeTemplateLangFile(__FILE__);
     <div id="footer-map">
     	<div class="wrap">
             <div class="foot-menu">
-                <?$APPLICATION->IncludeComponent("dlin:menu", "another_desktop", array(
+                <?$APPLICATION->IncludeComponent("tri_tochki:menu", "another_foot_desktop", array(
                     "ROOT_MENU_TYPE" => "top",
                     "MAX_LEVEL" => "1",
                     "CHILD_MENU_TYPE" => "left",
@@ -40,8 +39,9 @@ IncludeTemplateLangFile(__FILE__);
 						<meta itemprop="addressCountry" content="Россия">
 				    </span>
                     <a href="/contacts/"><p>Москва, улица Гарибальди 36</p></a>
-                    <a href="tel:+74951016035">+7 495 101‑60-35</a>
-                    <div itemscope="" ><span itemtype="http://schema.org/OpeningHoursSpecification" itemprop="openingHoursSpecification"><span itemtype="http://schema.org/DayOfWeek" itemscope="" itemprop="dayOfWeek" content="Mon-Sat 09:00-21:00"><span>пн-сб с 9:00 до 21:00</span></span></span></div>
+                    <!-- a href="tel:+74951016035">+7 495 101‑60-35</a -->
+                    <div itemscope="" ><span itemtype="http://schema.org/OpeningHoursSpecification" itemprop="openingHoursSpecification"><span itemtype="http://schema.org/DayOfWeek" itemscope="" itemprop="dayOfWeek" content="Mon-Sat 09:00-21:00"><span>пн-сб с 9:00 до 21:00</span>
+						<br><span>ООО Центр мануальной медицины</span></span></span></div>
                 </div>
 
                 <div>
@@ -52,8 +52,9 @@ IncludeTemplateLangFile(__FILE__);
 				    </span>
                     <a href="/contacts/mir/"><p>Москва, ул. Гиляровского 51</p></a>
                     <meta itemprop="paymentAccepted" content="Cash, credit card"/>
-                    <a href="tel:+74951016035">+7 495 101‑60-35</a>
-                    <div itemscope="" ><span itemtype="http://schema.org/OpeningHoursSpecification" itemprop="openingHoursSpecification"><span itemtype="http://schema.org/DayOfWeek" itemscope="" itemprop="dayOfWeek" content="Mon-Sat 09:00-21:00"><span>пн-сб с 9:00 до 21:00</span></span></span></div>
+                    <!-- a href="tel:+74951016035">+7 495 101‑60-35</a -->
+                    <div itemscope="" ><span itemtype="http://schema.org/OpeningHoursSpecification" itemprop="openingHoursSpecification"><span itemtype="http://schema.org/DayOfWeek" itemscope="" itemprop="dayOfWeek" content="Mon-Sat 09:00-21:00"><span>пн-сб с 9:00 до 21:00</span>
+						<br><span>ООО Центр восстановительной медицины</span></span></span></div>
                 </div>
 
                 <div>
@@ -63,15 +64,16 @@ IncludeTemplateLangFile(__FILE__);
 						<meta itemprop="addressCountry" content="Россия">
 				    </span>
                     <a href="/contacts/pushkino/"><p>Пушкино, Авиационная улица, 36</p></a>
-                    <a href="tel:+74951011241">+7 495 101‑12-41</a>
-                    <div itemscope=""><span itemtype="http://schema.org/OpeningHoursSpecification" itemprop="openingHoursSpecification"><span itemtype="http://schema.org/DayOfWeek" itemscope="" itemprop="dayOfWeek" content="Mon-Sat 09:00-21:00"><span>пн-сб с 9:00 до 21:00</span></span></span></div>
+                    <!-- a href="tel:+74951011241">+7 495 101‑12-41</a -->
+                    <div itemscope=""><span itemtype="http://schema.org/OpeningHoursSpecification" itemprop="openingHoursSpecification"><span itemtype="http://schema.org/DayOfWeek" itemscope="" itemprop="dayOfWeek" content="Mon-Sat 09:00-21:00"><span>пн-сб с 9:00 до 21:00</span>
+						<br><span>ООО Органик фуд</span></span></span></div>
                 </div>
 
             </div>
         </div>
     </div>
     <?  $APPLICATION->IncludeComponent("dlin:sendfeedback", ".default", false);?>
-    <div id="modal-search" class="uk-modal" aria-hidden="true">
+        <div id="modal-search" class="uk-modal" aria-hidden="true">
         <div class="uk-modal-dialog">
             <a class="uk-modal-close uk-close"></a>
             <div class="uk-modal-header">Поиск</div>
@@ -91,7 +93,6 @@ IncludeTemplateLangFile(__FILE__);
             </div>
         </div>
     </div>
-
         <div id="foot">
 			<div class="wrap">
                 <div id="copy-bottom">
@@ -103,8 +104,6 @@ IncludeTemplateLangFile(__FILE__);
 			</div>
 		</div>
     </div>
-	  
-        
 <script type="text/javascript" src="<?=SITE_TEMPLATE_PATH?>/js/footerfuncs.js"></script>        
 <script>
 	$(document).ready(function(){
@@ -114,17 +113,6 @@ IncludeTemplateLangFile(__FILE__);
 	});
 </script>
 <script>
-    $(document).ready(function(){
-        /*if($('#banner').length){
-            $('#banner').slick({
-                dots: false,
-                infinite: true,
-                speed: 300,
-                slidesToShow: 1
-            });
-        }*/
-    });
-
     $(document).ready(function(){
         $("#feedback").submit(function(){
             yaCounter47424421.reachGoal('zapis');
@@ -178,7 +166,8 @@ IncludeTemplateLangFile(__FILE__);
 </script>
 
 
-
+<script src="<?=SITE_TEMPLATE_PATH?>/js/jquery.fancybox.js"></script>
+<script src="<?=SITE_TEMPLATE_PATH?>/js/jquery.fancybox-media.js"></script>
 
 
 <link rel="stylesheet" href="<?=SITE_TEMPLATE_PATH?>/css/font-awesome.min.css"/>
@@ -190,45 +179,19 @@ IncludeTemplateLangFile(__FILE__);
 
 
 
-<!-- calltouch code -->
-<script src="https://mod.calltouch.ru/init.js?id=fnhyv0va"></script>
-
-<!-- calltouch requests send -->
+<!-- calltouch -->
 <script type="text/javascript">
-jQuery(document).on('submit', 'form#feedback', function() {
-var form = jQuery(this);
-var phone = form.find('input[name="TEL"]').val();
-var fio = form.find('input[name="AUTHOR"]').val();
-var sub = 'Заявка';
-
-var ct_node_id = '8';
-var ct_site_id = '25979';
-var ct_data = {
-fio: fio,
-phoneNumber: phone,
-subject: sub,
-sessionId: window.call_value
-};
-
-if ( !!phone && !!fio ){
-jQuery.ajax({  
-  url: 'https://api-node'+ct_node_id+'.calltouch.ru/calls-service/RestAPI/requests/'+ct_site_id+'/register/',
-  dataType: 'json',
-  type: 'POST',
-  data: ct_data,
-  async: false
-});  
-}
-});
+(function(w,d,n,c){w.CalltouchDataObject=n;w[n]=function(){w[n]["callbacks"].push(arguments)};if(!w[n]["callbacks"]){w[n]["callbacks"]=[]}w[n]["loaded"]=false;if(typeof c!=="object"){c=[c]}w[n]["counters"]=c;for(var i=0;i<c.length;i+=1){p(c[i])}function p(cId){var a=d.getElementsByTagName("script")[0],s=d.createElement("script"),i=function(){a.parentNode.insertBefore(s,a)};s.type="text/javascript";s.async=true;s.src="https://mod.calltouch.ru/init.js?id="+cId;if(w.opera=="[object Opera]"){d.addEventListener("DOMContentLoaded",i,false)}else{i()}}})(window,document,"ct","fnhyv0va");
 </script>
-<script>
+<script type="text/javascript" >
 jQuery(document).on('click', 'button[name="send_header_phone"]', function() {
     var m = jQuery(this).closest('#res_form');
         var fio = m.find('input[name="AUTHOR"],input[placeholder*="имя"]').val();
         var phone = m.find('input[name="header_phone"],input[type*="tel"]').val();
         var mail = m.find('input[name*="email"]').val();
         var ct_site_id = '25979';
-        var sub = 'Заявка';
+        var ct_node_id = '8';
+        var sub = 'Заявка ' + document.location.hostname;
         var ct_data = { 
         fio: fio,          
         phoneNumber: phone,
@@ -238,13 +201,34 @@ jQuery(document).on('click', 'button[name="send_header_phone"]', function() {
         };
         if (!!phone){
         jQuery.ajax({
-          url: 'https://api-node8.calltouch.ru/calls-service/RestAPI/requests/'+ct_site_id+'/register/',
+          url: 'https://api-node' + ct_node_id + '.calltouch.ru/calls-service/RestAPI/requests/' + ct_site_id + '/register/',
           dataType: 'json', type: 'POST', data: ct_data, async: false
         });
     }
 })
 </script>
-<!-- calltouch code -->
-
+<script type="text/javascript" >
+jQuery(document).on('click', 'input[type="submit"]', function() {
+		var m = jQuery('#feedback');
+        var fio = m.find('input[name="AUTHOR"]').val();
+        var phone = m.find('input[name="TEL"]').val();
+        var ct_site_id = '25979';
+        var ct_node_id = '8';
+        var sub = 'Заявка ' + document.location.hostname;
+        var ct_data = { 
+        fio: fio,          
+        phoneNumber: phone,
+        subject: sub,
+        sessionId: window.call_value
+        };
+        if (!!phone){
+        jQuery.ajax({
+          url: 'https://api-node' + ct_node_id + '.calltouch.ru/calls-service/RestAPI/requests/' + ct_site_id + '/register/',
+          dataType: 'json', type: 'POST', data: ct_data, async: false
+        });
+    }
+})
+</script>
+<!--calltouch -->
 </body>
 </html>

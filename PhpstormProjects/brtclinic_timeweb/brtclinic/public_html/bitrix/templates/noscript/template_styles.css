@@ -1207,7 +1207,7 @@ button#dropdownMenuButton {
 .banner-picture div div {
     height: 330px;
     border: 10px solid rgba(255, 255, 255, .5);
-    /*border-radius: 50%;*/
+    border-radius: 50%;
 }
 
 ul.checked {
@@ -3699,6 +3699,7 @@ input.uk-form-width-medium {
     }
     .banner-picture > div > div {
         border: none;
+        border-radius: initial;
     }
     .banner-picture img {
         height: 100%;

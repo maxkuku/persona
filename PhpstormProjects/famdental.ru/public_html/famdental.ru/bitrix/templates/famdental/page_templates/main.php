@@ -1,5 +1,21 @@
 </div><!--1 container-->
 <img src="<?=SITE_TEMPLATE_PATH?>/imager/fam-1600.jpg" class="main" alt="2 поколения стоматологов"/>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "LocalBusiness",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Oktyabrskoye pole",
+    "addressRegion": "Moscow",
+    "streetAddress": "No 2 building 3 Marshala Rybalko street"
+  },
+  "description": "Dentist",
+  "name": "Family dentists",
+  "telephone": "+7 (495) 241-93-82",
+  "image": "https://famdental.ru/bitrix/templates/famdental/imager/logo-top.png"
+}
+</script>
 <p class="caption heading"><span>В нашей команде два поколения стоматологов семьи Ахтаниных</span></p>
 <div class="container">
 <!--
@@ -19,7 +35,7 @@
 			<span></span>
 			<div class="quarter_in">
 				<h4>3 вида гарантий на имплантацию</h4>
-				<p>Пожизненная гарантия на имплант от производителя. Гарантия на установку и протезирование до 5 лет. </p>
+				<p>Пожизненная гарантия на имплант от производителя. Гарантия на установку и протезирование до 3 лет. </p>
 			</div>
 		</div>
 		<div class="quarter_block uk-width-1-1 uk-width-medium-1-2">
@@ -63,7 +79,7 @@
 				<div class="about_doctor">
 					<h3>Ахтанин Александр Павлович</h3></a>
 					<p class="prof">Стоматолог-ортопед, имплантолог</p>
-					<p class="long">Опыт работы 31 год</p>
+					<p class="long">Опыт работы 32 года</p>
 					<p class="about_him">Главный врач клиники,
 						Implant Specialist (Бостон, США). Устанавливает импланты
 						с 1996 года.</p>
@@ -75,9 +91,8 @@
 				<div class="about_doctor">
 					<h3>Ахтанин Евгений Александрович</h3></a>
 					<p class="prof">Стоматолог-хирург, имплантолог</p>
-					<p class="long">Опыт имплантации 11 лет</p>
-					<p class="about_him">Сертифицированный специалист Straumann Young Professional. Специализируется
-						в хирургии, имплантации и протезировании.</p></div>
+					<p class="long">Опыт имплантации 12 лет</p>
+					<p class="about_him">Сертифицированный специалист Straumann Young Professional. Состоит в международной ассоциации имплантологов ITI. </p></div>
 			</div>
 				<div class="doctor"><a href="/akhtanin-alexander-jr">
 				<img src="/upload/medialibrary/cf4/cf413c22f9e170046a7522639d4ffd07.jpg" alt="Ахтанин Александр
@@ -85,7 +100,7 @@
 				<div class="about_doctor">
 					<h3>Ахтанин Александр Александрович</h3></a>
 					<p class="prof">Стоматолог-ортопед, имплантолог</p>
-					<p class="long">Опыт имплантации 7 лет</p>
+					<p class="long">Опыт имплантации 8 лет</p>
 					<p class="about_him">Состоит в международной ассоциации имплантологов ITI. Стажировался в
 						Германии на базе Университетской клиники Charite.</p>
 				</div>
@@ -95,7 +110,7 @@
 				<div class="about_doctor">
 					<h3>Ахтанина Ксения Игоревна</h3></a>
 					<p class="prof">Стоматолог-терапевт</p>
-					<p class="long">Опыт работы 5 лет</p>
+					<p class="long">Опыт работы 6 лет</p>
 					<p class="about_him">Стажировалась в Берлине на базе клиники Leipziger 14 Ihre Zahnaerzte. Специализации: эндодонтия (лечение корневых каналов) и художественная реставрация.</p>
 				</div>
 			</div>
@@ -105,7 +120,7 @@
 				<div class="about_doctor">
 					<h3>Ахтанина Ксения Павловна</h3></a>
 					<p class="prof">Стоматолог-терапевт</p>
-					<p class="long">Опыт работы 5 лет</p>
+					<p class="long">Опыт работы 6 лет</p>
 					<p class="about_him">Специализации: Лечение корневых каналов (эндодонтия), реставрация всех групп зубов, отбеливание.</p>
 				</div>
 			</div>
@@ -114,20 +129,11 @@
 				<div class="about_doctor">
 					<h3>Кузнецов Егор Андреевич</h3></a>
 					<p class="prof">Стоматолог-ортодонт</p>
-					<p class="long">Опыт работы 9 лет</p>
+					<p class="long">Опыт работы 12 лет</p>
 					<p class="about_him">Специалист в области исправления прикуса брекетами и капами</p>
 				</div>
 			</div>
-				<div class="doctor"><a href="/peresinkin">
-				<img src="/upload/medialibrary/b63/b63d5b9fe71d8edd91d16dd56dca0bc4.png" alt="Пересыпкин Дмитрий
-				Валерьевич">
-				<div class="about_doctor">
-					<h3>Пересыпкин Дмитрий Валерьевич</h3></a>
-					<p class="prof">Стоматолог-терапевт</p>
-					<p class="long">Опыт работы 24 года</p>
-					<p class="about_him">Специалист в области эстетической стоматологии и эндодонтии.</p>
-				</div>
-			</div>
+
 			</div>
 		</div>
 		<img class="arrs rarr" src="<?=SITE_TEMPLATE_PATH?>/imager/rarr.png" alt="Следующие" align="absmiddle"/>
@@ -227,14 +233,14 @@
 
 		<div class="inlay active">
 			<div>
-				<p>Осмотр и первичный прием проводит врач имплантолог с 30 летним опытом. Консультация длится 1 час, в ходе которой будет собран анамнез, проведен осмотр полости рта и изучены рентгеновские снимки (панорамные снимки делаются бесплатно). Вам будет предложено несколько вариантов имплантации зубов, озвучены суммы и сроки.</p>
+				<p>					 Осмотр и первичный прием проводит врач имплантолог. Консультация длится 1 час, в ходе которой будет собран анамнез, проведен осмотр полости рта и изучены КТ снимки <b><font color="red">(КТ в нашей клинике делается бесплатно)</font></b>. Вам будет предложено несколько вариантов имплантации зубов, озвучены суммы и сроки.</p>
 				<img src="/upload/medialibrary/39b/39bd07edf3b986295f4346ed2eba4e0a.jpg" alt="Протез">
 				<a href="/implantaciya-pri-polnom-otsutstvii-zubov"><img src="/bitrix/templates/famdental/imager/more.png" alt="Подробнее"></a>
 			</div>
 		</div>
 		<div class="inlay">
 			<div>
-				<p>Вы сделаете компьютерную томограмму. При необходимости могут быть назначены дополнительные лабораторные анализы. Врач получит трехмерную модель ваших челюстей, подберет размеры имплантов и абатменов для крепления протеза. Согласует с зуботехнической лабораторией конструкцию протеза и цвет ваших будущих зубов.</p>
+				<p>Врач получит трехмерную модель ваших челюстей, подберет размеры имплантов и абатменов для крепления протеза. Согласует с зуботехнической лабораторией конструкцию протеза и цвет ваших будущих зубов.</p>
 				<img src="/upload/medialibrary/39b/39bd07edf3b986295f4346ed2eba4e0a.jpg" alt="Протез">
 				<a href="/implantaciya-pri-polnom-otsutstvii-zubov"><img src="/bitrix/templates/famdental/imager/more.png" alt="Подробнее"></a>
 			</div>

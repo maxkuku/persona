@@ -33,7 +33,7 @@ img.littler {
 }
 .container{
     max-width:1170px;
-    margin:0 auto;
+    margin: 0 auto 30px;
     padding: 0;
 }
 .top-grid{
@@ -45,6 +45,9 @@ img.littler {
     display: inline-block;
     vertical-align: top;
     margin-right: 35px;
+}
+.footer-line.fixed + .map-container{
+    margin-top: 84px;
 }
 .menu{
     display: inline-block;
@@ -222,6 +225,9 @@ h1, h2{
     width: 70px;
     height:70px;
     margin-top: 20px;
+}
+.in_address a img {
+    width: 50px;
 }
 .quarter_block_num span{
     position: relative;
@@ -465,7 +471,7 @@ a.about_doctor img{
 .video_with_arrows_wrap img {
     height: 40px;
     width: 40px;
-    margin: 140px 10px;
+    margin: 110px 10px;
     display: inline-block;
 }
 .video_with_arrows_wrap_price {
@@ -565,7 +571,7 @@ video{
     padding:12px;
 }
 .footer-line{
-    margin-top:32px;
+    /*margin-top:32px;*/
 }
 .footer-line button,
 button.rec{
