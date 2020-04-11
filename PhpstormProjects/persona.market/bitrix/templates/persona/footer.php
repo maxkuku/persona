@@ -230,6 +230,9 @@ search={search_term_string}">
 
 
 <script src="<?=SITE_TEMPLATE_PATH?>/js/jquery-2.1.1.min.js" type="text/javascript"></script>
+<?if(strpos(htmlspecialcharsex($_SERVER['REQUEST_URI']), 'catalog') == false):?>
+    <script src="<?=SITE_TEMPLATE_PATH?>/js/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+<?endif?>
 <script src="//code.jquery.com/ui/1.12.0/jquery-ui.min.js" type="text/javascript"></script>
 <script src="<?=SITE_TEMPLATE_PATH?>/js/bootstrap.min.js" type="text/javascript"></script>
 <script src="<?=SITE_TEMPLATE_PATH?>/js/common.js" type="text/javascript"></script>
@@ -238,7 +241,6 @@ search={search_term_string}">
 <?if(strpos(htmlspecialcharsex($_SERVER['REQUEST_URI']), 'catalog') == false):?>
     <!--script src="<?=SITE_TEMPLATE_PATH?>/js/preorder.js" type="text/javascript"></script-->
     <script src="<?=SITE_TEMPLATE_PATH?>/js/jquery.countdown.min.js" type="text/javascript"></script>
-    <script src="<?=SITE_TEMPLATE_PATH?>/js/jquery.nivo.slider.pack.js" type="text/javascript"></script>
 <?endif?>
 <script src="<?=SITE_TEMPLATE_PATH?>/js/owl.carousel.min.js" type="text/javascript"></script>
 <script src="<?=SITE_TEMPLATE_PATH?>/js/moment.js" type="text/javascript"></script>

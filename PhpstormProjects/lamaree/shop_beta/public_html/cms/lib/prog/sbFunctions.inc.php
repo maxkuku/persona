@@ -499,8 +499,10 @@ function big_resi($src,$w,$h)
 
 //find item category. ID of item
 
-function find_cat($id) {
+function find_cat($id, $only_name) {
     global $dbc;
+    if(!$only_name)
+        $only_name = false;
     $query2 = "SELECT link_cat_id FROM sb_catlinks WHERE link_el_id = '$id'";
     $data2 = mysqli_query($dbc, $query2);
     $cat_id = array();
@@ -525,7 +527,12 @@ function find_cat($id) {
             $line .= "<a class=\"cat-tag\" href=\"".$row3['cat_url']."\">".$row3['cat_name']."</a>";
         }
     }
-    return $line;
+    if($only_line){
+        return $row3['cat_name'];
+    }
+    else {
+        return $line;
+    }
 }
 
 
@@ -2559,7 +2566,7 @@ function sets($id_or_artikul, $way, $name){
 					$line .= '<div class="set-price">'.$sum.' <span class="smaller">руб</span></div>';
 				    $line .= '<div class="double-waves"></div></div>';
 
-					$line .= '<div class="add-to-basket-set btn-blue" onclick="set_in_basket(\''.implode(",", $ids).'\')" title="После оформления заказа вы сможете оговорить с менеджером размер порции">Добавить сэт в корзину</div>
+					$line .= '<div class="add-to-basket-set btn-blue" onclick="set_in_basket(\''.implode(",", $ids).'\')" title="После оформления заказа вы сможете оговорить с менеджером объем каждой позиции в заказе">Добавить сэт в корзину</div>
 						
 					</div>
 				</div>';

@@ -7,13 +7,14 @@ if (CModule::IncludeModule("main")):
 		"AUTHOR"           => htmlspecialcharsEx($_REQUEST['AUTHOR']),
 		"TEL"              => htmlspecialcharsEx($_REQUEST['TEL']),
 		"PIC"              => htmlspecialcharsEx($_REQUEST['PIC']),
+		"CONS"              => htmlspecialcharsEx($_REQUEST['CONS']),
 		"REF"              => urldecode(htmlspecialcharsEx($_SERVER['REQUEST_URI'])),
 		"SOURCE"           => htmlspecialcharsEx($_REQUEST['SOURCE']),
 		"EMAIL_TO"         => COption::GetOptionString('main', 'email_from')
 	);
 
 	if(htmlspecialchars($_REQUEST['submit'],3)<>""){
-		if(strlen(htmlspecialchars($_REQUEST['AUTHOR'],3))>2
+		if(strlen(htmlspecialchars($_REQUEST['AUTHOR'],3))>3
 		   && strlen(htmlspecialchars($_REQUEST['AUTHOR'],3))<100){
 			if(strlen(trim(htmlspecialchars($_REQUEST['TEL'],3))) == 16 && strpos(htmlspecialchars($_REQUEST['TEL'],3), '_') === false){
 				
@@ -29,6 +30,13 @@ if (CModule::IncludeModule("main")):
 
                     if (CEvent::Send("FEEDBACK_FORM", "s1", $arEventFields)) {
                         $arResult['SUC'][] = "Сообщение отправлено. Спасибо";
+
+
+                        # /home/c/c41821/brtclinic/public_html/bitrix/templates/noscript
+
+                        $fp = fopen('/home/c/c41821/brtclinic/public_html/bitrix/components/noscript/sendfeedback/emails_log.log', 'a+');
+                        fwrite($fp, date("Y-m-d H:i:s") . "\n" . implode(", ", $arEventFields) . " отправлено \n");
+                        fclose($fp);
 
 
                         $fields['AUTHOR'] = htmlspecialcharsEx($_REQUEST['AUTHOR']);

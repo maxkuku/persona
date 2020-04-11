@@ -566,7 +566,7 @@ $protocol = (CMain::IsHTTPS()) ? "https://" : "http://";
                                             <div class="addtocart-group">
 
                                                 <button type="button" id="button-cart"
-                                                        onclick="cart.add2(<?= $arResult['ID'] ?>, 1);"
+                                                        onclick="cart.add(<?= $arResult['ID'] ?>, 1);"
                                                         data-loading-text="Загрузка..."
                                                         data-id="<?= $arResult['ID'] ?>"
                                                         class="btn btn-danger gradiented">В корзину

@@ -657,7 +657,7 @@ class CatalogSectionComponent extends ElementList
 		if($id):
 
 		$filter = array ( "IBLOCK_ID" => 11, "=PROPERTY_FOR_WHAT" => $id, "ACTIVE" => "Y" );
-		$items_sel =  (new CIBlockElement())->GetList([], $filter, 0, 0, ['ID', 'NAME', 'CODE', 'PREVIEW_TEXT', 'PROPERTY_FOR_WHAT_VALUE', 'DETAIL_TEXT']);
+		$items_sel =  (new CIBlockElement())->GetList([], $filter, 0, 0, ['ID', 'NAME', 'CODE', 'PREVIEW_TEXT', 'PROPERTY_FOR_WHAT_VALUE', 'DETAIL_TEXT', 'PREVIEW_PICTURE', 'DETAIL_PICTURE']);
 		$arResult['ITEMS_SELECTED'] = $items_sel->SelectedRowsCount();
 		$res = "";
 		if(!$arResult['ITEMS_SELECTED'])

@@ -8,12 +8,13 @@ if ( empty( $arResult['ALL_ITEMS'] ) ) {
 
 
 CJSCore::Init();
-
+$GLOBALS['brandmenuitems'] = 0;
 ?>
 <div class="top-nav brand-menu-top">
     <div class="container top-menu-container">
         <ul id="top-menu-list" class="top-menu">
 			<? foreach ( $arResult["ALL_ITEMS"] as $itemID => $arLink ): ?>
+            
 			<? if ( $arLink["DEPTH_LEVEL"] == 1 ) { ?>
 			<? if ( $prevIndex > $arLink["DEPTH_LEVEL"] ) { ?>
     </div>
@@ -35,16 +36,19 @@ CJSCore::Init();
 				<? }
                 elseif ( $arLink['DEPTH_LEVEL'] > 1 ) { ?>
                     <a href="<?= $arLink["LINK"] ?>"><?= $arLink["NAME"] ?></a>
+                    <?$GLOBALS['brandmenuitems']++?>
 				<? } ?>
 
 				<? $prevIndex = $arLink["DEPTH_LEVEL"]; ?>
+
 				<? endforeach; ?>
                 </ul>
                 <div class="tri-menu-wrap">
                     <div id="header-menu">
+                        <a class="btn" href="/sertifikat_prod/"><span>Сертификаты</span></a>
                         <a class="btn" href="/contact-us/"><span>Контакты</span></a>
-                        <a class="btn" href="/payment-delivery"><span>Оплата и доставка</span></a>
-                        <!--a class="btn" href="/bonus"><span>Бонусы за покупки</span></a-->
+                        <a class="btn" href="/payment-delivery/"><span>Оплата и доставка</span></a>
+
                     </div>
                 </div>
                 <div class="pull-right">

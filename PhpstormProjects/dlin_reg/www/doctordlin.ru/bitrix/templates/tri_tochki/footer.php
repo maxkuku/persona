@@ -168,8 +168,22 @@ IncludeTemplateLangFile(__FILE__);
 
 <script src="<?=SITE_TEMPLATE_PATH?>/js/jquery.fancybox.js"></script>
 <script src="<?=SITE_TEMPLATE_PATH?>/js/jquery.fancybox-media.js"></script>
+<script>
+    jQuery(document).ready(function ($) {
+        $(".fancybox").fancybox({
+            type: 'iframe',
+            helpers: {
+                media: true
+            },
+            youtube: {
+                autoplay: 1, // enable autoplay
+                start: 0 // set start time in seconds (embed)
+            }
+        }); // fancybox
+    }); // ready
+</script>
 
-
+<link rel="stylesheet" href="<?=SITE_TEMPLATE_PATH?>/css/jquery.fancybox.css?v=3"/>
 <link rel="stylesheet" href="<?=SITE_TEMPLATE_PATH?>/css/font-awesome.min.css"/>
 <link rel="stylesheet" href="<?=SITE_TEMPLATE_PATH?>/css/lightbox.min.css"/>
 <link rel="stylesheet" href="<?=SITE_TEMPLATE_PATH?>/responsiveslides.css"/>

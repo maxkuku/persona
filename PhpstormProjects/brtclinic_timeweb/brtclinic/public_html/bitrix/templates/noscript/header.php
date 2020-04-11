@@ -134,8 +134,33 @@
 
 <div id="navigation"></div>
 
-
-            <?$APPLICATION->IncludeComponent(
+<?$n = strtotime("now");
+if($n < strtotime("5/01/2020") && $APPLICATION->GetCurPage() != "/kontakty/"){
+    ?>
+    <style>
+        .banner.wrapr .row {
+            background-color: #e34444;
+            width: 100%;
+            color: white;
+            padding: 2px 0;
+            text-align: center;
+        }
+        .banner.wrapr p.in-banner {
+            font-weight: 700;
+        }
+        .banner.wrapr p a {
+            color:yellow;
+            text-decoration:underline;
+            cursor:pointer;
+        }
+    </style><div class="banner wrapr">
+        <div class="row">
+            <p class="in-banner">КЛИНИКА НЕ РАБОТАЕТ ДО 30 АПРЕЛЯ</p>
+        <p class="in-under">ОСТАВЬТЕ <a class="btn" onclick="set_modal_header_consult()" data-uk-modal="{target:'#modal-form'}" data-target="#modal-form">ЗАЯВКУ НА САЙТЕ</a>, МЫ ВАМ ОБЯЗАТЕЛЬНО ПЕРЕЗВОНИМ</p>
+        </div>
+    </div><?
+}
+?><?$APPLICATION->IncludeComponent(
 				"bitrix:main.include",
 				"",
 				Array(

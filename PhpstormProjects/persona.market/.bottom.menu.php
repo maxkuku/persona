@@ -42,7 +42,7 @@ $aMenuLinks = Array(
 		""
 	),
 	Array(
-		"Новости",
+		"Статьи",
 		"/ads_block/",
 		Array(),
 		Array("IS_PARENT"=>"", "DEPTH_LEVEL"=>"2"),

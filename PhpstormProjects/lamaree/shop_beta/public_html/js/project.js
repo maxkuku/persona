@@ -308,7 +308,7 @@ function checkOrderForm() {
     }
 
 
-    if(delivery < 1) { // если не самовывоз
+    if (delivery < 1) { // если не самовывоз
         if ($('[name="user_f_4_5"] option:selected').val() == 0) {
             $('[name="user_f_4_5"]').addClass('error');
             scroll();
@@ -324,10 +324,14 @@ function checkOrderForm() {
 
     var dayArr = $('.order-form input[name="user_f_9"]').val().split('.');
     var dGet = '20' + dayArr[2] + '.' + dayArr[1] + '.' + dayArr[0];
+    var dFor = dayArr[1] + '/' + dayArr[0] + '/' + '20' + dayArr[2];
+    var dForRus = dayArr[0] + '.' + dayArr[1] + '.' + '20' + dayArr[2];
     var d = new Date(dGet);
     var isWeekend = (d.getDay() === 0);
 
 
+
+    // проверка на weekend
     if (isWeekend) {
         $('.order-form input[name="user_f_9"]').addClass('error');
         scroll_date1()
@@ -338,6 +342,43 @@ function checkOrderForm() {
             $('.order-form input[name="user_f_9"]').removeClass('error');
         }
     }
+
+
+
+
+
+
+    var dayArr1 = $('.order-form input[name="user_f_9_2"]').val().split('.');
+    var dFor1 = dayArr1[1] + '/' + dayArr1[0] + '/' + '20' + dayArr1[2];
+    var dForRus1 = dayArr1[0] + '.' + dayArr1[1] + '.' + '20' + dayArr1[2];
+
+
+    // проверка на новый год
+    if (delivery < 1) { // если не самовывоз
+        if (dateCheck('12/29/2020', '01/05/2021', new Date(dFor)) ||
+            dateCheck('03/08/2020', '03/09/2020', new Date(dFor))) {
+            alert('На дату ' + dForRus + ' заказы не принимаются')
+            result = false;
+        }
+        else {
+            $('.order-form input[name="user_f_9"]').removeClass('error');
+        }
+    }
+    else { // если самовывоз
+        if (dateCheck('12/29/2019', '01/05/2020', new Date(dFor1))||
+            dateCheck('03/08/2020', '03/09/2020', new Date(dFor1))) {
+            $('.order-form input[name="user_f_9_2"]').addClass('error');
+            alert('На дату ' + dForRus1 + ' заказы не принимаются')
+            result = false;
+        }
+        else {
+            $('.order-form input[name="user_f_9_2"]').removeClass('error');
+        }
+    }
+
+
+
+
 
 
     if ($.trim($('.order-form input[name="user_f_2"]').val()) == '' || !isValidEmailAddress($('.order-form input[name="user_f_2"]').val())) {
@@ -378,10 +419,11 @@ function checkOrderForm() {
     // забанить имейл
     if (
         $('.order-form input[name="user_f_2"]').val() === 'alex.ru@bk.ru'
-        || $('.order-form input[name="user_f_2"]').val() === 'fhhj@mail.ru') {
+        || $('.order-form input[name="user_f_2"]').val() === 'fhhj@mail.ru'
+        || $('.order-form input[name="user_f_2"]').val() === 'kosterin@mail.ru') {
 
         $('.order-form input[name="user_f_2"]').addClass('error');
-        return false;
+        result = false;
 
     }
 
@@ -416,6 +458,18 @@ function checkOrderForm() {
         }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
         if ($.trim($('.metromenu').val()) == '') {
             $('.metromenu').addClass('error');
             scroll_addr();
@@ -446,7 +500,7 @@ function checkOrderForm() {
             || $('.order-form input[name="user_f_2"]').val() === 'fhhj@mail.ru') {
 
             $('.order-form input[name="user_f_2"]').addClass('error');
-            return false;
+            result = false;
 
         }
 
@@ -457,7 +511,7 @@ function checkOrderForm() {
 
         if(dateCheck("12/23/2019", "12/28/2019", new Date())) {
             minSum = 3000;
-            console.log(dateCheck("12/23/2019", "12/28/2019", new Date()) + " " + new Date())
+
         }
 
 
@@ -472,42 +526,46 @@ function checkOrderForm() {
     }
 
 
+
+
     return result;
 }
 
 
 $(document).ready(function(){ // datetimepicker specific
-    $('#datetimepicker2').datetimepicker(
-        { format: 'DD.MM.YY' }).on('dp.change', function (e) {
+    if($('#datetimepicker2').length) {
+        $('#datetimepicker2').datetimepicker(
+            {format: 'DD.MM.YY'}).on('dp.change', function (e) {
 
-        var vat = $('[name="user_f_9_3"] option:selected').val();
-        var tal = $('[name="user_f_9_3"] option:selected').text();
-        var rvat, rtal;
+            var vat = $('[name="user_f_9_3"] option:selected').val();
+            var tal = $('[name="user_f_9_3"] option:selected').text();
+            var rvat, rtal;
 
-        //console.log(e.date)
+            //console.log(e.date)
 
-        if(dateCheck("12/23/2019", "12/28/2019", new Date(e.date))){
+            if (dateCheck("12/23/2019", "12/28/2019", new Date(e.date))) {
 
-            rvat = vat.replace('19', '21');
-            rtal = tal.replace('19', '21');
+                rvat = vat.replace('19', '21');
+                rtal = tal.replace('19', '21');
 
-        }
-        else{
+            }
+            else {
 
-            rvat = vat.replace('21', '19');
-            rtal = tal.replace('21', '19');
+                rvat = vat.replace('21', '19');
+                rtal = tal.replace('21', '19');
 
-        }
+            }
 
-        //console.log(rtal)
+            //console.log(rtal)
 
-        $('[name="user_f_9_3"] option:selected').val(rvat)
-        $('[name="user_f_9_3"] option:selected').text(rtal)
+            $('[name="user_f_9_3"] option:selected').val(rvat)
+            $('[name="user_f_9_3"] option:selected').text(rtal)
 
-    });
+        });
+    }
 });
 
-if(dateCheck("12/15/2019", "01/08/2020", new Date())){
+if(dateCheck("12/15/2020", "01/08/2021", new Date())){
     //$('.numberCircle').addClass('snow');
     /*$('#headerLogo').addClass('snow');
     $('#mainPage').addClass('snow');
@@ -522,6 +580,46 @@ if(dateCheck("12/15/2019", "01/08/2020", new Date())){
 
 }
 
+var pay = function(){
+    if(checkOrderForm) {
+        var city;
+        if($('[name=user_f_4_5] option:selected').val() == 1){
+            city = "Москва";
+        }
+        else{
+            city = "Московская область";
+        }
+        $.ajax({
+            type: 'post',
+            url: '/ajax/add_order_payment.php',
+            data: {
+                'ajax_pay': 1,
+                'user_f_1': $('[name=user_f_1]').val(),
+                'user_f_2': $('[name=user_f_2]').val(),
+                'user_f_4': city + ", ул. " + $('[name=user_f_4]').val() + ", д." + $('[name=user_f_4_2]').val() + " кв." + $('[name=user_f_4_3]').val() + " п." + $('[name=user_f_4_4]').val() + ", м." + $('[name="metro-stations"] option:selected').val(),
+                'user_f_5': $('[name=user_f_5]').val(),
+                'user_f_6': $('[name=user_f_62]').val(),
+                'goods_list': $('[name=goods_list]').val(),
+                'user_f_8': $('[name=user_f_8]').val(),
+                'user_f_9': $('[name=user_f_9]').val() + " " + $('[name=user_f_9_3] option:selected').val(),
+                'user_f_11': $('[name=user_f_11]').val(),
+                'user_f_12': $('[name=user_f_12]').val(),
+                'user_f_13': $('[name=user_f_13]').val(),
+            },
+            dataType: 'html',
+            beforeSend: function () {
+
+            },
+            complete: function () {
+
+            },
+            success: function (data) {
+                $('body').append(data);
+                $('.pay-modal').css('display', 'block');
+            }
+        });
+    }
+}
 
 function checkActiveDelivery() {
 
@@ -529,7 +627,7 @@ function checkActiveDelivery() {
 
     if(dateCheck("12/23/2019", "12/28/2019", new Date())) {
         minSum = 3000;
-        console.log(dateCheck("12/23/2019", "12/28/2019", new Date()) + " " + new Date())
+
     }
 
 
@@ -538,8 +636,7 @@ function checkActiveDelivery() {
 
     if ($('.delivery-inputs .active').hasClass('delivery-input1')) {
         $('.order-form .input-like-div.del.first').trigger('click');
-        //$('.order-form select[name="user_f_9"]').find("option").eq(0).attr('disabled', 'disabled');
-        //$('.order-form select[name="user_f_9"]').find("option").eq(0).attr('selected', 'selected');
+
         $.each($('.delivery'), function () {
             $(this).css('display', 'block');
         });
@@ -551,9 +648,11 @@ function checkActiveDelivery() {
 
         if (total_sum_without_delivery < 8000) {
             $('.order-basket .total-sum span').text(total_sum_without_delivery + 350);
+            $('[name=user_f_13]').val(total_sum_without_delivery + 350);
         }
         else {
             $('.order-basket .total-sum span').text(total_sum_without_delivery);
+            $('[name=user_f_13]').val(total_sum_without_delivery);
         }
 
         if (total_sum_without_delivery < minSum) {
@@ -1104,6 +1203,7 @@ $(document).ready(function () {
 
 
     var miniBasketTimeout;
+
     $('body').on('mouseenter click tap', '.mini-basket-sum, .mini-basket-top-panel', function () {
         if ($('body').find('.no-items').length) {
             //console.log('return')
@@ -1118,14 +1218,7 @@ $(document).ready(function () {
          $('.top-panel .numberCircle').hide();
     });
 
-
-
-
-
-
-
     addEventListener('touchstart', this.callPassedFuntion, { passive: false });
-
 
     $('body').on('mouseenter', '.popup-basket', function () {
         clearTimeout(miniBasketTimeout);
@@ -1136,12 +1229,9 @@ $(document).ready(function () {
         $('.popup-basket').css('display', 'none');
     })
 
-
-
     $('.mob .mini-basket-top-panel').on('click tap', function () {
         $('.popup-basket').show();
     });
-
 
     $('body').on('mouseleave', '.mini-basket-sum, .popup-basket', function () {
         miniBasketTimeout = setTimeout(function () {
@@ -1159,7 +1249,6 @@ $(document).ready(function () {
 
 
     });
-
 
     $('body').on('click tap', '.item-delete .icon-delete', function (e) {
         e.preventDefault();
@@ -1203,19 +1292,21 @@ $(document).ready(function () {
         var total_sum;
         if ($(this).val() == 0) {
             total_sum = subtotal_sum;
+            $('[name=user_f_13]').val(total_sum);
         }
         else {
             if(subtotal_sum < 8000) {
                 total_sum = subtotal_sum + 350;
+                $('[name=user_f_13]').val(total_sum);
             }
         }
         $(this).parent().find('.total-price span').text(total_sum);
     })
+
     $('body').on('click tap', '.cart-total .btn-blue', function (e) {
         e.preventDefault();
         $('.cart-total form').submit();
     })
-
 
     $('body').on('click tap', '.input-toggle .input', function () {
         if ($(this).hasClass('active')) {
@@ -1231,32 +1322,29 @@ $(document).ready(function () {
 
 
 
+    $('body').on('click tap', '.order-alfa', function (e) {
 
+    });
 
 
 
 
     $('body').on('click tap', '.order-form-submit', function (e) {
-
         e.preventDefault();
-
-
-
-
-
-                if (checkOrderForm()) {
-
+        if (checkOrderForm()) {
+                    var minSum = 2000;
+                    if(dateCheck("12/23/2019", "12/28/2019", new Date())) {
+                        minSum = 3000;
+                        console.log(dateCheck("12/23/2019", "12/28/2019", new Date()) + " " + new Date())
+                    }
                     var total_sum_without_delivery = parseFloat($('.order-basket .total-sum-without-delivery').text());
-
-                    if(total_sum_without_delivery > 2000) {
+                    if(total_sum_without_delivery > minSum) {
                         var date_form = "";
                         var timeT = "";
+
                         if ($('.delivery-inputs .active').hasClass('delivery-input1')) {
-
                             checkActiveDelivery();
-
                             $([name = 'user_f_11']).val(0);
-
                             var reg_text = "";
                             //var region = parseInt($('.order-form input[name="user_f_4_5"]:checked').val());
                             var region = parseInt($('.order-form [name="user_f_4_5"] option:selected').val());
@@ -1264,22 +1352,14 @@ $(document).ready(function () {
                                 reg_text = "Москва, ";
                             }
                             else {
-                                reg_text = "МО, ";
+                                reg_text = "Московская область, ";
                             }
-
                             var address = reg_text + $('.order-form input[name="user_f_4"]').val();
                             var address_2 = $('.order-form input[name="user_f_4_2"]').val();
                             var address_3 = $('.order-form input[name="user_f_4_3"]').val();
                             var address_4 = $('.order-form input[name="user_f_4_4"]').val();
                             var metro = $('.order-form select[name="metro-stations"] option:selected').data('subtext');
-
-
                             if ($('.order-form input[name="user_f_4"]').attr('type') !== 'radio') {
-
-
-
-
-
                                 if ($.trim(address_2) != '') {
                                     address += ', д.' + address_2;
                                 }
@@ -1292,58 +1372,42 @@ $(document).ready(function () {
                                 if ($.trim(metro) != '') {
                                     address += ', метро ' + metro;
                                 }
-
                                 $('input[name="user_f_4"]').val(address);
                                 $('input[name="user_f_11"]').val(0);
-
                                 date_form = $('[name="user_f_9"]').val();
-
-
-
-
-
-
-
-
-
                                 timeT = $('[name="user_f_9_3"] option:selected').val();
                                 var resDateTime = "";
                                 $('[name=user_f_9]').attr('type', 'text');
                                 resDateTime = date_form + " " + timeT;
                                 $('[name=user_f_9]').val(resDateTime.substring(0, 20));
 
-
                             }
-
                         }
                         else {
                             $('[name=user_f_4]').val('Самовывоз');
                             date_form = $('[name="user_f_9_2"]').val();
-
                             var d = date_form.replace(/(\d+)-(\d+)-(\d+)/, '$3.$2.$1');
                             var newDate = new Date();
-
                             timeT = newDate.getHours() + ":" + newDate.getMinutes()
-
                             $('[name=user_f_9]').attr('type', 'text');
                             $('[name=user_f_9]').val(d);
-
-
                             $('[name=user_f_9_2]').attr('type', 'text');
                             $('[name=user_f_9_2]').val(d);
-
-
                             $("[name = 'user_f_11']").val(1);
 
                         }
-                        $('.order-form form').submit();
+
+                        if($('input[name=user_f_1]').val() != 'test') {
+                            $('.order-form form').submit();
+                        }
+                        else{
+                            alert('Sent');
+                        }
                     }
                     else{
-                        alert("Минимальная сумма заказа 2000 руб.")
+                        alert("Минимальная сумма заказа " + minSum + " руб.")
                     }
-
                 }
-
     });
 
 
@@ -1507,15 +1571,16 @@ $(document).ready(function () {
         /* для всех, кроме главной */
         $('#headerNav').toggleClass('open');
         $('.top-panel .container').hide();
+        $('body').css({'overflow':'hidden'});
         //$(window,'body').scrollTop(0)
     });
 
-    $('#headerNav .close-menu').click(function(){
+    /*$('#headerNav .close-menu').click(function(){
         $('.carousel').toggleClass('open');
         $('#mainPage').toggleClass('open');
         $('#headerNav').toggleClass('open');
         $('.top-panel .container').show();
-    })
+    })*/
 
 
     $('#catalog-menu .close-menu').click(function(){
@@ -1523,6 +1588,7 @@ $(document).ready(function () {
         $('#mainPage').toggleClass('open');
         $('#headerNav').toggleClass('open');
         $('.top-panel .container').show();
+        $('body').css({'overflow':'initial'});
     })
 
 
@@ -2146,7 +2212,7 @@ $(document).ready(function () {
 
     $('.mob .carousel.slide').click(function () {
         //console.log('bum')
-        $('.popup-basket').show();
+        /*$('.popup-basket').show();*/
     });
 });
 
@@ -2211,9 +2277,7 @@ $(document).ready(function(){
 });
 
 $(document).ready(function(){
-
-    // сли пользователь начинает вводить телефон с восьмерки она изменяется
-
+    // если пользователь начинает вводить телефон с восьмерки она изменяется
     $('[name=user_f_5]').keyup(function (event) {
         if($('[name=user_f_5]').val().length === 4) {
             //console.log('press')

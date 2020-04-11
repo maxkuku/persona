@@ -15,7 +15,7 @@ IncludeTemplateLangFile(__FILE__);
 					    <input type="text" name="AUTHOR" class="uk-form-width-medium" required=""
 					           placeholder="Введите ваше имя"></div>
 				    <div class="uk-form-row">
-
+                        <input type="hidden" name="CONS" value="Звонок"/>
 					    <input type="tel" name="TEL" class="uk-form-width-medium" required=""
 					           placeholder="Введите ваш телефон"></div>
 
@@ -28,26 +28,88 @@ IncludeTemplateLangFile(__FILE__);
 		    </form>
 		    <? $APPLICATION->IncludeComponent("redesign:sendfeedback", ".default", false); ?>
 	        </div>
-		    <div class="block-footer-right"></div>
+		    <div class="block-footer-right">
+                <div class="bottom-search-form">
+                    <form id="bottom-search" action="/search/">
+                        <input type="text" name="q" placeholder="Введите ваш запрос">
+                        <input type="image" name="image" src="<?= SITE_TEMPLATE_PATH ?>/images/search.png" width="18">
+                    </form>
+                </div>
+                <table class="double-bot-menu">
+                    <tr>
+                    <td style="vertical-align: bottom;" id="left-bot-menu">
+                        <table>
+                            <tr><td colspan="2"><b>Меню:</b></td></tr>
+                            <tr style="background: none;"><td>
+                                <ul>
+                                    <li><a href="/about/">О клинике</a></li>
+                                    <li><a href="/articles/">Имплантация</a></li>
+                                    <li><a href="/sinus/">Протезирование</a></li>
+                                    <li><a href="/parodontologiya/">Пародонтология</a></li>
+                                </ul>
+                            </td><td>
+                                <ul>
+                                    <li><a href="/vrachi/">Врачи</a></li>
+                                    <li><a href="/price/">Цены</a></li>
+                                    <li><a href="/contacts/">Контакты</a></li>
+                                </ul>
+                            </td></tr>
+                        </table>
+                    </td>
+                    <td id="right-bot-menu">
+                        <div class="bottom-conts">
+                            <div class="tel-and-hours">
+                                <img src="<?= SITE_TEMPLATE_PATH ?>/images/phone-w.png">
+
+                                <div class="order-call">
+                <span class="call_phone_4">
+                    <a class="callibri_phone_k" href="tel:+74951273049">+7(495)127-30-49</a>
+                </span>
+                                    <br>
+                                    <a class="call" data-uk-modal="{target:'#modal-form'}" href="#">Заказать обычный звонок</a>
+                                </div>
+                            </div>
+                            <div class="hours">
+                                <img src="<?= SITE_TEMPLATE_PATH ?>/images/clock-w.png">
+                                <div>
+                                    <b>Часы работы:</b><br>
+                                    <span>Ежедневно с 9:00 до 22:00</span>
+                                </div>
+                            </div>
+                            <div class="addr">
+                                <img src="<?= SITE_TEMPLATE_PATH ?>/images/marker-w.png">
+                                <div>
+                                    <a class="conts" href="/contacts/">Москва, ул. Киевская 24</a><br>5 минут от <span>м.</span> Студенческая
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    </tr>
+                </table>
+            </div>
 	    </div>
     </div>
 </div>
-
-
 <div id="foot">
-    <div class="wrap">
-        <div id="logo-bottom">
-            <a href="/"><img src="<?= SITE_TEMPLATE_PATH ?>/images/logo-bot.png" width="70"
+    <div class="width1350">
+        <table class="foot-table"><tr>
+        <td id="logo-bottom">
+            <a href="/"><img src="<?= SITE_TEMPLATE_PATH ?>/images/logo-bot.png" height="40"
                              alt="Академстом лого"></a>
-        </div>
-        <div id="bottom-buttons">
+        </td>
+        <td id="bottom-buttons">
+            <b class="rights"><?=date('Y')?> &copy; Все права защищены</b><br>
             <a href="/policy/">Политика конфиденциальности</a>
-        </div>
+        </td>
+        <td class="credits">
+            <a href=""><img src="<?= SITE_TEMPLATE_PATH ?>/images/mmu.png" alt="Credits"/><span>Медицинский маркетинг<br>для умных клиентов</span></a>
+        </td>
+        </tr></table>
     </div>
 </div>
-
 <link rel="stylesheet" href="<?= SITE_TEMPLATE_PATH ?>/css/uikit.min.css"/>
 <link rel="stylesheet" href="<?= SITE_TEMPLATE_PATH ?>/css/uikit.docs.min.css"/>
+<link rel="stylesheet" href="<?= SITE_TEMPLATE_PATH ?>/css/theme.css"/>
 <script type="text/javascript" src="<?= SITE_TEMPLATE_PATH ?>/js/footer.js"></script>
 <script>
     $(document).ready(function () {
@@ -88,45 +150,20 @@ jQuery.ajax({
 }); 
 }
 });
-</script> 
-<!-- /calltouch -->
-<!-- Yandex.Metrika counter -->
-<script type="text/javascript">
-    (function (d, w, c) {
-        (w[c] = w[c] || []).push(function () {
-            try {
-                w.yaCounter46432377 = new Ya.Metrika({
-                    id: 46432377,
-                    clickmap: true,
-                    trackLinks: true,
-                    accurateTrackBounce: true,
-                    webvisor: true
-                });
-            } catch (e) {
-            }
-        });
-
-        var n = d.getElementsByTagName("script")[0],
-            s = d.createElement("script"),
-            f = function () {
-                n.parentNode.insertBefore(s, n);
-            };
-        s.type = "text/javascript";
-        s.async = true;
-        s.src = "<?=SITE_TEMPLATE_PATH?>/js/watch.js";
-
-        if (w.opera == "[object Opera]") {
-            d.addEventListener("DOMContentLoaded", f, false);
-        } else {
-            f();
-        }
-    })(document, window, "yandex_metrika_callbacks");
 </script>
-<noscript>
-    <div><img src="https://mc.yandex.ru/watch/46432377" style="position:absolute; left:-9999px;" alt=""/></div>
-</noscript>
-<!-- /Yandex.Metrika counter -->
-<!-- Global site tag (gtag.js) - Google Analytics -->
+<script type="text/javascript" >
+    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+    (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+    ym(46432377, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true,
+        webvisor:true
+    });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/46432377" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-108853140-1"></script>
 <script>
     window.dataLayer = window.dataLayer || [];

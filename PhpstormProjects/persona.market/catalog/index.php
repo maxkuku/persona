@@ -13,7 +13,7 @@ else if ( htmlspecialchars($_REQUEST['filter_clear'],3) == "Y" ) {
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 // попытка подключить модуль убирающий яндекс советник к каталогу
 $APPLICATION->IncludeComponent( "abricos:antisovetnik", "", array(), false);
-$APPLICATION->SetTitle("Каталог «Персона» маркет");
+#$APPLICATION->SetTitle("Каталог «Персона» маркет");
 $url_arr = explode('/',$_SERVER['REQUEST_URI']);
 $cat_code = array_slice($url_arr,-2,1)[0];
 $brand = (htmlspecialchars($_REQUEST['brand_name'],3)) ? htmlspecialchars($_REQUEST['brand_name'],3) : "";
@@ -69,7 +69,8 @@ $APPLICATION->IncludeComponent(
 		"AJAX_OPTION_STYLE" => "Y",
 		"BACKGROUND_IMAGE" => "-",
 		"BASKET_URL" => "/personal/basket.php",
-		"BROWSER_TITLE" => "NAME",
+		#"BROWSER_TITLE" => "NAME",
+		"BROWSER_TITLE" => "-",
 		"CACHE_FILTER" => "Y",
 		"CACHE_GROUPS" => "Y",
 		"CACHE_TIME" => "36000000",

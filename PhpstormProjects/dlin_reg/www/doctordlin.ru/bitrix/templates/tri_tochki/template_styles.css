@@ -1390,7 +1390,8 @@ body .picture-wrap {
     width: 47%;
     margin-bottom: 1em;
 }
-.flexed div.youtube {
+.flexed div.youtube,
+.flexed div.mp4 {
     height: 296px;
     background-size: cover;
     cursor: pointer;
@@ -1409,10 +1410,14 @@ body .picture-wrap {
 .pr1 > ul {
     /*column-count: 2;*/
 }
-.youtube {
+.youtube,
+.mp4 {
     width: 100%;
 }
-.youtube .play {
+.youtube .play,
+.youtube .pl,
+.mp4 .play,
+.mp4 .pl {
     background: url(images/play.png) no-repeat left top / contain;
     width: 100px;
     height: 100px;
@@ -3074,7 +3079,8 @@ h1[itemprop="author"]{
     body .cont-image img {
         width: 142px;
     }
-    body .flexed div.youtube {
+    body .flexed div.youtube,
+    body .flexed div.mp4 {
         height: 24vw;
         background-position: 0 -46px;
     }

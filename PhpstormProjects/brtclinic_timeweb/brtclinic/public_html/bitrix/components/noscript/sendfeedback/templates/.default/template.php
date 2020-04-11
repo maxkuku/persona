@@ -27,7 +27,8 @@
 				<fieldset>
 					<div class="uk-form-row">
 						<legend>Ваше имя</legend>
-						<input type="text" name="AUTHOR" class="uk-form-width-medium" required></div>
+						<input type="text" name="AUTHOR" class="uk-form-width-medium" required/>
+						<input type="hidden" name="CONS" value="Заказать звонок / Запись"></div>
 					<div class="uk-form-row">
 						<legend>Ваш телефон</legend>
 						<input type="tel" name="TEL" class="uk-form-width-medium" required></div>

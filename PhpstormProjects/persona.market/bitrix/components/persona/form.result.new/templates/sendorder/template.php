@@ -38,12 +38,12 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
 							</div>
 						</div>
 					</div-->
-                    <div class="form-group  row-customer_email">
+                    <div class="form-group required row-customer_email">
                         <label class="control-label col-sm-4">Email</label>
                         <div class="col-sm-8">
                             <input type="text" class="inputtext form-control" name="form_email_11" value=""
                                    id="customer_email" value="" placeholder="Отслеживать свой заказ"
-                                   data-reload-payment-form="true">
+                                   data-reload-payment-form="true"/>
                             <div class="simplecheckout-rule-group" data-for="customer_email">
                                 <div style="display:none;" data-for="customer_email" data-rule="api"
                                      class="simplecheckout-error-text simplecheckout-rule"
@@ -55,9 +55,9 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
                                     Некорректный адрес электронной почты!
                                 </div>
                             </div>
-                            <div class="simplecheckout-tooltip" data-for="customer_email">Обязателен для безналичной
+                            <!--div class="simplecheckout-tooltip" data-for="customer_email">Обязателен для безналичной
                                 оплаты!
-                            </div>
+                            </div-->
                         </div>
                     </div>
                     <div class="form-group required row-customer_firstname">
@@ -98,7 +98,7 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
             <div class="checkout-heading panel-heading">Комментарий к заказу (не обязательно)</div>
             <div class="simplecheckout-block-content">
                 <textarea name="form_textarea_17" cols="47" rows="7" class="inputtextarea form-control" id="comment"
-                          placeholder="Можете оставить свой комментарий к заказу"
+                          placeholder="Можете оставить свой комментарий к заказу или адрес доставки"
                           data-reload-payment-form="true"></textarea>
                 <textarea style="display:none" name="form_textarea_18" cols="47" rows="7"
                           class="inputtextarea"><?= $item_to_form ?></textarea>
@@ -131,7 +131,8 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
                 <?endif?>
                 <a class="button btn" data-onclick="backHistory"
                    id="simplecheckout_button_back"><span>Назад</span></a>
-                <input <?= (intval($arResult["F_RIGHT"]) < 10 ? "disabled=\"disabled\"" : ""); ?> type="submit" name="web_form_submit" value="<?= htmlspecialcharsbx(strlen(trim($arResult["arForm"]["BUTTON"])) <= 0 ? GetMessage("FORM_ADD") : $arResult["arForm"]["BUTTON"]); ?>" class="button btn-primary btn"/>
+                <? global $all_price;?>
+                <input <?= (($all_price) < MIN_ORDER_PRICE) ? "disabled title='Сумма заказа менее минимальной ".MIN_ORDER_PRICE." руб.'" : ""; ?> type="submit" name="web_form_submit" value="<?= htmlspecialcharsbx(strlen(trim($arResult["arForm"]["BUTTON"])) <= 0 ? GetMessage("FORM_ADD") : $arResult["arForm"]["BUTTON"]); ?>" class="button btn-primary btn"/>
 
                 <? if ($arResult["F_RIGHT"] >= 15):?>
                     &nbsp;<input type="hidden" name="web_form_apply" value="Y"/>
@@ -141,20 +142,25 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
     </div>
     <div class="simplecheckout-right-column">
         <div class="simplecheckout-block" id="simplecheckout_samo_address">
-            <div class="checkout-heading panel-heading">Самовывоз из пункта</div>
+            <div class="checkout-heading panel-heading"><?=(ONLY_DELIVERY)?"Доставка":"Самовывоз из пункта"?></div>
             <div class="simplecheckout-block-content">
                 <fieldset class="form-horizontal">
                     <div class="form-group required row-payment_address_country_id">
+                        <?if(ONLY_DELIVERY):?>
+                        <label class="control-label col-sm-4">Только доставка<sup>1</sup></label>
+                        <?else:?>
                         <label class="control-label col-sm-4">Самовывоз / доставка<sup>1</sup></label>
+                        <?endif?>
                         <div class="col-sm-8">
                             <script>
                                 window.delivery_sale = <?=PERCENT_SALE_DELIVERY?>;
                             </script>
                             <select class="form-control" name="form_text_23" id="samo_address_country_id" required>
                                 <option></option>
-                                <option data-select="delivery" value="Доставка">Доставка</option>
+                                <option data-select="delivery" <?=ONLY_DELIVERY?"selected":""?> value="Доставка">Доставка</option>
                                 <!--option value="0">Выберите при самовывозе</option-->
-                                <? $APPLICATION->IncludeComponent(
+                                <? if(!ONLY_DELIVERY):
+                                $APPLICATION->IncludeComponent(
                                     "persona:news.list",
                                     "addresses_for_order",
                                     array(
@@ -218,7 +224,8 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
                                         "MESSAGE_404" => ""
                                     ),
                                     false
-                                ); ?>
+                                );
+                                endif;?>
                             </select>
                             <div class="simplecheckout-rule-group" data-for="payment_address_country_id">
                                 <div style="display:none;" data-for="samo_address_country_id" data-rule="notEmpty"

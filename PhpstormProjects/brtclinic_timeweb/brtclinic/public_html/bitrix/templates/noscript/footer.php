@@ -217,7 +217,18 @@ $(document).ready(function(){
 });
 </script>
 <?endif?>
-
+<?$n = strtotime("now");
+if($n < strtotime("5/01/2020") && $APPLICATION->GetCurPage() != "/kontakty/"){
+?>
+<script>
+    function set_modal_header_consult() {
+        if ($('#modal-form .uk-modal-header').text().indexOf('консультацию') < 0) {
+            $('#modal-form .uk-modal-header').text('Заказать консультацию');
+            $('[name=CONS]').val("Консультация");
+        }
+    }
+</script>
+<?}?>
 <!-- calltouch -->
 <script type="text/javascript">
     jQuery(document).on('click', '#form-content input[type="submit"]', function() {

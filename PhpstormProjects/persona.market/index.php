@@ -1,7 +1,21 @@
 <? require( $_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php" );
 $APPLICATION->SetPageProperty("description", "Интернет-магазин профессиональной косметики для волос и тела имидж-лаборатории Персона Lab. Мы сотрудничаем с такими брендами, как TIGI, Wella и др. Наша сеть салонов находится по всей Москве.");
 $APPLICATION->SetTitle("Персона Маркет - интернет-магазин профессиональной косметики для волос в Москве");
-$APPLICATION->SetTitle( "«Персона» маркет" ); ?><div class="content-wrapper">
+$APPLICATION->SetTitle( "«Персона» маркет" ); ?>
+<?$APPLICATION->IncludeComponent("bitrix:main.feedback", "personal_cons", Array(
+	"EMAIL_TO" => "info@persona.market",	// E-mail, на который будет отправлено письмо
+		"EVENT_MESSAGE_ID" => array(	// Почтовые шаблоны для отправки письма
+			0 => "7",
+		),
+		"OK_TEXT" => "Спасибо, ваше сообщение принято.",	// Сообщение, выводимое пользователю после отправки
+		"REQUIRED_FIELDS" => array(	// Обязательные поля для заполнения
+			0 => "EMAIL",
+		),
+		"USE_CAPTCHA" => "N",	// Использовать защиту от автоматических сообщений (CAPTCHA) для неавторизованных пользователей
+	),
+	false
+);?>
+    <div class="content-wrapper">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-3">
@@ -98,9 +112,13 @@ $APPLICATION->SetTitle( "«Персона» маркет" ); ?><div class="conte
  <img alt="Скидка при доставке" src="/bitrix/templates/persona/images/free-delivery-icon-50x502.png">
 							</div>
 							<div class="text">
-								<div class="title">
-									 Скидка 20% при заказе доставкой
-								</div>
+                                <div class="title">
+                                    <?if(PERCENT_SALE_DELIVERY > 0):?>
+                                        Скидка <?=PERCENT_SALE_DELIVERY?>% при заказе с доставкой
+                                    <?else:?>
+                                        Скидка при заказе с доставкой временно не работает
+                                    <?endif?>
+                                </div>
 								<p style="word-wrap: break-word;">
 									 Скидки не суммируются
 								</p>
@@ -135,9 +153,9 @@ $APPLICATION->SetTitle( "«Персона» маркет" ); ?><div class="conte
 			);
 
             ?>
-		<div class="row action-main-spec">
+		<!--div class="row action-main-spec">
 			<div class="col-md-12">
-				 <!--owl actions carousel--> <?$APPLICATION->IncludeComponent(
+				 <?/*$APPLICATION->IncludeComponent(
 	"persona:news.list",
 	"actions_main_spec",
 	Array(
@@ -197,9 +215,14 @@ $APPLICATION->SetTitle( "«Персона» маркет" ); ?><div class="conte
 		"SORT_ORDER2" => "ASC",
 		"STRICT_SECTION_CHECK" => "N"
 	)
-);?>
+);*/?>
 			</div>
-		</div>
+		</div-->
+
+        <div class="row">
+            <div>&nbsp;</div>
+        </div>
+
 		<div class="row">
 			<div class="col-sm-8 col-md-9">
 				 <!--for recomend--> <? $arrFilter = array("=PROPERTY_RECOMEND" => "1")?> <?$APPLICATION->IncludeComponent(
@@ -678,7 +701,7 @@ Array(
 			<div class="col-sm-12 wrap">
 				<div class="shops clearfix">
 					<div class="shops-title">
-						 Наши пункты самовывоза
+						 Наши пункты самовывоза <?if(strtotime("now")<strtotime("5/01/2020")):?>(временно не работают)<?endif?>
 					</div>
 					<div class="clearfix">
 						<div class="shops-list mCustomScrollbar">

@@ -60,13 +60,32 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   t.src=v;s=b.getElementsByTagName(e)[0];
   s.parentNode.insertBefore(t,s)}(window, document,'script',
   'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '1813626908774184');
+  fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=1813626908774184&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Facebook Pixel Code -->
+
+
+<!-- Facebook Pixel Code 
+<script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
   fbq('init', '752632768553668');
   fbq('track', 'PageView');
 </script>
 <noscript><img height="1" width="1" style="display:none"
   src="https://www.facebook.com/tr?id=752632768553668&ev=PageView&noscript=1"
 /></noscript>
-<!-- End Facebook Pixel Code -->
+ End Facebook Pixel Code -->
 
 
 
@@ -157,6 +176,9 @@ _tmr.push({
 <noscript><div><img src="https://mc.yandex.ru/watch/47424421" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 <!-- /Yandex.Metrika counter -->
 
+    
+
+
 
 </head>
 <body class="<?=array_splice(explode('/', htmlspecialchars($_SERVER['PHP_SELF'])),-2,1)[0]?>">
@@ -182,7 +204,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
     <div id="phones">
         <ul>
-            <li>Москва: <a href="tel:+74951016035" onclick="yaCounter47424421.reachGoal
+            <li>  <a href="tel:+74951016035" onclick="yaCounter47424421.reachGoal
 										('phoneclick'); ga('send','event','phone','click');">+7(495) 101‑60-35</a></li>
 <!--            <li>Пушкино: <a href="tel:+74951011241" onclick="yaCounter47424421.reachGoal
 										('phoneclick1'); ga('send','event','phone','click');">+7(495) 101‑12-41</a></li> -->
@@ -208,7 +230,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         <div>
 
                             <span class="click formpop" uk-toggle="target: #modal-form">Заказать звонок</span>
-                            <span>Москва:</span>
+                            
                         <a href="tel:+74951016035" onclick="yaCounter47424421.reachGoal
 										('phoneclick'); ga('send','event','phone','click');">+7(495) 101‑60-35</a></div>
 

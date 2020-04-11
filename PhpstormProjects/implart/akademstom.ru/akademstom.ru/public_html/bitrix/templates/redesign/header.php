@@ -12,7 +12,6 @@
         })(window,document,'script','dataLayer','GTM-KCLHD5R');</script>
     <!-- End Google Tag Manager -->
     <!--TODO: remove-->
-    <meta name="robots" content="noindex, nofollow"/>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><? $APPLICATION->ShowTitle()?></title>
@@ -52,7 +51,8 @@
     <!-- End Facebook Pixel Code -->
 
 </head>
-<body class="<?=(strlen(str_replace("/","",$APPLICATION->GetCurDir()))>0)?str_replace("/","",$APPLICATION->GetCurDir())."_b":"main"?>">
+<body class="<?=(strlen(str_replace("/","",$APPLICATION->GetCurDir()))>0)?str_replace("/"," ",$APPLICATION->GetCurDir
+	())."_b":"main"?> <?=(mob_detect())?"mob":""?>">
 <div id="panel"><? $APPLICATION->ShowPanel();?></div>
 
 <!-- Google Tag Manager (noscript) -->
@@ -72,27 +72,34 @@
 
         <div class="top-conts">
 
-
+<script>
+    function set_modal_header_zvonok() {
+        if ($('.uk-modal-header h2').text().indexOf('звонок') < 0) {
+            $('.uk-modal-header h2').text('Заказать звонок');
+            $('[name=CONS]').val("Звонок");
+        }
+    }
+</script>
             <div class="tel-and-hours">
                 <img src="<?=SITE_TEMPLATE_PATH?>/images/phone.png"/>
 
                 <div class="order-call">
                 <span class="call_phone_4">
-                    <a class="callibri_phone_k" href="tel:+74951222504">+7(495)122-25-04</a>
+                    <a class="callibri_phone_k" data-uk-modal="{target:'#modal-form'}" href="tel:+74951222504" onclick="set_modal_header_zvonok();">+7(495)122-25-04</a>
                 </span>
                     <br>
-                    <a class="call" data-uk-modal="{target:'#modal-form'}" href="#">Заказать обычный звонок</a>
+                    <span style="font-size: 14px;">Ежедневно с 9:00 до 22:00</span>
                 </div>
             </div>
 
 
-            <div class="hours">
+            <!--div class="hours">
                 <img src="<?=SITE_TEMPLATE_PATH?>/images/clock.png"/>
                 <div>
                     <b>Часы работы:</b><br>
                     <span>Ежедневно с 9:00 до 22:00</span>
                 </div>
-            </div>
+            </div-->
 
 
             <div class="addr">
@@ -102,43 +109,48 @@
                 </div>
             </div>
 
+            <div class="top-tel">
+                <span class="call_phone_4">
 
-        </div>
+                    <a href="#" data-uk-modal="{target:'#modal-form'}" onclick="set_modal_header_zvonok();"><img src="<?= SITE_TEMPLATE_PATH?>/images/callback-pur.png" width="40" style="width: 40px;" alt="Записаться"/></a>
 
 
-
-
-
-    </div>
-</div>
-
-<div id="header-wrap">
-    <div>
-        <div id="headerTop">
-
-            <?$APPLICATION->IncludeComponent("redesign:menu", "another_desktop", Array(
-                "ROOT_MENU_TYPE" => "top_ak",	// Тип меню для первого уровня
-                "MAX_LEVEL" => "3",	// Уровень вложенности меню
-                "CHILD_MENU_TYPE" => "top_ak",	// Тип меню для остальных уровней
-                "USE_EXT" => "N",	// Подключать файлы с именами вида .тип_меню.menu_ext.php
-                "MENU_CACHE_TYPE" => "A",	// Тип кеширования
-                "MENU_CACHE_TIME" => "36000000",	// Время кеширования (сек.)
-                "MENU_CACHE_USE_GROUPS" => "N",	// Учитывать права доступа
-                "CLASS" => "width1350",
-                "MENU_CACHE_GET_VARS" => "",	// Значимые переменные запроса
-            ),
-                false,
-                array(
-                    "ACTIVE_COMPONENT" => "Y"
-                )
-            );?>
-
-            <div id="menu-switch">
-                <i class="fa fa-bars" aria-hidden="true"></i>
+                </span>
             </div>
 
+            <div id="menuButton">
+                <i class="bars">☰</i>
+            </div>
         </div>
-
+    </div>
+</div>
+<?$APPLICATION->IncludeComponent(
+    "redesign:menu",
+    "side",
+    array(
+        "ROOT_MENU_TYPE" => "top_ak",
+        "MAX_LEVEL" => "3",
+        "CHILD_MENU_TYPE" => "top_ak",
+        "USE_EXT" => "N",
+        "MENU_CACHE_TYPE" => "A",
+        "MENU_CACHE_TIME" => "36000000",
+        "MENU_CACHE_USE_GROUPS" => "N",
+        "CLASS" => "",
+        "MENU_CACHE_GET_VARS" => array(
+        ),
+        "COMPONENT_TEMPLATE" => "side",
+        "DELAY" => "N",
+        "ALLOW_MULTI_SELECT" => "N"
+    ),
+    false,
+    array(
+        "ACTIVE_COMPONENT" => "Y"
+    )
+);?>
+<div id="header-wrap" class="<?=($APPLICATION->GetCurPage()=="/")?"main-page":"others"?>">
+    <div>
+        <div id="headerTop">
+        </div>
         <div id="top-menu">
             <div id="top-menu-inner">
                 <? $APPLICATION->IncludeComponent("redesign:menu", "mobile", array(
@@ -177,18 +189,23 @@
 
     <?if($APPLICATION->GetCurPage() == "/" OR $APPLICATION->GetCurPage() == "/new/"){?>
     <div id="under-menu" class="width1350">
-        <table class="h1-and-image"><tr><td>
+        <table class="h1-and-image"><tr>
+                <td>
                     <img src="<?=SITE_TEMPLATE_PATH?>/images/5let.png" alt="5 лет"/>
-                </td><td>
+                </td>
+                <td id="header-cell" style="">
                     <div class="heading">
                         <h1>Центр пародонтологии<br>
                             и имплантации</h1>
-                        <p>Наша клиника специализируется на современных методах имплантации челюсти при полном отсутствии зубов. Стоматологическая ассоциация России (СтАР) присвоила нам престижный статус "Инновационного центра".</p>
+                        <p>Наша клиника специализируется на современных методах имплантации челюсти при полном отсутствии зубов. Мы применяем малотравматичные методики без наращивания костной ткани: All-on-4, All-on-6, скуловая имплантация.</p>
                         <p class="but">
                             <a href="#" data-uk-modal="{target:'#modal-form'}" class="colored"><span>Бесплатная консультация</span> <img class="r-arr" src="<?=SITE_TEMPLATE_PATH?>/images/arrow-right.png"/></a>
                         </p>
                     </div>
-                </td><td></td>
+                </td>
+                <td>
+
+                </td>
             </tr>
         </table>
     </div>

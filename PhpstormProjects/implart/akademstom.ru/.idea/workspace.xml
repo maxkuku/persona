@@ -2,11 +2,42 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ab59b16c-0731-4108-80dd-ff430e4816fe" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/../../art-eco.pro/http/local/templates/main_new/components/bitrix/catalog.section.list/tree_no_h2/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/../../art-eco.pro/http/local/templates/main_new/components/bitrix/catalog.section.list/tree_no_h2/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../brtclinic_timeweb/brtclinic/public_html/bitrix/templates/noscript/mobile.css" beforeDir="false" afterPath="$PROJECT_DIR$/../../brtclinic_timeweb/brtclinic/public_html/bitrix/templates/noscript/mobile.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../integra_reg/public_html/integramed.info/wp-content/themes/integra/css/text.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../integra_reg/public_html/integramed.info/wp-content/themes/integra/footer.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../integra_reg/public_html/integramed.info/wp-content/themes/integra/functions.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../integra_reg/public_html/integramed.info/wp-content/themes/integra/header.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../integra_reg/public_html/integramed.info/wp-content/themes/integra/index.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../integra_reg/public_html/integramed.info/wp-content/themes/integra/js/owl.carousel.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../integra_reg/public_html/integramed.info/wp-content/themes/integra/js/scrips.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../integra_reg/public_html/integramed.info/wp-content/themes/integra/page.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../integra_reg/public_html/integramed.info/wp-content/themes/integra/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../brtclinic_timeweb/brtclinic/public_html/bitrix/components/noscript/sendfeedback/component.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../brtclinic_timeweb/brtclinic/public_html/bitrix/components/noscript/sendfeedback/component.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../brtclinic_timeweb/brtclinic/public_html/bitrix/components/noscript/sendfeedback/templates/.default/template.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../brtclinic_timeweb/brtclinic/public_html/bitrix/components/noscript/sendfeedback/templates/.default/template.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../brtclinic_timeweb/brtclinic/public_html/bitrix/templates/noscript/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../brtclinic_timeweb/brtclinic/public_html/bitrix/templates/noscript/footer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../brtclinic_timeweb/brtclinic/public_html/bitrix/templates/noscript/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../brtclinic_timeweb/brtclinic/public_html/bitrix/templates/noscript/header.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../brtclinic_timeweb/brtclinic/public_html/bitrix/templates/noscript/template_styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/../../brtclinic_timeweb/brtclinic/public_html/bitrix/templates/noscript/template_styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../brtclinic_timeweb/brtclinic/public_html/sect_inc.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../brtclinic_timeweb/brtclinic/public_html/sect_inc.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../nic.ru/maxkuku.ru/docs/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../nic.ru/maxkuku.ru/docs/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/footer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/js/script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/template_styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/../../dlin_reg/www/doctordlin.ru/bitrix/templates/tri_tochki/template_styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../famdental.ru/public_html/famdental.ru/bitrix/templates/famdental/components/famdental/sendfeedback/.default/template.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../famdental.ru/public_html/famdental.ru/bitrix/templates/famdental/components/famdental/sendfeedback/.default/template.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../famdental.ru/public_html/famdental.ru/bitrix/templates/famdental/page_templates/main.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../famdental.ru/public_html/famdental.ru/bitrix/templates/famdental/page_templates/main.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/akademstom.ru/public_html/bitrix/templates/redesign/css/uikit.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/akademstom.ru/public_html/bitrix/templates/redesign/css/uikit.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/akademstom.ru/public_html/bitrix/templates/redesign/description.php" beforeDir="false" afterPath="$PROJECT_DIR$/akademstom.ru/public_html/bitrix/templates/redesign/description.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/akademstom.ru/public_html/bitrix/templates/redesign/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/akademstom.ru/public_html/bitrix/templates/redesign/footer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/akademstom.ru/public_html/bitrix/templates/redesign/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/akademstom.ru/public_html/bitrix/templates/redesign/header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/akademstom.ru/public_html/bitrix/templates/redesign/images/bottom-wave.png" beforeDir="false" afterPath="$PROJECT_DIR$/akademstom.ru/public_html/bitrix/templates/redesign/images/bottom-wave.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/akademstom.ru/public_html/bitrix/templates/redesign/images/doc.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/akademstom.ru/public_html/bitrix/templates/redesign/images/doc.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/akademstom.ru/public_html/bitrix/templates/redesign/images/top-wave.png" beforeDir="false" afterPath="$PROJECT_DIR$/akademstom.ru/public_html/bitrix/templates/redesign/images/top-wave.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/akademstom.ru/public_html/bitrix/templates/redesign/template_styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/akademstom.ru/public_html/bitrix/templates/redesign/template_styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../integra_reg/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../integra_reg/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../persona.market/.bottom.menu.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../persona.market/.bottom.menu.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../persona.market/.idea/phpRuntime.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../persona.market/bitrix/php_interface/init.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../persona.market/bitrix/php_interface/init.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../persona.market/bitrix/templates/persona/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../persona.market/bitrix/templates/persona/footer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../persona.market/include/comp_basket_bigdata.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../persona.market/include/comp_basket_bigdata.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../persona.market/include/phone.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../persona.market/include/phone.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -15,16 +46,25 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375" />
+    <leaf>
+      <file pinned="true" current-in-tab="true">
+        <entry file="remoteDeploymentFS://&lt;d870e8eb-417e-4467-b693-0c01346bf934&gt;/akademstom.ru/public_html/banner_inc.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="95" column="9" selection-start-line="95" selection-start-column="9" selection-end-line="95" selection-end-column="9" />
+              <folding>
+                <element signature="e#32#1443#0#HTML" />
+                <element signature="e#1444#1713#0#HTML" />
+                <element signature="e#1714#2633#0#HTML" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>bold</find>
-      <find>.h2, .h3</find>
-      <find>--&gt;</find>
-      <find>.left-right-wrap</find>
-      <find>items-move</find>
-      <find>.articlesU .item</find>
       <find>.logo-name img</find>
       <find>top-</find>
       <find>.order-call a, .addr a, .hours b</find>
@@ -49,6 +89,12 @@
       <find>top-conts</find>
       <find>#topmenu:after</find>
       <find>#header.fixed</find>
+      <find>call_phone_4</find>
+      <find>CONS</find>
+      <find>Онлайн</find>
+      <find>banner_inc</find>
+      <find>banner_inc.php</find>
+      <find>_inc.php</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -83,14 +129,18 @@
         <option value="&lt;d870e8eb-417e-4467-b693-0c01346bf934&gt;/akademstom.ru/public_html/bitrix/components/redesign/menu/templates/another_desktop/template.php" />
         <option value="&lt;d870e8eb-417e-4467-b693-0c01346bf934&gt;/akademstom.ru/public_html/bitrix/components/redesign/menu/templates/another_desktop/style.css" />
         <option value="&lt;d870e8eb-417e-4467-b693-0c01346bf934&gt;/akademstom.ru/public_html/new/index.php" />
-        <option value="&lt;d870e8eb-417e-4467-b693-0c01346bf934&gt;/akademstom.ru/public_html/bitrix/templates/redesign/footer.php" />
-        <option value="&lt;d870e8eb-417e-4467-b693-0c01346bf934&gt;/akademstom.ru/public_html/bitrix/components/redesign/sendfeedback/templates/.default/template.php" />
         <option value="&lt;d870e8eb-417e-4467-b693-0c01346bf934&gt;/akademstom.ru/public_html/bitrix/components/redesign/menu/templates/mobile/template.php" />
-        <option value="&lt;d870e8eb-417e-4467-b693-0c01346bf934&gt;/akademstom.ru/public_html/bitrix/templates/redesign/header.php" />
         <option value="&lt;d870e8eb-417e-4467-b693-0c01346bf934&gt;/akademstom.ru/public_html/bitrix/components/redesign/menu/templates/mobile/style.css" />
         <option value="&lt;d870e8eb-417e-4467-b693-0c01346bf934&gt;/akademstom.ru/public_html/bitrix/templates/redesign/template_styles.css" />
         <option value="&lt;d870e8eb-417e-4467-b693-0c01346bf934&gt;/akademstom.ru/public_html/bitrix/templates/redesign/js/script.js" />
         <option value="&lt;d870e8eb-417e-4467-b693-0c01346bf934&gt;/akademstom.ru/public_html/articles/index.php" />
+        <option value="&lt;d870e8eb-417e-4467-b693-0c01346bf934&gt;/akademstom.ru/public_html/index.php" />
+        <option value="&lt;d870e8eb-417e-4467-b693-0c01346bf934&gt;/akademstom.ru/public_html/bitrix/templates/redesign/header.php" />
+        <option value="&lt;d870e8eb-417e-4467-b693-0c01346bf934&gt;/akademstom.ru/public_html/bitrix/components/redesign/sendfeedback/component.php" />
+        <option value="&lt;d870e8eb-417e-4467-b693-0c01346bf934&gt;/akademstom.ru/public_html/bitrix/templates/redesign/footer.php" />
+        <option value="&lt;d870e8eb-417e-4467-b693-0c01346bf934&gt;/akademstom.ru/public_html/bitrix/components/redesign/sendfeedback/templates/.default/template.php" />
+        <option value="&lt;d870e8eb-417e-4467-b693-0c01346bf934&gt;/akademstom.ru/public_html/sect_inc.php" />
+        <option value="&lt;d870e8eb-417e-4467-b693-0c01346bf934&gt;/akademstom.ru/public_html/banner_inc.php" />
       </list>
     </option>
   </component>
@@ -101,8 +151,8 @@
     <auto-save>true</auto-save>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="83" />
-    <option name="y" value="78" />
+    <option name="x" value="64" />
+    <option name="y" value="118" />
     <option name="width" value="1726" />
     <option name="height" value="862" />
   </component>
@@ -113,17 +163,7 @@
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1">
-      <flattenPackages />
-      <showMembers />
-      <showModules />
-      <showLibraryContents />
-      <hideEmptyPackages />
-      <abbreviatePackageNames />
-      <autoscrollToSource />
-      <autoscrollFromSource />
-      <sortByType />
-      <manualOrder />
+    <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
@@ -133,56 +173,30 @@
           <expand>
             <path>
               <item name="akademstom.ru" type="b2602c69:ProjectViewProjectNode" />
-              <item name="akademstom.ru" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="akademstom.ru" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="akademstom.ru" type="b2602c69:ProjectViewProjectNode" />
-              <item name="akademstom.ru" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="akademstom.ru" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="akademstom.ru" type="462c0819:PsiDirectoryNode" />
+              <item name="akademstom.ru" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="akademstom.ru" type="b2602c69:ProjectViewProjectNode" />
-              <item name="akademstom.ru" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="akademstom.ru" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="public_html" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="akademstom.ru" type="462c0819:PsiDirectoryNode" />
+              <item name="akademstom.ru" type="462c0819:PsiDirectoryNode" />
+              <item name="public_html" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="akademstom.ru" type="b2602c69:ProjectViewProjectNode" />
-              <item name="akademstom.ru" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="akademstom.ru" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="public_html" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="bitrix" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="akademstom.ru" type="b2602c69:ProjectViewProjectNode" />
-              <item name="akademstom.ru" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="akademstom.ru" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="public_html" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="bitrix" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="components" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="akademstom.ru" type="b2602c69:ProjectViewProjectNode" />
-              <item name="akademstom.ru" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="akademstom.ru" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="public_html" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="bitrix" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="templates" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="akademstom.ru" type="b2602c69:ProjectViewProjectNode" />
-              <item name="akademstom.ru" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="akademstom.ru" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="public_html" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="bitrix" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="templates" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="redesign" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="akademstom.ru" type="462c0819:PsiDirectoryNode" />
+              <item name="akademstom.ru" type="462c0819:PsiDirectoryNode" />
+              <item name="public_html" type="462c0819:PsiDirectoryNode" />
+              <item name="bitrix" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -193,6 +207,9 @@
     <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="settings.editor.selected.configurable" value="settings.github" />
   </component>
   <component name="RecentsManager">
@@ -235,6 +252,11 @@
       <workItem from="1567528758080" duration="9417000" />
       <workItem from="1567704922142" duration="19063000" />
       <workItem from="1585059320812" duration="747000" />
+      <workItem from="1585748496427" duration="3949000" />
+      <workItem from="1585800704541" duration="44000" />
+      <workItem from="1585801682213" duration="171000" />
+      <workItem from="1585923969298" duration="628000" />
+      <workItem from="1586061961162" duration="557000" />
     </task>
     <task id="LOCAL-00001" summary="Akademstom добавки компонентов">
       <created>1560341141402</created>
@@ -254,15 +276,15 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="55625000" />
+    <option name="totallyTimeSpent" value="60974000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="83" y="78" width="1726" height="862" extended-state="0" />
+    <frame x="64" y="118" width="1726" height="862" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.2628435" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Database Changes" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -274,7 +296,8 @@
       <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
-      <window_info anchor="bottom" id="File Transfer" order="11" weight="0.3288948" />
+      <window_info anchor="bottom" id="File Transfer" order="11" weight="0.32756326" />
+      <window_info anchor="bottom" id="Database Changes" order="12" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />

@@ -20,14 +20,14 @@ if($SHOW_ALL == "Y") {
     $formlineids = "";
 
     # если авторизован, то выберем все незаконченные формы
-    if ( $USER->GetID() ) {
+    /*if ( $USER->GetID() ) {
         $forms = $DB->Query( "SELECT ID FROM b_form_result WHERE FORM_ID = " . $FORM_ID . " AND USER_ID = " . $USER->GetID() );
 
         while ( $form = $forms->Fetch() ) {
             $RIDS_ARR[] = $form['ID'];
         }
         $RIDS = implode( ",", $RIDS_ARR );
-    }
+    }*/
 
 
     # у одного заказа в форме несколько строк
@@ -91,7 +91,7 @@ if($SHOW_ALL == "Y") {
                                             <col class="model">
                                             <col class="quantity">
                                             <col class="price">
-                                            <col class="total">
+                                            <col class="total_title">
                                             <col class="remove">
                                         </colgroup>
                                         <thead>
@@ -101,7 +101,7 @@ if($SHOW_ALL == "Y") {
                                             <th class="model">Модель</th>
                                             <th class="quantity"><span title="Количество">Кол-во</span></th>
                                             <th class="price">Цена</th>
-                                            <th class="total">Итого</th>
+                                            <th class="total_title">Итого</th>
                                             <th class="remove" style="text-align: center;"><i class="fa fa-trash-o fa-lg"></i></th>
                                         </tr>
                                         </thead>
@@ -124,7 +124,7 @@ if($SHOW_ALL == "Y") {
 
 
                                             ?>
-                                            <tr class="item-ids" data-formlineid="<?=$it["FID"]?>">
+                                            <tr class="item-ids basket-list-template" data-formlineid="<?=$it["FID"]?>">
                                                 <td class="image">
                                                     <a href="/catalog/detail.php?ID=<?=$it["ID"]?>"><img src="<?=$ar["FILE"]['src']?>" alt="<?=$it["NAME"]?>" title="<?=$ar_res["NAME"]?>"></a>
                                                 </td>
@@ -140,17 +140,18 @@ if($SHOW_ALL == "Y") {
                                                 <td class="model"><?=$SrcPropID?></td>
                                                 <td class="quantity">
                                                     <div class="input-group btn-block" style="max-width: 200px;">
-                                                        <!--span class="input-group-btn">
-                                                            <button class="btn btn-primary" onclick="decreaseProductQuantity(<?=$it["ID"]?>)" data-toggle="tooltip" type="submit" data-original-title="Убрать" title="Убрать">
+                                                        <span class="input-group-btn">
+                                                            <button class="btn btn-primary" onclick="cart.updateInCart('<?=$it["ID"]?>', '-1')" data-toggle="tooltip" type="submit" data-original-title="Убрать" title="Убрать">
                                                                 <i class="fa fa-minus"></i>
                                                             </button>
-                                                        </span-->
-                                                        <span class="form-control" type="text" data-onchange="changeProductQuantity" name="quantity[<?=$it["ID"]?>]" value="<?=$it["QUAN"]?>" size="1"><?=$it["QUAN"]?></span>
-                            <!--span class="input-group-btn">
-                                <button class="btn btn-primary" onclick="increaseProductQuantity(<?=$it["ID"]?>)" data-toggle="tooltip" type="submit" data-original-title="Добавить" title="Добавить">
+                                                        </span>
+                                                        <span id="incart_span_<?=$it["ID"]?>" class="form-control" type="text" data-onchange="" name="quantity[<?=$it["ID"]?>]" value="<?=$it["QUAN"]?>" size="1"><?=$it["QUAN"]?></span>
+                            <span class="input-group-btn">
+                                <button class="btn btn-primary" onclick="cart.updateInCart('<?=$it["ID"]?>', 1)" data-toggle="tooltip" type="submit" data-original-title="Добавить" title="Добавить">
                                     <i class="fa fa-plus"></i>
                                 </button>
-                                <button class="btn btn-danger" data-onclick="removeProduct" data-product-key="<?=$it["ID"]?>" data-toggle="tooltip" type="button" data-original-title="Добавить" title="Добавить">
+                            </span>
+                                <!--button class="btn btn-danger" data-onclick="removeProduct" data-product-key="<?=$it["ID"]?>" data-toggle="tooltip" type="button" data-original-title="Добавить" title="Добавить">
                                     <i class="fa fa-times-circle"></i>
                                 </button>
                             </span-->

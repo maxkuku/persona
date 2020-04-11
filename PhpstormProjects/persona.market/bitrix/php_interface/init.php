@@ -23,12 +23,19 @@ define( 'PROTOCOL', $protocol );
 define( 'SITE_URL', siteURL() );
 define( 'MIN_ORDER_PRICE', 990 );
 define( 'COUNTDOWN', '2039-08-31' );
-define( 'PHONE', "+7 (967) 153-30-73" );
-define( 'PHONE2', "+7 (967) 153-30-73" );
-define( 'WHATSAPP_PHONE_SIMPLE', "79671533073" );
-define( 'WHATSAPP_PHONE', "+7(967) 153-30-73" );
+define( 'PHONE', "+7 (499) 938-42-43" );
+define( 'PHONE2', "+7 (499) 938-42-43" );
+define( 'WHATSAPP_PHONE_SIMPLE', "79776105832" );
+define( 'WHATSAPP_PHONE', "+7 (977) 610-58-32" );
 define( 'EMAIL', "info@persona.market" );
 define( 'COMPANY_NAME', "«Персона» маркет" );
+define( 'POSTAL_CODE', "101000" );
+define( 'SCHEDULE', "Пн-Вс с 10.00 – 22.00" );
+define( 'CITY_ADDR', "Россия, г. Москва" );
+define( 'STREET_ADDR', "ул. Большая Полянка, 30, стр. 1" );
+define( 'BIG_ADDR', "Москва, м. Полянка, Большая Полянка, 30, стр. 1" );
+define( 'COMP_NAME', "«Персона» маркет" );
+define( 'SLOGAN', "ПЕРСОНА МАРКЕТ - косметика и уход для волос" );
 define( 'PERCENT_SALE_DELIVERY', "20" ); # процент скидки при заказе с доставкой
 
 

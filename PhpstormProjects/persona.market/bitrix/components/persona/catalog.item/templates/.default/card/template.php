@@ -65,7 +65,7 @@ use \Bitrix\Main\Localization\Loc;
                 </div>
 
 
-
+                <?if($item['PROPERTIES']['sale']['VALUE']>0):?>
                 <div class="price">
 					<span class="price-old"><?=$item['PROPERTIES']['price']['VALUE']?>
                         <span class="sr-only">р.</span>
@@ -75,9 +75,15 @@ use \Bitrix\Main\Localization\Loc;
                         <span class="sr-only">р.</span>
                         <span class="roboto-forced ruble" aria-hidden="true" style="display:none;     font-weight: 400;"></span>
                     </span>
-
                 </div>
-
+                <?else:?>
+                <div class="price">
+					<span class="price-new"><?=$item['PROPERTIES']['price']['VALUE']?>
+                        <span class="sr-only">р.</span>
+                        <span class="roboto-forced ruble" aria-hidden="true" style="display:none;"></span>&nbsp;
+                    </span>
+                </div>
+                <?endif?>
 
 
 
@@ -99,7 +105,7 @@ use \Bitrix\Main\Localization\Loc;
             <div class="buttons">
                 <div class="btn-group dropup">
                     <button type="button" class="btn btn-addtocart" style=" display: none; " onclick="addPreOrder('', '<?=$item['ID']?>');"><i class="fa fa-bell"></i> <span>Уведомить</span></button>
-                    <button type="button" class="btn btn-addtocart wid-cont" onclick="cart.add('<?=$item['ID']?>');" title="В корзину"><i class="fa fa-plus fa-fw"></i>&nbsp;&nbsp;В корзину </button>
+                    <button type="button" class="btn btn-addtocart wid-cont" onclick="cart.add(<?=$item['ID']?>, 1);" title="В корзину"><i class="fa fa-plus fa-fw"></i>&nbsp;&nbsp;В корзину </button>
 
                         <button type="button" class="btn btn-addtocart dropdown-toggle pull-right" data-toggle="dropdown">
                             <i class="fa fa-angle-down caretalt"></i>

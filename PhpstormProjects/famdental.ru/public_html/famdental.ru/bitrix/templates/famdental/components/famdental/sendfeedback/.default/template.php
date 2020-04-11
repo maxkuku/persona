@@ -8,7 +8,7 @@
 			<form method="post" class="uk-form uk-form-stacked" onsubmit="yaCounter35248230.reachGoal('zapis'); ga('send', 'event', 'form', 'zapis');">
 				<fieldset>
 					<div class="uk-form-row">
-						<input type="hidden" name="REF" value="<?=$_SERVER['REQUEST_URI']?>"/>
+						<input type="hidden" name="REF" value="<?=urldecode(urldecode($_SERVER['REQUEST_URI']))?>"/>
 						<input type="text" class="uk-form-width-large" name="AUTHOR" size="20" class="uk-form-width-medium"
 						       placeholder="ФИО&nbsp;пациента"
 						       required></div>
@@ -18,6 +18,10 @@
 					<div class="uk-form-row">
 						<textarea type="text" class="uk-form-width-medium" name="SOURCE"
 						   class="uk-form-width-large" placeholder="Причина&nbsp;обращения"></textarea></div>
+					<div class="uk-form-row agree">
+						Нажимая кнопку, я соглашаюсь на <a href="//famdental.ru/agreement" target="_blank">обработку
+							персональных данных</a>
+					</div>
 					<div class="uk-form-row">
 						<input type="submit" name="submit"
 						       class="uk-form-width-large uk-button-primary uk-button uk-button-alert"

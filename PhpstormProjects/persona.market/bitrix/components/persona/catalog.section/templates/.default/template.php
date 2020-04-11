@@ -105,7 +105,7 @@ parse_str($_SERVER['QUERY_STRING'], $url_query);
                     <span class="">Производитель:</span>
                 </button>
             </div>
-            <div class="btn-group <?=(count($brands)>0 && strpos($_SERVER['QUERY_STRING'], 'brand_name') > -1)?"get-brand":"clear"?>" id="filter_manufacturer">
+            <div class="btn-group <?=(count($brands)>0 && strpos(" ".$_SERVER['REQUEST_URI'], 'brand_name') > 0)?"get-brand":"clear"?>" id="filter_manufacturer">
                 <button class="btn btn-default dropdown-toggle brands-toggle" type="button" data-toggle="dropdown" role="menu">
                     <span class=" button-text">&nbsp;&nbsp;</span><i class="fa fa-angle-down caretalt"></i>
                 </button>

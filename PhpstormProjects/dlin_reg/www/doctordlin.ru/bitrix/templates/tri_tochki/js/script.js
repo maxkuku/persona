@@ -360,11 +360,18 @@ function ytb() {
         $('body').append(win);
     }
     $('.play').click(function () {
+
         if($(this).parents('div').hasClass('youtube')) {
-            $('#vid_inner').append("<iframe width=\"900\" height=\"507\" style='max-width:100%;height:auto' src=\"https://www.youtube.com/embed/" + $(this).parents('div').attr('id') + "\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>");
+            $('#vid_inner').append("<iframe width=\"900\" height=\"507\" style='max-width:100%;height:auto' src=\"" + $(this).parents('div').data('src') + "\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>");
         }
         else{
-            $('#vid_inner').append("<iframe width=\"900\" height=\"507\" style='max-width:100%;height:auto' src=\"" + $(this).parents('div').attr('id') + "\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>");
+            //$('#vid_inner').append("<video width=\"900\" height=\"507\" style='max-width:100%;height:auto' controls autoplay><source src=\"" + $(this).parents('div').data('src') + "\" type=\"video/mp4; codecs='avc1.4D401E, mp4a.40.2'\"/><source src=\"" + $(this).parents('div').data('src').replace('mp4', 'webm') + "\" type=\"video/webm; codecs='vp8, vorbis'\"/></video>");
+            var src = $(this).parents('div').data('src').replace('mp4', 'webm');
+            window.open(
+                src,
+                '_blank'
+            );
+            return
         }
         $('.overlay').removeClass('hidden');
         $('.out .fa-close').click(function () {
@@ -376,7 +383,7 @@ function ytb() {
 
 //youtube in popup
 $(document).ready(function() {
-    ytb();
+    //ytb();
 });
 
 $(document).ready(function(){

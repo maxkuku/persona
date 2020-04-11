@@ -17,6 +17,49 @@
 }
 </script>
 <p class="caption heading"><span>В нашей команде два поколения стоматологов семьи Ахтаниных</span></p>
+<?if(SHOW_ONLINE):?>
+    <script>
+        function gr() {
+            /*if ($('#form-content').html().indexOf('info@famdent.ru') < 0) {
+                $('#form-content').prepend('<p>Для проведения онлайн-консультации необходимо выслать рентгеновские снимки или КТ на почту <a href="mailto:info@famdental.ru">info@famdental.ru</a></p>');
+            }*/
+        }
+    </script>
+    <style>
+        .banner-online{
+            background-color: #FF445B;
+            color: #eee;
+            padding: 60px 30px 30px;
+            text-align: center;
+            font-size: 22px;
+        }
+        .in-online-banner{
+            border: 3px solid #eeeeee;
+            margin: 0 auto 0 10px;
+            position: relative;
+            background-color: #FF445B;
+            color: white;
+            transition: 1s ease;
+            padding: 6px 37px;
+            font-size: 18px;
+            border-radius: 17px;
+            display: inline-block;
+        }
+        #form-content > p {
+            color: #000;
+        }
+        @media(max-width:768px){
+            .in-online-banner {
+                margin: 20px auto 0;
+                line-height: 24px;
+            }
+            .banner-online{
+                padding: 30px;
+            }
+        }
+    </style>
+    <p class="banner-online">Бесплатная <font color="yellow">онлайн-консультация врача</font> по имплантации <button class="uk-button in-online-banner" data-uk-modal="{target:'#modal-form'}" onclick="gr()">Записаться</button></p>
+<?endif?>
 <div class="container">
 <!--
 	<div class="highlight">

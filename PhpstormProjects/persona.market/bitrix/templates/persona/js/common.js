@@ -262,14 +262,18 @@ $(document).ready(function(){
     var gid = $('#button-cart').data('id')
     $('#plus').click(function(){
         var pl = parseInt($(this).parents('span').next('[name=quantity]').val()) + 1;
-        $(this).parent().next('[name=quantity]').val(pl)
-        $('#button-cart').attr("onclick", "cart.add(" + gid + "," + pl + ")")
+        $(this).parent().next('[name=quantity]').val(pl);
+        setTimeout(function(){
+            $('#button-cart').attr("onclick", "cart.add(" + gid + "," + pl + ")");
+        },100);
     })
     $('#minus').click(function(){
         var mi = parseInt($(this).parents('span').next('[name=quantity]').val()) - 1;
         if(mi > 0) {
             $(this).parent().next('[name=quantity]').val(mi)
-            $('#button-cart').attr("onclick", "cart.add(" + gid + "," + mi + ")")
+            setTimeout(function(){
+                $('#button-cart').attr("onclick", "cart.add(" + gid + "," + mi + ")");
+            },100);
         }
     })
 })
@@ -279,7 +283,7 @@ var cart = {
         $.ajax({
             url: '/ajax/index.php',
             type: 'post',
-            data: 'WEB_FORM_ID=2&web_form_submit=1&product_id=' + product_id + '&quantity=' + (typeof(quantity) != 'undefined' ? quantity : 1),
+            data: 'WEB_FORM_ID=2&web_form_submit=1&product_id=' + product_id + '&quantity=' + quantity,
             dataType: 'json',
             beforeSend: function () {
                 $('#cart > button').button('loading');
@@ -310,7 +314,6 @@ var cart = {
                         success: function (data) {
                             $('.cartMask').hide();
                             $('#cart-total').html(data['button']);
-
                         }
                     });
                 }
@@ -342,9 +345,9 @@ var cart = {
                         '<i class="fa fa-info-circle"></i>&nbsp;&nbsp;' + json['good'] + '</div>');
                     $('#modal-cart .modal-body').find('.text-center').hide();
                     $('#modal-cart').modal('show');
-                    //setTimeout(function () {
-                    $('#cart-total').html(json['totals']);
-                    //}, 100);
+
+                    // $('#cart-total').html(json['totals']);
+
                     $.ajax({ // TODO: обновление миникорзины
                         url: '/ajax/index.php',
                         type: 'get',
@@ -412,44 +415,64 @@ var cart = {
         $.ajax({
             url: '/ajax/index.php',
             type: 'post',
-            data: 'key=' + key + '&quantity=' + (typeof(quantity) != 'undefined' ? quantity : 1),
+            data: 'key=' + key + '&quantity=' + quantity,
             dataType: 'json',
             beforeSend: function () {
-                $('#cart > button').button('loading');
-                $('.cartMask').css({'display': 'block'});
+                //$('#cart > button').button('loading');
+                //$('.cartMask').css({'display': 'block'});
             },
             success: function (json) {
-                $('#cart > button').button('reset');
+                //$('#cart > button').button('reset');
+                var was_quan = parseInt( $('#popup_inp_' + key).val() );
+                var new_quan = was_quan + parseInt( json );
+                var was_price = parseInt($('#popup_inp_' + key).parents('.cartCell').next('.pprice').find('.cartCellContent').html()) / was_quan;
+                var new_price = new_quan * was_price;
+                var was_all_items = parseInt($('#cart-total .products b').text());
+                var was_all_price = parseInt($('#cart-total .prices b').html());
+                var new_all_items = was_all_items + parseInt( json );
+                var new_all_price = was_all_price + parseInt( json ) * was_price;
                 setTimeout(function () {
-                    $('#cart-total').html(json['button']);
-                    $('#modal-cart .modal-body').html(json['line']);
+                    //$('#cart-total').html(json['button']);
+                    //$('#modal-cart .modal-body').html(json['line']);
+                    $('#popup_inp_' + key).val( new_quan );
+                    $('#cart-total .products b').text( new_all_items );
+                    $('#cart-total .products').attr( 'data-quan', new_all_items );
                 }, 100);
-
+                setTimeout(function () {
+                    $('#popup_inp_' + key).parents('.cartCell').next('.pprice').find('.cartCellContent').html( new_price + ' <span class="sr-only">р.</span><span class="roboto-forced ruble" aria-hidden="true" style="display:none;"></span>' );
+                    $('#cart-total .prices b').html( new_all_price + ' <span class="sr-only">р.</span><span class="roboto-forced ruble" aria-hidden="true" style="display:none"></span>' );
+                }, 200);
             },
             error: function (xhr, ajaxOptions, thrownError) {
                 alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
             }
         });
     },
-    'updateInCart': function (key, quantity) {
+    'updateInCart': function (ind, kol) {
         $.ajax({
             url: '/ajax/index.php',
             type: 'post',
-            data: 'key=' + key + '&quantity=' + (typeof(quantity) != 'undefined' ? quantity : 1),
+            data: 'ind=' + ind + '&kol=' + kol,
             dataType: 'json',
             beforeSend: function () {
-                $('#cart > button').button('loading');
-                $('.cartMask').css({'display': 'block'});
             },
             success: function (json) {
-                $('#cart > button').button('reset');
                 setTimeout(function () {
-                    $('#cart-total').html(json['button']);
-                    $('#modal-cart .modal-body').html(json['line']);
-                    var f = parseInt( $('#incart_span_' + key).text() );
-                    $('#incart_span_' + key).text( f + parseInt( quantity ) );
+                    var f = parseInt( $('#incart_span_' + ind).text() );
+                    var quan_new = f + parseInt( json );
+                    var price = parseInt($('#incart_span_' + ind).parents('.basket-list-template').find('.price').text());
+                    var item_sum = price * quan_new;
+                    $('#incart_span_' + ind).text( quan_new );
+                    $('#incart_span_' + ind).parents('.basket-list-template').find('.total').html( item_sum + '<span class="sr-only">р.</span><span class="roboto-forced ruble" aria-hidden="true" style="display:none;"></span>');
                 }, 100);
-
+                setTimeout(function () {
+                    var sum = 0;
+                    $('.total').each(function(){
+                        sum = sum + parseInt($(this).text());
+                    });
+                    $('#total_sub_total .simplecheckout-cart-total-value').html( sum + ' <span class="sr-only">р.</span><span class="roboto-forced ruble" aria-hidden="true" style="display:none;"></span>');
+                    $('#total_total .simplecheckout-cart-total-value').html( sum + ' <span class="sr-only">р.</span><span class="roboto-forced ruble" aria-hidden="true" style="display:none;"></span>');
+                },200);
             },
             error: function (xhr, ajaxOptions, thrownError) {
                 alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
@@ -766,6 +789,100 @@ var qview = function (product_id) {
         }
     });
 }
+
+var popup = function (){
+    $('#modal-popup').remove();
+    html = '<div id="modal-popup" class="modal">';
+    html += '<div class="modal-dialog modal-lg">';
+    html += '<div class="modal-content white"><button type="button" class="close" onclick="set_cook(\'popup\', \'Y\', 3)" data-dismiss="modal">×</button><form method="post" id="personal">';
+    html += '<div class="modal-banner"><img id="banner-popup" src="/include/newproject_1_original-l.jpg" width="100%" alt="Видео консультация Персона маркет"/><div class="modal-text"><h2>Персональные консультации по видеосвязи!</h2><p>Мы <b>с заботой относимся к вашей красоте и здоровью,</b> поэтому проконсультируем вас <span class="big">до</span> покупки! А также мы напоминаем вам, что в нашем магазине <span class="big">только</span> <b>сертифицированная и оригинальная</b> продукция! <b>Остерегайтесь низких цен и подделок,</b> они могут навредить вашему здоровью!</p></div><div class="form-group required row-customer_telephone row">\n' +
+        '<div class="col-sm-6">\n' +
+        '<input type="hidden" name="sessid" id="sessid" value="">\n' +
+        '<input type="hidden" name="user_name" value="Пользователь">\n' +
+        '<input type="tel" required class="inputtext form-required form-control" name="form_text_27" id="customer_telephone" ' +
+        'placeholder="номер телефона" data-reload-payment-form="true">\n' +
+        '<div class="simplecheckout-rule-group" data-for="customer_telephone">\n' +
+        '<div style="display:none;" data-for="customer_telephone" data-rule="byLength" class="simplecheckout-error-text' +
+        ' simplecheckout-rule" data-length-min="3" data-length-max="32" ' +
+        'data-required="true">Телефон должен быть от 3 до 32 символов!\n' +
+        '</div>\n' +
+        '</div>\n' +
+        '</div>\n' +
+        '<div class="col-sm-6">\n' +
+        '<input type="button" class="form-control" name="web_form_submit" value="Получить консультацию">\n' +
+        '</div>\n' +
+        '</div></div>';
+    html += '    </div>';
+    html += '  </div>';
+    html += '</form></div>';
+    $('body').append(html);
+    setTimeout(function(){
+        $('#sessid').val(bxSession.sessid);
+        var selector = $('[type=tel]');
+        var im = new Inputmask("+7(999)999-99-99");
+        im.mask(selector);
+    },300);
+    $('#modal-popup').modal('show');
+    $('[name=web_form_submit]').click(function(){
+        var phone = $('[name=form_text_27]').val().toString();
+        $.ajax({
+            url: '/ajax/index.php?personal=Y&phone=' + phone,
+            type: 'get',
+            dataType: 'html',
+            success: function (data) {
+                $('#modal-popup .modal-content').html(data);
+            },
+            error: function (xhr, ajaxOptions, thrownError) {
+                $('#modal-popup .modal-content').html(thrownError);
+            }
+        });
+    })
+}
+
+
+
+function setCookie(name,value,days) {
+    var expires = "";
+    if (days) {
+        var date = new Date();
+        date.setTime(date.getTime() + (days*24*60*60*1000));
+        expires = "; expires=" + date.toUTCString();
+    }
+    document.cookie = name + "=" + (value || "")  + expires + "; path=/";
+}
+function getCookie(name) {
+    var nameEQ = name + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0;i < ca.length;i++) {
+        var c = ca[i];
+        while (c.charAt(0)==' ') c = c.substring(1,c.length);
+        if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+    }
+    return null;
+}
+function eraseCookie(name) {
+    document.cookie = name+'=; Max-Age=-99999999;';
+}
+
+
+function set_cook(name, value, days){
+    var x = getCookie( name )
+    if(!x)
+        setCookie(name,value,days);
+}
+
+
+
+domReady(function (){
+    setTimeout(function(){
+        var x = getCookie( 'popup' );
+        if(!x)
+            popup();
+    },15000)
+});
+
+
+
 
 var fastorder = function (product_id) {
     $('#modal-fastorder').remove();
@@ -1180,4 +1297,6 @@ domReady(function () {
             location.href = "/catalog/select/?" + qs
         },100);
     });
+
+
 });

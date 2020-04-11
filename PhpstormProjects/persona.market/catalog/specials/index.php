@@ -27,7 +27,15 @@ if($rating) {
     $sort_order = $rating;
 }
 
-    $filter = array("!PROPERTY_ACTION"=>false);
+    #$filter = array("!PROPERTY_ACTION"=>false);
+
+
+    # теперь не надо отмечать галочкой товар акционный
+    # достаточно старой / новой цены
+    $filter = array(
+    	"!PROPERTY_SALE"=>false,
+        "!PROPERTY_PRICE"=>false
+	);
 
 
     $APPLICATION->IncludeComponent(

@@ -1,5 +1,5 @@
 <?$APPLICATION->IncludeComponent(
-	"bitrix:catalog.bigdata.products", 
+	"persona:catalog.bigdata.products",
 	"optimus_new", 
 	array(
 		"LINE_ELEMENT_COUNT" => "5",
