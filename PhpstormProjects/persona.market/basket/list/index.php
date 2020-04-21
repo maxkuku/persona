@@ -71,6 +71,11 @@ if($SHOW_ALL == "Y") {
     }
 }
 ?>
+<style>
+    div#cart {
+        display: none;
+    }
+</style>
     <div class="container">
     <div class="row">
         <div id="content" class="col-sm-12">

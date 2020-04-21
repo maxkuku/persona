@@ -2,19 +2,7 @@
 $APPLICATION->SetPageProperty("description", "Интернет-магазин профессиональной косметики для волос и тела имидж-лаборатории Персона Lab. Мы сотрудничаем с такими брендами, как TIGI, Wella и др. Наша сеть салонов находится по всей Москве.");
 $APPLICATION->SetTitle("Персона Маркет - интернет-магазин профессиональной косметики для волос в Москве");
 $APPLICATION->SetTitle( "«Персона» маркет" ); ?>
-<?$APPLICATION->IncludeComponent("bitrix:main.feedback", "personal_cons", Array(
-	"EMAIL_TO" => "info@persona.market",	// E-mail, на который будет отправлено письмо
-		"EVENT_MESSAGE_ID" => array(	// Почтовые шаблоны для отправки письма
-			0 => "7",
-		),
-		"OK_TEXT" => "Спасибо, ваше сообщение принято.",	// Сообщение, выводимое пользователю после отправки
-		"REQUIRED_FIELDS" => array(	// Обязательные поля для заполнения
-			0 => "EMAIL",
-		),
-		"USE_CAPTCHA" => "N",	// Использовать защиту от автоматических сообщений (CAPTCHA) для неавторизованных пользователей
-	),
-	false
-);?>
+
     <div class="content-wrapper">
 	<div class="container">
 		<div class="row">
@@ -863,4 +851,5 @@ Array(
          </script>
 	</div>
 </div>
- <br><? require( $_SERVER["DOCUMENT_ROOT"] . "/bitrix/footer.php" ); ?>
+ <br>
+<? require( $_SERVER["DOCUMENT_ROOT"] . "/bitrix/footer.php" ); ?>

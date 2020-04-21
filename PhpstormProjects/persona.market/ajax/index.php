@@ -167,7 +167,8 @@ if ($PRODUCT_ID > 0 && $UPD > 0) {
         global $strError;
         echo json_encode($strError, JSON_UNESCAPED_UNICODE);
     }
-} elseif ($PRODUCT_ID > 0 && $UPD < 0) {
+}
+elseif ($PRODUCT_ID > 0 && $UPD < 0) {
     $FORM_ID = 2;
     $res = $DB->Query("SELECT RESULT_ID FROM b_form_result_answer WHERE FORM_ID = " . $FORM_ID . " AND USER_TEXT = $PRODUCT_ID");
     $arAnswer1 = [];
@@ -231,7 +232,8 @@ if ($PRODUCT_ID > 0 && $UPD > 0) {
     }
 
 
-} elseif ($PRODUCT_ID > 0 && (int)$UPD < 1) { #?key=189&quantity='-1'
+}
+elseif ($PRODUCT_ID > 0 && (int)$UPD < 1) { #?key=189&quantity='-1'
 
 
     $FORM_ID = 2;
@@ -291,7 +293,6 @@ if (strlen(htmlspecialchars($_REQUEST['fids_to_delete'], 3)) > 0) {
 }
 
 if (htmlspecialchars($_REQUEST['callback'], 3) == "Y") {
-
     ?>
     <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
@@ -451,7 +452,6 @@ if (htmlspecialchars($_REQUEST['route'], 3) == "extension/module/xds_qview"
                                  class="img-responsive center-block">
                         <?
                         } ?>
-
                     </div>
                 </div>
             </div>
@@ -477,8 +477,6 @@ if (htmlspecialchars($_REQUEST['route'], 3) == "extension/module/xds_qview"
 							</div>
 						</div-->
                 </div>
-
-
                 <div class="row">
                     <div class="col-sm-12">
                         <div class="price">
@@ -489,8 +487,6 @@ if (htmlspecialchars($_REQUEST['route'], 3) == "extension/module/xds_qview"
                         </div>
                     </div>
                 </div>
-
-
                 <!--div class="row">
                     <div class="col-sm-12">
                         <div class="review">
@@ -506,7 +502,6 @@ if (htmlspecialchars($_REQUEST['route'], 3) == "extension/module/xds_qview"
                         </div>
                     </div>
                 </div-->
-
                 <div class="row sm-xs-center">
                     <div class="col-sm-12">
                         <div class="description">
@@ -516,8 +511,6 @@ if (htmlspecialchars($_REQUEST['route'], 3) == "extension/module/xds_qview"
                         </div>
                     </div>
                 </div>
-
-
             </div>
         </div>
     </div>
@@ -539,12 +532,10 @@ if (htmlspecialchars($_REQUEST['route'], 3) == "extension/module/xds_qview"
                 <div style="margin-top: 15px;" class="visible-sm visible-xs"></div>
                 <div class="row">
                     <div class="col-md-5 col-sm-6">
-
                         <div class="input-group">
 						<span class="input-group-btn">
 							<button class="btn btn-default" id="minus"><i class="fa fa-minus fa-fw"></i></button>
 						</span>
-
                             <input type="text" name="quantity" value="1" id="modal-input-quantity"
                                    class="form-control" style="text-align: center; font-weight: bold;">
                             <span class="input-group-btn">
@@ -558,7 +549,6 @@ if (htmlspecialchars($_REQUEST['route'], 3) == "extension/module/xds_qview"
 
                         <button type="button" class="btn btn-danger btn-block" id="modal-button-cart"
                                 data-loading-text="Загрузка..."><b>В корзину</b></button>
-
                     </div>
                 </div>
             </div>
@@ -903,6 +893,8 @@ if (htmlspecialchars($_REQUEST['route'], 3) == "extension/module/xds_qview"
                  */
 
 
+/* список желаний */
+
 if (htmlspecialchars($_REQUEST['whish'], 3) == 1) {
     if (htmlspecialchars($_REQUEST['whish_id'], 3) > 1) {
         $wasCook = '';
@@ -929,6 +921,9 @@ if (htmlspecialchars($_REQUEST['whish'], 3) == 1) {
     }
 }
 
+
+/* убрать из списка желаний */
+
 if (htmlspecialchars($_REQUEST['whish_rem'], 3) == 1) {
     if (htmlspecialchars($_REQUEST['whish_id'], 3) > 1) {
         $json['success'] = "";
@@ -952,6 +947,9 @@ if (htmlspecialchars($_REQUEST['whish_rem'], 3) == 1) {
         echo json_encode($json, JSON_UNESCAPED_UNICODE);
     }
 }
+
+
+/* быстрый заказ */
 
 if (htmlspecialchars($_REQUEST['fastorder'], 3) == "Y") {
     if ((int)htmlspecialchars($_REQUEST['product_id'], 3) > 0) {
@@ -1137,6 +1135,8 @@ if (strlen(htmlspecialchars($_REQUEST['form_text_12'], 3)) > 1 &&
         echo $strError;
     }
 }
+
+/* комментарий написать */
 
 if (htmlspecialchars($_REQUEST['com_write'], 3) === "Y") {
     $el = new CIBlockElement;

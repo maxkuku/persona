@@ -23,6 +23,7 @@ IncludeTemplateLangFile(__FILE__);
 	<script src="//<?=$_SERVER['SERVER_NAME']?>/uikit/js/components/slideset.min.js"></script>
 	<script src="//<?=$_SERVER['SERVER_NAME']?>/uikit/js/components/slideshow.min.js"></script>
 	<script src="//<?=$_SERVER['SERVER_NAME']?>/uikit/js/core/nav.min.js"></script>
+	<!--script src="//<?=$_SERVER['SERVER_NAME']?>/uikit/js/core/uikit-icons.min.js"></script-->
 	<script src="//<?=$_SERVER['SERVER_NAME']?>/js/jquery.inputmask.js"></script>
 	<title><?$APPLICATION->ShowTitle()?></title>
 	<script src="//maps.api.2gis.ru/2.0/loader.js?pkg=full"></script>

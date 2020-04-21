@@ -1,3 +1,159 @@
+$(document).ready(function () {
+    //if(document.URL.indexOf('popup_show') > -1) {
+        // function show_banner...
+        //show_banner();
+    //}
+});
+
+function show_banner() {
+    var popup = '<style>.ban{' +
+        'background: url(/images/ban_pop.jpg) no-repeat center / cover;\n' +
+        '    max-width: 1401px;\n' +
+        '    max-height: 935px;\n' +
+        '    position: fixed;\n' +
+        '    top: 50%;\n' +
+        '    left: 50%;\n' +
+        '    transform: translate(-50%, -50%);\n' +
+        '    width: 65%;\n' +
+        '    height: 85%;\n' +
+        '    z-index: 100;\n' +
+        '    box-shadow: 1px 1px 71px 71px rgba(0,0,0,.4);\n' +
+        '    padding: 40px;\n' +
+        '    color: white;\n' +
+        '    font-size: 22px;' +
+        '}' +
+        '.ban h1 {\n' +
+        '    text-transform: uppercase;\n' +
+        '    text-align: center;\n' +
+        '    line-height: 42px;\n' +
+        '    font-family: inherit;\n' +
+        '}' +
+        '.ban h2 {\n' +
+        '    text-transform: uppercase;\n' +
+        '    line-height: 32px;\n' +
+        '    font-family: inherit;\n' +
+        '    margin-bottom: 30px;\n' +
+        '    margin-left: 40px;\n' +
+        '}' +
+        'button.close{' +
+        '    color: white;\n' +
+        '    opacity: 1;\n' +
+        '    margin: -20px;' +
+        '}' +
+        '.columns p {\n' +
+        '    margin: 0 40px 40px;\n' +
+        '    display: block;\n' +
+        '}' +
+        '.columns a {\n' +
+        '    color:#eee;\n' +
+        '}' +
+        '@media(min-width:768px){' +
+        '   .col-wrap {' +
+        '       margin-top:8%\n' +
+        '   }' +
+        '   .columns {\n' +
+        '       column-count: 2;\n' +
+        '   }' +
+        '   .ban h1{' +
+        '       margin-top: 7%;' +
+        '   }' +
+        '}' +
+        '@media(max-width:1366px){' +
+        '.ban{' +
+        '    font-size: 18px;' +
+        '   }' +
+        '}' +
+        '@media(max-width:768px){' +
+        '.ban{' +
+        '    padding: 23px 10px 10px;\n' +
+        '    font-size: 14px;' +
+        '    width: 90%' +
+        '}' +
+        'button.close {\n' +
+        '    margin: -20px 0;\n' +
+        '}' +
+        '.ban h2 {\n' +
+        '    line-height: 16px;\n' +
+        '    font-size: 14px;\n' +
+        '    margin: 0 0 8px;\n' +
+        '    text-align: center;\n' +
+        '}' +
+        '.ban h1 {\n' +
+        '    line-height: 18px;\n' +
+        '    font-size: 16px;\n' +
+        '}' +
+        '.columns p {\n' +
+        '    margin: 0 0 16px;\n' +
+        '    display: block;\n' +
+        '}' +
+        '}' +
+        '</style>' +
+        '<div class=ban>' +
+        '<button type="button" class="close" onclick="$(\'.ban\').hide(); set_cook(\'popup\', \'Y\', 1)">×</button>' +
+        '<h1>магазины ла маре продолжают работать в обычном режиме</h1>\n' +
+        '<br>\n' +
+        '<div class="col-wrap"><h2>адреса и телефоны открытых магазинов ЛА МАРЕ</h2>' +
+        '<div class="columns"><p>Усачёвский рынок\n' +
+        'м. Спортивная, ул. Усачёва, д. 26\n' +
+        'тел. <a href="tel:8(495)106-01-86">8(495)106-01-86</a></p>' +
+        '<p>Москворецкий рынок\n' +
+        'м. Нахимовский проспект\n' +
+        'Болотниковская улица, д. 12, стр. 31б\n' +
+        'тел. <a href="tel:8(495)966-41-94">8(495)966-41-94</a></p>' +
+        '<p>Рогожский Торговые Ряды\n' +
+        'м. Римская, улица Рогожский Вал, д. 5, стр. 8\n' +
+        'тел. <a href="tel:8(495)023-06-65">8(495)023-06-65</a></p>' +
+        '<p>Зеленоград ТЦ Авангард\n' +
+        'ул. Панфилова, д.13А, стр. 1\n' +
+        'тел. <a href="tel:8(495)966-12-84">8(495)966-12-84</a></p></div>' +
+        '</div></div>';
+    $('body').prepend(popup)
+}
+
+function setCookie(name,value,days) {
+    var expires = "";
+    if (days) {
+        var date = new Date();
+        date.setTime(date.getTime() + (days*24*60*60*1000));
+        expires = "; expires=" + date.toUTCString();
+    }
+    document.cookie = name + "=" + (value || "")  + expires + "; path=/";
+}
+function getCookie(name) {
+    var nameEQ = name + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0;i < ca.length;i++) {
+        var c = ca[i];
+        while (c.charAt(0)==' ') c = c.substring(1,c.length);
+        if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+    }
+    return null;
+}
+function eraseCookie(name) {
+    document.cookie = name+'=; Max-Age=-99999999;';
+}
+function set_cook(name, value, days){
+    var x = getCookie( name )
+    if(!x)
+        setCookie(name,value,days);
+}
+document.addEventListener("DOMContentLoaded", function(event){
+    console.log('f_popup');
+    setTimeout(function(){
+        console.log('t_popup');
+        var x = getCookie( 'popup' );
+        if(!x) {
+            console.log('popup');
+            show_banner();
+        }
+        else{
+            console.log('x_popup');
+        }
+    },5000);
+});
+
+
+
 // function get url parameter
 // var tech = getUrlParameter('technology');
 // var blog = getUrlParameter('blog');
@@ -580,15 +736,72 @@ if(dateCheck("12/15/2020", "01/08/2021", new Date())){
 
 }
 
-var pay = function(){
+
+
+
+
+
+
+
+var show_pay_button = function(){
+    $('[name=user_f_1]').change(function(){
+        if($(this).val().length > 2){ // имя
+            $('[name=user_f_2]').change(function(){
+                if($(this).val().length > 2){ // почта
+                    $('[name=user_f_5]').change(function(){
+                        if($(this).val().length > 2){ // телефон
+                            if(!$('.minimal-sum').is(":visible")){ // предупрежд. о мин. сумме
+                                $('#send-form input, #send-form select, #send-form textarea').one('change', function(){
+                                    if(checkOrderForm()) {
+                                        $('#alfa-payment-button').show();
+                                    }
+                                    else{
+                                        $('#alfa-payment-button').hide();
+                                    }
+                                });
+                            }
+                            else{
+                                $('#alfa-payment-button').hide();
+                            }
+                        }
+                        else{
+                            $('#alfa-payment-button').hide();
+                        }
+                    });
+                }
+                else{
+                    $('#alfa-payment-button').hide();
+                }
+            });
+        }
+        else{
+            $('#alfa-payment-button').hide();
+        }
+    });
+}
+
+var pay = function(e){
     if(checkOrderForm) {
+
+
         var city;
         if($('[name=user_f_4_5] option:selected').val() == 1){
             city = "Москва";
         }
-        else{
+        else if($('[name=user_f_4_5] option:selected').val() == 2){
             city = "Московская область";
         }
+        else{
+            return false;
+        }
+
+
+
+
+        var token_public = 'tkk4iu3h8bpqk911kamrt41gkj';
+        var addr = 'https://web.rbsuat.com/ab/rest/register.do';
+        var merchantOrderNumber = $('[name=order-num]').val();
+
         $.ajax({
             type: 'post',
             url: '/ajax/add_order_payment.php',
@@ -608,18 +821,75 @@ var pay = function(){
             },
             dataType: 'html',
             beforeSend: function () {
-
+                $('#alfa-payment__button').one('click', function(e){
+                    e.preventDefault();
+                });
             },
             complete: function () {
 
             },
             success: function (data) {
-                $('body').append(data);
-                $('.pay-modal').css('display', 'block');
+
+                if(Number.isInteger(data) && data > 0) {
+
+                    setTimeout(function () {
+                        $('#alfa-payment-button').one(click());
+                    }, 100);
+                }
+                else{
+                    $('#alfa-payment__message').text(data);
+                }
+
+            },
+            error: function(){
+                alert(':( Упс');
             }
         });
     }
 }
+
+/*
+var get_order_id = function(oi){
+    $.ajax({
+        type: 'post',
+        url: '/ajax/check_payment.php',
+        data: {
+            'orderId': oi,
+            'token': 'tkk4iu3h8bpqk911kamrt41gkj',
+        },
+        dataType: 'json',
+        success: function (json) {
+            var j = JSON.parse(json)
+            //console.log(j);
+            if(j.orderStatus == 2) {
+                setTimeout(function () {
+                    $.ajax({
+                        type: 'post',
+                        url: '/ajax/update_payment.php',
+                        data: {
+                            'req': j.orderNumber
+                        },
+                        success: function (req) {
+                            if(req == 1){
+                                $('.numb').text(j.orderNumber);
+                            }
+                        }
+                    });
+
+                }, 100);
+            }
+            else{
+                $('.likeh2').text('Ошибка!');
+                $('.res').text('Нет такого заказа');
+            }
+
+        },
+        error: function(){
+            alert(':( Упс');
+        }
+    });
+}
+*/
 
 function checkActiveDelivery() {
 
@@ -647,12 +917,12 @@ function checkActiveDelivery() {
         $('.order-form-container input[name="user_f_11"]').val('0');
 
         if (total_sum_without_delivery < 8000) {
-            $('.order-basket .total-sum span').text(total_sum_without_delivery + 350);
-            $('[name=user_f_13]').val(total_sum_without_delivery + 350);
+            $('.order-basket .total-sum-t').text(total_sum_without_delivery + 350 + '.00');
+            $('[name=user_f_13]').val(total_sum_without_delivery + 350 + '.00');
         }
         else {
-            $('.order-basket .total-sum span').text(total_sum_without_delivery);
-            $('[name=user_f_13]').val(total_sum_without_delivery);
+            $('.order-basket .total-sum-t').text(total_sum_without_delivery + '.00');
+            $('[name=user_f_13]').val(total_sum_without_delivery + '.00');
         }
 
         if (total_sum_without_delivery < minSum) {
@@ -673,7 +943,7 @@ function checkActiveDelivery() {
             $(this).css('display', 'block');
         });
         $('.order-form-container input[name="user_f_11"]').val('1');
-        $('.order-basket .total-sum span').text(total_sum_without_delivery);
+        $('.order-basket .total-sum-t').text(total_sum_without_delivery);
     }
 }
 

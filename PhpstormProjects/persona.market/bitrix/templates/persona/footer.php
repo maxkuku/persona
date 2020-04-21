@@ -34,8 +34,7 @@
 				<div class="col-sm-6 col-md-3">
 					<div class="footer_name_column"><i class="glyphicon glyphicon-user"></i><span>Контакты</span></div>
 					<ul class="list-unstyled">
-						<li><i class="fa fa-phone" aria-hidden="true"></i><? $APPLICATION->IncludeFile( SITE_DIR
-							. "include/phone.php", Array(), Array("MODE"=>"html") );?></li>
+						<li><i class="fa fa-phone" aria-hidden="true"></i><a href="tel:<?=PHONE?>" title="Позвонить"><?=PHONE?></a></li>
 						<li><i class="fa fa-envelope-o" aria-hidden="true"></i><a onclick="javascript:window.location
 						.href ='mailto:<? $APPLICATION->IncludeFile( SITE_DIR . "include/email.php", Array(), Array( "MODE" => "html" ) ); ?>';event.preventDefault()" href="<? $APPLICATION->IncludeFile( SITE_DIR . "include/email.php", Array(), Array( "MODE" => "html" ) ); ?>"><? $APPLICATION->IncludeFile( SITE_DIR . "include/email.php", Array(), Array( "MODE" => "html" ) ); ?></a></li>
 						<li><i class="fa fa-refresh" aria-hidden="true"></i><a href="/contact-us/">Связаться с нами</a></li>

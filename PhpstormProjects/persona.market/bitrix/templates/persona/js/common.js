@@ -148,6 +148,84 @@ $(document).ready(function () {
     }
 });
 
+function check(){
+    var err    = "";
+    var email  = $('[name=form_email_11]');
+    var name   = $('[name=form_text_13]');
+    var phone  = $('[name=form_text_12]');
+    var deliv  = $('[name=form_text_23] option:selected').data('select');
+    var addr  = $('[name="form_text_16"]');
+    if(email.val().length > 3){
+        if(email.val().indexOf("@") > -1) {
+            if(name.val().length > 3) {
+                if(phone.val().length > 11) {
+                    var ph = phone.val().replace(/[^0-9.]/g, "");
+                    if(ph.length > 10) {
+                        if(deliv !== "delivery") {
+                            return true;
+                        }
+                        else{
+                            if(addr.val().length > 3){
+                                return true;
+                            }
+                            else{
+                                err = "Заполните адрес доставки";
+                                return err;
+                            }
+                        }
+                    }
+                    else{
+                        err = "Не верно введен телефон";
+                        return err;
+                    }
+                }
+                else{
+                    err = "Не введен телефон";
+                    return err;
+                }
+            }
+            else{
+                err = "Не введено имя";
+                return err;
+            }
+        }
+        else{
+            err = "Не валидный E-mail";
+            return err;
+        }
+    }
+    else{
+        err = "Не заполнен E-mail";
+        return err;
+    }
+}
+
+
+$(document).ready(function () {
+    if(document.URL.indexOf('basket') > -1 /*&& document.URL.indexOf('try') > -1*/){
+        var r = Math.random();
+        $('form input, form select').on('change', function(r){
+
+            var v = check();
+            if(v === true){
+                $('[name="web_form_submit"] + p.red').remove();
+                $('#payb').show();
+            }
+            else{
+                if($('[name="web_form_submit"] + p.red').length){
+                    $('[name="web_form_submit"] + p.red').text(v);
+                }
+                else {
+                    $('[name="web_form_submit"]').after('<p class=red>' + v + '</p>')
+                }
+                $('#payb').hide();
+            }
+        });
+    }
+});
+
+
+
 $(document).ready(function () {
     $('.text-danger').each(function () {
         var element = $(this).parent().parent();
@@ -241,7 +319,7 @@ $(document).ready(function () {
     }
 
 
-    $(document).on('keydown', '#collapse-checkout-option input[name=\'email\'], #collapse-checkout-option input[name=\'password\']', function (e) {
+$(document).on('keydown', '#collapse-checkout-option input[name=\'email\'], #collapse-checkout-option input[name=\'password\']', function (e) {
         if (e.keyCode == 13) {
             $('#collapse-checkout-option #button-login').trigger('click');
         }
@@ -863,16 +941,11 @@ function getCookie(name) {
 function eraseCookie(name) {
     document.cookie = name+'=; Max-Age=-99999999;';
 }
-
-
 function set_cook(name, value, days){
     var x = getCookie( name )
     if(!x)
         setCookie(name,value,days);
 }
-
-
-
 domReady(function (){
     setTimeout(function(){
         var x = getCookie( 'popup' );

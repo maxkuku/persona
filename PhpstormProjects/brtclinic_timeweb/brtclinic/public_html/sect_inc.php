@@ -5,11 +5,12 @@
 <div class="over sect">
     <div class="wrap">
     <div id="banner" class="owl-carousel owl-theme_slider">
-        <div id="banner-picture1" class="banner-picture owl-item"><!--owl-carousel-->
-            <div id="promo1">
+        <div id="banner-picture1" class="banner-picture owl-item main"><!--owl-carousel-->
+            <!--div id="promo1">
                 <div><img style="width: 100%;" src="<?=SITE_TEMPLATE_PATH?>/images/promo1.jpg" alt="Золотой стандарт реабилитации"/></div>
-            </div>
-            <div class="banner_text">
+            </div-->
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/MEG8GwrblDA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <div class="banner_text" style="width: 45%; left: 50%;">
                 <h2>Золотой стандарт реабилитации</h2>
                     <ul class="checked">
 
@@ -238,7 +239,7 @@
 	"brt:news.list", 
 	"specs_by_number", 
 	array(
-        "ELEMENT_ID" => array(76,114,78),
+        "ELEMENT_ID" => array(106,114,76),
 		"VARIANT" => "not-in-use",
 		"ACTIVE_DATE_FORMAT" => "",
 		"ADD_SECTIONS_CHAIN" => "N",

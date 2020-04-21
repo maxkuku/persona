@@ -3384,11 +3384,36 @@ a.btn.disabled, fieldset[disabled] a.btn {
     border-color: #ad8a18
 }
 
+.btn-red{
+    background: -webkit-linear-gradient(135deg, #b80505 0%,#ea3d88 50%,#780333 100%);
+    background: linear-gradient(135deg, #b80505 0%,#ea3d88 50%,#780333 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ad8a18', endColorstr='#ad8a18',GradientType=1 );
+    border-color: #ad1855;
+}
+
+.simplecheckout-button-left .btn-red:hover{
+    background: -webkit-linear-gradient(135deg, #e5085a 0%,#e95e9a 50%,#ce246b 100%);
+    background: linear-gradient(135deg, #e5085a 0%,#e95e9a 50%,#ce246b 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ad8a18', endColorstr='#ad8a18',GradientType=1 );
+    border-color: #ad1855;
+}
+
 .btn-primary.focus, .btn-primary:focus {
     color: #fff;
     /*background-color: #286090;
     border-color: #122b40*/
 }
+
+.simplecheckout-button-left p.red {
+    display: inline-block;
+    margin: 0 0 0 4px;
+    color: #cf2048;
+    border: 1px solid;
+    padding: 0px 10px;
+    line-height: 32px;
+    transform: translateY(1px);
+}
+
 .wishlist td button.btn.btn-primary {
     position: relative;
     float: right;
@@ -6332,7 +6357,8 @@ button.btn.btn-default.filt-but {
 
 .get-brand ul,
 .get-limit ul,
-.get-sort ul {
+.get-sort ul/*,
+#manuf-group ul*/{
     display: inline-block;
     position: relative;
     float: none!important;
@@ -6348,16 +6374,21 @@ button.btn.btn-default.filt-but {
     display:none;
 }
 
+/*,
+*/
+
 .get-brand ul li.active,
 .get-limit ul li.active,
-.get-sort ul li.active{
+.get-sort ul li.active,
+#manuf-group ul li.active{
     display:block;
     border: 1px solid #ccc;
 }
 
 .get-brand ul li.active a,
 .get-limit ul li.active a,
-.get-sort ul li.active a{
+.get-sort ul li.active a,
+#manuf-group ul li.active a{
     display:block;
     height: 32px;
     line-height: 26px;

@@ -1,7 +1,6 @@
 <?
 if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
 ?>
-
 <? if ($arResult["isFormErrors"] == "Y"): ?>
     <div class="error form_error">
         <?= $arResult["FORM_ERRORS_TEXT"]; ?>
@@ -17,7 +16,6 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
      ***********************************************************************************/
     global $item_to_form;
     ?>
-
     <div class="simplecheckout-left-column">
         <div class="simplecheckout-block" id="simplecheckout_customer">
             <div class="checkout-heading panel-heading"><span>Покупатель</span>
@@ -97,9 +95,9 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
         <div class="simplecheckout-block" id="simplecheckout_comment">
             <div class="checkout-heading panel-heading">Комментарий к заказу (не обязательно)</div>
             <div class="simplecheckout-block-content">
-                <textarea name="form_textarea_17" cols="47" rows="7" class="inputtextarea form-control" id="comment"
-                          placeholder="Можете оставить свой комментарий к заказу или адрес доставки"
-                          data-reload-payment-form="true"></textarea>
+                <textarea name="form_textarea_17" cols="47" rows="3" class="inputtextarea form-control" id="comment"
+                          placeholder="Можете оставить свой комментарий к заказу 99 симв. макс."
+                          data-reload-payment-form="true" max-length="99"></textarea>
                 <textarea style="display:none" name="form_textarea_18" cols="47" rows="7"
                           class="inputtextarea"><?= $item_to_form ?></textarea>
             </div>
@@ -133,7 +131,104 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
                    id="simplecheckout_button_back"><span>Назад</span></a>
                 <? global $all_price;?>
                 <input <?= (($all_price) < MIN_ORDER_PRICE) ? "disabled title='Сумма заказа менее минимальной ".MIN_ORDER_PRICE." руб.'" : ""; ?> type="submit" name="web_form_submit" value="<?= htmlspecialcharsbx(strlen(trim($arResult["arForm"]["BUTTON"])) <= 0 ? GetMessage("FORM_ADD") : $arResult["arForm"]["BUTTON"]); ?>" class="button btn-primary btn"/>
+                <?$g = htmlspecialchars($_REQUEST['try'],3);
+                $res = $DB->Query("SELECT MAX(RESULT_ID) AS res FROM b_form_result_answer");
+while($ar = $res->Fetch())
+    $rrrr = $ar['res'] + 1; ?>
+                <style>
+                    .basket > iframe{
+                        width:40%!important;
+                        left:50%!important;
+                        transform:translateX(-50%);
+                    }
+                </style>
+                <script>
+                    function ron() {
+                        setTimeout(function () {
+                            $('.wrapper').css({'display': 'block!important'})
+                            $('.load-block').css({'display': 'none!important'})
+                        }, 200);
+                    }
+                </script>
+                <script>
+                    document.addEventListener("DOMContentLoaded", function(event) {
+                        if(parseInt($('#itogo-sum').text()) >= <?=MIN_ORDER_PRICE?>)
+                            $('#payb').attr('disabled', false)
+                    });
+                    function paying() {
+                        if (document.URL.indexOf('basket') > -1 /*&& document.URL.indexOf('try') > -1*/
+                        && $('#payb').attr('disabled') !== "disabled") {
+                            var formUrl;
+                            var orderId;
+                            var addr;
+                            var am;
+                            if($('[name="form_text_23"] option:selected').val() == "Доставка"){
+                                addr = $('[name="form_text_16"]').val();
+                                if($('#delivery-sum').length) {
+                                    var delivery = parseInt($('#delivery-sum').text());
+                                    am = <?=(int)$all_price?> + delivery;
+                                }
+                            }
+                            else{
+                                addr = $('[name="form_text_23"] option:selected').val();
+                            }
+                            $.ajax({
+                                type: 'post',
+                                url: '/ajax/register.php',
+                                data: {
+                                    'orderNumber': <?=$rrrr?>,
+                                    'amount': am,
+                                    'returnUrl': 'https://persona.market/basket/',
+                                    //'jsonParams': {
+                                    'username': $('[name="form_text_13"]').val(),
+                                    'userphone': $('[name="form_text_12"]').val(),
+                                    'email': $('[name="form_email_11"]').val(),
+                                    'index': $('[name="form_text_17"]').val(),
+                                    'city': $('[name="city[]"] option:selected').val(),
+                                    'usercomm': $('[name="form_textarea_17"]').val().substr(0,99),
+                                    'delivery': $('#delivery-sum').text(),
+                                    'useraddr': addr,
+                                    //}
+                                },
+                                success: function (req) {
+                                    var req = JSON.parse( req );
 
+                                    var errMess = req['errorMessage'];
+                                    var errCode = req['errorCode'];
+                                    var orderStatus = req['orderStatus'];
+                                    var formUrl = req['formUrl'];
+                                    var orderId = req['orderId'];
+
+                                    if(errMess) {
+                                        if ($('[name="web_form_submit"] + p.red').length) {
+                                            $('[name="web_form_submit"] + p.red').text(errMess);
+                                        } else {
+                                            $('[name="web_form_submit"]').after('<p class=red>' + errMess + '</p>')
+                                        }
+                                        $.ajax({
+                                            type: 'post',
+                                            url: '/ajax/cancel.php',
+                                            data: {
+                                                'orderId': <?=$rrrr?>,
+                                            },
+                                            success: function(can){
+                                                console.log(can);
+                                            }
+                                        });
+                                    }
+
+                                    if(formUrl && orderId) {
+                                        //
+                                        // document.location.href = formUrl + '?mdOrder=' + orderId
+                                        document.location.href = formUrl
+                                    }
+                                }
+                            });
+                        }
+                    }
+                </script>
+                <a href="#" id="payb" disabled class="button btn-primary btn-red btn" onclick="paying()">Оплатить картой</a>
+                <!--font color="red">Оплата в тестовом режиме</font-->
                 <? if ($arResult["F_RIGHT"] >= 15):?>
                     &nbsp;<input type="hidden" name="web_form_apply" value="Y"/>
                 <? endif; ?>
@@ -155,6 +250,7 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
                             <script>
                                 window.delivery_sale = <?=PERCENT_SALE_DELIVERY?>;
                             </script>
+                            
                             <select class="form-control" name="form_text_23" id="samo_address_country_id" required>
                                 <option></option>
                                 <option data-select="delivery" <?=ONLY_DELIVERY?"selected":""?> value="Доставка">Доставка</option>
@@ -233,6 +329,16 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
                                      data-required="true">Выберите адрес
                                 </div>
                             </div>
+                        <!--/div>
+                    </div>
+                    <div class="form-group row-customer_email">
+                        <label class="control-label col-sm-4">Адрес</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="inputtext form-control" name="ADDR" value="" id="customer_addr" placeholder="Адрес доставки" data-reload-payment-form="true">
+                            <div class="simplecheckout-rule-group" data-for="customer_addr">
+                            </div>
+                        </div>
+                    </div-->
 
                         </div>
                         <p class="sup" style="margin-left: 16px;">________<br>
@@ -244,11 +350,13 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
             </div>
         </div>
 
-        <!--div class="simplecheckout-block" id="simplecheckout_payment_address">
+
+        <?if(ONLY_DELIVERY):?>
+        <div class="simplecheckout-block" id="simplecheckout_payment_address">
             <div class="checkout-heading panel-heading">Адрес доставки</div>
             <div class="simplecheckout-block-content">
                 <fieldset class="form-horizontal">
-                    <div class="form-group required row-payment_address_zone_id">
+                    <!--div class="form-group required row-payment_address_zone_id">
                         <label class="control-label col-sm-4">Регион</label>
                         <div class="col-sm-8">
 
@@ -275,14 +383,14 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
 
 
                         </div>
-                    </div>
-                    <div class="form-group required row-payment_address_city">
+                    </div-->
+                    <!--div class="form-group required row-payment_address_city">
                         <label class="control-label col-sm-4">Город</label>
                         <div class="col-sm-8">
 
                             <select class="form-control cities" name="city[]">
                                 <ul class="dropdown-menu">
-                                    <?$city = fopen('city.csv','r');
+                                    <?/*$city = fopen('city.csv','r');
                                     $f = file('city.csv');
                                     $row = [];
                                     $from = ['"', '\n', '\r'];
@@ -295,7 +403,7 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
                                         if($r[1] == '3159' && $r[2] == '4312'){?>
                                         <option value='<?=$r[3]?>' data-country-id="<?=$r[1]?>"  data-region-id="<?=$r[2]?>"><?=$r[3]?></option>
                                         <? }
-                                    }?>
+                                    }*/?>
                                 </ul>
                             </select>
 
@@ -307,8 +415,8 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
                             </div>
 
                         </div>
-                    </div>
-                    <div class="form-group  row-payment_address_postcode">
+                    </div-->
+                    <!--div class="form-group  row-payment_address_postcode">
                         <label class="control-label col-sm-4">Индекс</label>
                         <div class="col-sm-8">
                             <input type="text" class="inputtext form-control" name="form_text_15" value=""
@@ -325,7 +433,7 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
                                 своего почтового отделения
                             </div>
                         </div>
-                    </div>
+                    </div-->
                     <div class="form-group required row-payment_address_address_1">
                         <label class="control-label col-sm-4">Адрес</label>
                         <div class="col-sm-8">
@@ -338,9 +446,9 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
                                      data-length-max="128" data-required="true">Адрес должен быть от 3 до 128 символов!
                                 </div>
                             </div>
-                            <div class="simplecheckout-tooltip" data-for="payment_address_address_1">Введите улицу и №
+                            <div class="simplecheckout-tooltip" data-for="payment_address_address_1"><!--Введите улицу и №
                                 дома
-                            </div>
+                            --></div>
                         </div>
                     </div>
                 </fieldset>
@@ -348,9 +456,10 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
                        value="0">
             </div>
 
-        </div-->
-
+        </div><!--доставки-->
+        <?endif?>
     </div>
+    <div class="payment-accept-cards" style="text-align:center"><img src="<?=SITE_TEMPLATE_PATH?>/images/cards-line.jpg" alt="Персона маркет. Принимаем оплату картами на сайте"/></div>
     <?
     /* foreach ($arResult["QUESTIONS"] as $FIELD_SID => $arQuestion)
     {

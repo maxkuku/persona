@@ -18,6 +18,9 @@
     .video_with_arrows_wrap_price .inline-wrap {
         width: 58%!important;
     }
+    .video_with_arrows_wrap .inline-wrap {
+        width: 70%;
+    }
     .logo{
         width: 100%;
         height: 74px;
@@ -88,7 +91,7 @@
         display: inline-block;
     }
     li.first-menu-name {
-        border-bottom: 1px solid #ccc;
+        /*border-bottom: 1px solid #ccc;*/
     }
     .menu-name{
         color:white;
@@ -97,19 +100,21 @@
         vertical-align: text-bottom;
     }
     .mob-line.active a{
-        display: block;
+        display: inline-block;
     }
     .mob-line a {
         display: none;
         padding: 5px;
-        border-bottom: 1px solid #ccc;
         color: white;
         font-weight: bold;
         text-decoration: none;
     }
+    .mob-line li{
+        border-bottom: 1px solid #ccc;
+    }
     .mob-line a.phone {
         position: static;
-        margin-top: -37px;
+        margin-top: -46px;
         border-bottom: 0;
         right: 0;
         font-size: 18px;
@@ -118,7 +123,7 @@
         font-weight: normal;
     }
     .mob-line.active a.phone {
-        margin-top: -192px;
+        margin-top: -256px;
     }
     .mob-line ul{
         list-style: none;
@@ -268,7 +273,7 @@
     }
     .footer a:first-child {
         margin:0 10px 0 0;
-        width: 54px;
+        /*width: 54px;*/
         height: 54px;
         overflow: hidden;
 
@@ -377,7 +382,7 @@
         display: block;
     }
     .video_with_arrows_wrap .video-container {
-        width: 213px;
+        width: 253px;
         height: auto;
     }
     .video-container-outer {
@@ -409,7 +414,7 @@
     }
     h1.on_main_page {
         font-size: 24px;
-        margin: 0;
+        margin: 0!important;
     }
     .ban-inner {
         height: 100px!important;

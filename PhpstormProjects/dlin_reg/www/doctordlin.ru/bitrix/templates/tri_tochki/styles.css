@@ -94,6 +94,12 @@ h6 { font-size:100%; }
 		overflow: hidden;
 		transition: .3s;
 	}
+	.parent.closed .down{
+		display:none;
+	}
+	.parent:not(.closed) .up{
+		display:none;
+	}
 	.parent.closed + ul.second-level {
 		height: 0;
 		position: relative;
@@ -290,16 +296,22 @@ h6 { font-size:100%; }
 		line-height: 0;
 	}
 	.bx-touch .parent:after {
-		content: "\f107"!important;
+		/*content: "\f107"!important;*/
+		/*content: ""!important;
 		font-family: fontawesome;
 		float: right;
 		font-size: 28px;
 		font-weight: normal;
 		color: #666!important;
-		padding: 3px 15px;
+		padding: 3px 15px;*/
+	}
+
+	.bx-touch span.opcl {
+		float: right;
+		margin-top: 19px!important;
 	}
 	.bx-touch .parent.closed:after {
-		content: "\f105"!important;
+		/*content: "\f105"!important;*/
 	}
 	#top-menu .closed.parent:after {
 		font-size: 28px;

@@ -4,3 +4,9 @@ input[name=web_form_submit]:focus {
 .simple-content .name {
     width: 50%;
 }
+.window_out{
+    background-color: #effcef;
+    border: 3px solid #4fe34f;
+    padding: 40px;
+    box-shadow: 0px 0px 8px 2px #4fe34f;
+}

@@ -4,7 +4,11 @@ CModule::IncludeModule('iblock');
 CModule::IncludeModule('form');
 $APPLICATION->SetTitle("Оформление заказа");
 $APPLICATION->AddHeadScript("/basket/region.js");
+$APPLICATION->AddHeadScript("https://3dsec.sberbank.ru/demopayment/docsite/assets/js/ipay.js");
+$APPLICATION->AddHeadString("<script>var ipay = new IPAY({api_token: '".TOKEN."'})</script>");
 $APPLICATION->SetAdditionalCSS("/basket/style.css");
+$APPLICATION->SetAdditionalCSS("https://securepayments.sberbank.ru/demopayment/docsite/assets/css/modal.css");
+
 
 $BX_USER_ID = htmlspecialchars($_COOKIE['BX_USER_ID'], 3);
 $SHOW_ALL = "Y";
@@ -84,6 +88,51 @@ if($SHOW_ALL == "Y") {
         $formlineids = str_replace(',', '_', $ids);
 
 	}
+}
+
+
+if(strlen(htmlspecialchars($_REQUEST['orderId'],3)) > 11) {
+    $orderId = htmlspecialchars($_REQUEST['orderId'], 3);
+
+
+    $url = 'https://'.SBER_ADDR.'.sberbank.ru/payment/rest/getOrderStatusExtended.do';
+
+    $postData = array(
+        'token' => TOKEN,
+        'orderId' => $orderId,
+    );
+
+    $handle = curl_init();
+    curl_setopt($handle, CURLOPT_URL, $url);
+    curl_setopt($handle, CURLOPT_POST, true);
+    curl_setopt($handle, CURLOPT_POSTFIELDS, $postData);
+    curl_setopt($handle, CURLOPT_RETURNTRANSFER, true);
+    $output = curl_exec($handle);
+    curl_close($handle);
+
+
+    # result {"errorCode":"0","errorMessage":"Успешно","orderNumber":"837","orderStatus":2,"actionCode":0,"actionCodeDescription":"","amount":550000,"currency":"643","date":1587020974315,"orderDescription":"","ip":"176.14.117.11","merchantOrderParams":[],"transactionAttributes":[],"attributes":[{"name":"mdOrder","value":"66c0640d-c88c-76e6-9dfa-c4ff5e34c9d9"}],"cardAuthInfo":{"maskedPan":"411111**1111","expiration":"202412","cardholderName":"CARDHOLDER NAME","approvalCode":"123456","pan":"411111**1111"},"authDateTime":1587021008713,"terminalId":"123456","authRefNum":"088417256908","paymentAmountInfo":{"paymentState":"DEPOSITED","approvedAmount":550000,"depositedAmount":550000,"refundedAmount":0},"bankInfo":{"bankName":"TEST CARD","bankCountryCode":"RU","bankCountryName":"Россия"}}
+
+
+    $out_verified_payment = json_decode($output, true);
+
+
+    if ($out_verified_payment['errorCode'] == 0 && $out_verified_payment['orderNumber'] > 0) {
+        $FORM_PRE_ID = 2;
+        $BX_USER_ID = $_COOKIE['BX_USER_ID'];
+        $res_pre = $DB->Query("SELECT RESULT_ID FROM b_form_result_answer WHERE FORM_ID = " . $FORM_PRE_ID . " AND USER_TEXT = '$BX_USER_ID'");
+        if ($res_pre->SelectedRowsCount() > 0) {
+            $arAns = [];
+            while ($arAnswer2 = $res_pre->Fetch())
+                $arAns[] = $arAnswer2['RESULT_ID'];
+        }
+
+        if (count($arAns) > 0) {
+            foreach ($arAns as $a) {
+                CFormResult::Delete($a);
+            }
+        }
+    }
 }
 ?>
 <style>
@@ -209,7 +258,8 @@ if($SHOW_ALL == "Y") {
                             <div class="simplecheckout-cart-total" id="total_total">
                                 <span><b>Итого:</b></span>
                                 <span class="simplecheckout-cart-total-value"><span id="itogo-sum"><?=($all_price)?($all_price + DELIVERY_PRICE):0?></span> <span class="sr-only">р.</span><span class="roboto-forced ruble" aria-hidden="true" style="display:none;"></span></span>
-                                <? $pr2 = $all_price + DELIVERY_PRICE;
+                                <? $dp = DELIVERY_PRICE;
+                                $pr2 = $all_price + $dp;
                                 $item_to_form .= "<tr><td colspan=5>Штук:" . "</td><td>" . $all_items . "</td></tr>
                                 <tr><td colspan=5>ИТОГО:" . "</td><td>" . $pr2 . " руб.</td></tr>";?>
                                 <span class="simplecheckout-cart-total-remove"></span>
@@ -316,7 +366,11 @@ array(
     "VARIABLE_ALIASES" => array(
         "WEB_FORM_ID" => "WEB_FORM_ID",
         "RESULT_ID" => "RESULT_ID",
-    )
+    ),
+    "PARAMS" => array(
+            "ORDER_ID" => "",
+            "PRICE" => (int)$all_price,
+    ),
 ),
 false
 );?>

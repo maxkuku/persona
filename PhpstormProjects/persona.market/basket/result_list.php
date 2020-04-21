@@ -1,5 +1,6 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
+$APPLICATION->SetPageProperty("title", "Заказ отправлен");
 $APPLICATION->SetPageProperty("description", "Корзина");
 $APPLICATION->IncludeComponent(
 	"persona:form.result.new",

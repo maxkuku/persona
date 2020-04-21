@@ -1,7 +1,7 @@
 <?
 $MESS ['FORM_REQUIRED_FIELDS'] = "Поля, обязательные для заполнения";
 $MESS ['FORM_APPLY'] = "Применить";
-$MESS ['FORM_ADD'] = "Добавить";
+$MESS ['FORM_ADD'] = "Отправить";
 $MESS ['FORM_ACCESS_DENIED'] = "Не хватает прав доступа к веб-форме.";
 $MESS ['FORM_DATA_SAVED1'] = "Спасибо!<br><br>Ваша заявка №";
 $MESS ['FORM_DATA_SAVED2'] = " принята к рассмотрению.";

@@ -23,6 +23,8 @@
             /*if ($('#form-content').html().indexOf('info@famdent.ru') < 0) {
                 $('#form-content').prepend('<p>Для проведения онлайн-консультации необходимо выслать рентгеновские снимки или КТ на почту <a href="mailto:info@famdental.ru">info@famdental.ru</a></p>');
             }*/
+            if($('[name=SOURCE]').val().length < 1)
+                $('[name=SOURCE]').val('Запись на онлайн-консультацию');
         }
     </script>
     <style>

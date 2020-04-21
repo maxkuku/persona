@@ -40,10 +40,12 @@ if(CLightHTMLEditor::IsMobileDevice()){
 			|| document.readyState === "complete" ? callback() : document.addEventListener("DOMContentLoaded", callback);
 		};
 	</script>
+    <?if($APPLICATION->GetCurPage() == 'basket'):?>
+    
+    <?endif?>
 	<? $APPLICATION->ShowHead();
 	CJSCore::Init(array('ajax', 'window'));
     ?>
-
     <script type="text/javascript" >
        (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
        m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
@@ -57,7 +59,6 @@ if(CLightHTMLEditor::IsMobileDevice()){
        });
     </script>
     <noscript><div><img src="https://mc.yandex.ru/watch/54107791" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-
 </head>
 <?if($APPLICATION->GetCurPage() == '/'){
    $class = "home-page";

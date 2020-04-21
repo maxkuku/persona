@@ -319,7 +319,7 @@ $(document).ready(function(){
 
 
 
-/*function vid_open(){
+function vid_open(){
     if ($(".youtube").length) {
         "use strict";
         $(function () {
@@ -350,7 +350,7 @@ $(document).ready(function(){
         });
 
     }
-}*/
+}
 
 
 
@@ -383,7 +383,7 @@ function ytb() {
 
 //youtube in popup
 $(document).ready(function() {
-    //ytb();
+    ytb();
 });
 
 $(document).ready(function(){

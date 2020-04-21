@@ -178,6 +178,100 @@ if (CModule::IncludeModule("form"))
 		// ****************** get/post processing ********************** //
 		// ************************************************************* //
 
+
+
+        # когда получили информацию об оплате заказа
+        # запросим сбербанк о парамерах заказа
+        # обновим форму, отправим письма и очистим корзину
+
+        if(strlen(htmlspecialchars($_REQUEST['orderId'],3)) > 11){
+
+            # в файле /basket/index
+            global $out_verified_payment;
+            global $output;
+
+
+
+
+            $fp = fopen(ROOT_NO_SLASH . '/basket/component_order.log', 'a+');
+            fwrite($fp, date('Y-m-d H:i:s') . ", заказ оплачен " . $out_verified_payment['orderNumber'] . " получено параметры - " . $output . "\n");
+            fclose($fp);
+
+
+
+            if($out_verified_payment['errorCode'] == 0 && $out_verified_payment['orderNumber'] > 0){
+                $RESULT_UPDATE_ID = $out_verified_payment['orderNumber'];
+
+
+                # тупой битрикс затирает остальные поля формы :(
+                # придется из заново получать
+
+
+                $arAnswer = CFormResult::GetDataByID(
+                    $RESULT_UPDATE_ID,
+                    [],  // вопросы все
+                    $arResult,
+                    $arAnswer2);
+
+
+                $arValues = array (
+                    "form_email_11" => $arAnswer['email'][0]['USER_TEXT'],          // "email"
+                    "form_text_12" => $arAnswer['phone'][0]['USER_TEXT'],        // "phone"
+                    "form_text_13" => $arAnswer['name'][0]['USER_TEXT'],         // "name"
+                    "form_text_14" => $arAnswer['city'][0]['USER_TEXT'],             // "город"
+                    "form_text_15" => $arAnswer['zip'][0]['USER_TEXT'],            // "индекс"
+                    "form_text_23" => $arAnswer['samo'][0]['USER_TEXT'],         // "доставка / самовывоз"
+                    "form_textarea_17" => $arAnswer['comment'][0]['USER_TEXT'],     // "коммент"
+                    "form_text_16" => $arAnswer['address'][0]['USER_TEXT'],         // "адрес доставки"
+                    "form_textarea_18" => $arAnswer['order'][0]['USER_TEXT'] . "<p>Заказ оплачен. Номер платежа " . $RESULT_UPDATE_ID . "</p>",         // "перечень заказа в таблице"
+                    "form_text_28"    => "Y",                            // оплачено
+                    "form_text_29"    => $out_verified_payment['attributes'][0]['value'], // "id заказа сбербанк"
+                );
+
+
+
+                if($arValues['form_text_28'] != "Y") {
+                    if (CFormResult::Update($RESULT_UPDATE_ID, $arValues, "N")) {
+                        $fp = fopen(ROOT_NO_SLASH . '/basket/verify_order_in_component.log', 'a+');
+                        fwrite($fp, date('Y-m-d H:i:s') . " Данные в заказе #" . $RESULT_UPDATE_ID . " успешно обновлены\n\n");
+                        fclose($fp);
+
+
+                        $WEB_FORM_ID = 3;
+                        $arResult["FORM_RESULT"] = 'addok';
+
+                        // send email notifications
+                        CFormCRM::onResultAdded($WEB_FORM_ID, $RESULT_UPDATE_ID);
+                        CFormResult::SetEvent($RESULT_UPDATE_ID);
+                        CFormResult::Mail($RESULT_UPDATE_ID);
+
+
+                        $arResult["FORM_NOTE"] = "<div class=window_out><p class=green>Заказ номер " . $RESULT_UPDATE_ID . " оплачен. С вами свяжутся для уточнения деталей заказа. Спасибо.</p></div>";
+
+
+                    }
+                    else {
+                        global $strError;
+                        $fp = fopen(ROOT_NO_SLASH . '/basket/verify_order_in_component.log', 'a+');
+                        fwrite($fp, date('Y-m-d H:i:s') . "Данные в заказ #" . $RESULT_UPDATE_ID . " не добавлены. " . $strError . "\n\n");
+                        fclose($fp);
+                    }
+                }
+                else{
+                    global $strError;
+                    $fp = fopen(ROOT_NO_SLASH . '/basket/verify_order_in_component.log', 'a+');
+                    fwrite($fp, date('Y-m-d H:i:s') . "Заказ #" . $RESULT_UPDATE_ID . " уже обновлен и оплачен. " . $strError . "\n\n");
+                    fclose($fp);
+                    $arResult["FORM_NOTE"] = "<div class=window_out><p class=green>Спасибо. Заказ номер " . $RESULT_UPDATE_ID . " уже был оплачен ранее. С вами свяжутся для уточнения деталей заказа.</p></div>";
+                }
+            }
+        }
+
+
+
+
+
+
 		$arResult["arrVALUES"] = array();
 
 		if (($_POST['WEB_FORM_ID'] == $arParams['WEB_FORM_ID'] || $_POST['WEB_FORM_ID'] == $arResult['arForm']['SID']) && (strlen($_REQUEST["web_form_submit"])>0 || strlen($_REQUEST["web_form_apply"])>0))
@@ -188,15 +282,20 @@ if (CModule::IncludeModule("form"))
 			$arResult["FORM_ERRORS"] = CForm::Check($arParams["WEB_FORM_ID"], $arResult["arrVALUES"], false, "Y", $arParams['USE_EXTENDED_ERRORS']);
 
 			if (
-				$arParams['USE_EXTENDED_ERRORS'] == 'Y' && (!is_array($arResult["FORM_ERRORS"]) || count($arResult["FORM_ERRORS"]) <= 0)
-				||
-				$arParams['USE_EXTENDED_ERRORS'] != 'Y' && strlen($arResult["FORM_ERRORS"]) <= 0
+				$arParams['USE_EXTENDED_ERRORS'] == 'Y' && (!is_array($arResult["FORM_ERRORS"]) || count($arResult["FORM_ERRORS"]) <= 0) || $arParams['USE_EXTENDED_ERRORS'] != 'Y' && strlen($arResult["FORM_ERRORS"]) <= 0
 			)
 			{
+
+
+
 				// check user session
 				if (check_bitrix_sessid())
 				{
 					$return = false;
+
+
+
+
 
 					// add result
 					if($RESULT_ID = CFormResult::Add($arParams["WEB_FORM_ID"], $arResult["arrVALUES"]))
@@ -210,21 +309,10 @@ if (CModule::IncludeModule("form"))
 						CFormCRM::onResultAdded($arParams["WEB_FORM_ID"], $RESULT_ID);
 						CFormResult::SetEvent($RESULT_ID);
                         CFormResult::Mail($RESULT_ID);
-                        #if (CFormResult::Mail($RESULT_ID))
-                        #{
-                        #    echo "Почтовое событие успешно создано.";
-                        #}
-                        #else // ошибка
-                        #{
-                        #    global $strError;
-                        #    echo $strError;
-                        #}
+
 
 
 						// delete pre-order form fields
-
-						global $arAnswer1;
-
 						if(count($arAnswer1) > 0){
 							foreach($arAnswer1 as $a) {
 								CFormResult::Delete( $a );
@@ -962,7 +1050,18 @@ if (CModule::IncludeModule("form"))
 		$arResult["CAPTCHA_FIELD"] = "<input type=\"text\" name=\"captcha_word\" size=\"30\" maxlength=\"50\" value=\"\" class=\"inputtext\" />";
 		$arResult["CAPTCHA"] = $arResult["CAPTCHA_IMAGE"]."<br />".$arResult["CAPTCHA_FIELD"];
 
-		// include default template
+
+
+
+
+
+
+
+
+
+
+
+        // include default template
 		$this->IncludeComponentTemplate();
 	}
 	else

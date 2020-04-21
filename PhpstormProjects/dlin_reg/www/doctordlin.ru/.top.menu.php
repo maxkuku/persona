@@ -108,6 +108,20 @@ $aMenuLinks = Array(
 		"" 
 	),
     Array(
+        "Антелистез позвонка",
+        "/treatment/antelistez_pozvonka/",
+        Array(),
+        Array("DL"=>"2", "PARENT"=>"treatment"),
+        ""
+    ),
+    Array(
+        "Антеспондилолистез позвоночника",
+        "/treatment/antespondilolistez_pozvonochnika/",
+        Array(),
+        Array("DL"=>"2", "PARENT"=>"treatment"),
+        ""
+    ),
+    Array(
         "Артроз",
         "/treatment/artroz/",
         Array(),
@@ -129,6 +143,20 @@ $aMenuLinks = Array(
         ""
     ),
     Array(
+        "Болезнь Бехтерева",
+        "/treatment/bolezn_behtereva/",
+        Array(),
+        Array("DL"=>"2", "PARENT"=>"treatment"),
+        ""
+    ),
+    Array(
+        "Боли после грыжи",
+        "/treatment/boli-posle-gryzhi/",
+        Array(),
+        Array("DL"=>"2", "PARENT"=>"treatment"),
+        ""
+    ),
+    Array(
         "Боль в сухожилиях",
         "/treatment/bol-v-suhozhiliyah/",
         Array(),
@@ -143,8 +171,15 @@ $aMenuLinks = Array(
         ""
     ),
     Array(
-        "Дисплазия позвоночника у взрослых",
-        "/treatment/displaziya/",
+        "Воспаление позвоночника",
+        "/treatment/vospalenie-pozvonochnika/",
+        Array(),
+        Array("DL"=>"2", "PARENT"=>"treatment"),
+        ""
+    ),
+    Array(
+        "Воспаление седалищного нерва",
+        "/treatment/ishias/",
         Array(),
         Array("DL"=>"2", "PARENT"=>"treatment"),
         ""
@@ -171,6 +206,13 @@ $aMenuLinks = Array(
         ""
     ),
     Array(
+        "Грыжа копчика",
+        "/treatment/gryzha-kopchika/",
+        Array(),
+        Array("DL"=>"2", "PARENT"=>"treatment"),
+        ""
+    ),
+    Array(
         "Грыжа поясничного отдела",
         "/treatment/gryzha-poyasnichnogo-otdela/",
         Array(),
@@ -191,9 +233,17 @@ $aMenuLinks = Array(
         Array("DL"=>"2", "PARENT"=>"treatment"),
         ""
     ),
+
     Array(
-        "Воспаление седалищного нерва",
-        "/treatment/ishias/",
+        "Дисплазия позвоночника у взрослых",
+        "/treatment/displaziya/",
+        Array(),
+        Array("DL"=>"2", "PARENT"=>"treatment"),
+        ""
+    ),
+    Array(
+        "Дорзальная грыжа",
+        "/treatment/dorzalnaya-gryzha/",
         Array(),
         Array("DL"=>"2", "PARENT"=>"treatment"),
         ""
@@ -206,8 +256,29 @@ $aMenuLinks = Array(
 		"" 
 	),
     Array(
+        "Компрессия тела позвонка",
+        "/treatment/kompressiya-tela-pozvonka/",
+        Array(),
+        Array("DL"=>"2", "PARENT"=>"treatment"),
+        ""
+    ),
+    Array(
         "Лечение гонартроза",
         "/treatment/koleno/",
+        Array(),
+        Array("DL"=>"2", "PARENT"=>"treatment"),
+        ""
+    ),
+    Array(
+        "Листез позвонка",
+        "/treatment/listez-pozvonka",
+        Array(),
+        Array("DL"=>"2", "PARENT"=>"treatment"),
+        ""
+    ),
+    Array(
+        "Крестцовая грыжа",
+        "/treatment/krestcovaya-gryzha/",
         Array(),
         Array("DL"=>"2", "PARENT"=>"treatment"),
         ""
@@ -256,11 +327,25 @@ $aMenuLinks = Array(
         ""
     ),
 	Array(
-		"Межреберная невралгия", 
-		"/treatment/mezhrebernaya_nevralgiya/", 
+		"Медианные грыжи",
+		"/treatment/mediannye-mezhpozvonkovye-gryzhi/",
 		Array(), 
 		Array("DL"=>"2", "PARENT"=>"treatment"), 
 		"" 
+	),
+    Array(
+		"Межреберная грыжа",
+		"/treatment/mezhrebernaya_gryzha/",
+		Array(),
+		Array("DL"=>"2", "PARENT"=>"treatment"),
+		""
+	),
+    Array(
+		"Межреберная невралгия",
+		"/treatment/mezhrebernaya_nevralgiya/",
+		Array(),
+		Array("DL"=>"2", "PARENT"=>"treatment"),
+		""
 	),
 	Array(
 		"Межберцовый синдесмоз",
@@ -326,6 +411,27 @@ $aMenuLinks = Array(
         ""
     ),
     Array(
+        "Остеоартрит суставов",
+        "/treatment/osteoartrit_sustavov/",
+        Array(),
+        Array("DL"=>"2", "PARENT"=>"treatment"),
+        ""
+    ),
+    Array(
+        "Остеофиты позвоночника",
+        "/treatment/osteofity_pozvonochnika/",
+        Array(),
+        Array("DL"=>"2", "PARENT"=>"treatment"),
+        ""
+    ),
+    Array(
+        "Парамедианная грыжа",
+        "/treatment/paramediannaya-gryzha/",
+        Array(),
+        Array("DL"=>"2", "PARENT"=>"treatment"),
+        ""
+    ),
+    Array(
         "Периартроз тазобедренного сустава",
         "/treatment/periartroz-tazobedrennogo/",
         Array(),
@@ -347,8 +453,22 @@ $aMenuLinks = Array(
         ""
     ),
 	Array(
+        "Подвывих тазобедренного сустава",
+        "/treatment/podvyvih_tazobedrennogo_sustava/",
+        Array(),
+        Array("DL"=>"2", "PARENT"=>"treatment"),
+        ""
+    ),
+	Array(
 		"Поясничная невралгия",
 		"/treatment/poyasnichnaya-nevralgiya/",
+		Array(),
+		Array("DL"=>"2", "PARENT"=>"treatment"),
+		""
+	),
+	Array(
+		"Боли в пояснично-крестцовом отделе позвоночника",
+		"/treatment/poyasnichno_krestcovom_otdele/",
 		Array(),
 		Array("DL"=>"2", "PARENT"=>"treatment"),
 		""
@@ -403,6 +523,27 @@ $aMenuLinks = Array(
         ""
     ),
     Array(
+        "Хронический реактивны синовит",
+        "/treatment/reaktivnyy-sinovit/",
+        Array(),
+        Array("DL"=>"2", "PARENT"=>"treatment"),
+        ""
+    ),
+    Array(
+        "Хронический спондилодисцит позвоночника",
+        "/treatment/hronicheskiy-spondilodiscit-pozvonochnika/",
+        Array(),
+        Array("DL"=>"2", "PARENT"=>"treatment"),
+        ""
+    ),
+    Array(
+        "Секвестированная грыжа",
+        "/treatment/sekvestrirovannaya_gryzha/",
+        Array(),
+        Array("DL"=>"2", "PARENT"=>"treatment"),
+        ""
+    ),
+    Array(
         "Скованность позвоночника",
         "/treatment/skovannost-pozvonochnika/",
         Array(),
@@ -444,10 +585,30 @@ $aMenuLinks = Array(
         Array("DL"=>"2", "PARENT"=>"treatment"),
         ""
     ),
-
+    Array(
+        "Хроническая фибромиалгия спины",
+        "/treatment/hronicheskaya_fibromialgiya_spiny/",
+        Array(),
+        Array("DL"=>"2", "PARENT"=>"treatment"),
+        ""
+    ),
+    Array(
+        "Хронический спондилодисцит позвоночника",
+        "/treatment/spondilodiscit-pozvonochnika/",
+        Array(),
+        Array("DL"=>"2", "PARENT"=>"treatment"),
+        ""
+    ),
     Array(
         "Спондилоартроз позвоночника",
         "/treatment/spondiloartroz_pozvonochnika/",
+        Array(),
+        Array("DL"=>"2", "PARENT"=>"treatment"),
+        ""
+    ),
+    Array(
+        "Спондилоартропатия",
+        "/treatment/spondiloartropatiya/",
         Array(),
         Array("DL"=>"2", "PARENT"=>"treatment"),
         ""
@@ -459,12 +620,19 @@ $aMenuLinks = Array(
 		Array("DL"=>"2", "PARENT"=>"treatment"), 
 		"" 
 	),
+    Array(
+        "Туннельный синдром",
+		"/treatment/tunnelnyy-sindrom/",
+		Array(),
+		Array("DL"=>"2", "PARENT"=>"treatment"),
+		""
+	),
 	Array(
-		"Воспаление позвоночника", 
-		"/treatment/vospalenie-pozvonochnika/", 
-		Array(), 
-		Array("DL"=>"2", "PARENT"=>"treatment"), 
-		"" 
+        "Защемление нерва в тазобедренном суставе",
+		"/treatment/zaschemlenie_nerva_v_taz/",
+		Array(),
+		Array("DL"=>"2", "PARENT"=>"treatment"),
+		""
 	),
 
 

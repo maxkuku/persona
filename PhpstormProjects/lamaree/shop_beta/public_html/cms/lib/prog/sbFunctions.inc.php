@@ -4,6 +4,76 @@ function pr($a){
     print_r($a);
     echo "</pre>";
 }
+
+function get_order_num($orderId){
+    $path = '/home/d/dlmlru/shop_beta/public_html/basket';
+    $url = 'https://web.rbsuat.com/ab/rest/getOrderStatusExtended.do';
+
+    $postData = array(
+        'token'    => 'tkk4iu3h8bpqk911kamrt41gkj',
+        'orderId'  => $orderId,
+    );
+
+    $handle = curl_init();
+    curl_setopt($handle, CURLOPT_URL, $url);
+    curl_setopt($handle, CURLOPT_POST, true);
+    curl_setopt($handle, CURLOPT_POSTFIELDS, $postData);
+    curl_setopt($handle, CURLOPT_RETURNTRANSFER, true);
+    $output = curl_exec($handle);
+    curl_close($handle);
+
+    $fp = fopen($path . "/get_order_num.log", "a+");
+    fwrite($fp, $output . " - " . round($diff,2) . " " . date("Y-m-d H:i:s") . "\n\n");
+    fclose($fp);
+
+    return $output;
+}
+
+
+function back_sum($orderId){
+    $path = '/home/d/dlmlru/shop_beta/public_html/basket';
+    $res = sql_query("SELECT user_f_13, user_f_14 FROM sb_plugins_2_n WHERE p_id = ?d AND user_f_15 LIKE ?s 
+    ", $orderId, "Y");
+    foreach ($res as $row) {
+        $diff = (float)$row[0] - (float)$row[1]; // get diff summs
+    }
+
+
+
+
+    # получить ID заказа по номеру
+    $res = sql_query("SELECT user_f_16 FROM sb_plugins_2_n WHERE p_id = ?d AND user_f_15 LIKE ?s 
+    ", $orderId, "Y");
+    $oId = $res[0][0];
+
+
+    $fp = fopen($path . "/cancel_lod.log", "a+");
+    fwrite($fp, $orderId . " - " . $oId . " - " . round($diff,2)*100 . " " . date("Y-m-d H:i:s") . "\n\n");
+    fclose($fp);
+
+
+
+    $url = 'https://web.rbsuat.com/ab/rest/refund.do';
+    $postData = array(
+        #'token'    => 'tkk4iu3h8bpqk911kamrt41gkj',
+        'userName'    => 'shop_lamaree-api',
+        'password'    => 'shop_lamaree*?1',
+        'orderId'  => $oId,
+        'amount'  => round($diff,2)*100, // отмена в копейках
+        'language'  => 'ru',
+    );
+    $handle = curl_init();
+    curl_setopt($handle, CURLOPT_URL, $url);
+    curl_setopt($handle, CURLOPT_POST, true);
+    curl_setopt($handle, CURLOPT_POSTFIELDS, $postData);
+    curl_setopt($handle, CURLOPT_RETURNTRANSFER, true);
+    $output = curl_exec($handle);
+    curl_close($handle);
+
+    return $output;
+}
+
+
 function monRP($month_int){
     switch((int)$month_int){
         case 1:
@@ -128,6 +198,16 @@ function links_n()
         ["dikie-krevetki", "Дикие креветки", "дикие креветки"],
         ["lobstery", "Лобстеры", "лобстеры"],
         ["lobstery-langusty", "Лобстеры и лангусты", "лобстеры и лангусты"],
+        ["baranina", "Баранина", "баранина"],
+        ["koreyka-na-kosti", "Корейка на кости", "корейка на кости"],
+        ["mulard", "Мулард", "мулард"],
+        ["myaso-utki", "Мясо утки", "мясо утки"],
+        ["cyplyonok-kornishon", "Цыплёнок корнишон", "цыплёнок корнишон"],
+        ["fermerskoe-myaso", "Фермерское мясо", "фермерское мясо"],
+        ["cesarka", "Цесарка", "цесарка"],
+        ["perepel", "Перепел", "перепел"],
+        ["svinoy-okorok", "Свиной окорок", "свиной окорок"],
+        ["fermerskie-produkty", "Фермерские продукты", "фермерские продукты"],
 
         /*очень важно, чтоб не было заглавных букв 2-го элемента каждой строки*/
     ];
@@ -377,28 +457,33 @@ function resi($src,$w,$h) /** не работает в списке катало
 
 
 
-    if(is_file( $root_path . $folder . 'N_' . $w . "x" . $h . "_" . $file) == false
-    || $size1 == $size2) {
+    if(is_file( $root_path . $folder . 'N_' . $w . "x" . $h . "_" . $file) == false) {
 
-        //$inFile = $root_path . "/" . $im_array[1] . "/" . $im_array[2] . "/" . $src;
-        ///home/d/dlmlru/shop_beta/public_html(/images/products//images/products)/zhir-utinyj-rossiya-s-m-utkino1_b1.jpg
+        $fp = fopen('/home/d/dlmlru/shop_beta/public_html/cms/plugins/own/pl_import/prog/resi_options.log', 'a+');
+        $outFile = $folder . 'N_' . $w . "x" . $h . "_" . $file;
+        //$md = sql_query("INSERT INTO sb_plugins_1(user_f_82) VALUES (?s)", md5($outFile));
 
 
         $inFile = $root_path . $src;
 
 
-
-        $outFile = $folder . 'N_' . $w . "x" . $h . "_" . $file;
         if(is_file($inFile)) {
             $image = new Imagick($inFile);
             $image->thumbnailImage($w, $h);
             $image->writeImage($root_path . $outFile);
+
+
+
+
+            fwrite($fp, date("Y-m-d H:i:s") . " " . $inFile . " func resi() image written in sbFunctions.inc.php on line " . __LINE__ . "\n");
+
         }
         else{
-            $fp = fopen('/home/d/dlmlru/shop_beta/public_html/cms/plugins/own/pl_import/prog/import_prog.log', 'a+');
-            fwrite($fp, $inFile . " in File in sbFunctions.inc.php on line " . __LINE__ . "\n");
-            fclose($fp);
+
+            fwrite($fp, date("Y-m-d H:i:s") . " " . $inFile . " func resi() in File in sbFunctions.inc.php on line " . __LINE__ . "\n");
+
         }
+        fclose($fp);
         return $folder . 'N_' . $w . "x" . $h . "_" . $file;
     }else{
         return $folder . 'N_' . $w . "x" . $h . "_" . $file;

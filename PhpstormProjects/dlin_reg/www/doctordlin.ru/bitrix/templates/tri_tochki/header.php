@@ -222,14 +222,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     </a>
                 </div>
                 <div class="annotate">
-                    Клиника лечения<br>позвоночника<br>Доктора Длина
+                    Клиника лечения<br>позвоночника и суставов<br>доктора Длина
                 </div>
+                <script>
+                    function set_modal_header_call() {
+                        if ($('#modal-form .uk-modal-header').text().indexOf('звонок') < 0) {
+                            $('#modal-form .uk-modal-header').text('Заказать звонок / Запись');
+                            $('[name=CONS]').val("Звонок");
+                        }
+                    }
+                </script>
                 <div id="top-contacts">
                     <div id="top-part-top">
 
                         <div>
 
-                            <span class="click formpop" uk-toggle="target: #modal-form">Заказать звонок</span>
+                            <span class="click formpop" uk-toggle="target: #modal-form" onclick="set_modal_header_call()">Заказать звонок</span>
                             
                         <a href="tel:+74951016035" onclick="yaCounter47424421.reachGoal
 										('phoneclick'); ga('send','event','phone','click');">+7(495) 101‑60-35</a></div>

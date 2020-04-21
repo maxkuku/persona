@@ -72,7 +72,7 @@ ul#horizontal-multilevel-menu li{
 	width: auto;
     overflow: hidden;
 }
-.parent:after{
+/*.parent:after{
 	display: inline-block;
     width: 14px;
     height: 14px;
@@ -90,7 +90,7 @@ ul#horizontal-multilevel-menu li{
 	font-size:14px;
 
 }
-
+*/
 ul li ul{
 	display:none;
 	position: absolute;
@@ -597,6 +597,7 @@ div#slider.lightblue{
 }
 div#logo {
     width: 120px;
+    margin-right: 50px;
 }
 .addr-conts div span {
     /*color: #e53a50;*/
@@ -2098,6 +2099,10 @@ div.top-buttons.all-on-4-all-on-6 {
 .st1>a.sta {
     background-color: white;
     color: #666;
+}
+.st1 > a.sta:after{
+    content: "\f107"!important;
+
 }
 .st1.closed>a.sta {
     background-color: transparent;
